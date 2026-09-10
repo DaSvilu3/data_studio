@@ -14,7 +14,11 @@
 #include <QTextEdit>
 #include <QVBoxLayout>
 
+#include <QStackedWidget>
+#include <QToolButton>
+
 #include "ui/ResultsModel.h"
+#include "ui/Theme.h"
 
 namespace ds {
 
@@ -39,10 +43,11 @@ ResultsView::ResultsView(QWidget* parent) : QWidget(parent) {
   table_->verticalHeader()->setDefaultSectionSize(
       table_->fontMetrics().height() + 8);
 
-  QFont mono(QStringLiteral("Menlo"));
-  mono.setStyleHint(QFont::Monospace);
-  mono.setPointSize(12);
+  const QFont mono = theme::monospaceFont(12);
   table_->setFont(mono);
+  table_->setShowGrid(false);          // separators are enough; a grid is noise
+  table_->verticalHeader()->setDefaultSectionSize(24);
+  table_->horizontalHeader()->setHighlightSections(false);
 
   filter_ = new QLineEdit(this);
   filter_->setPlaceholderText(QStringLiteral("Filter rows…"));
@@ -57,6 +62,24 @@ ResultsView::ResultsView(QWidget* parent) : QWidget(parent) {
   status_ = new QLabel(this);
   status_->setTextInteractionFlags(Qt::TextSelectableByMouse);
 
+  // Placeholder shown in place of the grid when there is nothing to show.
+  placeholder_ = new QLabel(this);
+  placeholder_->setAlignment(Qt::AlignCenter);
+  placeholder_->setWordWrap(true);
+  placeholder_->setStyleSheet(
+      QStringLiteral("color: %1; font-size: 13px;")
+          .arg(theme::textMuted().name()));
+
+  stack_ = new QStackedWidget(this);
+  stack_->addWidget(table_);
+  stack_->addWidget(placeholder_);
+
+  inspectorToggle_ = new QToolButton(this);
+  inspectorToggle_->setText(QStringLiteral("Cell"));
+  inspectorToggle_->setCheckable(true);
+  inspectorToggle_->setToolTip(
+      QStringLiteral("Show the full value of the selected cell"));
+
   inspector_ = new QTextEdit(this);
   inspector_->setReadOnly(true);
   inspector_->setFont(mono);
@@ -64,17 +87,25 @@ ResultsView::ResultsView(QWidget* parent) : QWidget(parent) {
       QStringLiteral("Select a cell to see its full value."));
 
   splitter_ = new QSplitter(Qt::Vertical, this);
-  splitter_->addWidget(table_);
+  splitter_->addWidget(stack_);
   splitter_->addWidget(inspector_);
   splitter_->setStretchFactor(0, 5);
-  splitter_->setStretchFactor(1, 1);
-  splitter_->setSizes({500, 90});
+  splitter_->setStretchFactor(1, 0);
+  splitter_->setCollapsible(0, false);
+  // Collapsed until a cell actually needs inspecting -- a permanent empty pane
+  // saying "select a cell" is just lost space.
+  inspector_->setVisible(false);
+  connect(inspectorToggle_, &QToolButton::toggled, this, [this](bool on) {
+    inspector_->setVisible(on);
+    if (on) updateInspector();
+  });
 
   auto* top = new QHBoxLayout;
   top->setContentsMargins(6, 4, 6, 4);
   top->addWidget(status_, 1);
+  top->addWidget(inspectorToggle_, 0);
   top->addWidget(filter_, 0);
-  filter_->setFixedWidth(220);
+  filter_->setFixedWidth(200);
 
   auto* layout = new QVBoxLayout(this);
   layout->setContentsMargins(0, 0, 0, 0);
@@ -87,12 +118,19 @@ ResultsView::ResultsView(QWidget* parent) : QWidget(parent) {
   connect(table_->selectionModel(), &QItemSelectionModel::currentChanged, this,
           &ResultsView::updateInspector);
 
+  clear();
+
   auto* copyAction = new QAction(this);
   copyAction->setShortcut(QKeySequence::Copy);
   copyAction->setShortcutContext(Qt::WidgetWithChildrenShortcut);
   connect(copyAction, &QAction::triggered, this, &ResultsView::copySelection);
   addAction(copyAction);
   table_->addAction(copyAction);
+}
+
+void ResultsView::showPlaceholder(const QString& text) {
+  placeholder_->setText(text);
+  stack_->setCurrentWidget(placeholder_);
 }
 
 void ResultsView::setResult(const ResultSet& result) {
@@ -139,22 +177,50 @@ void ResultsView::setResult(const ResultSet& result) {
   status_->setText(text);
   status_->setStyleSheet(QString());
   inspector_->clear();
+  // The previous statement may have failed and opened the inspector to show
+  // its SQL; a fresh result makes that stale.
+  inspectorToggle_->setChecked(false);
+
+  if (result.isSelect() && result.rows.empty()) {
+    showPlaceholder(QStringLiteral(
+        "No rows matched.\n\nThe query ran fine — the result set is empty."));
+  } else if (!result.isSelect()) {
+    showPlaceholder(QStringLiteral("%1 row%2 affected.")
+                        .arg(result.rowsAffected)
+                        .arg(result.rowsAffected == 1 ? "" : "s"));
+  } else {
+    stack_->setCurrentWidget(table_);
+  }
 }
 
 void ResultsView::setError(const QString& message, const QString& statement) {
   model_->setResult(ResultSet{});
   status_->setText(message);
-  status_->setStyleSheet(QStringLiteral("color:#d05050;"));
-  inspector_->setPlainText(statement.trimmed());
+  status_->setStyleSheet(
+      QStringLiteral("color: %1;").arg(theme::danger().name()));
+  showPlaceholder(message);
+  if (!statement.trimmed().isEmpty()) {
+    inspector_->setPlainText(statement.trimmed());
+    inspectorToggle_->setChecked(true);
+  }
+}
+
+void ResultsView::addErrorHint(const QString& hint) {
+  if (hint.isEmpty() || stack_->currentWidget() != placeholder_) return;
+  placeholder_->setText(placeholder_->text() + QStringLiteral("\n\n") + hint);
 }
 
 void ResultsView::clear() {
   model_->setResult(ResultSet{});
   status_->clear();
   inspector_->clear();
+  showPlaceholder(QStringLiteral(
+      "Nothing run yet.\n\nWrite a query and press ⌘↩, or double-click a "
+      "table in the sidebar to preview it."));
 }
 
 void ResultsView::updateInspector() {
+  if (!inspector_->isVisible()) return;
   const QModelIndex idx = table_->currentIndex();
   if (!idx.isValid()) {
     inspector_->clear();

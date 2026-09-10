@@ -28,6 +28,10 @@ class AnalyzerPanel : public QWidget {
   void setPlan(const ResultSet& plan, const QString& sql);
   void clearPlan();
 
+  // Counts across both sections, for the tab badge.
+  int errorCount() const { return errors_; }
+  int warningCount() const { return warnings_; }
+
  signals:
   // A diagnostic with a runnable fix was double-clicked.
   void applySuggestion(const QString& sql);
@@ -49,6 +53,8 @@ class AnalyzerPanel : public QWidget {
   std::vector<Diagnostic> staticDiags_;
   std::vector<Diagnostic> planDiags_;
   bool havePlan_ = false;
+  int errors_ = 0;
+  int warnings_ = 0;
 };
 
 }  // namespace ds

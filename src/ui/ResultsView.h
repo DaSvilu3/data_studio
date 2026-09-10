@@ -9,6 +9,8 @@ class QTextEdit;
 class QSortFilterProxyModel;
 class QLineEdit;
 class QSplitter;
+class QStackedWidget;
+class QToolButton;
 
 namespace ds {
 
@@ -23,6 +25,8 @@ class ResultsView : public QWidget {
 
   void setResult(const ResultSet& result);
   void setError(const QString& message, const QString& statement);
+  // Appends a follow-up line to the error already on screen.
+  void addErrorHint(const QString& hint);
   void clear();
   void setDialect(Dialect d) { dialect_ = d; }
 
@@ -46,7 +50,14 @@ class ResultsView : public QWidget {
   QLabel* status_ = nullptr;
   QTextEdit* inspector_ = nullptr;
   QSplitter* splitter_ = nullptr;
+  // Swaps between the grid and a placeholder, so an empty pane explains itself
+  // instead of showing a void.
+  QStackedWidget* stack_ = nullptr;
+  QLabel* placeholder_ = nullptr;
+  QToolButton* inspectorToggle_ = nullptr;
   Dialect dialect_ = Dialect::Sqlite;
+
+  void showPlaceholder(const QString& text);
 };
 
 }  // namespace ds

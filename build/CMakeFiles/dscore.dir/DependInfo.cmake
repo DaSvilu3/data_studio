@@ -16,6 +16,7 @@ set(CMAKE_DEPENDS_DEPENDENCY_FILES
   "/Users/yousufawj/projects/rnd/data_studio/src/core/sqlite/SqliteDriver.cpp" "CMakeFiles/dscore.dir/src/core/sqlite/SqliteDriver.cpp.o" "gcc" "CMakeFiles/dscore.dir/src/core/sqlite/SqliteDriver.cpp.o.d"
   "/Users/yousufawj/projects/rnd/data_studio/src/query/Analyzer.cpp" "CMakeFiles/dscore.dir/src/query/Analyzer.cpp.o" "gcc" "CMakeFiles/dscore.dir/src/query/Analyzer.cpp.o.d"
   "/Users/yousufawj/projects/rnd/data_studio/src/query/JoinGraph.cpp" "CMakeFiles/dscore.dir/src/query/JoinGraph.cpp.o" "gcc" "CMakeFiles/dscore.dir/src/query/JoinGraph.cpp.o.d"
+  "/Users/yousufawj/projects/rnd/data_studio/src/query/Profile.cpp" "CMakeFiles/dscore.dir/src/query/Profile.cpp.o" "gcc" "CMakeFiles/dscore.dir/src/query/Profile.cpp.o.d"
   "/Users/yousufawj/projects/rnd/data_studio/src/query/QueryBuilder.cpp" "CMakeFiles/dscore.dir/src/query/QueryBuilder.cpp.o" "gcc" "CMakeFiles/dscore.dir/src/query/QueryBuilder.cpp.o.d"
   "/Users/yousufawj/projects/rnd/data_studio/src/query/SqlContext.cpp" "CMakeFiles/dscore.dir/src/query/SqlContext.cpp.o" "gcc" "CMakeFiles/dscore.dir/src/query/SqlContext.cpp.o.d"
   "/Users/yousufawj/projects/rnd/data_studio/src/query/SqlLexer.cpp" "CMakeFiles/dscore.dir/src/query/SqlLexer.cpp.o" "gcc" "CMakeFiles/dscore.dir/src/query/SqlLexer.cpp.o.d"

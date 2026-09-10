@@ -23,6 +23,10 @@ class QueryBuilderPanel;
 class ResultsView;
 class SchemaTree;
 class SqlEditor;
+class DiagramView;
+class ProfilePanel;
+class CommandPalette;
+class HistoryPanel;
 
 class MainWindow : public QMainWindow {
   Q_OBJECT
@@ -46,6 +50,8 @@ class MainWindow : public QMainWindow {
   void refreshSchema();
   void setApiKey();
   void previewTable(const QString& table);
+  void profileColumn(const QString& table, const QString& column);
+  void openCommandPalette();
 
  private:
   void buildUi();
@@ -53,6 +59,11 @@ class MainWindow : public QMainWindow {
   void rebuildConnectionList();
   void applySchemaEverywhere();
   void setBusy(bool busy);
+  // Paints the status-bar pill: green when live, muted when not.
+  void setConnectionStatus(const QString& text, bool connected);
+  // Puts the finding count on the Analysis tab so it is visible without
+  // switching to it.
+  void updateAnalysisTabBadge();
   void runSql(const QString& sql);
   ConnectionSession* session() const { return session_; }
 
@@ -68,6 +79,10 @@ class MainWindow : public QMainWindow {
   ResultsView* results_ = nullptr;
   AnalyzerPanel* analyzer_ = nullptr;
   QueryBuilderPanel* builder_ = nullptr;
+  DiagramView* diagram_ = nullptr;
+  ProfilePanel* profile_ = nullptr;
+  HistoryPanel* history_ = nullptr;
+  CommandPalette* palette_ = nullptr;
   QTabWidget* workspaceTabs_ = nullptr;
   QSpinBox* rowLimit_ = nullptr;
   QLabel* statusLabel_ = nullptr;
@@ -82,6 +97,8 @@ class MainWindow : public QMainWindow {
 
   // Results arriving for a multi-statement script land in numbered tabs.
   int resultTabCount_ = 0;
+  // The statement whose result we are waiting for, so history can record it.
+  QString pendingSql_;
 };
 
 }  // namespace ds

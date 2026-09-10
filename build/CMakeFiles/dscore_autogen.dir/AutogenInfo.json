@@ -564,6 +564,12 @@
 			null
 		],
 		[
+			"/Users/yousufawj/projects/rnd/data_studio/src/query/Profile.h",
+			"MU",
+			"6LFRKMJSNU/moc_Profile.cpp",
+			null
+		],
+		[
 			"/Users/yousufawj/projects/rnd/data_studio/src/query/QueryBuilder.h",
 			"MU",
 			"6LFRKMJSNU/moc_QueryBuilder.cpp",
@@ -667,6 +673,11 @@
 		],
 		[
 			"/Users/yousufawj/projects/rnd/data_studio/src/query/JoinGraph.cpp",
+			"MU",
+			null
+		],
+		[
+			"/Users/yousufawj/projects/rnd/data_studio/src/query/Profile.cpp",
 			"MU",
 			null
 		],

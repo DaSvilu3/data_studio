@@ -27,6 +27,13 @@ class SqlEditor : public QPlainTextEdit {
   // The statement under the caret, or the selection when there is one.
   QString currentStatement() const;
   void markError(int offsetInDocument, int length);
+  void setSoftWrap(bool on);
+  bool softWrap() const;
+  // Breaks a statement onto one clause per line. Generated SQL often arrives
+  // as a single very long line, which is unreadable without horizontal
+  // scrolling.
+  void formatCurrentStatement();
+  static QString formatSql(const QString& sql);
   void clearError();
 
   void lineNumberAreaPaintEvent(QPaintEvent* event);

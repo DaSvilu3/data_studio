@@ -1141,6 +1141,30 @@ src/query/JoinGraph.cpp.s:
 	$(MAKE) $(MAKESILENT) -f CMakeFiles/dscore.dir/build.make CMakeFiles/dscore.dir/src/query/JoinGraph.cpp.s
 .PHONY : src/query/JoinGraph.cpp.s
 
+src/query/Profile.o: src/query/Profile.cpp.o
+.PHONY : src/query/Profile.o
+
+# target to build an object file
+src/query/Profile.cpp.o:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/dscore.dir/build.make CMakeFiles/dscore.dir/src/query/Profile.cpp.o
+.PHONY : src/query/Profile.cpp.o
+
+src/query/Profile.i: src/query/Profile.cpp.i
+.PHONY : src/query/Profile.i
+
+# target to preprocess a source file
+src/query/Profile.cpp.i:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/dscore.dir/build.make CMakeFiles/dscore.dir/src/query/Profile.cpp.i
+.PHONY : src/query/Profile.cpp.i
+
+src/query/Profile.s: src/query/Profile.cpp.s
+.PHONY : src/query/Profile.s
+
+# target to generate assembly for a file
+src/query/Profile.cpp.s:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/dscore.dir/build.make CMakeFiles/dscore.dir/src/query/Profile.cpp.s
+.PHONY : src/query/Profile.cpp.s
+
 src/query/QueryBuilder.o: src/query/QueryBuilder.cpp.o
 .PHONY : src/query/QueryBuilder.o
 
@@ -1237,6 +1261,30 @@ src/ui/AnalyzerPanel.cpp.s:
 	$(MAKE) $(MAKESILENT) -f CMakeFiles/dsui.dir/build.make CMakeFiles/dsui.dir/src/ui/AnalyzerPanel.cpp.s
 .PHONY : src/ui/AnalyzerPanel.cpp.s
 
+src/ui/CommandPalette.o: src/ui/CommandPalette.cpp.o
+.PHONY : src/ui/CommandPalette.o
+
+# target to build an object file
+src/ui/CommandPalette.cpp.o:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/dsui.dir/build.make CMakeFiles/dsui.dir/src/ui/CommandPalette.cpp.o
+.PHONY : src/ui/CommandPalette.cpp.o
+
+src/ui/CommandPalette.i: src/ui/CommandPalette.cpp.i
+.PHONY : src/ui/CommandPalette.i
+
+# target to preprocess a source file
+src/ui/CommandPalette.cpp.i:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/dsui.dir/build.make CMakeFiles/dsui.dir/src/ui/CommandPalette.cpp.i
+.PHONY : src/ui/CommandPalette.cpp.i
+
+src/ui/CommandPalette.s: src/ui/CommandPalette.cpp.s
+.PHONY : src/ui/CommandPalette.s
+
+# target to generate assembly for a file
+src/ui/CommandPalette.cpp.s:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/dsui.dir/build.make CMakeFiles/dsui.dir/src/ui/CommandPalette.cpp.s
+.PHONY : src/ui/CommandPalette.cpp.s
+
 src/ui/ConnectionDialog.o: src/ui/ConnectionDialog.cpp.o
 .PHONY : src/ui/ConnectionDialog.o
 
@@ -1285,6 +1333,54 @@ src/ui/ConnectionStore.cpp.s:
 	$(MAKE) $(MAKESILENT) -f CMakeFiles/dsui.dir/build.make CMakeFiles/dsui.dir/src/ui/ConnectionStore.cpp.s
 .PHONY : src/ui/ConnectionStore.cpp.s
 
+src/ui/DiagramView.o: src/ui/DiagramView.cpp.o
+.PHONY : src/ui/DiagramView.o
+
+# target to build an object file
+src/ui/DiagramView.cpp.o:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/dsui.dir/build.make CMakeFiles/dsui.dir/src/ui/DiagramView.cpp.o
+.PHONY : src/ui/DiagramView.cpp.o
+
+src/ui/DiagramView.i: src/ui/DiagramView.cpp.i
+.PHONY : src/ui/DiagramView.i
+
+# target to preprocess a source file
+src/ui/DiagramView.cpp.i:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/dsui.dir/build.make CMakeFiles/dsui.dir/src/ui/DiagramView.cpp.i
+.PHONY : src/ui/DiagramView.cpp.i
+
+src/ui/DiagramView.s: src/ui/DiagramView.cpp.s
+.PHONY : src/ui/DiagramView.s
+
+# target to generate assembly for a file
+src/ui/DiagramView.cpp.s:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/dsui.dir/build.make CMakeFiles/dsui.dir/src/ui/DiagramView.cpp.s
+.PHONY : src/ui/DiagramView.cpp.s
+
+src/ui/HistoryPanel.o: src/ui/HistoryPanel.cpp.o
+.PHONY : src/ui/HistoryPanel.o
+
+# target to build an object file
+src/ui/HistoryPanel.cpp.o:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/dsui.dir/build.make CMakeFiles/dsui.dir/src/ui/HistoryPanel.cpp.o
+.PHONY : src/ui/HistoryPanel.cpp.o
+
+src/ui/HistoryPanel.i: src/ui/HistoryPanel.cpp.i
+.PHONY : src/ui/HistoryPanel.i
+
+# target to preprocess a source file
+src/ui/HistoryPanel.cpp.i:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/dsui.dir/build.make CMakeFiles/dsui.dir/src/ui/HistoryPanel.cpp.i
+.PHONY : src/ui/HistoryPanel.cpp.i
+
+src/ui/HistoryPanel.s: src/ui/HistoryPanel.cpp.s
+.PHONY : src/ui/HistoryPanel.s
+
+# target to generate assembly for a file
+src/ui/HistoryPanel.cpp.s:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/dsui.dir/build.make CMakeFiles/dsui.dir/src/ui/HistoryPanel.cpp.s
+.PHONY : src/ui/HistoryPanel.cpp.s
+
 src/ui/MainWindow.o: src/ui/MainWindow.cpp.o
 .PHONY : src/ui/MainWindow.o
 
@@ -1332,6 +1428,30 @@ src/ui/NlPromptBar.s: src/ui/NlPromptBar.cpp.s
 src/ui/NlPromptBar.cpp.s:
 	$(MAKE) $(MAKESILENT) -f CMakeFiles/dsui.dir/build.make CMakeFiles/dsui.dir/src/ui/NlPromptBar.cpp.s
 .PHONY : src/ui/NlPromptBar.cpp.s
+
+src/ui/ProfilePanel.o: src/ui/ProfilePanel.cpp.o
+.PHONY : src/ui/ProfilePanel.o
+
+# target to build an object file
+src/ui/ProfilePanel.cpp.o:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/dsui.dir/build.make CMakeFiles/dsui.dir/src/ui/ProfilePanel.cpp.o
+.PHONY : src/ui/ProfilePanel.cpp.o
+
+src/ui/ProfilePanel.i: src/ui/ProfilePanel.cpp.i
+.PHONY : src/ui/ProfilePanel.i
+
+# target to preprocess a source file
+src/ui/ProfilePanel.cpp.i:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/dsui.dir/build.make CMakeFiles/dsui.dir/src/ui/ProfilePanel.cpp.i
+.PHONY : src/ui/ProfilePanel.cpp.i
+
+src/ui/ProfilePanel.s: src/ui/ProfilePanel.cpp.s
+.PHONY : src/ui/ProfilePanel.s
+
+# target to generate assembly for a file
+src/ui/ProfilePanel.cpp.s:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/dsui.dir/build.make CMakeFiles/dsui.dir/src/ui/ProfilePanel.cpp.s
+.PHONY : src/ui/ProfilePanel.cpp.s
 
 src/ui/QueryBuilderPanel.o: src/ui/QueryBuilderPanel.cpp.o
 .PHONY : src/ui/QueryBuilderPanel.o
@@ -1501,6 +1621,30 @@ src/ui/SqlHighlighter.cpp.s:
 	$(MAKE) $(MAKESILENT) -f CMakeFiles/dsui.dir/build.make CMakeFiles/dsui.dir/src/ui/SqlHighlighter.cpp.s
 .PHONY : src/ui/SqlHighlighter.cpp.s
 
+src/ui/Theme.o: src/ui/Theme.cpp.o
+.PHONY : src/ui/Theme.o
+
+# target to build an object file
+src/ui/Theme.cpp.o:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/dsui.dir/build.make CMakeFiles/dsui.dir/src/ui/Theme.cpp.o
+.PHONY : src/ui/Theme.cpp.o
+
+src/ui/Theme.i: src/ui/Theme.cpp.i
+.PHONY : src/ui/Theme.i
+
+# target to preprocess a source file
+src/ui/Theme.cpp.i:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/dsui.dir/build.make CMakeFiles/dsui.dir/src/ui/Theme.cpp.i
+.PHONY : src/ui/Theme.cpp.i
+
+src/ui/Theme.s: src/ui/Theme.cpp.s
+.PHONY : src/ui/Theme.s
+
+# target to generate assembly for a file
+src/ui/Theme.cpp.s:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/dsui.dir/build.make CMakeFiles/dsui.dir/src/ui/Theme.cpp.s
+.PHONY : src/ui/Theme.cpp.s
+
 tests/core_tests.o: tests/core_tests.cpp.o
 .PHONY : tests/core_tests.o
 
@@ -1658,6 +1802,9 @@ help:
 	@echo "... src/query/JoinGraph.o"
 	@echo "... src/query/JoinGraph.i"
 	@echo "... src/query/JoinGraph.s"
+	@echo "... src/query/Profile.o"
+	@echo "... src/query/Profile.i"
+	@echo "... src/query/Profile.s"
 	@echo "... src/query/QueryBuilder.o"
 	@echo "... src/query/QueryBuilder.i"
 	@echo "... src/query/QueryBuilder.s"
@@ -1670,18 +1817,30 @@ help:
 	@echo "... src/ui/AnalyzerPanel.o"
 	@echo "... src/ui/AnalyzerPanel.i"
 	@echo "... src/ui/AnalyzerPanel.s"
+	@echo "... src/ui/CommandPalette.o"
+	@echo "... src/ui/CommandPalette.i"
+	@echo "... src/ui/CommandPalette.s"
 	@echo "... src/ui/ConnectionDialog.o"
 	@echo "... src/ui/ConnectionDialog.i"
 	@echo "... src/ui/ConnectionDialog.s"
 	@echo "... src/ui/ConnectionStore.o"
 	@echo "... src/ui/ConnectionStore.i"
 	@echo "... src/ui/ConnectionStore.s"
+	@echo "... src/ui/DiagramView.o"
+	@echo "... src/ui/DiagramView.i"
+	@echo "... src/ui/DiagramView.s"
+	@echo "... src/ui/HistoryPanel.o"
+	@echo "... src/ui/HistoryPanel.i"
+	@echo "... src/ui/HistoryPanel.s"
 	@echo "... src/ui/MainWindow.o"
 	@echo "... src/ui/MainWindow.i"
 	@echo "... src/ui/MainWindow.s"
 	@echo "... src/ui/NlPromptBar.o"
 	@echo "... src/ui/NlPromptBar.i"
 	@echo "... src/ui/NlPromptBar.s"
+	@echo "... src/ui/ProfilePanel.o"
+	@echo "... src/ui/ProfilePanel.i"
+	@echo "... src/ui/ProfilePanel.s"
 	@echo "... src/ui/QueryBuilderPanel.o"
 	@echo "... src/ui/QueryBuilderPanel.i"
 	@echo "... src/ui/QueryBuilderPanel.s"
@@ -1703,6 +1862,9 @@ help:
 	@echo "... src/ui/SqlHighlighter.o"
 	@echo "... src/ui/SqlHighlighter.i"
 	@echo "... src/ui/SqlHighlighter.s"
+	@echo "... src/ui/Theme.o"
+	@echo "... src/ui/Theme.i"
+	@echo "... src/ui/Theme.s"
 	@echo "... tests/core_tests.o"
 	@echo "... tests/core_tests.i"
 	@echo "... tests/core_tests.s"

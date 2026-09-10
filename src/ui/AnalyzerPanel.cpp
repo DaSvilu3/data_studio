@@ -128,6 +128,8 @@ void AnalyzerPanel::rebuild() {
   tree_->clear();
 
   int errors = 0, warnings = 0, infos = 0;
+  errors_ = 0;
+  warnings_ = 0;
   auto addSection = [&](const QString& title,
                         const std::vector<Diagnostic>& diags) {
     if (diags.empty()) return;
@@ -170,6 +172,8 @@ void AnalyzerPanel::rebuild() {
   addSection(QStringLiteral("Schema checks"), staticDiags_);
   addSection(QStringLiteral("Query plan"), planDiags_);
 
+  errors_ = errors;
+  warnings_ = warnings;
   const int total = errors + warnings + infos;
   if (sql_.trimmed().isEmpty()) {
     summary_->setText(QStringLiteral("Nothing to analyze yet."));

@@ -1,11 +1,14 @@
 // Integration tests for the driver, schema introspection and query
 // intelligence layers, run against a throwaway SQLite database.
 #include <cstdio>
+#include <cstdlib>
+#include <cmath>
 #include <filesystem>
 
 #include "core/Driver.h"
 #include "query/Analyzer.h"
 #include "query/JoinGraph.h"
+#include "query/Profile.h"
 #include "query/QueryBuilder.h"
 #include "query/SqlContext.h"
 #include "tests/test_util.h"
@@ -370,7 +373,161 @@ int main() {
     tst::check(threw, "bad SQL raises DbError");
   }
 
+  // -------------------------------------------------------------- profiling
+  tst::section("column profiling");
+  {
+    driver->execute("CREATE TABLE profiled (id INTEGER PRIMARY KEY, "
+                    "status TEXT, note TEXT, score REAL)", 0);
+    driver->execute(
+        "INSERT INTO profiled(status, note, score) VALUES "
+        "('paid','a',1.0),('paid','b',2.0),('paid',NULL,3.0),"
+        "('paid',NULL,4.0),('pending',NULL,5.0)", 0);
+    Schema s2 = driver->introspect();
+    const Table* t = s2.findTable("profiled");
+    tst::check(t != nullptr, "profiled table found");
+
+    auto profileOf = [&](const char* column) {
+      const Column* c = t->findColumn(column);
+      ProfileQueries q(Dialect::Sqlite, *t, *c);
+      ResultSet range;
+      if (q.supportsRange()) range = driver->execute(q.range(), 0);
+      return assembleProfile(*t, *c, driver->execute(q.counts(), 0), range,
+                             driver->execute(q.topValues(8), 0));
+    };
+
+    ColumnProfile status = profileOf("status");
+    tst::check(status.totalRows == 5, "row count");
+    tst::check(status.nullCount == 0, "no nulls in status");
+    tst::check(status.distinctCount == 2, "two distinct statuses");
+    tst::check(status.topValues.size() == 2, "top values returned");
+    tst::check(!status.topValues.empty() &&
+                   status.topValues[0].value == "paid" &&
+                   status.topValues[0].count == 4,
+               "most common value is 'paid' with 4 rows");
+    tst::check(std::abs(status.topValues[0].share - 0.8) < 0.001,
+               "share computed against non-null rows");
+
+    ColumnProfile note = profileOf("note");
+    tst::check(note.nullCount == 3, "nulls counted");
+    tst::check(std::abs(note.nullShare() - 0.6) < 0.001, "null share");
+    tst::check(note.selectivity() == 1.0,
+               "selectivity ignores nulls (2 distinct of 2 non-null)");
+
+    ColumnProfile score = profileOf("score");
+    tst::check(score.hasRange && score.minValue == "1" && score.maxValue == "5",
+               "numeric range");
+    tst::check(score.hasMean && std::abs(score.meanValue - 3.0) < 0.001,
+               "mean computed");
+    tst::check(score.looksUnique(), "all scores distinct");
+
+    ColumnProfile id = profileOf("id");
+    tst::check(id.looksUnique(), "primary key is unique");
+
+    // Insights are the point of profiling -- check they fire on real shapes.
+    auto has = [](const std::vector<std::string>& notes, const char* fragment) {
+      for (const auto& n : notes) {
+        if (n.find(fragment) != std::string::npos) return true;
+      }
+      return false;
+    };
+    tst::check(has(profileInsights(note, *t), "half the rows are NULL"),
+               "flags a mostly-null column");
+    tst::check(has(profileInsights(score, *t), "not indexed"),
+               "flags a unique but unindexed column");
+    tst::check(!has(profileInsights(id, *t), "not indexed"),
+               "does not flag the indexed primary key");
+
+    // A text column cannot be averaged; the query must not ask for it.
+    const Column* noteCol = t->findColumn("note");
+    ProfileQueries textQueries(Dialect::Sqlite, *t, *noteCol);
+    tst::check(!textQueries.supportsMean(), "no AVG on a text column");
+    tst::check(textQueries.counts().find("COUNT(DISTINCT") != std::string::npos,
+               "distinct count requested");
+    ProfileQueries mysqlQueries(Dialect::MySql, *t, *noteCol);
+    tst::check(mysqlQueries.counts().find("`profiled`") != std::string::npos,
+               "MySQL identifier quoting");
+  }
+
   driver->disconnect();
   std::filesystem::remove(path);
+
+  // ------------------------------------------------- live MySQL / MariaDB
+  // Opt-in: these need a running server, so they're skipped unless a DSN is
+  // supplied. Both engines are worth covering -- MariaDB authenticates with
+  // mysql_native_password, which Oracle's client library can no longer do.
+  //   DS_TEST_MYSQL="host:port:user:password[:database]" ./ds-core-tests
+  if (const char* dsn = std::getenv("DS_TEST_MYSQL")) {
+    tst::section("live MySQL/MariaDB server");
+    std::vector<std::string> parts;
+    std::string field;
+    for (const char* p = dsn;; ++p) {
+      if (*p == ':' || *p == '\0') {
+        parts.push_back(field);
+        field.clear();
+        if (*p == '\0') break;
+      } else {
+        field.push_back(*p);
+      }
+    }
+
+    if (parts.size() < 4) {
+      tst::check(false, "DS_TEST_MYSQL needs host:port:user:password[:db]");
+    } else {
+      ConnectionConfig cfg;
+      cfg.dialect = Dialect::MySql;
+      cfg.host = parts[0];
+      cfg.port = std::stoi(parts[1]);
+      cfg.user = parts[2];
+      cfg.password = parts[3];
+      if (parts.size() > 4) cfg.database = parts[4];
+
+      try {
+        auto mysql = makeDriver(cfg);
+        mysql->connect(cfg);
+        tst::check(true, "connected");
+        tst::note(mysql->serverVersion());
+
+        // The value round trip is where client libraries differ most.
+        ResultSet rs = mysql->execute(
+            "SELECT 1, 'txt', NULL, 3.5, CAST('9.99' AS DECIMAL(10,2))", 0);
+        tst::check(rs.rows.size() == 1 && rs.rows[0].size() == 5,
+                   "five typed columns returned");
+        tst::check(std::holds_alternative<int64_t>(rs.rows[0][0]),
+                   "integer typed");
+        tst::check(isNull(rs.rows[0][2]), "NULL round-trips");
+        tst::check(toDisplayString(rs.rows[0][4]) == "9.99",
+                   "DECIMAL keeps its precision as text");
+
+        const auto dbs = mysql->databases();
+        tst::check(!dbs.empty(), "databases listed");
+
+        if (!dbs.empty()) {
+          mysql->useDatabase(cfg.database.empty() ? dbs[0] : cfg.database);
+          // Introspection reads information_schema, where the two servers
+          // disagree about the SQL type of several expressions -- the reason
+          // metadata must never be read with std::get.
+          Schema live = mysql->introspect();
+          tst::check(!live.tables.empty(), "schema introspected");
+          tst::note(std::to_string(live.tables.size()) + " tables in '" +
+                    live.name + "'");
+
+          bool sawColumns = false, sawIndex = false;
+          for (const auto& t : live.tables) {
+            if (!t.columns.empty()) sawColumns = true;
+            if (!t.indexes.empty()) sawIndex = true;
+          }
+          tst::check(sawColumns, "columns populated");
+          tst::check(sawIndex, "indexes populated");
+
+          ResultSet plan = mysql->explain("SELECT 1");
+          tst::check(!plan.columns.empty(), "EXPLAIN returned a plan");
+        }
+        mysql->disconnect();
+      } catch (const std::exception& e) {
+        tst::check(false, std::string("live server: ") + e.what());
+      }
+    }
+  }
+
   return tst::report();
 }

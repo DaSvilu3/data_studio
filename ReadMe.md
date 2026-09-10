@@ -30,6 +30,29 @@ add filters and aggregates, and read the SQL as it's generated. Values are quote
 according to each column's declared type, and one-to-many hops become `LEFT JOIN`
 with a warning that they can multiply rows.
 
+**Relationship diagram.** An interactive map of the foreign-key graph. A large
+schema can't be drawn at once and stay readable, so it works in focus mode: one
+table at the centre, everything within N hops in rings around it, sized so
+nodes never overlap. Past 24 neighbours it keeps the most connected ones and
+says how many it left out. Each node shows its keys and relationships first;
+edges carry a dot on the many end.
+
+**Column profiling.** Ask what a column actually contains rather than what it
+was declared as: row count, nulls, distinct values, range, mean, and the most
+common values with proportion bars. It then says what that implies — a column
+that is effectively constant, one that is unique but unindexed, a value that
+accounts for most of the table (so a filter matching it reads nearly
+everything, while one matching anything else is highly selective). Right-click
+a frequent value to drop it into the editor as a `WHERE` condition.
+
+**Command palette.** `⌘K` fuzzy-searches every table, every column and every
+command. On a schema with hundreds of tables it is the fastest way to get
+anywhere. Choosing a table centres the diagram and previews it; choosing a
+column profiles it.
+
+**Query history.** Everything you have run, persisted across sessions, with
+timing, row counts and success, searchable, and re-runnable from a right-click.
+
 **Natural language to SQL.** Ask a question in English and get SQL back for
 review — it is never run automatically. Generation runs either against a **local
 model** (LM Studio, Ollama, llama.cpp, vLLM — nothing leaves the machine at all)
@@ -41,20 +64,39 @@ indexes. No row data leaves the machine under either provider.
 Requires macOS, CMake ≥ 3.21, and a C++20 compiler.
 
 ```sh
-brew install qt sqlite mysql-client
+brew install qt sqlite mariadb-connector-c
 cmake -S . -B build -DCMAKE_BUILD_TYPE=Release
 cmake --build build
 open build/data-studio.app
 ```
 
-MySQL support is optional: if `libmysqlclient` isn't found at configure time the
-build prints a warning, `DS_HAVE_MYSQL` is set to 0, and SQLite-only binaries are
-produced.
+**Use MariaDB Connector/C, not Oracle's `mysql-client`.** MySQL 9 removed the
+client-side `mysql_native_password` plugin, and that is still MariaDB's default
+authentication method, so an Oracle-client build cannot connect to a MariaDB
+server at all:
+
+```
+Authentication plugin 'mysql_native_password' cannot be loaded:
+  .../lib/plugin/mysql_native_password.so (no such file)
+```
+
+Connector/C ships that plugin *and* `caching_sha2_password`, so one build talks
+to both engines. The two libraries expose the same `mysql.h` API; CMake prefers
+Connector/C, falls back to `libmysqlclient` with a warning, and produces
+SQLite-only binaries if neither is present.
 
 ### Tests
 
 ```sh
 cd build && ctest -V
+```
+
+Set `DS_TEST_MYSQL` to also run the suite against a live server — worth doing
+against both engines, since they disagree about the SQL type of several
+`information_schema` expressions:
+
+```sh
+DS_TEST_MYSQL="127.0.0.1:3306:root:secret" ./build/ds-core-tests
 ```
 
 `core` exercises the drivers, introspection and query intelligence against a
@@ -98,8 +140,15 @@ src/
     LocalSqlGenerator   any OpenAI-compatible server (LM Studio, Ollama, …)
     ClaudeSqlGenerator  Claude Messages API, structured outputs
     AiSettings     provider config + local-server discovery
+  query/
+    Profile        column statistics: the queries, and what they imply
   ui/            dsui
     QueryExecutor  ConnectionSession: driver on a worker thread, queued signals
+    DiagramView    QGraphicsScene map of the FK graph, radial focus layout
+    ProfilePanel   column statistics and the insights drawn from them
+    CommandPalette ⌘K fuzzy launcher over schema and commands
+    HistoryPanel   persisted, searchable query history
+    Theme          palette, painted icons, application stylesheet
     MainWindow, SqlEditor, SchemaTree, ResultsView, AnalyzerPanel,
     QueryBuilderPanel, ConnectionDialog, ConnectionStore, …
 tests/           core_tests.cpp, ui_tests.cpp
@@ -107,10 +156,20 @@ tests/           core_tests.cpp, ui_tests.cpp
 
 ### Notes on some decisions
 
-**Drivers are written directly against `sqlite3` and `libmysqlclient` rather
+**Drivers are written directly against `sqlite3` and the MySQL client rather
 than Qt SQL.** Homebrew's Qt ships only the SQLite plugin — there is no `QMYSQL`
 — and going native also buys real query cancellation, streaming result reads,
 and full control over introspection.
+
+**Server-reported metadata is read with coercing accessors, never `std::get`.**
+Which SQL type a server reports for an expression is not something a client can
+rely on: MariaDB returns `COALESCE(data_length + index_length, -1)` as DECIMAL,
+which this driver deliberately keeps as text to preserve precision. Assuming a
+variant alternative there threw `bad_variant_access` on every MariaDB schema.
+
+**The connection handle is stored as `void*`.** Oracle's client declares
+`struct MYSQL` while Connector/C declares `struct st_mysql`, so no forward
+declaration compiles against both.
 
 **`dscore` has no Qt dependency.** Values are a `std::variant`, not `QVariant`,
 so the whole query-intelligence layer is plain C++ and testable on its own.
@@ -177,7 +236,26 @@ are flagged before you run them.
 | `⌘E` | `EXPLAIN` the current statement |
 | `⌘.` | Cancel the running query |
 | `⌃Space` | Completions |
+| `⌘K` | Go to any table, column or command |
 | `F5` | Refresh schema |
+| `⇧⌘F` | Format the statement onto one clause per line |
+
+## Interface
+
+Nothing in the diagram, the palette or profiling needs a schema the user has
+described by hand: all three are driven by the same introspected `Schema` and
+`JoinGraph` that power completion and the analyzer.
+
+Colours, metrics and icons live in `src/ui/Theme.cpp` and are derived from the
+system palette, so light and dark both work and no widget hard-codes a hex value
+at the call site. Icons are painted with `QPainter` rather than loaded, so the
+app ships no image assets.
+
+The schema tree marks primary keys, foreign-key columns and indexes with
+distinct glyphs and bolds `NOT NULL` columns, which makes the shape of an
+unfamiliar table readable without expanding anything. Connections carry a status
+dot, the Analysis tab carries a finding count so problems are visible without
+switching to it, and empty panes explain themselves instead of rendering a void.
 
 ## Status
 

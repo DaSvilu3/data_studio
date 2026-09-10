@@ -5,6 +5,8 @@
 #include <QTimer>
 #include <filesystem>
 
+#include <QPixmap>
+
 #include "ai/SchemaPrompt.h"
 #include "ai/SqlGenerator.h"
 #include "tests/test_util.h"
@@ -12,7 +14,9 @@
 #include "ui/QueryExecutor.h"
 #include "ui/ResultsModel.h"
 #include "ui/SchemaTree.h"
+#include "ui/MainWindow.h"
 #include "ui/SqlEditor.h"
+#include "ui/Theme.h"
 
 using namespace ds;
 
@@ -228,6 +232,39 @@ int main(int argc, char** argv) {
                "an explicit selection wins over the caret statement");
   }
 
+  // ------------------------------------------------------------- formatting
+  tst::section("SQL formatting");
+  {
+    // The exact one-liner llama-3.2-3b produced: unreadable without wrapping.
+    const QString oneLine =
+        "SELECT p.name, SUM(oi.qty) AS total_qty FROM order_items oi JOIN "
+        "products p ON oi.product_id = p.id GROUP BY p.name ORDER BY "
+        "total_qty DESC LIMIT 200";
+    const QString formatted = SqlEditor::formatSql(oneLine);
+    std::cout << "\n" << formatted.toStdString() << "\n\n";
+
+    tst::check(formatted.count(QLatin1Char('\n')) >= 5,
+               "long statement is broken across clauses");
+    tst::check(formatted.startsWith("SELECT p.name"), "SELECT list intact");
+    tst::check(formatted.contains("\nFROM order_items oi"),
+               "FROM starts its own line");
+    tst::check(formatted.contains("\n  JOIN products p"),
+               "JOIN is indented under the clause");
+    tst::check(formatted.contains("\n  ON oi.product_id = p.id"),
+               "ON is indented too");
+    tst::check(formatted.contains("\nGROUP BY p.name"),
+               "GROUP BY stays together on one line");
+    tst::check(formatted.contains("\nORDER BY total_qty DESC"),
+               "ORDER BY stays together");
+    tst::check(!formatted.contains(" ,"), "no space before a comma");
+    tst::check(formatted.contains("SUM(oi.qty)"),
+               "function call is not pulled apart");
+
+    // Formatting must not change what the statement means.
+    tst::check(SqlEditor::formatSql(formatted) == formatted,
+               "formatting is idempotent");
+  }
+
   // --------------------------------------------------------------- widgets
   tst::section("panels construct against a live schema");
   {
@@ -311,6 +348,137 @@ int main(int argc, char** argv) {
     tst::check(ddl.contains("CREATE TABLE customers"), "renders DDL");
     tst::check(ddl.contains("FOREIGN KEY"), "includes relationships");
     tst::check(!ddl.contains("Ana"), "never includes row data");
+  }
+
+  // ----------------------------------------------- cross-database recovery
+  // Regression: switching database left the sidebar showing the previous
+  // database's tables while the switch was still in flight, so clicking one
+  // ran it against the database we had just moved to. The switch must report
+  // busy like every other worker operation, and a statement naming a table
+  // that lives in another database must be explainable rather than just
+  // failing with the server's raw message.
+  if (const char* dsn = std::getenv("DS_TEST_MYSQL")) {
+    tst::section("switching database");
+
+    QStringList parts = QString::fromUtf8(dsn).split(QLatin1Char(':'));
+    if (parts.size() >= 4) {
+      ConnectionConfig my;
+      my.dialect = Dialect::MySql;
+      my.host = parts[0].toStdString();
+      my.port = parts[1].toInt();
+      my.user = parts[2].toStdString();
+      my.password = parts[3].toStdString();
+
+      ConnectionSession mysql(my);
+      bool ready = false, busySeen = false, busyCleared = false;
+      QStringList located;
+      QString locatedTable;
+
+      QObject::connect(&mysql, &ConnectionSession::schemaChanged,
+                       [&] { ready = true; });
+      QObject::connect(&mysql, &ConnectionSession::openFailed,
+                       [&](const QString&) { ready = true; });
+      QObject::connect(&mysql, &ConnectionSession::busyChanged,
+                       [&](bool busy) {
+                         if (busy) busySeen = true;
+                         else if (busySeen) busyCleared = true;
+                       });
+      QObject::connect(&mysql, &ConnectionSession::tableLocated,
+                       [&](const QString& t, const QStringList& dbs) {
+                         locatedTable = t;
+                         located = dbs;
+                       });
+
+      mysql.open();
+      pump(ready, 20000);
+      tst::check(mysql.isOpen(), "connected to the live server");
+
+      const QStringList databases = mysql.databases();
+      tst::check(databases.size() >= 2,
+                 "server has at least two databases to switch between");
+
+      if (mysql.isOpen() && databases.size() >= 2) {
+        // Find a table that exists in one database but not another.
+        QString uniqueTable, homeDb, otherDb;
+        for (const QString& db : databases) {
+          ready = false;
+          mysql.useDatabase(db);
+          pump(ready, 30000);
+          if (mysql.schema().tables.empty()) continue;
+          if (homeDb.isEmpty()) {
+            homeDb = db;
+            uniqueTable = QString::fromStdString(mysql.schema().tables[0].name);
+          } else if (!mysql.schema().findTable(uniqueTable.toStdString())) {
+            otherDb = db;
+            break;
+          }
+        }
+        tst::check(!homeDb.isEmpty() && !otherDb.isEmpty(),
+                   "found a table present in one database and absent in another");
+        tst::note(uniqueTable.toStdString() + " is in " + homeDb.toStdString() +
+                  " but not " + otherDb.toStdString());
+
+        // We are now on otherDb. Busy must have been raised and cleared by the
+        // switch itself -- that is the bug that let a stale click through.
+        tst::check(busySeen && busyCleared,
+                   "switching database reports busy and then idle");
+
+        if (!uniqueTable.isEmpty()) {
+          mysql.locateTable(uniqueTable);
+          bool got = false;
+          QEventLoop wait;
+          QTimer::singleShot(8000, &wait, &QEventLoop::quit);
+          QObject::connect(&mysql, &ConnectionSession::tableLocated, &wait,
+                           [&](const QString&, const QStringList&) {
+                             got = true;
+                             wait.quit();
+                           });
+          wait.exec();
+          tst::check(got && located.contains(homeDb),
+                     "the missing table is traced back to its real database");
+          tst::note("located in: " + located.join(", ").toStdString());
+        }
+      }
+    }
+  }
+
+  // ---------------------------------------------------------------- theming
+  // The offscreen platform gives a light palette, so this exercises the light
+  // branch of the theme that the running app (dark) never reaches here.
+  tst::section("theme");
+  {
+    tst::check(!theme::appStyleSheet().isEmpty(), "stylesheet generated");
+    tst::check(theme::textPrimary() != theme::surface(),
+               "text contrasts with the surface it sits on");
+    tst::check(theme::icon(QStringLiteral("run")).availableSizes().size() > 0,
+               "icons render to a pixmap");
+    tst::check(!theme::icon(QStringLiteral("table")).isNull(), "table icon");
+    tst::check(!theme::statusDot(theme::success()).isNull(), "status dot");
+
+    // Render the real window offscreen and confirm it actually paints, which
+    // catches a stylesheet that blanks the UI in the theme we don't run in.
+    qApp->setStyleSheet(theme::appStyleSheet());
+    MainWindow window;
+    window.resize(1200, 800);
+    window.show();
+    QApplication::processEvents();
+
+    const QPixmap shot = window.grab();
+    tst::check(!shot.isNull() && shot.width() > 0, "main window renders");
+
+    const QImage image = shot.toImage();
+    QSet<QRgb> distinct;
+    for (int y = 0; y < image.height(); y += 7) {
+      for (int x = 0; x < image.width(); x += 7) distinct.insert(image.pixel(x, y));
+    }
+    // A single flat colour would mean the stylesheet painted over everything.
+    tst::check(distinct.size() > 12, "window is not a blank field of colour");
+    tst::note(std::to_string(distinct.size()) + " distinct colours sampled");
+
+    if (const char* out = std::getenv("DS_TEST_SHOT")) {
+      shot.save(QString::fromUtf8(out));
+      tst::note(std::string("saved ") + out);
+    }
   }
 
   std::filesystem::remove(path);

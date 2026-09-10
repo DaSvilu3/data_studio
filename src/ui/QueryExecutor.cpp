@@ -90,13 +90,80 @@ void QueryWorker::refreshSchema() {
   emit busyChanged(false);
 }
 
+void QueryWorker::profileColumn(const QString& table, const QString& column) {
+  if (!driver_) return;
+  emit busyChanged(true);
+  try {
+    Schema schema = driver_->introspect();
+    const Table* t = schema.findTable(table.toStdString());
+    const Column* c = t ? t->findColumn(column.toStdString()) : nullptr;
+    if (!t || !c) {
+      emit failed(QStringLiteral("No such column: %1.%2").arg(table, column),
+                  QString());
+      emit busyChanged(false);
+      return;
+    }
+
+    ProfileQueries queries(driver_->dialect(), *t, *c);
+    const ResultSet counts = driver_->execute(queries.counts(), 0);
+    // MIN/MAX over a blob or JSON column is meaningless, so it's skipped
+    // rather than failing the whole profile.
+    ResultSet range;
+    if (queries.supportsRange()) {
+      try {
+        range = driver_->execute(queries.range(), 0);
+      } catch (const DbError&) {
+      }
+    }
+    ResultSet top;
+    try {
+      top = driver_->execute(queries.topValues(8), 0);
+    } catch (const DbError&) {
+    }
+
+    emit profileReady(assembleProfile(*t, *c, counts, range, top));
+  } catch (const std::exception& e) {
+    emit failed(QString::fromUtf8(e.what()),
+                QStringLiteral("<profiling %1.%2>").arg(table, column));
+  }
+  emit busyChanged(false);
+}
+
 void QueryWorker::switchDatabase(const QString& name) {
   if (!driver_) return;
+  // Re-introspecting a large schema is not instant. Without this the GUI looks
+  // idle while the connection has already moved, so the sidebar still lists the
+  // previous database's tables and clicking one runs it against the new one.
+  emit busyChanged(true);
   try {
     driver_->useDatabase(name.toStdString());
     emit schemaReady(driver_->introspect());
   } catch (const std::exception& e) {
     emit failed(QString::fromUtf8(e.what()), QStringLiteral("USE ") + name);
+  }
+  emit busyChanged(false);
+}
+
+void QueryWorker::locateTable(const QString& table) {
+  if (!driver_ || driver_->dialect() != Dialect::MySql) return;
+  try {
+    // Only used to explain a failure, so a single cheap lookup is fine.
+    std::string escaped;
+    for (char c : table.toStdString()) {
+      if (c == '\'' || c == '\\') escaped.push_back('\\');
+      escaped.push_back(c);
+    }
+    const ResultSet rs = driver_->execute(
+        "SELECT table_schema FROM information_schema.tables "
+        "WHERE table_name = '" + escaped + "' ORDER BY table_schema", 0);
+
+    QStringList found;
+    for (const auto& row : rs.rows) {
+      if (!row.empty()) found << QString::fromStdString(toDisplayString(row[0]));
+    }
+    if (!found.isEmpty()) emit tableLocated(table, found);
+  } catch (const std::exception&) {
+    // Best effort: this only ever improves an error message.
   }
 }
 
@@ -108,6 +175,7 @@ ConnectionSession::ConnectionSession(const ConnectionConfig& cfg,
   static const int kOnce = []() {
     qRegisterMetaType<ds::ResultSet>("ds::ResultSet");
     qRegisterMetaType<ds::Schema>("ds::Schema");
+    qRegisterMetaType<ds::ColumnProfile>("ds::ColumnProfile");
     return 0;
   }();
   Q_UNUSED(kOnce);
@@ -137,6 +205,10 @@ ConnectionSession::ConnectionSession(const ConnectionConfig& cfg,
     schema_ = s;
     emit schemaChanged();
   });
+  connect(worker_, &QueryWorker::profileReady, this,
+          &ConnectionSession::profileReady);
+  connect(worker_, &QueryWorker::tableLocated, this,
+          &ConnectionSession::tableLocated);
   connect(worker_, &QueryWorker::failed, this, &ConnectionSession::failed);
   connect(worker_, &QueryWorker::busyChanged, this, [this](bool busy) {
     busy_ = busy;
@@ -180,6 +252,17 @@ void ConnectionSession::useDatabase(const QString& name) {
   cfg_.database = name.toStdString();
   QMetaObject::invokeMethod(worker_, "switchDatabase", Qt::QueuedConnection,
                             Q_ARG(QString, name));
+}
+
+void ConnectionSession::profileColumn(const QString& table,
+                                      const QString& column) {
+  QMetaObject::invokeMethod(worker_, "profileColumn", Qt::QueuedConnection,
+                            Q_ARG(QString, table), Q_ARG(QString, column));
+}
+
+void ConnectionSession::locateTable(const QString& table) {
+  QMetaObject::invokeMethod(worker_, "locateTable", Qt::QueuedConnection,
+                            Q_ARG(QString, table));
 }
 
 void ConnectionSession::cancel() {

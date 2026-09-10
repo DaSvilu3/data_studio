@@ -6,11 +6,13 @@
 #include <QPainter>
 #include <QScrollBar>
 #include <QStandardItemModel>
+#include <QSet>
 #include <QTextBlock>
 
 #include "query/JoinGraph.h"
 #include "query/QueryBuilder.h"
 #include "ui/SqlHighlighter.h"
+#include "ui/Theme.h"
 
 namespace ds {
 namespace {
@@ -61,13 +63,11 @@ QColor kindColour(CompletionKind k) {
 }  // namespace
 
 SqlEditor::SqlEditor(QWidget* parent) : QPlainTextEdit(parent) {
-  QFont mono(QStringLiteral("Menlo"));
-  mono.setStyleHint(QFont::Monospace);
-  mono.setFixedPitch(true);
-  mono.setPointSize(13);
+  const QFont mono = theme::monospaceFont(13);
   setFont(mono);
   setTabStopDistance(4 * QFontMetricsF(mono).horizontalAdvance(' '));
   setLineWrapMode(QPlainTextEdit::NoWrap);
+  document()->setDocumentMargin(10);
   setPlaceholderText(
       QStringLiteral("Write SQL here.  ⌘↩ runs the statement under the "
                      "cursor.  ⌃Space completes from the live schema."));
@@ -125,6 +125,122 @@ void SqlEditor::markError(int offset, int length) {
 }
 
 void SqlEditor::clearError() { highlighter_->clearErrorRange(); }
+
+void SqlEditor::setSoftWrap(bool on) {
+  setLineWrapMode(on ? QPlainTextEdit::WidgetWidth : QPlainTextEdit::NoWrap);
+}
+
+bool SqlEditor::softWrap() const {
+  return lineWrapMode() == QPlainTextEdit::WidgetWidth;
+}
+
+QString SqlEditor::formatSql(const QString& sql) {
+  const auto tokens = tokenize(sql.toStdString());
+  if (tokens.empty()) return sql;
+
+  // Clause keywords start a new line; JOIN variants and boolean connectives
+  // get indented under the clause they belong to.
+  static const QSet<QString> kClause = {
+      QStringLiteral("SELECT"), QStringLiteral("FROM"),
+      QStringLiteral("WHERE"),  QStringLiteral("HAVING"),
+      QStringLiteral("LIMIT"),  QStringLiteral("UNION"),
+      QStringLiteral("INSERT"), QStringLiteral("UPDATE"),
+      QStringLiteral("DELETE"), QStringLiteral("VALUES"),
+      QStringLiteral("SET")};
+  static const QSet<QString> kIndented = {
+      QStringLiteral("JOIN"), QStringLiteral("ON"), QStringLiteral("AND"),
+      QStringLiteral("OR")};
+
+  QString out;
+  const std::string source = sql.toStdString();
+
+  for (size_t i = 0; i < tokens.size(); ++i) {
+    const Token& t = tokens[i];
+    const QString text = QString::fromStdString(t.text);
+    const QString upper = text.toUpper();
+
+    bool newline = false;
+    QString indent;
+    if (t.type == TokenType::Keyword) {
+      if (kClause.contains(upper)) {
+        newline = true;
+      } else if (upper == QStringLiteral("GROUP") ||
+                 upper == QStringLiteral("ORDER")) {
+        newline = true;
+      } else if (kIndented.contains(upper)) {
+        newline = true;
+        indent = QStringLiteral("  ");
+      } else if (upper == QStringLiteral("LEFT") ||
+                 upper == QStringLiteral("RIGHT") ||
+                 upper == QStringLiteral("INNER") ||
+                 upper == QStringLiteral("OUTER") ||
+                 upper == QStringLiteral("CROSS")) {
+        newline = true;
+      }
+    }
+
+    // A JOIN right after LEFT/INNER/... belongs on the same line as it.
+    if (newline && i > 0 && tokens[i - 1].type == TokenType::Keyword) {
+      const QString prev = QString::fromStdString(tokens[i - 1].text).toUpper();
+      if (upper == QStringLiteral("JOIN") &&
+          (prev == QStringLiteral("LEFT") || prev == QStringLiteral("RIGHT") ||
+           prev == QStringLiteral("INNER") || prev == QStringLiteral("OUTER") ||
+           prev == QStringLiteral("CROSS"))) {
+        newline = false;
+      }
+      if (upper == QStringLiteral("BY") &&
+          (prev == QStringLiteral("GROUP") || prev == QStringLiteral("ORDER"))) {
+        newline = false;
+      }
+    }
+
+    if (newline && !out.isEmpty()) {
+      out += QLatin1Char('\n');
+      out += indent;
+    } else if (!out.isEmpty()) {
+      // Keep punctuation tight against what it follows.
+      bool tight = t.type == TokenType::Punctuation &&
+                   (text == QStringLiteral(",") ||
+                    text == QStringLiteral(")") ||
+                    text == QStringLiteral(".") ||
+                    text == QStringLiteral(";"));
+      // A call belongs to its name: SUM(x), not SUM (x). Keywords that take a
+      // parenthesised list -- IN, VALUES -- keep their space by convention.
+      if (!tight && text == QStringLiteral("(") && i > 0) {
+        const Token& prev = tokens[i - 1];
+        tight = prev.type == TokenType::Identifier ||
+                (prev.type == TokenType::Keyword &&
+                 isSqlFunction(prev.text));
+      }
+      const QString last = out.right(1);
+      const bool afterOpen = last == QStringLiteral("(") ||
+                             last == QStringLiteral(".");
+      if (!tight && !afterOpen) out += QLatin1Char(' ');
+    }
+    out += text;
+  }
+  Q_UNUSED(source);
+  return out;
+}
+
+void SqlEditor::formatCurrentStatement() {
+  const std::string all = toPlainText().toStdString();
+  const auto [begin, end] =
+      statementRangeAt(all, static_cast<size_t>(textCursor().position()));
+  if (end <= begin) return;
+
+  const QString original =
+      QString::fromStdString(all.substr(begin, end - begin));
+  const QString formatted = formatSql(original);
+  if (formatted == original) return;
+
+  QTextCursor cursor = textCursor();
+  cursor.beginEditBlock();
+  cursor.setPosition(static_cast<int>(begin));
+  cursor.setPosition(static_cast<int>(end), QTextCursor::KeepAnchor);
+  cursor.insertText(formatted);
+  cursor.endEditBlock();
+}
 
 int SqlEditor::lineNumberAreaWidth() const {
   int digits = 1;

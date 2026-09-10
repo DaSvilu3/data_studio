@@ -24,6 +24,8 @@ class SchemaTree : public QWidget {
   void insertText(const QString& text);
   void previewTableRequested(const QString& table);
   void refreshRequested();
+  void profileColumnRequested(const QString& table, const QString& column);
+  void showInDiagramRequested(const QString& table);
 
  private slots:
   void applyFilter(const QString& text);

@@ -5,10 +5,12 @@
 #include <memory>
 
 #include "core/Driver.h"
+#include "query/Profile.h"
 
 Q_DECLARE_METATYPE(ds::ResultSet)
 Q_DECLARE_METATYPE(ds::Schema)
 Q_DECLARE_METATYPE(ds::ConnectionConfig)
+Q_DECLARE_METATYPE(ds::ColumnProfile)
 
 namespace ds {
 
@@ -31,6 +33,9 @@ class QueryWorker : public QObject {
   void runExplain(const QString& sql);
   void refreshSchema();
   void switchDatabase(const QString& name);
+  void profileColumn(const QString& table, const QString& column);
+  // Which databases on this server contain a table of this name.
+  void locateTable(const QString& table);
 
  signals:
   void connected(const QString& serverVersion, const QStringList& databases);
@@ -38,6 +43,8 @@ class QueryWorker : public QObject {
   void resultReady(const ds::ResultSet& result, int index, int total);
   void explainReady(const ds::ResultSet& plan, const QString& sql);
   void schemaReady(const ds::Schema& schema);
+  void profileReady(const ds::ColumnProfile& profile);
+  void tableLocated(const QString& table, const QStringList& databases);
   void failed(const QString& message, const QString& statement);
   void finished();
   void busyChanged(bool busy);
@@ -67,6 +74,8 @@ class ConnectionSession : public QObject {
   void explain(const QString& sql);
   void refreshSchema();
   void useDatabase(const QString& name);
+  void profileColumn(const QString& table, const QString& column);
+  void locateTable(const QString& table);
   void cancel();
 
  signals:
@@ -75,6 +84,8 @@ class ConnectionSession : public QObject {
   void resultReady(const ds::ResultSet& result, int index, int total);
   void explainReady(const ds::ResultSet& plan, const QString& sql);
   void schemaChanged();
+  void profileReady(const ds::ColumnProfile& profile);
+  void tableLocated(const QString& table, const QStringList& databases);
   void failed(const QString& message, const QString& statement);
   void busyChanged(bool busy);
 

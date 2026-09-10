@@ -18,6 +18,8 @@ file(REMOVE_RECURSE
   "CMakeFiles/dscore.dir/src/query/Analyzer.cpp.o.d"
   "CMakeFiles/dscore.dir/src/query/JoinGraph.cpp.o"
   "CMakeFiles/dscore.dir/src/query/JoinGraph.cpp.o.d"
+  "CMakeFiles/dscore.dir/src/query/Profile.cpp.o"
+  "CMakeFiles/dscore.dir/src/query/Profile.cpp.o.d"
   "CMakeFiles/dscore.dir/src/query/QueryBuilder.cpp.o"
   "CMakeFiles/dscore.dir/src/query/QueryBuilder.cpp.o.d"
   "CMakeFiles/dscore.dir/src/query/SqlContext.cpp.o"

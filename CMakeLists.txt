@@ -51,6 +51,7 @@ add_library(dscore STATIC
   src/query/JoinGraph.cpp
   src/query/QueryBuilder.cpp
   src/query/Analyzer.cpp
+  src/query/Profile.cpp
 )
 target_include_directories(dscore PUBLIC src)
 target_link_libraries(dscore PUBLIC PkgConfig::SQLITE3)
@@ -76,6 +77,11 @@ qt_add_library(dsui STATIC
   src/ai/LocalSqlGenerator.cpp
   src/ai/ClaudeSqlGenerator.cpp
   src/ai/AiSettingsDialog.cpp
+  src/ui/Theme.cpp
+  src/ui/DiagramView.cpp
+  src/ui/ProfilePanel.cpp
+  src/ui/CommandPalette.cpp
+  src/ui/HistoryPanel.cpp
   src/ui/MainWindow.cpp
   src/ui/ConnectionDialog.cpp
   src/ui/ConnectionStore.cpp

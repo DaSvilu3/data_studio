@@ -212,10 +212,24 @@ CMakeFiles/dscore.dir/src/query/Analyzer.cpp.s: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green "Compiling CXX source to assembly CMakeFiles/dscore.dir/src/query/Analyzer.cpp.s"
 	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /Users/yousufawj/projects/rnd/data_studio/src/query/Analyzer.cpp -o CMakeFiles/dscore.dir/src/query/Analyzer.cpp.s
 
+CMakeFiles/dscore.dir/src/query/Profile.cpp.o: CMakeFiles/dscore.dir/flags.make
+CMakeFiles/dscore.dir/src/query/Profile.cpp.o: /Users/yousufawj/projects/rnd/data_studio/src/query/Profile.cpp
+CMakeFiles/dscore.dir/src/query/Profile.cpp.o: CMakeFiles/dscore.dir/compiler_depend.ts
+	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green --progress-dir=/Users/yousufawj/projects/rnd/data_studio/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_11) "Building CXX object CMakeFiles/dscore.dir/src/query/Profile.cpp.o"
+	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -MD -MT CMakeFiles/dscore.dir/src/query/Profile.cpp.o -MF CMakeFiles/dscore.dir/src/query/Profile.cpp.o.d -o CMakeFiles/dscore.dir/src/query/Profile.cpp.o -c /Users/yousufawj/projects/rnd/data_studio/src/query/Profile.cpp
+
+CMakeFiles/dscore.dir/src/query/Profile.cpp.i: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green "Preprocessing CXX source to CMakeFiles/dscore.dir/src/query/Profile.cpp.i"
+	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /Users/yousufawj/projects/rnd/data_studio/src/query/Profile.cpp > CMakeFiles/dscore.dir/src/query/Profile.cpp.i
+
+CMakeFiles/dscore.dir/src/query/Profile.cpp.s: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green "Compiling CXX source to assembly CMakeFiles/dscore.dir/src/query/Profile.cpp.s"
+	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /Users/yousufawj/projects/rnd/data_studio/src/query/Profile.cpp -o CMakeFiles/dscore.dir/src/query/Profile.cpp.s
+
 CMakeFiles/dscore.dir/src/core/mysql/MySqlDriver.cpp.o: CMakeFiles/dscore.dir/flags.make
 CMakeFiles/dscore.dir/src/core/mysql/MySqlDriver.cpp.o: /Users/yousufawj/projects/rnd/data_studio/src/core/mysql/MySqlDriver.cpp
 CMakeFiles/dscore.dir/src/core/mysql/MySqlDriver.cpp.o: CMakeFiles/dscore.dir/compiler_depend.ts
-	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green --progress-dir=/Users/yousufawj/projects/rnd/data_studio/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_11) "Building CXX object CMakeFiles/dscore.dir/src/core/mysql/MySqlDriver.cpp.o"
+	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green --progress-dir=/Users/yousufawj/projects/rnd/data_studio/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_12) "Building CXX object CMakeFiles/dscore.dir/src/core/mysql/MySqlDriver.cpp.o"
 	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -MD -MT CMakeFiles/dscore.dir/src/core/mysql/MySqlDriver.cpp.o -MF CMakeFiles/dscore.dir/src/core/mysql/MySqlDriver.cpp.o.d -o CMakeFiles/dscore.dir/src/core/mysql/MySqlDriver.cpp.o -c /Users/yousufawj/projects/rnd/data_studio/src/core/mysql/MySqlDriver.cpp
 
 CMakeFiles/dscore.dir/src/core/mysql/MySqlDriver.cpp.i: cmake_force
@@ -238,6 +252,7 @@ dscore_OBJECTS = \
 "CMakeFiles/dscore.dir/src/query/JoinGraph.cpp.o" \
 "CMakeFiles/dscore.dir/src/query/QueryBuilder.cpp.o" \
 "CMakeFiles/dscore.dir/src/query/Analyzer.cpp.o" \
+"CMakeFiles/dscore.dir/src/query/Profile.cpp.o" \
 "CMakeFiles/dscore.dir/src/core/mysql/MySqlDriver.cpp.o"
 
 # External object files for target dscore
@@ -253,10 +268,11 @@ libdscore.a: CMakeFiles/dscore.dir/src/query/SqlContext.cpp.o
 libdscore.a: CMakeFiles/dscore.dir/src/query/JoinGraph.cpp.o
 libdscore.a: CMakeFiles/dscore.dir/src/query/QueryBuilder.cpp.o
 libdscore.a: CMakeFiles/dscore.dir/src/query/Analyzer.cpp.o
+libdscore.a: CMakeFiles/dscore.dir/src/query/Profile.cpp.o
 libdscore.a: CMakeFiles/dscore.dir/src/core/mysql/MySqlDriver.cpp.o
 libdscore.a: CMakeFiles/dscore.dir/build.make
 libdscore.a: CMakeFiles/dscore.dir/link.txt
-	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green --bold --progress-dir=/Users/yousufawj/projects/rnd/data_studio/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_12) "Linking CXX static library libdscore.a"
+	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green --bold --progress-dir=/Users/yousufawj/projects/rnd/data_studio/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_13) "Linking CXX static library libdscore.a"
 	$(CMAKE_COMMAND) -P CMakeFiles/dscore.dir/cmake_clean_target.cmake
 	$(CMAKE_COMMAND) -E cmake_link_script CMakeFiles/dscore.dir/link.txt --verbose=$(VERBOSE)
 
