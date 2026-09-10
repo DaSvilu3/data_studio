@@ -7,6 +7,8 @@
 #include <QScrollBar>
 #include <QStandardItemModel>
 #include <QSet>
+
+#include <cctype>
 #include <QTextBlock>
 
 #include "query/JoinGraph.h"
@@ -114,10 +116,24 @@ QString SqlEditor::currentStatement() const {
       QChar(0x2029), QLatin1Char('\n'));
 
   const std::string all = toPlainText().toStdString();
-  const auto [begin, end] =
-      statementRangeAt(all, static_cast<size_t>(cursor.position()));
-  if (end <= begin) return {};
-  return QString::fromStdString(all.substr(begin, end - begin));
+  size_t position = static_cast<size_t>(cursor.position());
+
+  auto range = statementRangeAt(all, position);
+  if (range.second <= range.first) {
+    // The caret is past the last semicolon, on trailing whitespace. Running
+    // nothing at all looks like the app ignored the keystroke, so fall back to
+    // the statement that just ended.
+    size_t back = std::min(position, all.size());
+    while (back > 0 && std::isspace(static_cast<unsigned char>(all[back - 1]))) {
+      --back;
+    }
+    if (back > 0 && all[back - 1] == ';') --back;
+    if (back == 0) return {};
+    range = statementRangeAt(all, back);
+  }
+  if (range.second <= range.first) return {};
+  return QString::fromStdString(
+      all.substr(range.first, range.second - range.first));
 }
 
 void SqlEditor::markError(int offset, int length) {

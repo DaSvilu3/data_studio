@@ -646,6 +646,7 @@ void MainWindow::connectToSelected() {
 
   connect(session_, &ConnectionSession::profileReady, this,
           [this](const ColumnProfile& p) {
+            workspaceTabs_->setCurrentIndex(0);
             profile_->showProfile(p);
             bottomTabs_->setCurrentWidget(profile_);
           });
@@ -803,6 +804,10 @@ void MainWindow::profileColumn(const QString& table, const QString& column) {
                              4000);
     return;
   }
+  // The Profile panel lives inside the SQL editor workspace, so asking for a
+  // profile from the diagram or the palette has to bring that workspace
+  // forward -- otherwise the request looks like it did nothing.
+  workspaceTabs_->setCurrentIndex(0);
   profile_->showPending(table, column);
   bottomTabs_->setCurrentWidget(profile_);
   session_->profileColumn(table, column);

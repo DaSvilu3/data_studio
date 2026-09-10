@@ -36,6 +36,8 @@ ResultsView::ResultsView(QWidget* parent) : QWidget(parent) {
   table_->setSortingEnabled(true);
   table_->setSelectionBehavior(QAbstractItemView::SelectItems);
   table_->setSelectionMode(QAbstractItemView::ExtendedSelection);
+  // Zebra striping earns its place on a wide data grid, and unlike a tree
+  // view QTableView paints no rows past the last one.
   table_->setAlternatingRowColors(true);
   table_->setContextMenuPolicy(Qt::CustomContextMenu);
   table_->horizontalHeader()->setSectionResizeMode(QHeaderView::Interactive);

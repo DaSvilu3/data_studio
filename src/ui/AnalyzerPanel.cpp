@@ -55,7 +55,7 @@ AnalyzerPanel::AnalyzerPanel(QWidget* parent) : QWidget(parent) {
   tree_->header()->setStretchLastSection(true);
   tree_->setColumnWidth(0, 380);
   tree_->setWordWrap(true);
-  tree_->setAlternatingRowColors(true);
+  tree_->setAlternatingRowColors(false);
   tree_->setContextMenuPolicy(Qt::CustomContextMenu);
 
   auto* top = new QHBoxLayout;

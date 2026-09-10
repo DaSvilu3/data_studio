@@ -230,6 +230,21 @@ int main(int argc, char** argv) {
     editor.setTextCursor(cursor);
     tst::check(editor.currentStatement() == "SELECT 1",
                "an explicit selection wins over the caret statement");
+
+    // Caret on the blank line after the final semicolon: running nothing looks
+    // like the keystroke was ignored, so fall back to the statement above.
+    editor.setPlainText("SELECT 1;\nSELECT 2 FROM customers;\n");
+    QTextCursor tail = editor.textCursor();
+    tail.movePosition(QTextCursor::End);
+    editor.setTextCursor(tail);
+    tst::check(editor.currentStatement().trimmed() == "SELECT 2 FROM customers",
+               "caret past the last semicolon runs the statement above it");
+
+    editor.setPlainText("   \n\n  ");
+    tail.movePosition(QTextCursor::End);
+    editor.setTextCursor(tail);
+    tst::check(editor.currentStatement().trimmed().isEmpty(),
+               "an empty document still yields nothing");
   }
 
   // ------------------------------------------------------------- formatting
