@@ -20,7 +20,6 @@ events:
     names:
       - "uname"
     candidate_directories:
-      - "/opt/anaconda3/bin/"
       - "/Users/yousufawj/.kimi-code/bin/"
       - "/Users/yousufawj/.grok/bin/"
       - "/Users/yousufawj/.antigravity/antigravity/bin/"
@@ -46,12 +45,12 @@ events:
       - "/Applications/VMware Fusion.app/Contents/Public/"
       - "/usr/local/share/dotnet/"
       - "/Users/yousufawj/.dotnet/tools/"
+      - "/opt/anaconda3/bin/"
       - "/opt/anaconda3/condabin/"
       - "/Users/yousufawj/Library/Application Support/JetBrains/Toolbox/scripts/"
       - "/Users/yousufawj/code/sdk/flutter/bin/"
       - "/Users/yousufawj/.lmstudio/bin/"
     searched_directories:
-      - "/opt/anaconda3/bin/uname"
       - "/Users/yousufawj/.kimi-code/bin/uname"
       - "/Users/yousufawj/.grok/bin/uname"
       - "/Users/yousufawj/.antigravity/antigravity/bin/uname"
@@ -65,7 +64,6 @@ events:
     found: "/opt/homebrew/opt/coreutils/libexec/gnubin/uname"
     search_context:
       ENV{PATH}:
-        - "/opt/anaconda3/bin"
         - "/Users/yousufawj/.kimi-code/bin"
         - "/Users/yousufawj/.grok/bin"
         - "/Users/yousufawj/.antigravity/antigravity/bin"
@@ -134,7 +132,6 @@ events:
       - "make"
       - "smake"
     candidate_directories:
-      - "/opt/anaconda3/bin/"
       - "/Users/yousufawj/.kimi-code/bin/"
       - "/Users/yousufawj/.grok/bin/"
       - "/Users/yousufawj/.antigravity/antigravity/bin/"
@@ -160,12 +157,12 @@ events:
       - "/Applications/VMware Fusion.app/Contents/Public/"
       - "/usr/local/share/dotnet/"
       - "/Users/yousufawj/.dotnet/tools/"
+      - "/opt/anaconda3/bin/"
       - "/opt/anaconda3/condabin/"
       - "/Users/yousufawj/Library/Application Support/JetBrains/Toolbox/scripts/"
       - "/Users/yousufawj/code/sdk/flutter/bin/"
       - "/Users/yousufawj/.lmstudio/bin/"
     searched_directories:
-      - "/opt/anaconda3/bin/gmake"
       - "/Users/yousufawj/.kimi-code/bin/gmake"
       - "/Users/yousufawj/.grok/bin/gmake"
       - "/Users/yousufawj/.antigravity/antigravity/bin/gmake"
@@ -191,11 +188,11 @@ events:
       - "/Applications/VMware Fusion.app/Contents/Public/gmake"
       - "/usr/local/share/dotnet/gmake"
       - "/Users/yousufawj/.dotnet/tools/gmake"
+      - "/opt/anaconda3/bin/gmake"
       - "/opt/anaconda3/condabin/gmake"
       - "/Users/yousufawj/Library/Application Support/JetBrains/Toolbox/scripts/gmake"
       - "/Users/yousufawj/code/sdk/flutter/bin/gmake"
       - "/Users/yousufawj/.lmstudio/bin/gmake"
-      - "/opt/anaconda3/bin/make"
       - "/Users/yousufawj/.kimi-code/bin/make"
       - "/Users/yousufawj/.grok/bin/make"
       - "/Users/yousufawj/.antigravity/antigravity/bin/make"
@@ -212,7 +209,6 @@ events:
     found: "/usr/bin/make"
     search_context:
       ENV{PATH}:
-        - "/opt/anaconda3/bin"
         - "/Users/yousufawj/.kimi-code/bin"
         - "/Users/yousufawj/.grok/bin"
         - "/Users/yousufawj/.antigravity/antigravity/bin"
@@ -279,7 +275,6 @@ events:
       - "icx"
       - "clang++"
     candidate_directories:
-      - "/opt/anaconda3/bin/"
       - "/Users/yousufawj/.kimi-code/bin/"
       - "/Users/yousufawj/.grok/bin/"
       - "/Users/yousufawj/.antigravity/antigravity/bin/"
@@ -305,12 +300,12 @@ events:
       - "/Applications/VMware Fusion.app/Contents/Public/"
       - "/usr/local/share/dotnet/"
       - "/Users/yousufawj/.dotnet/tools/"
+      - "/opt/anaconda3/bin/"
       - "/opt/anaconda3/condabin/"
       - "/Users/yousufawj/Library/Application Support/JetBrains/Toolbox/scripts/"
       - "/Users/yousufawj/code/sdk/flutter/bin/"
       - "/Users/yousufawj/.lmstudio/bin/"
     searched_directories:
-      - "/opt/anaconda3/bin/c++"
       - "/Users/yousufawj/.kimi-code/bin/c++"
       - "/Users/yousufawj/.grok/bin/c++"
       - "/Users/yousufawj/.antigravity/antigravity/bin/c++"
@@ -327,7 +322,6 @@ events:
     found: "/usr/bin/c++"
     search_context:
       ENV{PATH}:
-        - "/opt/anaconda3/bin"
         - "/Users/yousufawj/.kimi-code/bin"
         - "/Users/yousufawj/.grok/bin"
         - "/Users/yousufawj/.antigravity/antigravity/bin"
@@ -395,7 +389,6 @@ events:
     found: "/opt/homebrew/share/cmake/Modules/CMakeCXXCompilerId.cpp.in"
     search_context:
       ENV{PATH}:
-        - "/opt/anaconda3/bin"
         - "/Users/yousufawj/.kimi-code/bin"
         - "/Users/yousufawj/.grok/bin"
         - "/Users/yousufawj/.antigravity/antigravity/bin"
@@ -520,7 +513,6 @@ events:
       - "ar"
     candidate_directories:
       - "/usr/bin/"
-      - "/opt/anaconda3/bin/"
       - "/Users/yousufawj/.kimi-code/bin/"
       - "/Users/yousufawj/.grok/bin/"
       - "/Users/yousufawj/.antigravity/antigravity/bin/"
@@ -545,6 +537,7 @@ events:
       - "/Applications/VMware Fusion.app/Contents/Public/"
       - "/usr/local/share/dotnet/"
       - "/Users/yousufawj/.dotnet/tools/"
+      - "/opt/anaconda3/bin/"
       - "/opt/anaconda3/condabin/"
       - "/Users/yousufawj/Library/Application Support/JetBrains/Toolbox/scripts/"
       - "/Users/yousufawj/code/sdk/flutter/bin/"
@@ -552,7 +545,6 @@ events:
     found: "/usr/bin/ar"
     search_context:
       ENV{PATH}:
-        - "/opt/anaconda3/bin"
         - "/Users/yousufawj/.kimi-code/bin"
         - "/Users/yousufawj/.grok/bin"
         - "/Users/yousufawj/.antigravity/antigravity/bin"
@@ -614,7 +606,6 @@ events:
       - "ranlib"
     candidate_directories:
       - "/usr/bin/"
-      - "/opt/anaconda3/bin/"
       - "/Users/yousufawj/.kimi-code/bin/"
       - "/Users/yousufawj/.grok/bin/"
       - "/Users/yousufawj/.antigravity/antigravity/bin/"
@@ -639,6 +630,7 @@ events:
       - "/Applications/VMware Fusion.app/Contents/Public/"
       - "/usr/local/share/dotnet/"
       - "/Users/yousufawj/.dotnet/tools/"
+      - "/opt/anaconda3/bin/"
       - "/opt/anaconda3/condabin/"
       - "/Users/yousufawj/Library/Application Support/JetBrains/Toolbox/scripts/"
       - "/Users/yousufawj/code/sdk/flutter/bin/"
@@ -646,7 +638,6 @@ events:
     found: "/usr/bin/ranlib"
     search_context:
       ENV{PATH}:
-        - "/opt/anaconda3/bin"
         - "/Users/yousufawj/.kimi-code/bin"
         - "/Users/yousufawj/.grok/bin"
         - "/Users/yousufawj/.antigravity/antigravity/bin"
@@ -708,7 +699,6 @@ events:
       - "strip"
     candidate_directories:
       - "/usr/bin/"
-      - "/opt/anaconda3/bin/"
       - "/Users/yousufawj/.kimi-code/bin/"
       - "/Users/yousufawj/.grok/bin/"
       - "/Users/yousufawj/.antigravity/antigravity/bin/"
@@ -733,6 +723,7 @@ events:
       - "/Applications/VMware Fusion.app/Contents/Public/"
       - "/usr/local/share/dotnet/"
       - "/Users/yousufawj/.dotnet/tools/"
+      - "/opt/anaconda3/bin/"
       - "/opt/anaconda3/condabin/"
       - "/Users/yousufawj/Library/Application Support/JetBrains/Toolbox/scripts/"
       - "/Users/yousufawj/code/sdk/flutter/bin/"
@@ -740,7 +731,6 @@ events:
     found: "/usr/bin/strip"
     search_context:
       ENV{PATH}:
-        - "/opt/anaconda3/bin"
         - "/Users/yousufawj/.kimi-code/bin"
         - "/Users/yousufawj/.grok/bin"
         - "/Users/yousufawj/.antigravity/antigravity/bin"
@@ -802,7 +792,6 @@ events:
       - "ld"
     candidate_directories:
       - "/usr/bin/"
-      - "/opt/anaconda3/bin/"
       - "/Users/yousufawj/.kimi-code/bin/"
       - "/Users/yousufawj/.grok/bin/"
       - "/Users/yousufawj/.antigravity/antigravity/bin/"
@@ -827,6 +816,7 @@ events:
       - "/Applications/VMware Fusion.app/Contents/Public/"
       - "/usr/local/share/dotnet/"
       - "/Users/yousufawj/.dotnet/tools/"
+      - "/opt/anaconda3/bin/"
       - "/opt/anaconda3/condabin/"
       - "/Users/yousufawj/Library/Application Support/JetBrains/Toolbox/scripts/"
       - "/Users/yousufawj/code/sdk/flutter/bin/"
@@ -834,7 +824,6 @@ events:
     found: "/usr/bin/ld"
     search_context:
       ENV{PATH}:
-        - "/opt/anaconda3/bin"
         - "/Users/yousufawj/.kimi-code/bin"
         - "/Users/yousufawj/.grok/bin"
         - "/Users/yousufawj/.antigravity/antigravity/bin"
@@ -896,7 +885,6 @@ events:
       - "nm"
     candidate_directories:
       - "/usr/bin/"
-      - "/opt/anaconda3/bin/"
       - "/Users/yousufawj/.kimi-code/bin/"
       - "/Users/yousufawj/.grok/bin/"
       - "/Users/yousufawj/.antigravity/antigravity/bin/"
@@ -921,6 +909,7 @@ events:
       - "/Applications/VMware Fusion.app/Contents/Public/"
       - "/usr/local/share/dotnet/"
       - "/Users/yousufawj/.dotnet/tools/"
+      - "/opt/anaconda3/bin/"
       - "/opt/anaconda3/condabin/"
       - "/Users/yousufawj/Library/Application Support/JetBrains/Toolbox/scripts/"
       - "/Users/yousufawj/code/sdk/flutter/bin/"
@@ -928,7 +917,6 @@ events:
     found: "/usr/bin/nm"
     search_context:
       ENV{PATH}:
-        - "/opt/anaconda3/bin"
         - "/Users/yousufawj/.kimi-code/bin"
         - "/Users/yousufawj/.grok/bin"
         - "/Users/yousufawj/.antigravity/antigravity/bin"
@@ -990,7 +978,6 @@ events:
       - "objdump"
     candidate_directories:
       - "/usr/bin/"
-      - "/opt/anaconda3/bin/"
       - "/Users/yousufawj/.kimi-code/bin/"
       - "/Users/yousufawj/.grok/bin/"
       - "/Users/yousufawj/.antigravity/antigravity/bin/"
@@ -1015,6 +1002,7 @@ events:
       - "/Applications/VMware Fusion.app/Contents/Public/"
       - "/usr/local/share/dotnet/"
       - "/Users/yousufawj/.dotnet/tools/"
+      - "/opt/anaconda3/bin/"
       - "/opt/anaconda3/condabin/"
       - "/Users/yousufawj/Library/Application Support/JetBrains/Toolbox/scripts/"
       - "/Users/yousufawj/code/sdk/flutter/bin/"
@@ -1022,7 +1010,6 @@ events:
     found: "/usr/bin/objdump"
     search_context:
       ENV{PATH}:
-        - "/opt/anaconda3/bin"
         - "/Users/yousufawj/.kimi-code/bin"
         - "/Users/yousufawj/.grok/bin"
         - "/Users/yousufawj/.antigravity/antigravity/bin"
@@ -1084,7 +1071,6 @@ events:
       - "objcopy"
     candidate_directories:
       - "/usr/bin/"
-      - "/opt/anaconda3/bin/"
       - "/Users/yousufawj/.kimi-code/bin/"
       - "/Users/yousufawj/.grok/bin/"
       - "/Users/yousufawj/.antigravity/antigravity/bin/"
@@ -1109,13 +1095,13 @@ events:
       - "/Applications/VMware Fusion.app/Contents/Public/"
       - "/usr/local/share/dotnet/"
       - "/Users/yousufawj/.dotnet/tools/"
+      - "/opt/anaconda3/bin/"
       - "/opt/anaconda3/condabin/"
       - "/Users/yousufawj/Library/Application Support/JetBrains/Toolbox/scripts/"
       - "/Users/yousufawj/code/sdk/flutter/bin/"
       - "/Users/yousufawj/.lmstudio/bin/"
     searched_directories:
       - "/usr/bin/objcopy"
-      - "/opt/anaconda3/bin/objcopy"
       - "/Users/yousufawj/.kimi-code/bin/objcopy"
       - "/Users/yousufawj/.grok/bin/objcopy"
       - "/Users/yousufawj/.antigravity/antigravity/bin/objcopy"
@@ -1140,6 +1126,7 @@ events:
       - "/Applications/VMware Fusion.app/Contents/Public/objcopy"
       - "/usr/local/share/dotnet/objcopy"
       - "/Users/yousufawj/.dotnet/tools/objcopy"
+      - "/opt/anaconda3/bin/objcopy"
       - "/opt/anaconda3/condabin/objcopy"
       - "/Users/yousufawj/Library/Application Support/JetBrains/Toolbox/scripts/objcopy"
       - "/Users/yousufawj/code/sdk/flutter/bin/objcopy"
@@ -1147,7 +1134,6 @@ events:
     found: false
     search_context:
       ENV{PATH}:
-        - "/opt/anaconda3/bin"
         - "/Users/yousufawj/.kimi-code/bin"
         - "/Users/yousufawj/.grok/bin"
         - "/Users/yousufawj/.antigravity/antigravity/bin"
@@ -1209,7 +1195,6 @@ events:
       - "readelf"
     candidate_directories:
       - "/usr/bin/"
-      - "/opt/anaconda3/bin/"
       - "/Users/yousufawj/.kimi-code/bin/"
       - "/Users/yousufawj/.grok/bin/"
       - "/Users/yousufawj/.antigravity/antigravity/bin/"
@@ -1234,13 +1219,13 @@ events:
       - "/Applications/VMware Fusion.app/Contents/Public/"
       - "/usr/local/share/dotnet/"
       - "/Users/yousufawj/.dotnet/tools/"
+      - "/opt/anaconda3/bin/"
       - "/opt/anaconda3/condabin/"
       - "/Users/yousufawj/Library/Application Support/JetBrains/Toolbox/scripts/"
       - "/Users/yousufawj/code/sdk/flutter/bin/"
       - "/Users/yousufawj/.lmstudio/bin/"
     searched_directories:
       - "/usr/bin/readelf"
-      - "/opt/anaconda3/bin/readelf"
       - "/Users/yousufawj/.kimi-code/bin/readelf"
       - "/Users/yousufawj/.grok/bin/readelf"
       - "/Users/yousufawj/.antigravity/antigravity/bin/readelf"
@@ -1265,6 +1250,7 @@ events:
       - "/Applications/VMware Fusion.app/Contents/Public/readelf"
       - "/usr/local/share/dotnet/readelf"
       - "/Users/yousufawj/.dotnet/tools/readelf"
+      - "/opt/anaconda3/bin/readelf"
       - "/opt/anaconda3/condabin/readelf"
       - "/Users/yousufawj/Library/Application Support/JetBrains/Toolbox/scripts/readelf"
       - "/Users/yousufawj/code/sdk/flutter/bin/readelf"
@@ -1272,7 +1258,6 @@ events:
     found: false
     search_context:
       ENV{PATH}:
-        - "/opt/anaconda3/bin"
         - "/Users/yousufawj/.kimi-code/bin"
         - "/Users/yousufawj/.grok/bin"
         - "/Users/yousufawj/.antigravity/antigravity/bin"
@@ -1334,7 +1319,6 @@ events:
       - "dlltool"
     candidate_directories:
       - "/usr/bin/"
-      - "/opt/anaconda3/bin/"
       - "/Users/yousufawj/.kimi-code/bin/"
       - "/Users/yousufawj/.grok/bin/"
       - "/Users/yousufawj/.antigravity/antigravity/bin/"
@@ -1359,13 +1343,13 @@ events:
       - "/Applications/VMware Fusion.app/Contents/Public/"
       - "/usr/local/share/dotnet/"
       - "/Users/yousufawj/.dotnet/tools/"
+      - "/opt/anaconda3/bin/"
       - "/opt/anaconda3/condabin/"
       - "/Users/yousufawj/Library/Application Support/JetBrains/Toolbox/scripts/"
       - "/Users/yousufawj/code/sdk/flutter/bin/"
       - "/Users/yousufawj/.lmstudio/bin/"
     searched_directories:
       - "/usr/bin/dlltool"
-      - "/opt/anaconda3/bin/dlltool"
       - "/Users/yousufawj/.kimi-code/bin/dlltool"
       - "/Users/yousufawj/.grok/bin/dlltool"
       - "/Users/yousufawj/.antigravity/antigravity/bin/dlltool"
@@ -1390,6 +1374,7 @@ events:
       - "/Applications/VMware Fusion.app/Contents/Public/dlltool"
       - "/usr/local/share/dotnet/dlltool"
       - "/Users/yousufawj/.dotnet/tools/dlltool"
+      - "/opt/anaconda3/bin/dlltool"
       - "/opt/anaconda3/condabin/dlltool"
       - "/Users/yousufawj/Library/Application Support/JetBrains/Toolbox/scripts/dlltool"
       - "/Users/yousufawj/code/sdk/flutter/bin/dlltool"
@@ -1397,7 +1382,6 @@ events:
     found: false
     search_context:
       ENV{PATH}:
-        - "/opt/anaconda3/bin"
         - "/Users/yousufawj/.kimi-code/bin"
         - "/Users/yousufawj/.grok/bin"
         - "/Users/yousufawj/.antigravity/antigravity/bin"
@@ -1459,7 +1443,6 @@ events:
       - "addr2line"
     candidate_directories:
       - "/usr/bin/"
-      - "/opt/anaconda3/bin/"
       - "/Users/yousufawj/.kimi-code/bin/"
       - "/Users/yousufawj/.grok/bin/"
       - "/Users/yousufawj/.antigravity/antigravity/bin/"
@@ -1484,13 +1467,13 @@ events:
       - "/Applications/VMware Fusion.app/Contents/Public/"
       - "/usr/local/share/dotnet/"
       - "/Users/yousufawj/.dotnet/tools/"
+      - "/opt/anaconda3/bin/"
       - "/opt/anaconda3/condabin/"
       - "/Users/yousufawj/Library/Application Support/JetBrains/Toolbox/scripts/"
       - "/Users/yousufawj/code/sdk/flutter/bin/"
       - "/Users/yousufawj/.lmstudio/bin/"
     searched_directories:
       - "/usr/bin/addr2line"
-      - "/opt/anaconda3/bin/addr2line"
       - "/Users/yousufawj/.kimi-code/bin/addr2line"
       - "/Users/yousufawj/.grok/bin/addr2line"
       - "/Users/yousufawj/.antigravity/antigravity/bin/addr2line"
@@ -1515,6 +1498,7 @@ events:
       - "/Applications/VMware Fusion.app/Contents/Public/addr2line"
       - "/usr/local/share/dotnet/addr2line"
       - "/Users/yousufawj/.dotnet/tools/addr2line"
+      - "/opt/anaconda3/bin/addr2line"
       - "/opt/anaconda3/condabin/addr2line"
       - "/Users/yousufawj/Library/Application Support/JetBrains/Toolbox/scripts/addr2line"
       - "/Users/yousufawj/code/sdk/flutter/bin/addr2line"
@@ -1522,7 +1506,6 @@ events:
     found: false
     search_context:
       ENV{PATH}:
-        - "/opt/anaconda3/bin"
         - "/Users/yousufawj/.kimi-code/bin"
         - "/Users/yousufawj/.grok/bin"
         - "/Users/yousufawj/.antigravity/antigravity/bin"
@@ -1584,7 +1567,6 @@ events:
       - "tapi"
     candidate_directories:
       - "/usr/bin/"
-      - "/opt/anaconda3/bin/"
       - "/Users/yousufawj/.kimi-code/bin/"
       - "/Users/yousufawj/.grok/bin/"
       - "/Users/yousufawj/.antigravity/antigravity/bin/"
@@ -1609,13 +1591,13 @@ events:
       - "/Applications/VMware Fusion.app/Contents/Public/"
       - "/usr/local/share/dotnet/"
       - "/Users/yousufawj/.dotnet/tools/"
+      - "/opt/anaconda3/bin/"
       - "/opt/anaconda3/condabin/"
       - "/Users/yousufawj/Library/Application Support/JetBrains/Toolbox/scripts/"
       - "/Users/yousufawj/code/sdk/flutter/bin/"
       - "/Users/yousufawj/.lmstudio/bin/"
     searched_directories:
       - "/usr/bin/tapi"
-      - "/opt/anaconda3/bin/tapi"
       - "/Users/yousufawj/.kimi-code/bin/tapi"
       - "/Users/yousufawj/.grok/bin/tapi"
       - "/Users/yousufawj/.antigravity/antigravity/bin/tapi"
@@ -1640,6 +1622,7 @@ events:
       - "/Applications/VMware Fusion.app/Contents/Public/tapi"
       - "/usr/local/share/dotnet/tapi"
       - "/Users/yousufawj/.dotnet/tools/tapi"
+      - "/opt/anaconda3/bin/tapi"
       - "/opt/anaconda3/condabin/tapi"
       - "/Users/yousufawj/Library/Application Support/JetBrains/Toolbox/scripts/tapi"
       - "/Users/yousufawj/code/sdk/flutter/bin/tapi"
@@ -1647,7 +1630,6 @@ events:
     found: false
     search_context:
       ENV{PATH}:
-        - "/opt/anaconda3/bin"
         - "/Users/yousufawj/.kimi-code/bin"
         - "/Users/yousufawj/.grok/bin"
         - "/Users/yousufawj/.antigravity/antigravity/bin"
@@ -1708,7 +1690,6 @@ events:
     names:
       - "install_name_tool"
     candidate_directories:
-      - "/opt/anaconda3/bin/"
       - "/Users/yousufawj/.kimi-code/bin/"
       - "/Users/yousufawj/.grok/bin/"
       - "/Users/yousufawj/.antigravity/antigravity/bin/"
@@ -1734,14 +1715,28 @@ events:
       - "/Applications/VMware Fusion.app/Contents/Public/"
       - "/usr/local/share/dotnet/"
       - "/Users/yousufawj/.dotnet/tools/"
+      - "/opt/anaconda3/bin/"
       - "/opt/anaconda3/condabin/"
       - "/Users/yousufawj/Library/Application Support/JetBrains/Toolbox/scripts/"
       - "/Users/yousufawj/code/sdk/flutter/bin/"
       - "/Users/yousufawj/.lmstudio/bin/"
-    found: "/opt/anaconda3/bin/install_name_tool"
+    searched_directories:
+      - "/Users/yousufawj/.kimi-code/bin/install_name_tool"
+      - "/Users/yousufawj/.grok/bin/install_name_tool"
+      - "/Users/yousufawj/.antigravity/antigravity/bin/install_name_tool"
+      - "/Users/yousufawj/.nvm/versions/node/v22.21.0/bin/install_name_tool"
+      - "/Users/yousufawj/.local/bin/install_name_tool"
+      - "/opt/homebrew/opt/mysql-client/bin/install_name_tool"
+      - "/opt/homebrew/opt/php@8.3/sbin/install_name_tool"
+      - "/opt/homebrew/opt/php@8.3/bin/install_name_tool"
+      - "/opt/homebrew/bin/install_name_tool"
+      - "/opt/homebrew/sbin/install_name_tool"
+      - "/opt/homebrew/opt/coreutils/libexec/gnubin/install_name_tool"
+      - "/usr/local/bin/install_name_tool"
+      - "/System/Cryptexes/App/usr/bin/install_name_tool"
+    found: "/usr/bin/install_name_tool"
     search_context:
       ENV{PATH}:
-        - "/opt/anaconda3/bin"
         - "/Users/yousufawj/.kimi-code/bin"
         - "/Users/yousufawj/.grok/bin"
         - "/Users/yousufawj/.antigravity/antigravity/bin"
@@ -1792,8 +1787,8 @@ events:
     checks:
       - "Detecting CXX compiler ABI info"
     directories:
-      source: "/Users/yousufawj/projects/rnd/data_studio/build/CMakeFiles/CMakeScratch/TryCompile-v4egrU"
-      binary: "/Users/yousufawj/projects/rnd/data_studio/build/CMakeFiles/CMakeScratch/TryCompile-v4egrU"
+      source: "/Users/yousufawj/projects/rnd/data_studio/build/CMakeFiles/CMakeScratch/TryCompile-Zre7FK"
+      binary: "/Users/yousufawj/projects/rnd/data_studio/build/CMakeFiles/CMakeScratch/TryCompile-Zre7FK"
     cmakeVariables:
       CMAKE_CXX_FLAGS: ""
       CMAKE_CXX_FLAGS_DEBUG: "-g"
@@ -1807,19 +1802,19 @@ events:
       variable: "CMAKE_CXX_ABI_COMPILED"
       cached: true
       stdout: |
-        Change Dir: '/Users/yousufawj/projects/rnd/data_studio/build/CMakeFiles/CMakeScratch/TryCompile-v4egrU'
+        Change Dir: '/Users/yousufawj/projects/rnd/data_studio/build/CMakeFiles/CMakeScratch/TryCompile-Zre7FK'
         
-        Run Build Command(s): /opt/homebrew/bin/cmake -E env VERBOSE=1 /usr/bin/make -f Makefile cmTC_022ee/fast
-        /Applications/Xcode.app/Contents/Developer/usr/bin/make  -f CMakeFiles/cmTC_022ee.dir/build.make CMakeFiles/cmTC_022ee.dir/build
-        Building CXX object CMakeFiles/cmTC_022ee.dir/CMakeCXXCompilerABI.cpp.o
-        /usr/bin/c++   -arch arm64   -v -Wl,-v -MD -MT CMakeFiles/cmTC_022ee.dir/CMakeCXXCompilerABI.cpp.o -MF CMakeFiles/cmTC_022ee.dir/CMakeCXXCompilerABI.cpp.o.d -o CMakeFiles/cmTC_022ee.dir/CMakeCXXCompilerABI.cpp.o -c /opt/homebrew/share/cmake/Modules/CMakeCXXCompilerABI.cpp
+        Run Build Command(s): /opt/homebrew/bin/cmake -E env VERBOSE=1 /usr/bin/make -f Makefile cmTC_f783c/fast
+        /Applications/Xcode.app/Contents/Developer/usr/bin/make  -f CMakeFiles/cmTC_f783c.dir/build.make CMakeFiles/cmTC_f783c.dir/build
+        Building CXX object CMakeFiles/cmTC_f783c.dir/CMakeCXXCompilerABI.cpp.o
+        /usr/bin/c++   -arch arm64   -v -Wl,-v -MD -MT CMakeFiles/cmTC_f783c.dir/CMakeCXXCompilerABI.cpp.o -MF CMakeFiles/cmTC_f783c.dir/CMakeCXXCompilerABI.cpp.o.d -o CMakeFiles/cmTC_f783c.dir/CMakeCXXCompilerABI.cpp.o -c /opt/homebrew/share/cmake/Modules/CMakeCXXCompilerABI.cpp
         Apple clang version 17.0.0 (clang-1700.4.4.1)
         Target: arm64-apple-darwin25.5.0
         Thread model: posix
         InstalledDir: /Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/bin
         clang++: warning: -Wl,-v: 'linker' input unused [-Wunused-command-line-argument]
         ignoring nonexistent directory "/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/bin/../include/c++/v1"
-         "/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/bin/clang" -cc1 -triple arm64-apple-macosx26.0.0 -Wundef-prefix=TARGET_OS_ -Wdeprecated-objc-isa-usage -Werror=deprecated-objc-isa-usage -Werror=implicit-function-declaration -emit-obj -disable-free -clear-ast-before-backend -disable-llvm-verifier -discard-value-names -main-file-name CMakeCXXCompilerABI.cpp -mrelocation-model pic -pic-level 2 -mframe-pointer=non-leaf -fno-strict-return -ffp-contract=on -fno-rounding-math -funwind-tables=1 -fobjc-msgsend-selector-stubs -target-sdk-version=26.1 -fvisibility-inlines-hidden-static-local-var -fdefine-target-os-macros -fno-assume-unique-vtables -fno-modulemap-allow-subdirectory-search -target-cpu apple-m1 -target-feature +zcm -target-feature +zcz -target-feature +v8.5a -target-feature +aes -target-feature +altnzcv -target-feature +ccdp -target-feature +complxnum -target-feature +crc -target-feature +dotprod -target-feature +fp-armv8 -target-feature +fp16fml -target-feature +fptoint -target-feature +fullfp16 -target-feature +jsconv -target-feature +lse -target-feature +neon -target-feature +pauth -target-feature +perfmon -target-feature +predres -target-feature +ras -target-feature +rcpc -target-feature +rdm -target-feature +sb -target-feature +sha2 -target-feature +sha3 -target-feature +specrestrict -target-feature +ssbs -target-abi darwinpcs -debugger-tuning=lldb -fdebug-compilation-dir=/Users/yousufawj/projects/rnd/data_studio/build/CMakeFiles/CMakeScratch/TryCompile-v4egrU -target-linker-version 1230.1 -v -fcoverage-compilation-dir=/Users/yousufawj/projects/rnd/data_studio/build/CMakeFiles/CMakeScratch/TryCompile-v4egrU -resource-dir /Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/lib/clang/17 -dependency-file CMakeFiles/cmTC_022ee.dir/CMakeCXXCompilerABI.cpp.o.d -skip-unused-modulemap-deps -MT CMakeFiles/cmTC_022ee.dir/CMakeCXXCompilerABI.cpp.o -sys-header-deps -isysroot /Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX.sdk -I/usr/local/include -internal-isystem /Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX.sdk/usr/include/c++/v1 -internal-isystem /Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX.sdk/usr/local/include -internal-isystem /Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/lib/clang/17/include -internal-externc-isystem /Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX.sdk/usr/include -internal-externc-isystem /Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/include -internal-iframework /Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX.sdk/System/Library/Frameworks -internal-iframework /Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX.sdk/System/Library/SubFrameworks -internal-iframework /Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX.sdk/Library/Frameworks -Wno-reorder-init-list -Wno-implicit-int-float-conversion -Wno-c99-designator -Wno-final-dtor-non-final-class -Wno-extra-semi-stmt -Wno-misleading-indentation -Wno-quoted-include-in-framework-header -Wno-implicit-fallthrough -Wno-enum-enum-conversion -Wno-enum-float-conversion -Wno-elaborated-enum-base -fdeprecated-macro -ferror-limit 19 -stack-protector 1 -fstack-check -mdarwin-stkchk-strong-link -fblocks -fencode-extended-block-signature -fregister-global-dtors-with-atexit -fgnuc-version=4.2.1 -fno-cxx-modules -fskip-odr-check-in-gmf -fcxx-exceptions -fexceptions -fmax-type-align=16 -fcommon -clang-vendor-feature=+disableNonDependentMemberExprInCurrentInstantiation -fno-odr-hash-protocols -clang-vendor-feature=+enableAggressiveVLAFolding -clang-vendor-feature=+revert09abecef7bbf -clang-vendor-feature=+thisNoAlignAttr -clang-vendor-feature=+thisNoNullAttr -clang-vendor-feature=+disableAtImportPrivateFrameworkInImplementationError -D__GCC_HAVE_DWARF2_CFI_ASM=1 -o CMakeFiles/cmTC_022ee.dir/CMakeCXXCompilerABI.cpp.o -x c++ /opt/homebrew/share/cmake/Modules/CMakeCXXCompilerABI.cpp
+         "/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/bin/clang" -cc1 -triple arm64-apple-macosx26.0.0 -Wundef-prefix=TARGET_OS_ -Wdeprecated-objc-isa-usage -Werror=deprecated-objc-isa-usage -Werror=implicit-function-declaration -emit-obj -disable-free -clear-ast-before-backend -disable-llvm-verifier -discard-value-names -main-file-name CMakeCXXCompilerABI.cpp -mrelocation-model pic -pic-level 2 -mframe-pointer=non-leaf -fno-strict-return -ffp-contract=on -fno-rounding-math -funwind-tables=1 -fobjc-msgsend-selector-stubs -target-sdk-version=26.1 -fvisibility-inlines-hidden-static-local-var -fdefine-target-os-macros -fno-assume-unique-vtables -fno-modulemap-allow-subdirectory-search -target-cpu apple-m1 -target-feature +zcm -target-feature +zcz -target-feature +v8.5a -target-feature +aes -target-feature +altnzcv -target-feature +ccdp -target-feature +complxnum -target-feature +crc -target-feature +dotprod -target-feature +fp-armv8 -target-feature +fp16fml -target-feature +fptoint -target-feature +fullfp16 -target-feature +jsconv -target-feature +lse -target-feature +neon -target-feature +pauth -target-feature +perfmon -target-feature +predres -target-feature +ras -target-feature +rcpc -target-feature +rdm -target-feature +sb -target-feature +sha2 -target-feature +sha3 -target-feature +specrestrict -target-feature +ssbs -target-abi darwinpcs -debugger-tuning=lldb -fdebug-compilation-dir=/Users/yousufawj/projects/rnd/data_studio/build/CMakeFiles/CMakeScratch/TryCompile-Zre7FK -target-linker-version 1230.1 -v -fcoverage-compilation-dir=/Users/yousufawj/projects/rnd/data_studio/build/CMakeFiles/CMakeScratch/TryCompile-Zre7FK -resource-dir /Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/lib/clang/17 -dependency-file CMakeFiles/cmTC_f783c.dir/CMakeCXXCompilerABI.cpp.o.d -skip-unused-modulemap-deps -MT CMakeFiles/cmTC_f783c.dir/CMakeCXXCompilerABI.cpp.o -sys-header-deps -isysroot /Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX.sdk -I/usr/local/include -internal-isystem /Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX.sdk/usr/include/c++/v1 -internal-isystem /Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX.sdk/usr/local/include -internal-isystem /Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/lib/clang/17/include -internal-externc-isystem /Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX.sdk/usr/include -internal-externc-isystem /Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/include -internal-iframework /Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX.sdk/System/Library/Frameworks -internal-iframework /Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX.sdk/System/Library/SubFrameworks -internal-iframework /Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX.sdk/Library/Frameworks -Wno-reorder-init-list -Wno-implicit-int-float-conversion -Wno-c99-designator -Wno-final-dtor-non-final-class -Wno-extra-semi-stmt -Wno-misleading-indentation -Wno-quoted-include-in-framework-header -Wno-implicit-fallthrough -Wno-enum-enum-conversion -Wno-enum-float-conversion -Wno-elaborated-enum-base -fdeprecated-macro -ferror-limit 19 -stack-protector 1 -fstack-check -mdarwin-stkchk-strong-link -fblocks -fencode-extended-block-signature -fregister-global-dtors-with-atexit -fgnuc-version=4.2.1 -fno-cxx-modules -fskip-odr-check-in-gmf -fcxx-exceptions -fexceptions -fmax-type-align=16 -fcommon -clang-vendor-feature=+disableNonDependentMemberExprInCurrentInstantiation -fno-odr-hash-protocols -clang-vendor-feature=+enableAggressiveVLAFolding -clang-vendor-feature=+revert09abecef7bbf -clang-vendor-feature=+thisNoAlignAttr -clang-vendor-feature=+thisNoNullAttr -clang-vendor-feature=+disableAtImportPrivateFrameworkInImplementationError -D__GCC_HAVE_DWARF2_CFI_ASM=1 -o CMakeFiles/cmTC_f783c.dir/CMakeCXXCompilerABI.cpp.o -x c++ /opt/homebrew/share/cmake/Modules/CMakeCXXCompilerABI.cpp
         clang -cc1 version 17.0.0 (clang-1700.4.4.1) default target arm64-apple-darwin25.5.0
         ignoring nonexistent directory "/usr/local/include"
         ignoring nonexistent directory "/Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX.sdk/usr/local/include"
@@ -1833,13 +1828,13 @@ events:
          /Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX.sdk/System/Library/Frameworks (framework directory)
          /Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX.sdk/System/Library/SubFrameworks (framework directory)
         End of search list.
-        Linking CXX executable cmTC_022ee
-        /opt/homebrew/bin/cmake -E cmake_link_script CMakeFiles/cmTC_022ee.dir/link.txt --verbose=1
+        Linking CXX executable cmTC_f783c
+        /opt/homebrew/bin/cmake -E cmake_link_script CMakeFiles/cmTC_f783c.dir/link.txt --verbose=1
         Apple clang version 17.0.0 (clang-1700.4.4.1)
         Target: arm64-apple-darwin25.5.0
         Thread model: posix
         InstalledDir: /Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/bin
-         "/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/bin/ld" -demangle -lto_library /Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/lib/libLTO.dylib -dynamic -arch arm64 -platform_version macos 26.0.0 26.1 -syslibroot /Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX.sdk -mllvm -enable-linkonceodr-outlining -o cmTC_022ee -L/opt/homebrew/opt/icu4c@77/lib -L/opt/homebrew/opt/libzip/lib -L/opt/homebrew/opt/openssl@3/lib -L/usr/local/lib -v CMakeFiles/cmTC_022ee.dir/CMakeCXXCompilerABI.cpp.o -lc++ -lSystem /Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/lib/clang/17/lib/darwin/libclang_rt.osx.a
+         "/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/bin/ld" -demangle -lto_library /Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/lib/libLTO.dylib -dynamic -arch arm64 -platform_version macos 26.0.0 26.1 -syslibroot /Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX.sdk -mllvm -enable-linkonceodr-outlining -o cmTC_f783c -L/opt/homebrew/opt/icu4c@77/lib -L/opt/homebrew/opt/libzip/lib -L/opt/homebrew/opt/openssl@3/lib -L/usr/local/lib -v CMakeFiles/cmTC_f783c.dir/CMakeCXXCompilerABI.cpp.o -lc++ -lSystem /Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/lib/clang/17/lib/darwin/libclang_rt.osx.a
         @(#)PROGRAM:ld PROJECT:ld-1230.1
         BUILD 16:18:08 Oct 17 2025
         configured to support archs: armv6 armv7 armv7s arm64 arm64e arm64_32 i386 x86_64 x86_64h armv6m armv7k armv7m armv7em armv8m.main armv8.1m.main
@@ -1854,7 +1849,7 @@ events:
         	/Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX.sdk/usr/lib/swift
         Framework search paths:
         	/Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX.sdk/System/Library/Frameworks
-        /usr/bin/c++  -arch arm64 -L/opt/homebrew/opt/icu4c@77/lib -L/opt/homebrew/opt/libzip/lib -L/opt/homebrew/opt/openssl@3/lib -v -Wl,-v CMakeFiles/cmTC_022ee.dir/CMakeCXXCompilerABI.cpp.o -o cmTC_022ee
+        /usr/bin/c++  -arch arm64 -L/opt/homebrew/opt/icu4c@77/lib -L/opt/homebrew/opt/libzip/lib -L/opt/homebrew/opt/openssl@3/lib -v -Wl,-v CMakeFiles/cmTC_f783c.dir/CMakeCXXCompilerABI.cpp.o -o cmTC_f783c
         
       exitCode: 0
   -
@@ -1898,19 +1893,19 @@ events:
       Parsed CXX implicit link information:
         link line regex: [^( *|.*[/\\])(ld[0-9]*(|\\.[a-rt-z][a-z]*|\\.s[a-np-z][a-z]*|\\.so[a-z]+)|CMAKE_LINK_STARTFILE-NOTFOUND|([^/\\]+-)?ld|collect2)[^/\\]*( |$)]
         linker tool regex: [^[ 	]*(->|"|[0-9]+>[ 	-]*Build:[ 	0-9]+ ms[ 	]*)?[ 	]*(([^"]*[/\\])?(ld[0-9]*(|\\.[a-rt-z][a-z]*|\\.s[a-np-z][a-z]*|\\.so[a-z]+)))("|,| |$)]
-        ignore line: [Change Dir: '/Users/yousufawj/projects/rnd/data_studio/build/CMakeFiles/CMakeScratch/TryCompile-v4egrU']
+        ignore line: [Change Dir: '/Users/yousufawj/projects/rnd/data_studio/build/CMakeFiles/CMakeScratch/TryCompile-Zre7FK']
         ignore line: []
-        ignore line: [Run Build Command(s): /opt/homebrew/bin/cmake -E env VERBOSE=1 /usr/bin/make -f Makefile cmTC_022ee/fast]
-        ignore line: [/Applications/Xcode.app/Contents/Developer/usr/bin/make  -f CMakeFiles/cmTC_022ee.dir/build.make CMakeFiles/cmTC_022ee.dir/build]
-        ignore line: [Building CXX object CMakeFiles/cmTC_022ee.dir/CMakeCXXCompilerABI.cpp.o]
-        ignore line: [/usr/bin/c++   -arch arm64   -v -Wl -v -MD -MT CMakeFiles/cmTC_022ee.dir/CMakeCXXCompilerABI.cpp.o -MF CMakeFiles/cmTC_022ee.dir/CMakeCXXCompilerABI.cpp.o.d -o CMakeFiles/cmTC_022ee.dir/CMakeCXXCompilerABI.cpp.o -c /opt/homebrew/share/cmake/Modules/CMakeCXXCompilerABI.cpp]
+        ignore line: [Run Build Command(s): /opt/homebrew/bin/cmake -E env VERBOSE=1 /usr/bin/make -f Makefile cmTC_f783c/fast]
+        ignore line: [/Applications/Xcode.app/Contents/Developer/usr/bin/make  -f CMakeFiles/cmTC_f783c.dir/build.make CMakeFiles/cmTC_f783c.dir/build]
+        ignore line: [Building CXX object CMakeFiles/cmTC_f783c.dir/CMakeCXXCompilerABI.cpp.o]
+        ignore line: [/usr/bin/c++   -arch arm64   -v -Wl -v -MD -MT CMakeFiles/cmTC_f783c.dir/CMakeCXXCompilerABI.cpp.o -MF CMakeFiles/cmTC_f783c.dir/CMakeCXXCompilerABI.cpp.o.d -o CMakeFiles/cmTC_f783c.dir/CMakeCXXCompilerABI.cpp.o -c /opt/homebrew/share/cmake/Modules/CMakeCXXCompilerABI.cpp]
         ignore line: [Apple clang version 17.0.0 (clang-1700.4.4.1)]
         ignore line: [Target: arm64-apple-darwin25.5.0]
         ignore line: [Thread model: posix]
         ignore line: [InstalledDir: /Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/bin]
         ignore line: [clang++: warning: -Wl -v: 'linker' input unused [-Wunused-command-line-argument]]
         ignore line: [ignoring nonexistent directory "/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/bin/../include/c++/v1"]
-        ignore line: [ "/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/bin/clang" -cc1 -triple arm64-apple-macosx26.0.0 -Wundef-prefix=TARGET_OS_ -Wdeprecated-objc-isa-usage -Werror=deprecated-objc-isa-usage -Werror=implicit-function-declaration -emit-obj -disable-free -clear-ast-before-backend -disable-llvm-verifier -discard-value-names -main-file-name CMakeCXXCompilerABI.cpp -mrelocation-model pic -pic-level 2 -mframe-pointer=non-leaf -fno-strict-return -ffp-contract=on -fno-rounding-math -funwind-tables=1 -fobjc-msgsend-selector-stubs -target-sdk-version=26.1 -fvisibility-inlines-hidden-static-local-var -fdefine-target-os-macros -fno-assume-unique-vtables -fno-modulemap-allow-subdirectory-search -target-cpu apple-m1 -target-feature +zcm -target-feature +zcz -target-feature +v8.5a -target-feature +aes -target-feature +altnzcv -target-feature +ccdp -target-feature +complxnum -target-feature +crc -target-feature +dotprod -target-feature +fp-armv8 -target-feature +fp16fml -target-feature +fptoint -target-feature +fullfp16 -target-feature +jsconv -target-feature +lse -target-feature +neon -target-feature +pauth -target-feature +perfmon -target-feature +predres -target-feature +ras -target-feature +rcpc -target-feature +rdm -target-feature +sb -target-feature +sha2 -target-feature +sha3 -target-feature +specrestrict -target-feature +ssbs -target-abi darwinpcs -debugger-tuning=lldb -fdebug-compilation-dir=/Users/yousufawj/projects/rnd/data_studio/build/CMakeFiles/CMakeScratch/TryCompile-v4egrU -target-linker-version 1230.1 -v -fcoverage-compilation-dir=/Users/yousufawj/projects/rnd/data_studio/build/CMakeFiles/CMakeScratch/TryCompile-v4egrU -resource-dir /Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/lib/clang/17 -dependency-file CMakeFiles/cmTC_022ee.dir/CMakeCXXCompilerABI.cpp.o.d -skip-unused-modulemap-deps -MT CMakeFiles/cmTC_022ee.dir/CMakeCXXCompilerABI.cpp.o -sys-header-deps -isysroot /Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX.sdk -I/usr/local/include -internal-isystem /Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX.sdk/usr/include/c++/v1 -internal-isystem /Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX.sdk/usr/local/include -internal-isystem /Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/lib/clang/17/include -internal-externc-isystem /Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX.sdk/usr/include -internal-externc-isystem /Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/include -internal-iframework /Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX.sdk/System/Library/Frameworks -internal-iframework /Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX.sdk/System/Library/SubFrameworks -internal-iframework /Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX.sdk/Library/Frameworks -Wno-reorder-init-list -Wno-implicit-int-float-conversion -Wno-c99-designator -Wno-final-dtor-non-final-class -Wno-extra-semi-stmt -Wno-misleading-indentation -Wno-quoted-include-in-framework-header -Wno-implicit-fallthrough -Wno-enum-enum-conversion -Wno-enum-float-conversion -Wno-elaborated-enum-base -fdeprecated-macro -ferror-limit 19 -stack-protector 1 -fstack-check -mdarwin-stkchk-strong-link -fblocks -fencode-extended-block-signature -fregister-global-dtors-with-atexit -fgnuc-version=4.2.1 -fno-cxx-modules -fskip-odr-check-in-gmf -fcxx-exceptions -fexceptions -fmax-type-align=16 -fcommon -clang-vendor-feature=+disableNonDependentMemberExprInCurrentInstantiation -fno-odr-hash-protocols -clang-vendor-feature=+enableAggressiveVLAFolding -clang-vendor-feature=+revert09abecef7bbf -clang-vendor-feature=+thisNoAlignAttr -clang-vendor-feature=+thisNoNullAttr -clang-vendor-feature=+disableAtImportPrivateFrameworkInImplementationError -D__GCC_HAVE_DWARF2_CFI_ASM=1 -o CMakeFiles/cmTC_022ee.dir/CMakeCXXCompilerABI.cpp.o -x c++ /opt/homebrew/share/cmake/Modules/CMakeCXXCompilerABI.cpp]
+        ignore line: [ "/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/bin/clang" -cc1 -triple arm64-apple-macosx26.0.0 -Wundef-prefix=TARGET_OS_ -Wdeprecated-objc-isa-usage -Werror=deprecated-objc-isa-usage -Werror=implicit-function-declaration -emit-obj -disable-free -clear-ast-before-backend -disable-llvm-verifier -discard-value-names -main-file-name CMakeCXXCompilerABI.cpp -mrelocation-model pic -pic-level 2 -mframe-pointer=non-leaf -fno-strict-return -ffp-contract=on -fno-rounding-math -funwind-tables=1 -fobjc-msgsend-selector-stubs -target-sdk-version=26.1 -fvisibility-inlines-hidden-static-local-var -fdefine-target-os-macros -fno-assume-unique-vtables -fno-modulemap-allow-subdirectory-search -target-cpu apple-m1 -target-feature +zcm -target-feature +zcz -target-feature +v8.5a -target-feature +aes -target-feature +altnzcv -target-feature +ccdp -target-feature +complxnum -target-feature +crc -target-feature +dotprod -target-feature +fp-armv8 -target-feature +fp16fml -target-feature +fptoint -target-feature +fullfp16 -target-feature +jsconv -target-feature +lse -target-feature +neon -target-feature +pauth -target-feature +perfmon -target-feature +predres -target-feature +ras -target-feature +rcpc -target-feature +rdm -target-feature +sb -target-feature +sha2 -target-feature +sha3 -target-feature +specrestrict -target-feature +ssbs -target-abi darwinpcs -debugger-tuning=lldb -fdebug-compilation-dir=/Users/yousufawj/projects/rnd/data_studio/build/CMakeFiles/CMakeScratch/TryCompile-Zre7FK -target-linker-version 1230.1 -v -fcoverage-compilation-dir=/Users/yousufawj/projects/rnd/data_studio/build/CMakeFiles/CMakeScratch/TryCompile-Zre7FK -resource-dir /Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/lib/clang/17 -dependency-file CMakeFiles/cmTC_f783c.dir/CMakeCXXCompilerABI.cpp.o.d -skip-unused-modulemap-deps -MT CMakeFiles/cmTC_f783c.dir/CMakeCXXCompilerABI.cpp.o -sys-header-deps -isysroot /Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX.sdk -I/usr/local/include -internal-isystem /Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX.sdk/usr/include/c++/v1 -internal-isystem /Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX.sdk/usr/local/include -internal-isystem /Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/lib/clang/17/include -internal-externc-isystem /Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX.sdk/usr/include -internal-externc-isystem /Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/include -internal-iframework /Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX.sdk/System/Library/Frameworks -internal-iframework /Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX.sdk/System/Library/SubFrameworks -internal-iframework /Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX.sdk/Library/Frameworks -Wno-reorder-init-list -Wno-implicit-int-float-conversion -Wno-c99-designator -Wno-final-dtor-non-final-class -Wno-extra-semi-stmt -Wno-misleading-indentation -Wno-quoted-include-in-framework-header -Wno-implicit-fallthrough -Wno-enum-enum-conversion -Wno-enum-float-conversion -Wno-elaborated-enum-base -fdeprecated-macro -ferror-limit 19 -stack-protector 1 -fstack-check -mdarwin-stkchk-strong-link -fblocks -fencode-extended-block-signature -fregister-global-dtors-with-atexit -fgnuc-version=4.2.1 -fno-cxx-modules -fskip-odr-check-in-gmf -fcxx-exceptions -fexceptions -fmax-type-align=16 -fcommon -clang-vendor-feature=+disableNonDependentMemberExprInCurrentInstantiation -fno-odr-hash-protocols -clang-vendor-feature=+enableAggressiveVLAFolding -clang-vendor-feature=+revert09abecef7bbf -clang-vendor-feature=+thisNoAlignAttr -clang-vendor-feature=+thisNoNullAttr -clang-vendor-feature=+disableAtImportPrivateFrameworkInImplementationError -D__GCC_HAVE_DWARF2_CFI_ASM=1 -o CMakeFiles/cmTC_f783c.dir/CMakeCXXCompilerABI.cpp.o -x c++ /opt/homebrew/share/cmake/Modules/CMakeCXXCompilerABI.cpp]
         ignore line: [clang -cc1 version 17.0.0 (clang-1700.4.4.1) default target arm64-apple-darwin25.5.0]
         ignore line: [ignoring nonexistent directory "/usr/local/include"]
         ignore line: [ignoring nonexistent directory "/Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX.sdk/usr/local/include"]
@@ -1924,13 +1919,13 @@ events:
         ignore line: [ /Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX.sdk/System/Library/Frameworks (framework directory)]
         ignore line: [ /Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX.sdk/System/Library/SubFrameworks (framework directory)]
         ignore line: [End of search list.]
-        ignore line: [Linking CXX executable cmTC_022ee]
-        ignore line: [/opt/homebrew/bin/cmake -E cmake_link_script CMakeFiles/cmTC_022ee.dir/link.txt --verbose=1]
+        ignore line: [Linking CXX executable cmTC_f783c]
+        ignore line: [/opt/homebrew/bin/cmake -E cmake_link_script CMakeFiles/cmTC_f783c.dir/link.txt --verbose=1]
         ignore line: [Apple clang version 17.0.0 (clang-1700.4.4.1)]
         ignore line: [Target: arm64-apple-darwin25.5.0]
         ignore line: [Thread model: posix]
         ignore line: [InstalledDir: /Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/bin]
-        link line: [ "/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/bin/ld" -demangle -lto_library /Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/lib/libLTO.dylib -dynamic -arch arm64 -platform_version macos 26.0.0 26.1 -syslibroot /Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX.sdk -mllvm -enable-linkonceodr-outlining -o cmTC_022ee -L/opt/homebrew/opt/icu4c@77/lib -L/opt/homebrew/opt/libzip/lib -L/opt/homebrew/opt/openssl@3/lib -L/usr/local/lib -v CMakeFiles/cmTC_022ee.dir/CMakeCXXCompilerABI.cpp.o -lc++ -lSystem /Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/lib/clang/17/lib/darwin/libclang_rt.osx.a]
+        link line: [ "/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/bin/ld" -demangle -lto_library /Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/lib/libLTO.dylib -dynamic -arch arm64 -platform_version macos 26.0.0 26.1 -syslibroot /Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX.sdk -mllvm -enable-linkonceodr-outlining -o cmTC_f783c -L/opt/homebrew/opt/icu4c@77/lib -L/opt/homebrew/opt/libzip/lib -L/opt/homebrew/opt/openssl@3/lib -L/usr/local/lib -v CMakeFiles/cmTC_f783c.dir/CMakeCXXCompilerABI.cpp.o -lc++ -lSystem /Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/lib/clang/17/lib/darwin/libclang_rt.osx.a]
           arg [/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/bin/ld] ==> ignore
           arg [-demangle] ==> ignore
           arg [-lto_library] ==> ignore, skip following value
@@ -1947,13 +1942,13 @@ events:
           arg [-mllvm] ==> ignore
           arg [-enable-linkonceodr-outlining] ==> ignore
           arg [-o] ==> ignore
-          arg [cmTC_022ee] ==> ignore
+          arg [cmTC_f783c] ==> ignore
           arg [-L/opt/homebrew/opt/icu4c@77/lib] ==> dir [/opt/homebrew/opt/icu4c@77/lib]
           arg [-L/opt/homebrew/opt/libzip/lib] ==> dir [/opt/homebrew/opt/libzip/lib]
           arg [-L/opt/homebrew/opt/openssl@3/lib] ==> dir [/opt/homebrew/opt/openssl@3/lib]
           arg [-L/usr/local/lib] ==> dir [/usr/local/lib]
           arg [-v] ==> ignore
-          arg [CMakeFiles/cmTC_022ee.dir/CMakeCXXCompilerABI.cpp.o] ==> ignore
+          arg [CMakeFiles/cmTC_f783c.dir/CMakeCXXCompilerABI.cpp.o] ==> ignore
           arg [-lc++] ==> lib [c++]
           arg [-lSystem] ==> lib [System]
           arg [/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/lib/clang/17/lib/darwin/libclang_rt.osx.a] ==> lib [/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/lib/clang/17/lib/darwin/libclang_rt.osx.a]
@@ -2009,8 +2004,8 @@ events:
     checks:
       - "Performing Test CMAKE_HAVE_LIBC_PTHREAD"
     directories:
-      source: "/Users/yousufawj/projects/rnd/data_studio/build/CMakeFiles/CMakeScratch/TryCompile-Tw1Nyv"
-      binary: "/Users/yousufawj/projects/rnd/data_studio/build/CMakeFiles/CMakeScratch/TryCompile-Tw1Nyv"
+      source: "/Users/yousufawj/projects/rnd/data_studio/build/CMakeFiles/CMakeScratch/TryCompile-Ty9HRG"
+      binary: "/Users/yousufawj/projects/rnd/data_studio/build/CMakeFiles/CMakeScratch/TryCompile-Ty9HRG"
     cmakeVariables:
       CMAKE_CXX_FLAGS: ""
       CMAKE_CXX_FLAGS_DEBUG: "-g"
@@ -2024,15 +2019,15 @@ events:
       variable: "CMAKE_HAVE_LIBC_PTHREAD"
       cached: true
       stdout: |
-        Change Dir: '/Users/yousufawj/projects/rnd/data_studio/build/CMakeFiles/CMakeScratch/TryCompile-Tw1Nyv'
+        Change Dir: '/Users/yousufawj/projects/rnd/data_studio/build/CMakeFiles/CMakeScratch/TryCompile-Ty9HRG'
         
-        Run Build Command(s): /opt/homebrew/bin/cmake -E env VERBOSE=1 /usr/bin/make -f Makefile cmTC_3fc33/fast
-        /Applications/Xcode.app/Contents/Developer/usr/bin/make  -f CMakeFiles/cmTC_3fc33.dir/build.make CMakeFiles/cmTC_3fc33.dir/build
-        Building CXX object CMakeFiles/cmTC_3fc33.dir/src.cxx.o
-        /usr/bin/c++ -DCMAKE_HAVE_LIBC_PTHREAD  -std=c++20 -arch arm64 -MD -MT CMakeFiles/cmTC_3fc33.dir/src.cxx.o -MF CMakeFiles/cmTC_3fc33.dir/src.cxx.o.d -o CMakeFiles/cmTC_3fc33.dir/src.cxx.o -c /Users/yousufawj/projects/rnd/data_studio/build/CMakeFiles/CMakeScratch/TryCompile-Tw1Nyv/src.cxx
-        Linking CXX executable cmTC_3fc33
-        /opt/homebrew/bin/cmake -E cmake_link_script CMakeFiles/cmTC_3fc33.dir/link.txt --verbose=1
-        /usr/bin/c++  -arch arm64 -L/opt/homebrew/opt/icu4c@77/lib -L/opt/homebrew/opt/libzip/lib -L/opt/homebrew/opt/openssl@3/lib  CMakeFiles/cmTC_3fc33.dir/src.cxx.o -o cmTC_3fc33
+        Run Build Command(s): /opt/homebrew/bin/cmake -E env VERBOSE=1 /usr/bin/make -f Makefile cmTC_ea3f8/fast
+        /Applications/Xcode.app/Contents/Developer/usr/bin/make  -f CMakeFiles/cmTC_ea3f8.dir/build.make CMakeFiles/cmTC_ea3f8.dir/build
+        Building CXX object CMakeFiles/cmTC_ea3f8.dir/src.cxx.o
+        /usr/bin/c++ -DCMAKE_HAVE_LIBC_PTHREAD  -std=c++20 -arch arm64 -MD -MT CMakeFiles/cmTC_ea3f8.dir/src.cxx.o -MF CMakeFiles/cmTC_ea3f8.dir/src.cxx.o.d -o CMakeFiles/cmTC_ea3f8.dir/src.cxx.o -c /Users/yousufawj/projects/rnd/data_studio/build/CMakeFiles/CMakeScratch/TryCompile-Ty9HRG/src.cxx
+        Linking CXX executable cmTC_ea3f8
+        /opt/homebrew/bin/cmake -E cmake_link_script CMakeFiles/cmTC_ea3f8.dir/link.txt --verbose=1
+        /usr/bin/c++  -arch arm64 -L/opt/homebrew/opt/icu4c@77/lib -L/opt/homebrew/opt/libzip/lib -L/opt/homebrew/opt/openssl@3/lib  CMakeFiles/cmTC_ea3f8.dir/src.cxx.o -o cmTC_ea3f8
         
       exitCode: 0
   -
@@ -2051,8 +2046,8 @@ events:
     checks:
       - "Performing Test HAVE_STDATOMIC"
     directories:
-      source: "/Users/yousufawj/projects/rnd/data_studio/build/CMakeFiles/CMakeScratch/TryCompile-Izemee"
-      binary: "/Users/yousufawj/projects/rnd/data_studio/build/CMakeFiles/CMakeScratch/TryCompile-Izemee"
+      source: "/Users/yousufawj/projects/rnd/data_studio/build/CMakeFiles/CMakeScratch/TryCompile-t3bD7V"
+      binary: "/Users/yousufawj/projects/rnd/data_studio/build/CMakeFiles/CMakeScratch/TryCompile-t3bD7V"
     cmakeVariables:
       CMAKE_CXX_FLAGS: ""
       CMAKE_CXX_FLAGS_DEBUG: "-g"
@@ -2066,15 +2061,15 @@ events:
       variable: "HAVE_STDATOMIC"
       cached: true
       stdout: |
-        Change Dir: '/Users/yousufawj/projects/rnd/data_studio/build/CMakeFiles/CMakeScratch/TryCompile-Izemee'
+        Change Dir: '/Users/yousufawj/projects/rnd/data_studio/build/CMakeFiles/CMakeScratch/TryCompile-t3bD7V'
         
-        Run Build Command(s): /opt/homebrew/bin/cmake -E env VERBOSE=1 /usr/bin/make -f Makefile cmTC_ea8ee/fast
-        /Applications/Xcode.app/Contents/Developer/usr/bin/make  -f CMakeFiles/cmTC_ea8ee.dir/build.make CMakeFiles/cmTC_ea8ee.dir/build
-        Building CXX object CMakeFiles/cmTC_ea8ee.dir/src.cxx.o
-        /usr/bin/c++ -DHAVE_STDATOMIC  -std=c++20 -arch arm64 -MD -MT CMakeFiles/cmTC_ea8ee.dir/src.cxx.o -MF CMakeFiles/cmTC_ea8ee.dir/src.cxx.o.d -o CMakeFiles/cmTC_ea8ee.dir/src.cxx.o -c /Users/yousufawj/projects/rnd/data_studio/build/CMakeFiles/CMakeScratch/TryCompile-Izemee/src.cxx
-        Linking CXX executable cmTC_ea8ee
-        /opt/homebrew/bin/cmake -E cmake_link_script CMakeFiles/cmTC_ea8ee.dir/link.txt --verbose=1
-        /usr/bin/c++  -arch arm64 -L/opt/homebrew/opt/icu4c@77/lib -L/opt/homebrew/opt/libzip/lib -L/opt/homebrew/opt/openssl@3/lib  CMakeFiles/cmTC_ea8ee.dir/src.cxx.o -o cmTC_ea8ee
+        Run Build Command(s): /opt/homebrew/bin/cmake -E env VERBOSE=1 /usr/bin/make -f Makefile cmTC_55e01/fast
+        /Applications/Xcode.app/Contents/Developer/usr/bin/make  -f CMakeFiles/cmTC_55e01.dir/build.make CMakeFiles/cmTC_55e01.dir/build
+        Building CXX object CMakeFiles/cmTC_55e01.dir/src.cxx.o
+        /usr/bin/c++ -DHAVE_STDATOMIC  -std=c++20 -arch arm64 -MD -MT CMakeFiles/cmTC_55e01.dir/src.cxx.o -MF CMakeFiles/cmTC_55e01.dir/src.cxx.o.d -o CMakeFiles/cmTC_55e01.dir/src.cxx.o -c /Users/yousufawj/projects/rnd/data_studio/build/CMakeFiles/CMakeScratch/TryCompile-t3bD7V/src.cxx
+        Linking CXX executable cmTC_55e01
+        /opt/homebrew/bin/cmake -E cmake_link_script CMakeFiles/cmTC_55e01.dir/link.txt --verbose=1
+        /usr/bin/c++  -arch arm64 -L/opt/homebrew/opt/icu4c@77/lib -L/opt/homebrew/opt/libzip/lib -L/opt/homebrew/opt/openssl@3/lib  CMakeFiles/cmTC_55e01.dir/src.cxx.o -o cmTC_55e01
         
       exitCode: 0
   -
@@ -2199,7 +2194,6 @@ events:
       CMAKE_PREFIX_PATH:
         - "/opt/homebrew/opt/qt"
       ENV{PATH}:
-        - "/opt/anaconda3/bin"
         - "/Users/yousufawj/.kimi-code/bin"
         - "/Users/yousufawj/.grok/bin"
         - "/Users/yousufawj/.antigravity/antigravity/bin"
@@ -2290,7 +2284,6 @@ events:
       - "/opt/homebrew/opt/qt/sbin/"
       - "/opt/homebrew/opt/qt/"
       - "/opt/homebrew/opt/qt/bin/"
-      - "/opt/anaconda3/bin/"
       - "/Users/yousufawj/.kimi-code/bin/"
       - "/Users/yousufawj/.grok/bin/"
       - "/Users/yousufawj/.antigravity/antigravity/bin/"
@@ -2316,6 +2309,7 @@ events:
       - "/Applications/VMware Fusion.app/Contents/Public/"
       - "/usr/local/share/dotnet/"
       - "/Users/yousufawj/.dotnet/tools/"
+      - "/opt/anaconda3/bin/"
       - "/opt/anaconda3/condabin/"
       - "/Users/yousufawj/Library/Application Support/JetBrains/Toolbox/scripts/"
       - "/Users/yousufawj/code/sdk/flutter/bin/"
@@ -2358,7 +2352,6 @@ events:
       CMAKE_PREFIX_PATH:
         - "/opt/homebrew/opt/qt"
       ENV{PATH}:
-        - "/opt/anaconda3/bin"
         - "/Users/yousufawj/.kimi-code/bin"
         - "/Users/yousufawj/.grok/bin"
         - "/Users/yousufawj/.antigravity/antigravity/bin"
@@ -2544,7 +2537,6 @@ events:
       CMAKE_PREFIX_PATH:
         - "/opt/homebrew/opt/qt"
       ENV{PATH}:
-        - "/opt/anaconda3/bin"
         - "/Users/yousufawj/.kimi-code/bin"
         - "/Users/yousufawj/.grok/bin"
         - "/Users/yousufawj/.antigravity/antigravity/bin"
@@ -2638,7 +2630,6 @@ events:
     candidate_directories:
       - "/opt/homebrew/opt/qt/lib/"
       - "/opt/homebrew/opt/qt/"
-      - "/opt/anaconda3/bin/"
       - "/Users/yousufawj/.kimi-code/bin/"
       - "/Users/yousufawj/.grok/bin/"
       - "/Users/yousufawj/.antigravity/antigravity/bin/"
@@ -2660,6 +2651,7 @@ events:
       - "/Applications/VMware Fusion.app/Contents/Public/"
       - "/usr/local/share/dotnet/"
       - "/Users/yousufawj/.dotnet/tools/"
+      - "/opt/anaconda3/bin/"
       - "/opt/anaconda3/condabin/"
       - "/Users/yousufawj/Library/Application Support/JetBrains/Toolbox/scripts/"
       - "/Users/yousufawj/code/sdk/flutter/bin/"
@@ -2682,7 +2674,6 @@ events:
       CMAKE_PREFIX_PATH:
         - "/opt/homebrew/opt/qt"
       ENV{PATH}:
-        - "/opt/anaconda3/bin"
         - "/Users/yousufawj/.kimi-code/bin"
         - "/Users/yousufawj/.grok/bin"
         - "/Users/yousufawj/.antigravity/antigravity/bin"
@@ -2778,7 +2769,6 @@ events:
     candidate_directories:
       - "/opt/homebrew/opt/qt/lib/"
       - "/opt/homebrew/opt/qt/"
-      - "/opt/anaconda3/bin/"
       - "/Users/yousufawj/.kimi-code/bin/"
       - "/Users/yousufawj/.grok/bin/"
       - "/Users/yousufawj/.antigravity/antigravity/bin/"
@@ -2800,6 +2790,7 @@ events:
       - "/Applications/VMware Fusion.app/Contents/Public/"
       - "/usr/local/share/dotnet/"
       - "/Users/yousufawj/.dotnet/tools/"
+      - "/opt/anaconda3/bin/"
       - "/opt/anaconda3/condabin/"
       - "/Users/yousufawj/Library/Application Support/JetBrains/Toolbox/scripts/"
       - "/Users/yousufawj/code/sdk/flutter/bin/"
@@ -2822,7 +2813,6 @@ events:
       CMAKE_PREFIX_PATH:
         - "/opt/homebrew/opt/qt"
       ENV{PATH}:
-        - "/opt/anaconda3/bin"
         - "/Users/yousufawj/.kimi-code/bin"
         - "/Users/yousufawj/.grok/bin"
         - "/Users/yousufawj/.antigravity/antigravity/bin"
@@ -2918,7 +2908,6 @@ events:
     candidate_directories:
       - "/opt/homebrew/opt/qt/include/"
       - "/opt/homebrew/opt/qt/"
-      - "/opt/anaconda3/bin/"
       - "/Users/yousufawj/.kimi-code/bin/"
       - "/Users/yousufawj/.grok/bin/"
       - "/Users/yousufawj/.antigravity/antigravity/bin/"
@@ -2944,6 +2933,7 @@ events:
       - "/Applications/VMware Fusion.app/Contents/Public/"
       - "/usr/local/share/dotnet/"
       - "/Users/yousufawj/.dotnet/tools/"
+      - "/opt/anaconda3/bin/"
       - "/opt/anaconda3/condabin/"
       - "/Users/yousufawj/Library/Application Support/JetBrains/Toolbox/scripts/"
       - "/Users/yousufawj/code/sdk/flutter/bin/"
@@ -2980,7 +2970,6 @@ events:
     searched_directories:
       - "/opt/homebrew/opt/qt/include/OpenGL.framework/Headers/gl.h"
       - "/opt/homebrew/opt/qt/OpenGL.framework/Headers/gl.h"
-      - "/opt/anaconda3/bin/OpenGL.framework/Headers/gl.h"
       - "/Users/yousufawj/.kimi-code/bin/OpenGL.framework/Headers/gl.h"
       - "/Users/yousufawj/.grok/bin/OpenGL.framework/Headers/gl.h"
       - "/Users/yousufawj/.antigravity/antigravity/bin/OpenGL.framework/Headers/gl.h"
@@ -3006,6 +2995,7 @@ events:
       - "/Applications/VMware Fusion.app/Contents/Public/OpenGL.framework/Headers/gl.h"
       - "/usr/local/share/dotnet/OpenGL.framework/Headers/gl.h"
       - "/Users/yousufawj/.dotnet/tools/OpenGL.framework/Headers/gl.h"
+      - "/opt/anaconda3/bin/OpenGL.framework/Headers/gl.h"
       - "/opt/anaconda3/condabin/OpenGL.framework/Headers/gl.h"
       - "/Users/yousufawj/Library/Application Support/JetBrains/Toolbox/scripts/OpenGL.framework/Headers/gl.h"
       - "/Users/yousufawj/code/sdk/flutter/bin/OpenGL.framework/Headers/gl.h"
@@ -3038,7 +3028,6 @@ events:
       CMAKE_PREFIX_PATH:
         - "/opt/homebrew/opt/qt"
       ENV{PATH}:
-        - "/opt/anaconda3/bin"
         - "/Users/yousufawj/.kimi-code/bin"
         - "/Users/yousufawj/.grok/bin"
         - "/Users/yousufawj/.antigravity/antigravity/bin"
@@ -3134,7 +3123,6 @@ events:
     candidate_directories:
       - "/opt/homebrew/opt/qt/include/"
       - "/opt/homebrew/opt/qt/"
-      - "/opt/anaconda3/bin/"
       - "/Users/yousufawj/.kimi-code/bin/"
       - "/Users/yousufawj/.grok/bin/"
       - "/Users/yousufawj/.antigravity/antigravity/bin/"
@@ -3160,6 +3148,7 @@ events:
       - "/Applications/VMware Fusion.app/Contents/Public/"
       - "/usr/local/share/dotnet/"
       - "/Users/yousufawj/.dotnet/tools/"
+      - "/opt/anaconda3/bin/"
       - "/opt/anaconda3/condabin/"
       - "/Users/yousufawj/Library/Application Support/JetBrains/Toolbox/scripts/"
       - "/Users/yousufawj/code/sdk/flutter/bin/"
@@ -3196,7 +3185,6 @@ events:
     searched_directories:
       - "/opt/homebrew/opt/qt/include/OpenGL.framework/Headers/glu.h"
       - "/opt/homebrew/opt/qt/OpenGL.framework/Headers/glu.h"
-      - "/opt/anaconda3/bin/OpenGL.framework/Headers/glu.h"
       - "/Users/yousufawj/.kimi-code/bin/OpenGL.framework/Headers/glu.h"
       - "/Users/yousufawj/.grok/bin/OpenGL.framework/Headers/glu.h"
       - "/Users/yousufawj/.antigravity/antigravity/bin/OpenGL.framework/Headers/glu.h"
@@ -3222,6 +3210,7 @@ events:
       - "/Applications/VMware Fusion.app/Contents/Public/OpenGL.framework/Headers/glu.h"
       - "/usr/local/share/dotnet/OpenGL.framework/Headers/glu.h"
       - "/Users/yousufawj/.dotnet/tools/OpenGL.framework/Headers/glu.h"
+      - "/opt/anaconda3/bin/OpenGL.framework/Headers/glu.h"
       - "/opt/anaconda3/condabin/OpenGL.framework/Headers/glu.h"
       - "/Users/yousufawj/Library/Application Support/JetBrains/Toolbox/scripts/OpenGL.framework/Headers/glu.h"
       - "/Users/yousufawj/code/sdk/flutter/bin/OpenGL.framework/Headers/glu.h"
@@ -3254,7 +3243,6 @@ events:
       CMAKE_PREFIX_PATH:
         - "/opt/homebrew/opt/qt"
       ENV{PATH}:
-        - "/opt/anaconda3/bin"
         - "/Users/yousufawj/.kimi-code/bin"
         - "/Users/yousufawj/.grok/bin"
         - "/Users/yousufawj/.antigravity/antigravity/bin"
@@ -3347,7 +3335,6 @@ events:
     candidate_directories:
       - "/opt/homebrew/opt/qt/include/"
       - "/opt/homebrew/opt/qt/"
-      - "/opt/anaconda3/bin/"
       - "/Users/yousufawj/.kimi-code/bin/"
       - "/Users/yousufawj/.grok/bin/"
       - "/Users/yousufawj/.antigravity/antigravity/bin/"
@@ -3373,6 +3360,7 @@ events:
       - "/Applications/VMware Fusion.app/Contents/Public/"
       - "/usr/local/share/dotnet/"
       - "/Users/yousufawj/.dotnet/tools/"
+      - "/opt/anaconda3/bin/"
       - "/opt/anaconda3/condabin/"
       - "/Users/yousufawj/Library/Application Support/JetBrains/Toolbox/scripts/"
       - "/Users/yousufawj/code/sdk/flutter/bin/"
@@ -3409,7 +3397,6 @@ events:
     searched_directories:
       - "/opt/homebrew/opt/qt/include/vulkan.framework/Headers/vulkan.h"
       - "/opt/homebrew/opt/qt/vulkan.framework/Headers/vulkan.h"
-      - "/opt/anaconda3/bin/vulkan.framework/Headers/vulkan.h"
       - "/Users/yousufawj/.kimi-code/bin/vulkan.framework/Headers/vulkan.h"
       - "/Users/yousufawj/.grok/bin/vulkan.framework/Headers/vulkan.h"
       - "/Users/yousufawj/.antigravity/antigravity/bin/vulkan.framework/Headers/vulkan.h"
@@ -3435,6 +3422,7 @@ events:
       - "/Applications/VMware Fusion.app/Contents/Public/vulkan.framework/Headers/vulkan.h"
       - "/usr/local/share/dotnet/vulkan.framework/Headers/vulkan.h"
       - "/Users/yousufawj/.dotnet/tools/vulkan.framework/Headers/vulkan.h"
+      - "/opt/anaconda3/bin/vulkan.framework/Headers/vulkan.h"
       - "/opt/anaconda3/condabin/vulkan.framework/Headers/vulkan.h"
       - "/Users/yousufawj/Library/Application Support/JetBrains/Toolbox/scripts/vulkan.framework/Headers/vulkan.h"
       - "/Users/yousufawj/code/sdk/flutter/bin/vulkan.framework/Headers/vulkan.h"
@@ -3470,7 +3458,6 @@ events:
       - "/System/Library/Frameworks/vulkan.framework/Headers/vulkan.h"
       - "/opt/homebrew/opt/qt/include/vulkan/vulkan.h"
       - "/opt/homebrew/opt/qt/vulkan/vulkan.h"
-      - "/opt/anaconda3/bin/vulkan/vulkan.h"
       - "/Users/yousufawj/.kimi-code/bin/vulkan/vulkan.h"
       - "/Users/yousufawj/.grok/bin/vulkan/vulkan.h"
       - "/Users/yousufawj/.antigravity/antigravity/bin/vulkan/vulkan.h"
@@ -3496,6 +3483,7 @@ events:
       - "/Applications/VMware Fusion.app/Contents/Public/vulkan/vulkan.h"
       - "/usr/local/share/dotnet/vulkan/vulkan.h"
       - "/Users/yousufawj/.dotnet/tools/vulkan/vulkan.h"
+      - "/opt/anaconda3/bin/vulkan/vulkan.h"
       - "/opt/anaconda3/condabin/vulkan/vulkan.h"
       - "/Users/yousufawj/Library/Application Support/JetBrains/Toolbox/scripts/vulkan/vulkan.h"
       - "/Users/yousufawj/code/sdk/flutter/bin/vulkan/vulkan.h"
@@ -3534,7 +3522,6 @@ events:
       CMAKE_PREFIX_PATH:
         - "/opt/homebrew/opt/qt"
       ENV{PATH}:
-        - "/opt/anaconda3/bin"
         - "/Users/yousufawj/.kimi-code/bin"
         - "/Users/yousufawj/.grok/bin"
         - "/Users/yousufawj/.antigravity/antigravity/bin"
@@ -3627,7 +3614,6 @@ events:
     candidate_directories:
       - "/opt/homebrew/opt/qt/lib/"
       - "/opt/homebrew/opt/qt/"
-      - "/opt/anaconda3/bin/"
       - "/Users/yousufawj/.kimi-code/bin/"
       - "/Users/yousufawj/.grok/bin/"
       - "/Users/yousufawj/.antigravity/antigravity/bin/"
@@ -3649,6 +3635,7 @@ events:
       - "/Applications/VMware Fusion.app/Contents/Public/"
       - "/usr/local/share/dotnet/"
       - "/Users/yousufawj/.dotnet/tools/"
+      - "/opt/anaconda3/bin/"
       - "/opt/anaconda3/condabin/"
       - "/Users/yousufawj/Library/Application Support/JetBrains/Toolbox/scripts/"
       - "/Users/yousufawj/code/sdk/flutter/bin/"
@@ -3669,7 +3656,6 @@ events:
     searched_directories:
       - "/opt/homebrew/opt/qt/lib/"
       - "/opt/homebrew/opt/qt/"
-      - "/opt/anaconda3/bin/"
       - "/Users/yousufawj/.kimi-code/bin/"
       - "/Users/yousufawj/.grok/bin/"
       - "/Users/yousufawj/.antigravity/antigravity/bin/"
@@ -3691,6 +3677,7 @@ events:
       - "/Applications/VMware Fusion.app/Contents/Public/"
       - "/usr/local/share/dotnet/"
       - "/Users/yousufawj/.dotnet/tools/"
+      - "/opt/anaconda3/bin/"
       - "/opt/anaconda3/condabin/"
       - "/Users/yousufawj/Library/Application Support/JetBrains/Toolbox/scripts/"
       - "/Users/yousufawj/code/sdk/flutter/bin/"
@@ -3713,7 +3700,6 @@ events:
       CMAKE_PREFIX_PATH:
         - "/opt/homebrew/opt/qt"
       ENV{PATH}:
-        - "/opt/anaconda3/bin"
         - "/Users/yousufawj/.kimi-code/bin"
         - "/Users/yousufawj/.grok/bin"
         - "/Users/yousufawj/.antigravity/antigravity/bin"
@@ -3807,7 +3793,6 @@ events:
       - "/opt/homebrew/opt/qt/bin/"
       - "/opt/homebrew/opt/qt/sbin/"
       - "/opt/homebrew/opt/qt/"
-      - "/opt/anaconda3/bin/"
       - "/Users/yousufawj/.kimi-code/bin/"
       - "/Users/yousufawj/.grok/bin/"
       - "/Users/yousufawj/.antigravity/antigravity/bin/"
@@ -3833,6 +3818,7 @@ events:
       - "/Applications/VMware Fusion.app/Contents/Public/"
       - "/usr/local/share/dotnet/"
       - "/Users/yousufawj/.dotnet/tools/"
+      - "/opt/anaconda3/bin/"
       - "/opt/anaconda3/condabin/"
       - "/Users/yousufawj/Library/Application Support/JetBrains/Toolbox/scripts/"
       - "/Users/yousufawj/code/sdk/flutter/bin/"
@@ -3874,7 +3860,6 @@ events:
       - "/opt/homebrew/opt/qt/bin/glslc"
       - "/opt/homebrew/opt/qt/sbin/glslc"
       - "/opt/homebrew/opt/qt/glslc"
-      - "/opt/anaconda3/bin/glslc"
       - "/Users/yousufawj/.kimi-code/bin/glslc"
       - "/Users/yousufawj/.grok/bin/glslc"
       - "/Users/yousufawj/.antigravity/antigravity/bin/glslc"
@@ -3900,6 +3885,7 @@ events:
       - "/Applications/VMware Fusion.app/Contents/Public/glslc"
       - "/usr/local/share/dotnet/glslc"
       - "/Users/yousufawj/.dotnet/tools/glslc"
+      - "/opt/anaconda3/bin/glslc"
       - "/opt/anaconda3/condabin/glslc"
       - "/Users/yousufawj/Library/Application Support/JetBrains/Toolbox/scripts/glslc"
       - "/Users/yousufawj/code/sdk/flutter/bin/glslc"
@@ -3942,7 +3928,6 @@ events:
       CMAKE_PREFIX_PATH:
         - "/opt/homebrew/opt/qt"
       ENV{PATH}:
-        - "/opt/anaconda3/bin"
         - "/Users/yousufawj/.kimi-code/bin"
         - "/Users/yousufawj/.grok/bin"
         - "/Users/yousufawj/.antigravity/antigravity/bin"
@@ -4029,7 +4014,6 @@ events:
       - "/opt/homebrew/opt/qt/bin/"
       - "/opt/homebrew/opt/qt/sbin/"
       - "/opt/homebrew/opt/qt/"
-      - "/opt/anaconda3/bin/"
       - "/Users/yousufawj/.kimi-code/bin/"
       - "/Users/yousufawj/.grok/bin/"
       - "/Users/yousufawj/.antigravity/antigravity/bin/"
@@ -4055,6 +4039,7 @@ events:
       - "/Applications/VMware Fusion.app/Contents/Public/"
       - "/usr/local/share/dotnet/"
       - "/Users/yousufawj/.dotnet/tools/"
+      - "/opt/anaconda3/bin/"
       - "/opt/anaconda3/condabin/"
       - "/Users/yousufawj/Library/Application Support/JetBrains/Toolbox/scripts/"
       - "/Users/yousufawj/code/sdk/flutter/bin/"
@@ -4096,7 +4081,6 @@ events:
       - "/opt/homebrew/opt/qt/bin/glslangValidator"
       - "/opt/homebrew/opt/qt/sbin/glslangValidator"
       - "/opt/homebrew/opt/qt/glslangValidator"
-      - "/opt/anaconda3/bin/glslangValidator"
       - "/Users/yousufawj/.kimi-code/bin/glslangValidator"
       - "/Users/yousufawj/.grok/bin/glslangValidator"
       - "/Users/yousufawj/.antigravity/antigravity/bin/glslangValidator"
@@ -4122,6 +4106,7 @@ events:
       - "/Applications/VMware Fusion.app/Contents/Public/glslangValidator"
       - "/usr/local/share/dotnet/glslangValidator"
       - "/Users/yousufawj/.dotnet/tools/glslangValidator"
+      - "/opt/anaconda3/bin/glslangValidator"
       - "/opt/anaconda3/condabin/glslangValidator"
       - "/Users/yousufawj/Library/Application Support/JetBrains/Toolbox/scripts/glslangValidator"
       - "/Users/yousufawj/code/sdk/flutter/bin/glslangValidator"
@@ -4164,7 +4149,6 @@ events:
       CMAKE_PREFIX_PATH:
         - "/opt/homebrew/opt/qt"
       ENV{PATH}:
-        - "/opt/anaconda3/bin"
         - "/Users/yousufawj/.kimi-code/bin"
         - "/Users/yousufawj/.grok/bin"
         - "/Users/yousufawj/.antigravity/antigravity/bin"
@@ -4346,7 +4330,6 @@ events:
       CMAKE_PREFIX_PATH:
         - "/opt/homebrew/opt/qt"
       ENV{PATH}:
-        - "/opt/anaconda3/bin"
         - "/Users/yousufawj/.kimi-code/bin"
         - "/Users/yousufawj/.grok/bin"
         - "/Users/yousufawj/.antigravity/antigravity/bin"
@@ -4538,7 +4521,6 @@ events:
       CMAKE_PREFIX_PATH:
         - "/opt/homebrew/opt/qt"
       ENV{PATH}:
-        - "/opt/anaconda3/bin"
         - "/Users/yousufawj/.kimi-code/bin"
         - "/Users/yousufawj/.grok/bin"
         - "/Users/yousufawj/.antigravity/antigravity/bin"
@@ -4719,7 +4701,6 @@ events:
       CMAKE_PREFIX_PATH:
         - "/opt/homebrew/opt/qt"
       ENV{PATH}:
-        - "/opt/anaconda3/bin"
         - "/Users/yousufawj/.kimi-code/bin"
         - "/Users/yousufawj/.grok/bin"
         - "/Users/yousufawj/.antigravity/antigravity/bin"
@@ -4894,7 +4875,6 @@ events:
       CMAKE_PREFIX_PATH:
         - "/opt/homebrew/opt/qt"
       ENV{PATH}:
-        - "/opt/anaconda3/bin"
         - "/Users/yousufawj/.kimi-code/bin"
         - "/Users/yousufawj/.grok/bin"
         - "/Users/yousufawj/.antigravity/antigravity/bin"
@@ -5081,7 +5061,6 @@ events:
       CMAKE_PREFIX_PATH:
         - "/opt/homebrew/opt/qt"
       ENV{PATH}:
-        - "/opt/anaconda3/bin"
         - "/Users/yousufawj/.kimi-code/bin"
         - "/Users/yousufawj/.grok/bin"
         - "/Users/yousufawj/.antigravity/antigravity/bin"
@@ -5256,7 +5235,6 @@ events:
       CMAKE_PREFIX_PATH:
         - "/opt/homebrew/opt/qt"
       ENV{PATH}:
-        - "/opt/anaconda3/bin"
         - "/Users/yousufawj/.kimi-code/bin"
         - "/Users/yousufawj/.grok/bin"
         - "/Users/yousufawj/.antigravity/antigravity/bin"
@@ -5439,7 +5417,164 @@ events:
       CMAKE_PREFIX_PATH:
         - "/opt/homebrew/opt/qt"
       ENV{PATH}:
+        - "/Users/yousufawj/.kimi-code/bin"
+        - "/Users/yousufawj/.grok/bin"
+        - "/Users/yousufawj/.antigravity/antigravity/bin"
+        - "/Users/yousufawj/.nvm/versions/node/v22.21.0/bin"
+        - "/Users/yousufawj/.local/bin"
+        - "/opt/homebrew/opt/mysql-client/bin"
+        - "/opt/homebrew/opt/php@8.3/sbin"
+        - "/opt/homebrew/opt/php@8.3/bin"
+        - "/opt/homebrew/bin"
+        - "/opt/homebrew/sbin"
+        - "/opt/homebrew/opt/coreutils/libexec/gnubin"
+        - "/usr/local/bin"
+        - "/System/Cryptexes/App/usr/bin"
+        - "/usr/bin"
+        - "/bin"
+        - "/usr/sbin"
+        - "/sbin"
+        - "/var/run/com.apple.security.cryptexd/codex.system/bootstrap/usr/local/bin"
+        - "/var/run/com.apple.security.cryptexd/codex.system/bootstrap/usr/bin"
+        - "/var/run/com.apple.security.cryptexd/codex.system/bootstrap/usr/appleinternal/bin"
+        - "/pkg/env/global/bin"
+        - "/Library/Apple/usr/bin"
+        - "/Applications/VMware Fusion.app/Contents/Public"
+        - "/usr/local/share/dotnet"
+        - "~/.dotnet/tools"
+        - "/Users/yousufawj/.kimi-code/bin"
+        - "/Users/yousufawj/.grok/bin"
+        - "/Users/yousufawj/.antigravity/antigravity/bin"
+        - "/Users/yousufawj/.nvm/versions/node/v22.21.0/bin"
+        - "/Users/yousufawj/.local/bin"
+        - "/opt/homebrew/opt/mysql-client/bin"
+        - "/opt/homebrew/opt/php@8.3/sbin"
+        - "/opt/homebrew/opt/php@8.3/bin"
         - "/opt/anaconda3/bin"
+        - "/opt/anaconda3/condabin"
+        - "/Users/yousufawj/Library/Application Support/JetBrains/Toolbox/scripts"
+        - "/Users/yousufawj/code/sdk/flutter/bin"
+        - "/Users/yousufawj/.lmstudio/bin"
+        - "/Users/yousufawj/code/sdk/flutter/bin"
+        - "/Users/yousufawj/.lmstudio/bin"
+      CMAKE_INSTALL_PREFIX: "/usr/local"
+      CMAKE_SYSTEM_PREFIX_PATH:
+        - "/Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX.sdk/usr"
+        - "/opt/homebrew"
+        - "/usr/local"
+        - "/usr"
+        - "/"
+        - "/opt/homebrew"
+        - "/usr/local"
+        - "/usr/X11R6"
+        - "/usr/pkg"
+        - "/opt"
+        - "/sw"
+        - "/opt/local"
+      CMAKE_SYSTEM_FRAMEWORK_PATH:
+        - "~/Library/Frameworks"
+        - "/Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX.sdk/Library/Frameworks"
+        - "/Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX.sdk/Network/Library/Frameworks"
+        - "/Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX.sdk/System/Library/Frameworks"
+        - "/Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/Library/Frameworks"
+        - "/Applications/Xcode.app/Contents/Developer/Library/Frameworks"
+        - "/Library/Frameworks"
+        - "/Network/Library/Frameworks"
+        - "/System/Library/Frameworks"
+  -
+    kind: "find_package-v1"
+    backtrace:
+      - "/opt/homebrew/opt/qt/lib/cmake/Qt6/Qt6Config.cmake:246 (find_package)"
+      - "CMakeLists.txt:17 (find_package)"
+    name: "Qt6Concurrent"
+    configs:
+      -
+        filename: "Qt6Concurrent.cps"
+        kind: "cps"
+      -
+        filename: "qt6concurrent.cps"
+        kind: "cps"
+      -
+        filename: "Qt6ConcurrentConfig.cmake"
+        kind: "cmake"
+      -
+        filename: "qt6concurrent-config.cmake"
+        kind: "cmake"
+    version_request:
+      version: "6.5"
+      version_complete: "6.5"
+      exact: false
+    settings:
+      required: "optional"
+      quiet: false
+      global: false
+      policy_scope: true
+      bypass_provider: false
+      names:
+        - "Qt6Concurrent"
+      search_paths:
+        - "/opt/homebrew/opt/qt/lib/cmake"
+      path_suffixes:
+        - ""
+      paths:
+        CMAKE_FIND_USE_CMAKE_PATH: false
+        CMAKE_FIND_USE_CMAKE_ENVIRONMENT_PATH: true
+        CMAKE_FIND_USE_SYSTEM_ENVIRONMENT_PATH: true
+        CMAKE_FIND_USE_CMAKE_SYSTEM_PATH: true
+        CMAKE_FIND_USE_INSTALL_PREFIX: true
+        CMAKE_FIND_USE_PACKAGE_ROOT_PATH: true
+        CMAKE_FIND_USE_CMAKE_PACKAGE_REGISTRY: true
+        CMAKE_FIND_USE_SYSTEM_PACKAGE_REGISTRY: true
+        CMAKE_FIND_ROOT_PATH_MODE: "BOTH"
+    candidates:
+      -
+        path: "/Users/yousufawj/projects/rnd/data_studio/build/CMakeFiles/pkgRedirects/Qt6ConcurrentConfig.cmake"
+        mode: "config"
+        reason: "no_exist"
+      -
+        path: "/Users/yousufawj/projects/rnd/data_studio/build/CMakeFiles/pkgRedirects/qt6concurrent-config.cmake"
+        mode: "config"
+        reason: "no_exist"
+      -
+        path: "/Users/yousufawj/projects/rnd/data_studio/build/CMakeFiles/pkgRedirects/lib64/cps/Qt6Concurrent.cps"
+        mode: "cps"
+        reason: "no_exist"
+      -
+        path: "/Users/yousufawj/projects/rnd/data_studio/build/CMakeFiles/pkgRedirects/lib64/cps/qt6concurrent.cps"
+        mode: "cps"
+        reason: "no_exist"
+      -
+        path: "/Users/yousufawj/projects/rnd/data_studio/build/CMakeFiles/pkgRedirects/lib/cps/Qt6Concurrent.cps"
+        mode: "cps"
+        reason: "no_exist"
+      -
+        path: "/Users/yousufawj/projects/rnd/data_studio/build/CMakeFiles/pkgRedirects/lib/cps/qt6concurrent.cps"
+        mode: "cps"
+        reason: "no_exist"
+      -
+        path: "/Users/yousufawj/projects/rnd/data_studio/build/CMakeFiles/pkgRedirects/share/cps/Qt6Concurrent.cps"
+        mode: "cps"
+        reason: "no_exist"
+      -
+        path: "/Users/yousufawj/projects/rnd/data_studio/build/CMakeFiles/pkgRedirects/share/cps/qt6concurrent.cps"
+        mode: "cps"
+        reason: "no_exist"
+      -
+        path: "/opt/homebrew/opt/qt/lib/cmake/Qt6ConcurrentConfig.cmake"
+        mode: "config"
+        reason: "no_exist"
+      -
+        path: "/opt/homebrew/opt/qt/lib/cmake/qt6concurrent-config.cmake"
+        mode: "config"
+        reason: "no_exist"
+    found:
+      path: "/opt/homebrew/opt/qt/lib/cmake/Qt6Concurrent/Qt6ConcurrentConfig.cmake"
+      mode: "config"
+      version: "6.11.0"
+    search_context:
+      CMAKE_PREFIX_PATH:
+        - "/opt/homebrew/opt/qt"
+      ENV{PATH}:
         - "/Users/yousufawj/.kimi-code/bin"
         - "/Users/yousufawj/.grok/bin"
         - "/Users/yousufawj/.antigravity/antigravity/bin"
@@ -5524,6 +5659,10 @@ events:
         found: false
       -
         name: "Network"
+        required: true
+        found: false
+      -
+        name: "Concurrent"
         required: true
         found: false
     configs:
@@ -8412,7 +8551,6 @@ events:
       CMAKE_PREFIX_PATH:
         - "/opt/homebrew/opt/qt"
       ENV{PATH}:
-        - "/opt/anaconda3/bin"
         - "/Users/yousufawj/.kimi-code/bin"
         - "/Users/yousufawj/.grok/bin"
         - "/Users/yousufawj/.antigravity/antigravity/bin"
@@ -8504,7 +8642,6 @@ events:
       - "/opt/homebrew/opt/qt/bin/"
       - "/opt/homebrew/opt/qt/sbin/"
       - "/opt/homebrew/opt/qt/"
-      - "/opt/anaconda3/bin/"
       - "/Users/yousufawj/.kimi-code/bin/"
       - "/Users/yousufawj/.grok/bin/"
       - "/Users/yousufawj/.antigravity/antigravity/bin/"
@@ -8530,6 +8667,7 @@ events:
       - "/Applications/VMware Fusion.app/Contents/Public/"
       - "/usr/local/share/dotnet/"
       - "/Users/yousufawj/.dotnet/tools/"
+      - "/opt/anaconda3/bin/"
       - "/opt/anaconda3/condabin/"
       - "/Users/yousufawj/Library/Application Support/JetBrains/Toolbox/scripts/"
       - "/Users/yousufawj/code/sdk/flutter/bin/"
@@ -8574,8 +8712,6 @@ events:
       - "/opt/homebrew/opt/qt/sbin/pkgconf"
       - "/opt/homebrew/opt/qt/pkg-config"
       - "/opt/homebrew/opt/qt/pkgconf"
-      - "/opt/anaconda3/bin/pkg-config"
-      - "/opt/anaconda3/bin/pkgconf"
       - "/Users/yousufawj/.kimi-code/bin/pkg-config"
       - "/Users/yousufawj/.kimi-code/bin/pkgconf"
       - "/Users/yousufawj/.grok/bin/pkg-config"
@@ -8597,7 +8733,6 @@ events:
       CMAKE_PREFIX_PATH:
         - "/opt/homebrew/opt/qt"
       ENV{PATH}:
-        - "/opt/anaconda3/bin"
         - "/Users/yousufawj/.kimi-code/bin"
         - "/Users/yousufawj/.grok/bin"
         - "/Users/yousufawj/.antigravity/antigravity/bin"
@@ -8687,7 +8822,6 @@ events:
       CMAKE_PREFIX_PATH:
         - "/opt/homebrew/opt/qt"
       ENV{PATH}:
-        - "/opt/anaconda3/bin"
         - "/Users/yousufawj/.kimi-code/bin"
         - "/Users/yousufawj/.grok/bin"
         - "/Users/yousufawj/.antigravity/antigravity/bin"
@@ -8778,7 +8912,6 @@ events:
     candidate_directories:
       - "/opt/homebrew/opt/qt/lib/"
       - "/opt/homebrew/opt/qt/"
-      - "/opt/anaconda3/bin/"
       - "/Users/yousufawj/.kimi-code/bin/"
       - "/Users/yousufawj/.grok/bin/"
       - "/Users/yousufawj/.antigravity/antigravity/bin/"
@@ -8800,6 +8933,7 @@ events:
       - "/Applications/VMware Fusion.app/Contents/Public/"
       - "/usr/local/share/dotnet/"
       - "/Users/yousufawj/.dotnet/tools/"
+      - "/opt/anaconda3/bin/"
       - "/opt/anaconda3/condabin/"
       - "/Users/yousufawj/Library/Application Support/JetBrains/Toolbox/scripts/"
       - "/Users/yousufawj/code/sdk/flutter/bin/"
@@ -8820,7 +8954,6 @@ events:
     searched_directories:
       - "/opt/homebrew/opt/qt/lib/"
       - "/opt/homebrew/opt/qt/"
-      - "/opt/anaconda3/bin/"
       - "/Users/yousufawj/.kimi-code/bin/"
       - "/Users/yousufawj/.grok/bin/"
       - "/Users/yousufawj/.antigravity/antigravity/bin/"
@@ -8842,6 +8975,7 @@ events:
       - "/Applications/VMware Fusion.app/Contents/Public/"
       - "/usr/local/share/dotnet/"
       - "/Users/yousufawj/.dotnet/tools/"
+      - "/opt/anaconda3/bin/"
       - "/opt/anaconda3/condabin/"
       - "/Users/yousufawj/Library/Application Support/JetBrains/Toolbox/scripts/"
       - "/Users/yousufawj/code/sdk/flutter/bin/"
@@ -8851,7 +8985,6 @@ events:
       CMAKE_PREFIX_PATH:
         - "/opt/homebrew/opt/qt"
       ENV{PATH}:
-        - "/opt/anaconda3/bin"
         - "/Users/yousufawj/.kimi-code/bin"
         - "/Users/yousufawj/.grok/bin"
         - "/Users/yousufawj/.antigravity/antigravity/bin"
@@ -8925,9 +9058,9 @@ events:
       - "/opt/homebrew/share/cmake/Modules/FindPkgConfig.cmake:811 (_pkg_find_libs)"
       - "/opt/homebrew/share/cmake/Modules/FindPkgConfig.cmake:1149 (_pkg_recalculate)"
       - "/opt/homebrew/share/cmake/Modules/FindPkgConfig.cmake:1166 (_pkg_check_modules_internal)"
-      - "CMakeLists.txt:22 (pkg_check_modules)"
+      - "CMakeLists.txt:37 (pkg_check_modules)"
     mode: "library"
-    variable: "pkgcfg_lib_MYSQLCLIENT_mysqlclient"
+    variable: "pkgcfg_lib_MARIADB_mariadb"
     description: "Path to a library."
     settings:
       SearchFramework: "FIRST"
@@ -8938,15 +9071,14 @@ events:
       CMAKE_FIND_USE_CMAKE_SYSTEM_PATH: true
       CMAKE_FIND_USE_INSTALL_PREFIX: true
     names:
-      - "mysqlclient"
+      - "mariadb"
     candidate_directories:
-      - "/opt/homebrew/Cellar/mysql/9.6.0_1/lib/"
-    found: "/opt/homebrew/Cellar/mysql/9.6.0_1/lib/libmysqlclient.dylib"
+      - "/opt/homebrew/Cellar/mariadb-connector-c/3.4.9/lib/"
+    found: "/opt/homebrew/Cellar/mariadb-connector-c/3.4.9/lib/libmariadb.dylib"
     search_context:
       CMAKE_PREFIX_PATH:
         - "/opt/homebrew/opt/qt"
       ENV{PATH}:
-        - "/opt/anaconda3/bin"
         - "/Users/yousufawj/.kimi-code/bin"
         - "/Users/yousufawj/.grok/bin"
         - "/Users/yousufawj/.antigravity/antigravity/bin"
@@ -9013,4 +9145,882 @@ events:
         - "/Library/Frameworks"
         - "/Network/Library/Frameworks"
         - "/System/Library/Frameworks"
+  -
+    kind: "find-v1"
+    backtrace:
+      - "/opt/homebrew/share/cmake/Modules/CTest.cmake:171 (find_program)"
+      - "CMakeLists.txt:108 (include)"
+    mode: "program"
+    variable: "GITCOMMAND"
+    description: "Path to a program."
+    settings:
+      SearchFramework: "FIRST"
+      SearchAppBundle: "FIRST"
+      CMAKE_FIND_USE_CMAKE_PATH: true
+      CMAKE_FIND_USE_CMAKE_ENVIRONMENT_PATH: true
+      CMAKE_FIND_USE_SYSTEM_ENVIRONMENT_PATH: true
+      CMAKE_FIND_USE_CMAKE_SYSTEM_PATH: true
+      CMAKE_FIND_USE_INSTALL_PREFIX: true
+    names:
+      - "git"
+    candidate_directories:
+      - "/opt/homebrew/opt/qt/bin/"
+      - "/opt/homebrew/opt/qt/sbin/"
+      - "/opt/homebrew/opt/qt/"
+      - "/Users/yousufawj/.kimi-code/bin/"
+      - "/Users/yousufawj/.grok/bin/"
+      - "/Users/yousufawj/.antigravity/antigravity/bin/"
+      - "/Users/yousufawj/.nvm/versions/node/v22.21.0/bin/"
+      - "/Users/yousufawj/.local/bin/"
+      - "/opt/homebrew/opt/mysql-client/bin/"
+      - "/opt/homebrew/opt/php@8.3/sbin/"
+      - "/opt/homebrew/opt/php@8.3/bin/"
+      - "/opt/homebrew/bin/"
+      - "/opt/homebrew/sbin/"
+      - "/opt/homebrew/opt/coreutils/libexec/gnubin/"
+      - "/usr/local/bin/"
+      - "/System/Cryptexes/App/usr/bin/"
+      - "/usr/bin/"
+      - "/bin/"
+      - "/usr/sbin/"
+      - "/sbin/"
+      - "/var/run/com.apple.security.cryptexd/codex.system/bootstrap/usr/local/bin/"
+      - "/var/run/com.apple.security.cryptexd/codex.system/bootstrap/usr/bin/"
+      - "/var/run/com.apple.security.cryptexd/codex.system/bootstrap/usr/appleinternal/bin/"
+      - "/pkg/env/global/bin/"
+      - "/Library/Apple/usr/bin/"
+      - "/Applications/VMware Fusion.app/Contents/Public/"
+      - "/usr/local/share/dotnet/"
+      - "/Users/yousufawj/.dotnet/tools/"
+      - "/opt/anaconda3/bin/"
+      - "/opt/anaconda3/condabin/"
+      - "/Users/yousufawj/Library/Application Support/JetBrains/Toolbox/scripts/"
+      - "/Users/yousufawj/code/sdk/flutter/bin/"
+      - "/Users/yousufawj/.lmstudio/bin/"
+      - "/Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX.sdk/usr/bin/"
+      - "/Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX.sdk/usr/sbin/"
+      - "/Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX.sdk/usr/"
+      - "/opt/homebrew/bin/"
+      - "/opt/homebrew/sbin/"
+      - "/opt/homebrew/"
+      - "/usr/local/bin/"
+      - "/usr/local/sbin/"
+      - "/usr/local/"
+      - "/usr/bin/"
+      - "/usr/sbin/"
+      - "/usr/"
+      - "/bin/"
+      - "/sbin/"
+      - "/usr/X11R6/bin/"
+      - "/usr/X11R6/sbin/"
+      - "/usr/X11R6/"
+      - "/usr/pkg/bin/"
+      - "/usr/pkg/sbin/"
+      - "/usr/pkg/"
+      - "/opt/bin/"
+      - "/opt/sbin/"
+      - "/opt/"
+      - "/sw/bin/"
+      - "/sw/sbin/"
+      - "/sw/"
+      - "/opt/local/bin/"
+      - "/opt/local/sbin/"
+      - "/opt/local/"
+      - "/Users/yousufawj/Applications/"
+      - "/Applications/"
+      - "/Applications/Xcode.app/Contents/Applications/"
+      - "/Applications/Xcode.app/Contents/Developer/Applications/"
+    searched_directories:
+      - "/opt/homebrew/opt/qt/bin/git"
+      - "/opt/homebrew/opt/qt/sbin/git"
+      - "/opt/homebrew/opt/qt/git"
+      - "/Users/yousufawj/.kimi-code/bin/git"
+      - "/Users/yousufawj/.grok/bin/git"
+      - "/Users/yousufawj/.antigravity/antigravity/bin/git"
+      - "/Users/yousufawj/.nvm/versions/node/v22.21.0/bin/git"
+      - "/Users/yousufawj/.local/bin/git"
+      - "/opt/homebrew/opt/mysql-client/bin/git"
+      - "/opt/homebrew/opt/php@8.3/sbin/git"
+      - "/opt/homebrew/opt/php@8.3/bin/git"
+    found: "/opt/homebrew/bin/git"
+    search_context:
+      CMAKE_PREFIX_PATH:
+        - "/opt/homebrew/opt/qt"
+      ENV{PATH}:
+        - "/Users/yousufawj/.kimi-code/bin"
+        - "/Users/yousufawj/.grok/bin"
+        - "/Users/yousufawj/.antigravity/antigravity/bin"
+        - "/Users/yousufawj/.nvm/versions/node/v22.21.0/bin"
+        - "/Users/yousufawj/.local/bin"
+        - "/opt/homebrew/opt/mysql-client/bin"
+        - "/opt/homebrew/opt/php@8.3/sbin"
+        - "/opt/homebrew/opt/php@8.3/bin"
+        - "/opt/homebrew/bin"
+        - "/opt/homebrew/sbin"
+        - "/opt/homebrew/opt/coreutils/libexec/gnubin"
+        - "/usr/local/bin"
+        - "/System/Cryptexes/App/usr/bin"
+        - "/usr/bin"
+        - "/bin"
+        - "/usr/sbin"
+        - "/sbin"
+        - "/var/run/com.apple.security.cryptexd/codex.system/bootstrap/usr/local/bin"
+        - "/var/run/com.apple.security.cryptexd/codex.system/bootstrap/usr/bin"
+        - "/var/run/com.apple.security.cryptexd/codex.system/bootstrap/usr/appleinternal/bin"
+        - "/pkg/env/global/bin"
+        - "/Library/Apple/usr/bin"
+        - "/Applications/VMware Fusion.app/Contents/Public"
+        - "/usr/local/share/dotnet"
+        - "~/.dotnet/tools"
+        - "/Users/yousufawj/.kimi-code/bin"
+        - "/Users/yousufawj/.grok/bin"
+        - "/Users/yousufawj/.antigravity/antigravity/bin"
+        - "/Users/yousufawj/.nvm/versions/node/v22.21.0/bin"
+        - "/Users/yousufawj/.local/bin"
+        - "/opt/homebrew/opt/mysql-client/bin"
+        - "/opt/homebrew/opt/php@8.3/sbin"
+        - "/opt/homebrew/opt/php@8.3/bin"
+        - "/opt/anaconda3/bin"
+        - "/opt/anaconda3/condabin"
+        - "/Users/yousufawj/Library/Application Support/JetBrains/Toolbox/scripts"
+        - "/Users/yousufawj/code/sdk/flutter/bin"
+        - "/Users/yousufawj/.lmstudio/bin"
+        - "/Users/yousufawj/code/sdk/flutter/bin"
+        - "/Users/yousufawj/.lmstudio/bin"
+      CMAKE_INSTALL_PREFIX: "/usr/local"
+      CMAKE_SYSTEM_PREFIX_PATH:
+        - "/Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX.sdk/usr"
+        - "/opt/homebrew"
+        - "/usr/local"
+        - "/usr"
+        - "/"
+        - "/opt/homebrew"
+        - "/usr/local"
+        - "/usr/X11R6"
+        - "/usr/pkg"
+        - "/opt"
+        - "/sw"
+        - "/opt/local"
+      CMAKE_SYSTEM_APPBUNDLE_PATH:
+        - "/Users/yousufawj/Applications"
+        - "/Applications"
+        - "/Applications/Xcode.app/Contents/Applications"
+        - "/Applications/Xcode.app/Contents/Developer/Applications"
+  -
+    kind: "find-v1"
+    backtrace:
+      - "/opt/homebrew/share/cmake/Modules/CTest.cmake:188 (find_program)"
+      - "CMakeLists.txt:108 (include)"
+    mode: "program"
+    variable: "MEMORYCHECK_COMMAND"
+    description: "Path to the memory checking command, used for memory error detection."
+    settings:
+      SearchFramework: "FIRST"
+      SearchAppBundle: "FIRST"
+      CMAKE_FIND_USE_CMAKE_PATH: true
+      CMAKE_FIND_USE_CMAKE_ENVIRONMENT_PATH: true
+      CMAKE_FIND_USE_SYSTEM_ENVIRONMENT_PATH: true
+      CMAKE_FIND_USE_CMAKE_SYSTEM_PATH: true
+      CMAKE_FIND_USE_INSTALL_PREFIX: true
+    names:
+      - "purify"
+      - "valgrind"
+      - "boundscheck"
+      - "drmemory"
+      - "cuda-memcheck"
+      - "compute-sanitizer"
+    candidate_directories:
+      - "/opt/homebrew/opt/qt/bin/"
+      - "/opt/homebrew/opt/qt/sbin/"
+      - "/opt/homebrew/opt/qt/"
+      - "/Users/yousufawj/.kimi-code/bin/"
+      - "/Users/yousufawj/.grok/bin/"
+      - "/Users/yousufawj/.antigravity/antigravity/bin/"
+      - "/Users/yousufawj/.nvm/versions/node/v22.21.0/bin/"
+      - "/Users/yousufawj/.local/bin/"
+      - "/opt/homebrew/opt/mysql-client/bin/"
+      - "/opt/homebrew/opt/php@8.3/sbin/"
+      - "/opt/homebrew/opt/php@8.3/bin/"
+      - "/opt/homebrew/bin/"
+      - "/opt/homebrew/sbin/"
+      - "/opt/homebrew/opt/coreutils/libexec/gnubin/"
+      - "/usr/local/bin/"
+      - "/System/Cryptexes/App/usr/bin/"
+      - "/usr/bin/"
+      - "/bin/"
+      - "/usr/sbin/"
+      - "/sbin/"
+      - "/var/run/com.apple.security.cryptexd/codex.system/bootstrap/usr/local/bin/"
+      - "/var/run/com.apple.security.cryptexd/codex.system/bootstrap/usr/bin/"
+      - "/var/run/com.apple.security.cryptexd/codex.system/bootstrap/usr/appleinternal/bin/"
+      - "/pkg/env/global/bin/"
+      - "/Library/Apple/usr/bin/"
+      - "/Applications/VMware Fusion.app/Contents/Public/"
+      - "/usr/local/share/dotnet/"
+      - "/Users/yousufawj/.dotnet/tools/"
+      - "/opt/anaconda3/bin/"
+      - "/opt/anaconda3/condabin/"
+      - "/Users/yousufawj/Library/Application Support/JetBrains/Toolbox/scripts/"
+      - "/Users/yousufawj/code/sdk/flutter/bin/"
+      - "/Users/yousufawj/.lmstudio/bin/"
+      - "/Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX.sdk/usr/bin/"
+      - "/Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX.sdk/usr/sbin/"
+      - "/Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX.sdk/usr/"
+      - "/opt/homebrew/bin/"
+      - "/opt/homebrew/sbin/"
+      - "/opt/homebrew/"
+      - "/usr/local/bin/"
+      - "/usr/local/sbin/"
+      - "/usr/local/"
+      - "/usr/bin/"
+      - "/usr/sbin/"
+      - "/usr/"
+      - "/bin/"
+      - "/sbin/"
+      - "/usr/X11R6/bin/"
+      - "/usr/X11R6/sbin/"
+      - "/usr/X11R6/"
+      - "/usr/pkg/bin/"
+      - "/usr/pkg/sbin/"
+      - "/usr/pkg/"
+      - "/opt/bin/"
+      - "/opt/sbin/"
+      - "/opt/"
+      - "/sw/bin/"
+      - "/sw/sbin/"
+      - "/sw/"
+      - "/opt/local/bin/"
+      - "/opt/local/sbin/"
+      - "/opt/local/"
+      - "/Users/yousufawj/Applications/"
+      - "/Applications/"
+      - "/Applications/Xcode.app/Contents/Applications/"
+      - "/Applications/Xcode.app/Contents/Developer/Applications/"
+    searched_directories:
+      - "/opt/homebrew/opt/qt/bin/purify"
+      - "/opt/homebrew/opt/qt/sbin/purify"
+      - "/opt/homebrew/opt/qt/purify"
+      - "/Users/yousufawj/.kimi-code/bin/purify"
+      - "/Users/yousufawj/.grok/bin/purify"
+      - "/Users/yousufawj/.antigravity/antigravity/bin/purify"
+      - "/Users/yousufawj/.nvm/versions/node/v22.21.0/bin/purify"
+      - "/Users/yousufawj/.local/bin/purify"
+      - "/opt/homebrew/opt/mysql-client/bin/purify"
+      - "/opt/homebrew/opt/php@8.3/sbin/purify"
+      - "/opt/homebrew/opt/php@8.3/bin/purify"
+      - "/opt/homebrew/bin/purify"
+      - "/opt/homebrew/sbin/purify"
+      - "/opt/homebrew/opt/coreutils/libexec/gnubin/purify"
+      - "/usr/local/bin/purify"
+      - "/System/Cryptexes/App/usr/bin/purify"
+      - "/usr/bin/purify"
+      - "/bin/purify"
+      - "/usr/sbin/purify"
+      - "/sbin/purify"
+      - "/var/run/com.apple.security.cryptexd/codex.system/bootstrap/usr/local/bin/purify"
+      - "/var/run/com.apple.security.cryptexd/codex.system/bootstrap/usr/bin/purify"
+      - "/var/run/com.apple.security.cryptexd/codex.system/bootstrap/usr/appleinternal/bin/purify"
+      - "/pkg/env/global/bin/purify"
+      - "/Library/Apple/usr/bin/purify"
+      - "/Applications/VMware Fusion.app/Contents/Public/purify"
+      - "/usr/local/share/dotnet/purify"
+      - "/Users/yousufawj/.dotnet/tools/purify"
+      - "/opt/anaconda3/bin/purify"
+      - "/opt/anaconda3/condabin/purify"
+      - "/Users/yousufawj/Library/Application Support/JetBrains/Toolbox/scripts/purify"
+      - "/Users/yousufawj/code/sdk/flutter/bin/purify"
+      - "/Users/yousufawj/.lmstudio/bin/purify"
+      - "/Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX.sdk/usr/bin/purify"
+      - "/Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX.sdk/usr/sbin/purify"
+      - "/Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX.sdk/usr/purify"
+      - "/opt/homebrew/bin/purify"
+      - "/opt/homebrew/sbin/purify"
+      - "/opt/homebrew/purify"
+      - "/usr/local/bin/purify"
+      - "/usr/local/sbin/purify"
+      - "/usr/local/purify"
+      - "/usr/bin/purify"
+      - "/usr/sbin/purify"
+      - "/usr/purify"
+      - "/bin/purify"
+      - "/sbin/purify"
+      - "/usr/X11R6/bin/purify"
+      - "/usr/X11R6/sbin/purify"
+      - "/usr/X11R6/purify"
+      - "/usr/pkg/bin/purify"
+      - "/usr/pkg/sbin/purify"
+      - "/usr/pkg/purify"
+      - "/opt/bin/purify"
+      - "/opt/sbin/purify"
+      - "/opt/purify"
+      - "/sw/bin/purify"
+      - "/sw/sbin/purify"
+      - "/sw/purify"
+      - "/opt/local/bin/purify"
+      - "/opt/local/sbin/purify"
+      - "/opt/local/purify"
+      - "/Users/yousufawj/Applications/purify"
+      - "/Applications/purify"
+      - "/Applications/Xcode.app/Contents/Applications/purify"
+      - "/Applications/Xcode.app/Contents/Developer/Applications/purify"
+      - "/opt/homebrew/opt/qt/bin/valgrind"
+      - "/opt/homebrew/opt/qt/sbin/valgrind"
+      - "/opt/homebrew/opt/qt/valgrind"
+      - "/Users/yousufawj/.kimi-code/bin/valgrind"
+      - "/Users/yousufawj/.grok/bin/valgrind"
+      - "/Users/yousufawj/.antigravity/antigravity/bin/valgrind"
+      - "/Users/yousufawj/.nvm/versions/node/v22.21.0/bin/valgrind"
+      - "/Users/yousufawj/.local/bin/valgrind"
+      - "/opt/homebrew/opt/mysql-client/bin/valgrind"
+      - "/opt/homebrew/opt/php@8.3/sbin/valgrind"
+      - "/opt/homebrew/opt/php@8.3/bin/valgrind"
+      - "/opt/homebrew/bin/valgrind"
+      - "/opt/homebrew/sbin/valgrind"
+      - "/opt/homebrew/opt/coreutils/libexec/gnubin/valgrind"
+      - "/usr/local/bin/valgrind"
+      - "/System/Cryptexes/App/usr/bin/valgrind"
+      - "/usr/bin/valgrind"
+      - "/bin/valgrind"
+      - "/usr/sbin/valgrind"
+      - "/sbin/valgrind"
+      - "/var/run/com.apple.security.cryptexd/codex.system/bootstrap/usr/local/bin/valgrind"
+      - "/var/run/com.apple.security.cryptexd/codex.system/bootstrap/usr/bin/valgrind"
+      - "/var/run/com.apple.security.cryptexd/codex.system/bootstrap/usr/appleinternal/bin/valgrind"
+      - "/pkg/env/global/bin/valgrind"
+      - "/Library/Apple/usr/bin/valgrind"
+      - "/Applications/VMware Fusion.app/Contents/Public/valgrind"
+      - "/usr/local/share/dotnet/valgrind"
+      - "/Users/yousufawj/.dotnet/tools/valgrind"
+      - "/opt/anaconda3/bin/valgrind"
+      - "/opt/anaconda3/condabin/valgrind"
+      - "/Users/yousufawj/Library/Application Support/JetBrains/Toolbox/scripts/valgrind"
+      - "/Users/yousufawj/code/sdk/flutter/bin/valgrind"
+      - "/Users/yousufawj/.lmstudio/bin/valgrind"
+      - "/Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX.sdk/usr/bin/valgrind"
+      - "/Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX.sdk/usr/sbin/valgrind"
+      - "/Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX.sdk/usr/valgrind"
+      - "/opt/homebrew/bin/valgrind"
+      - "/opt/homebrew/sbin/valgrind"
+      - "/opt/homebrew/valgrind"
+      - "/usr/local/bin/valgrind"
+      - "/usr/local/sbin/valgrind"
+      - "/usr/local/valgrind"
+      - "/usr/bin/valgrind"
+      - "/usr/sbin/valgrind"
+      - "/usr/valgrind"
+      - "/bin/valgrind"
+      - "/sbin/valgrind"
+      - "/usr/X11R6/bin/valgrind"
+      - "/usr/X11R6/sbin/valgrind"
+      - "/usr/X11R6/valgrind"
+      - "/usr/pkg/bin/valgrind"
+      - "/usr/pkg/sbin/valgrind"
+      - "/usr/pkg/valgrind"
+      - "/opt/bin/valgrind"
+      - "/opt/sbin/valgrind"
+      - "/opt/valgrind"
+      - "/sw/bin/valgrind"
+      - "/sw/sbin/valgrind"
+      - "/sw/valgrind"
+      - "/opt/local/bin/valgrind"
+      - "/opt/local/sbin/valgrind"
+      - "/opt/local/valgrind"
+      - "/Users/yousufawj/Applications/valgrind"
+      - "/Applications/valgrind"
+      - "/Applications/Xcode.app/Contents/Applications/valgrind"
+      - "/Applications/Xcode.app/Contents/Developer/Applications/valgrind"
+      - "/opt/homebrew/opt/qt/bin/boundscheck"
+      - "/opt/homebrew/opt/qt/sbin/boundscheck"
+      - "/opt/homebrew/opt/qt/boundscheck"
+      - "/Users/yousufawj/.kimi-code/bin/boundscheck"
+      - "/Users/yousufawj/.grok/bin/boundscheck"
+      - "/Users/yousufawj/.antigravity/antigravity/bin/boundscheck"
+      - "/Users/yousufawj/.nvm/versions/node/v22.21.0/bin/boundscheck"
+      - "/Users/yousufawj/.local/bin/boundscheck"
+      - "/opt/homebrew/opt/mysql-client/bin/boundscheck"
+      - "/opt/homebrew/opt/php@8.3/sbin/boundscheck"
+      - "/opt/homebrew/opt/php@8.3/bin/boundscheck"
+      - "/opt/homebrew/bin/boundscheck"
+      - "/opt/homebrew/sbin/boundscheck"
+      - "/opt/homebrew/opt/coreutils/libexec/gnubin/boundscheck"
+      - "/usr/local/bin/boundscheck"
+      - "/System/Cryptexes/App/usr/bin/boundscheck"
+      - "/usr/bin/boundscheck"
+      - "/bin/boundscheck"
+      - "/usr/sbin/boundscheck"
+      - "/sbin/boundscheck"
+      - "/var/run/com.apple.security.cryptexd/codex.system/bootstrap/usr/local/bin/boundscheck"
+      - "/var/run/com.apple.security.cryptexd/codex.system/bootstrap/usr/bin/boundscheck"
+      - "/var/run/com.apple.security.cryptexd/codex.system/bootstrap/usr/appleinternal/bin/boundscheck"
+      - "/pkg/env/global/bin/boundscheck"
+      - "/Library/Apple/usr/bin/boundscheck"
+      - "/Applications/VMware Fusion.app/Contents/Public/boundscheck"
+      - "/usr/local/share/dotnet/boundscheck"
+      - "/Users/yousufawj/.dotnet/tools/boundscheck"
+      - "/opt/anaconda3/bin/boundscheck"
+      - "/opt/anaconda3/condabin/boundscheck"
+      - "/Users/yousufawj/Library/Application Support/JetBrains/Toolbox/scripts/boundscheck"
+      - "/Users/yousufawj/code/sdk/flutter/bin/boundscheck"
+      - "/Users/yousufawj/.lmstudio/bin/boundscheck"
+      - "/Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX.sdk/usr/bin/boundscheck"
+      - "/Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX.sdk/usr/sbin/boundscheck"
+      - "/Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX.sdk/usr/boundscheck"
+      - "/opt/homebrew/bin/boundscheck"
+      - "/opt/homebrew/sbin/boundscheck"
+      - "/opt/homebrew/boundscheck"
+      - "/usr/local/bin/boundscheck"
+      - "/usr/local/sbin/boundscheck"
+      - "/usr/local/boundscheck"
+      - "/usr/bin/boundscheck"
+      - "/usr/sbin/boundscheck"
+      - "/usr/boundscheck"
+      - "/bin/boundscheck"
+      - "/sbin/boundscheck"
+      - "/usr/X11R6/bin/boundscheck"
+      - "/usr/X11R6/sbin/boundscheck"
+      - "/usr/X11R6/boundscheck"
+      - "/usr/pkg/bin/boundscheck"
+      - "/usr/pkg/sbin/boundscheck"
+      - "/usr/pkg/boundscheck"
+      - "/opt/bin/boundscheck"
+      - "/opt/sbin/boundscheck"
+      - "/opt/boundscheck"
+      - "/sw/bin/boundscheck"
+      - "/sw/sbin/boundscheck"
+      - "/sw/boundscheck"
+      - "/opt/local/bin/boundscheck"
+      - "/opt/local/sbin/boundscheck"
+      - "/opt/local/boundscheck"
+      - "/Users/yousufawj/Applications/boundscheck"
+      - "/Applications/boundscheck"
+      - "/Applications/Xcode.app/Contents/Applications/boundscheck"
+      - "/Applications/Xcode.app/Contents/Developer/Applications/boundscheck"
+      - "/opt/homebrew/opt/qt/bin/drmemory"
+      - "/opt/homebrew/opt/qt/sbin/drmemory"
+      - "/opt/homebrew/opt/qt/drmemory"
+      - "/Users/yousufawj/.kimi-code/bin/drmemory"
+      - "/Users/yousufawj/.grok/bin/drmemory"
+      - "/Users/yousufawj/.antigravity/antigravity/bin/drmemory"
+      - "/Users/yousufawj/.nvm/versions/node/v22.21.0/bin/drmemory"
+      - "/Users/yousufawj/.local/bin/drmemory"
+      - "/opt/homebrew/opt/mysql-client/bin/drmemory"
+      - "/opt/homebrew/opt/php@8.3/sbin/drmemory"
+      - "/opt/homebrew/opt/php@8.3/bin/drmemory"
+      - "/opt/homebrew/bin/drmemory"
+      - "/opt/homebrew/sbin/drmemory"
+      - "/opt/homebrew/opt/coreutils/libexec/gnubin/drmemory"
+      - "/usr/local/bin/drmemory"
+      - "/System/Cryptexes/App/usr/bin/drmemory"
+      - "/usr/bin/drmemory"
+      - "/bin/drmemory"
+      - "/usr/sbin/drmemory"
+      - "/sbin/drmemory"
+      - "/var/run/com.apple.security.cryptexd/codex.system/bootstrap/usr/local/bin/drmemory"
+      - "/var/run/com.apple.security.cryptexd/codex.system/bootstrap/usr/bin/drmemory"
+      - "/var/run/com.apple.security.cryptexd/codex.system/bootstrap/usr/appleinternal/bin/drmemory"
+      - "/pkg/env/global/bin/drmemory"
+      - "/Library/Apple/usr/bin/drmemory"
+      - "/Applications/VMware Fusion.app/Contents/Public/drmemory"
+      - "/usr/local/share/dotnet/drmemory"
+      - "/Users/yousufawj/.dotnet/tools/drmemory"
+      - "/opt/anaconda3/bin/drmemory"
+      - "/opt/anaconda3/condabin/drmemory"
+      - "/Users/yousufawj/Library/Application Support/JetBrains/Toolbox/scripts/drmemory"
+      - "/Users/yousufawj/code/sdk/flutter/bin/drmemory"
+      - "/Users/yousufawj/.lmstudio/bin/drmemory"
+      - "/Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX.sdk/usr/bin/drmemory"
+      - "/Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX.sdk/usr/sbin/drmemory"
+      - "/Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX.sdk/usr/drmemory"
+      - "/opt/homebrew/bin/drmemory"
+      - "/opt/homebrew/sbin/drmemory"
+      - "/opt/homebrew/drmemory"
+      - "/usr/local/bin/drmemory"
+      - "/usr/local/sbin/drmemory"
+      - "/usr/local/drmemory"
+      - "/usr/bin/drmemory"
+      - "/usr/sbin/drmemory"
+      - "/usr/drmemory"
+      - "/bin/drmemory"
+      - "/sbin/drmemory"
+      - "/usr/X11R6/bin/drmemory"
+      - "/usr/X11R6/sbin/drmemory"
+      - "/usr/X11R6/drmemory"
+      - "/usr/pkg/bin/drmemory"
+      - "/usr/pkg/sbin/drmemory"
+      - "/usr/pkg/drmemory"
+      - "/opt/bin/drmemory"
+      - "/opt/sbin/drmemory"
+      - "/opt/drmemory"
+      - "/sw/bin/drmemory"
+      - "/sw/sbin/drmemory"
+      - "/sw/drmemory"
+      - "/opt/local/bin/drmemory"
+      - "/opt/local/sbin/drmemory"
+      - "/opt/local/drmemory"
+      - "/Users/yousufawj/Applications/drmemory"
+      - "/Applications/drmemory"
+      - "/Applications/Xcode.app/Contents/Applications/drmemory"
+      - "/Applications/Xcode.app/Contents/Developer/Applications/drmemory"
+      - "/opt/homebrew/opt/qt/bin/cuda-memcheck"
+      - "/opt/homebrew/opt/qt/sbin/cuda-memcheck"
+      - "/opt/homebrew/opt/qt/cuda-memcheck"
+      - "/Users/yousufawj/.kimi-code/bin/cuda-memcheck"
+      - "/Users/yousufawj/.grok/bin/cuda-memcheck"
+      - "/Users/yousufawj/.antigravity/antigravity/bin/cuda-memcheck"
+      - "/Users/yousufawj/.nvm/versions/node/v22.21.0/bin/cuda-memcheck"
+      - "/Users/yousufawj/.local/bin/cuda-memcheck"
+      - "/opt/homebrew/opt/mysql-client/bin/cuda-memcheck"
+      - "/opt/homebrew/opt/php@8.3/sbin/cuda-memcheck"
+      - "/opt/homebrew/opt/php@8.3/bin/cuda-memcheck"
+      - "/opt/homebrew/bin/cuda-memcheck"
+      - "/opt/homebrew/sbin/cuda-memcheck"
+      - "/opt/homebrew/opt/coreutils/libexec/gnubin/cuda-memcheck"
+      - "/usr/local/bin/cuda-memcheck"
+      - "/System/Cryptexes/App/usr/bin/cuda-memcheck"
+      - "/usr/bin/cuda-memcheck"
+      - "/bin/cuda-memcheck"
+      - "/usr/sbin/cuda-memcheck"
+      - "/sbin/cuda-memcheck"
+      - "/var/run/com.apple.security.cryptexd/codex.system/bootstrap/usr/local/bin/cuda-memcheck"
+      - "/var/run/com.apple.security.cryptexd/codex.system/bootstrap/usr/bin/cuda-memcheck"
+      - "/var/run/com.apple.security.cryptexd/codex.system/bootstrap/usr/appleinternal/bin/cuda-memcheck"
+      - "/pkg/env/global/bin/cuda-memcheck"
+      - "/Library/Apple/usr/bin/cuda-memcheck"
+      - "/Applications/VMware Fusion.app/Contents/Public/cuda-memcheck"
+      - "/usr/local/share/dotnet/cuda-memcheck"
+      - "/Users/yousufawj/.dotnet/tools/cuda-memcheck"
+      - "/opt/anaconda3/bin/cuda-memcheck"
+      - "/opt/anaconda3/condabin/cuda-memcheck"
+      - "/Users/yousufawj/Library/Application Support/JetBrains/Toolbox/scripts/cuda-memcheck"
+      - "/Users/yousufawj/code/sdk/flutter/bin/cuda-memcheck"
+      - "/Users/yousufawj/.lmstudio/bin/cuda-memcheck"
+      - "/Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX.sdk/usr/bin/cuda-memcheck"
+      - "/Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX.sdk/usr/sbin/cuda-memcheck"
+      - "/Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX.sdk/usr/cuda-memcheck"
+      - "/opt/homebrew/bin/cuda-memcheck"
+      - "/opt/homebrew/sbin/cuda-memcheck"
+      - "/opt/homebrew/cuda-memcheck"
+      - "/usr/local/bin/cuda-memcheck"
+      - "/usr/local/sbin/cuda-memcheck"
+      - "/usr/local/cuda-memcheck"
+      - "/usr/bin/cuda-memcheck"
+      - "/usr/sbin/cuda-memcheck"
+      - "/usr/cuda-memcheck"
+      - "/bin/cuda-memcheck"
+      - "/sbin/cuda-memcheck"
+      - "/usr/X11R6/bin/cuda-memcheck"
+      - "/usr/X11R6/sbin/cuda-memcheck"
+      - "/usr/X11R6/cuda-memcheck"
+      - "/usr/pkg/bin/cuda-memcheck"
+      - "/usr/pkg/sbin/cuda-memcheck"
+      - "/usr/pkg/cuda-memcheck"
+      - "/opt/bin/cuda-memcheck"
+      - "/opt/sbin/cuda-memcheck"
+      - "/opt/cuda-memcheck"
+      - "/sw/bin/cuda-memcheck"
+      - "/sw/sbin/cuda-memcheck"
+      - "/sw/cuda-memcheck"
+      - "/opt/local/bin/cuda-memcheck"
+      - "/opt/local/sbin/cuda-memcheck"
+      - "/opt/local/cuda-memcheck"
+      - "/Users/yousufawj/Applications/cuda-memcheck"
+      - "/Applications/cuda-memcheck"
+      - "/Applications/Xcode.app/Contents/Applications/cuda-memcheck"
+      - "/Applications/Xcode.app/Contents/Developer/Applications/cuda-memcheck"
+      - "/opt/homebrew/opt/qt/bin/compute-sanitizer"
+      - "/opt/homebrew/opt/qt/sbin/compute-sanitizer"
+      - "/opt/homebrew/opt/qt/compute-sanitizer"
+      - "/Users/yousufawj/.kimi-code/bin/compute-sanitizer"
+      - "/Users/yousufawj/.grok/bin/compute-sanitizer"
+      - "/Users/yousufawj/.antigravity/antigravity/bin/compute-sanitizer"
+      - "/Users/yousufawj/.nvm/versions/node/v22.21.0/bin/compute-sanitizer"
+      - "/Users/yousufawj/.local/bin/compute-sanitizer"
+      - "/opt/homebrew/opt/mysql-client/bin/compute-sanitizer"
+      - "/opt/homebrew/opt/php@8.3/sbin/compute-sanitizer"
+      - "/opt/homebrew/opt/php@8.3/bin/compute-sanitizer"
+      - "/opt/homebrew/bin/compute-sanitizer"
+      - "/opt/homebrew/sbin/compute-sanitizer"
+      - "/opt/homebrew/opt/coreutils/libexec/gnubin/compute-sanitizer"
+      - "/usr/local/bin/compute-sanitizer"
+      - "/System/Cryptexes/App/usr/bin/compute-sanitizer"
+      - "/usr/bin/compute-sanitizer"
+      - "/bin/compute-sanitizer"
+      - "/usr/sbin/compute-sanitizer"
+      - "/sbin/compute-sanitizer"
+      - "/var/run/com.apple.security.cryptexd/codex.system/bootstrap/usr/local/bin/compute-sanitizer"
+      - "/var/run/com.apple.security.cryptexd/codex.system/bootstrap/usr/bin/compute-sanitizer"
+      - "/var/run/com.apple.security.cryptexd/codex.system/bootstrap/usr/appleinternal/bin/compute-sanitizer"
+      - "/pkg/env/global/bin/compute-sanitizer"
+      - "/Library/Apple/usr/bin/compute-sanitizer"
+      - "/Applications/VMware Fusion.app/Contents/Public/compute-sanitizer"
+      - "/usr/local/share/dotnet/compute-sanitizer"
+      - "/Users/yousufawj/.dotnet/tools/compute-sanitizer"
+      - "/opt/anaconda3/bin/compute-sanitizer"
+      - "/opt/anaconda3/condabin/compute-sanitizer"
+      - "/Users/yousufawj/Library/Application Support/JetBrains/Toolbox/scripts/compute-sanitizer"
+      - "/Users/yousufawj/code/sdk/flutter/bin/compute-sanitizer"
+      - "/Users/yousufawj/.lmstudio/bin/compute-sanitizer"
+      - "/Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX.sdk/usr/bin/compute-sanitizer"
+      - "/Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX.sdk/usr/sbin/compute-sanitizer"
+      - "/Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX.sdk/usr/compute-sanitizer"
+      - "/opt/homebrew/bin/compute-sanitizer"
+      - "/opt/homebrew/sbin/compute-sanitizer"
+      - "/opt/homebrew/compute-sanitizer"
+      - "/usr/local/bin/compute-sanitizer"
+      - "/usr/local/sbin/compute-sanitizer"
+      - "/usr/local/compute-sanitizer"
+      - "/usr/bin/compute-sanitizer"
+      - "/usr/sbin/compute-sanitizer"
+      - "/usr/compute-sanitizer"
+      - "/bin/compute-sanitizer"
+      - "/sbin/compute-sanitizer"
+      - "/usr/X11R6/bin/compute-sanitizer"
+      - "/usr/X11R6/sbin/compute-sanitizer"
+      - "/usr/X11R6/compute-sanitizer"
+      - "/usr/pkg/bin/compute-sanitizer"
+      - "/usr/pkg/sbin/compute-sanitizer"
+      - "/usr/pkg/compute-sanitizer"
+      - "/opt/bin/compute-sanitizer"
+      - "/opt/sbin/compute-sanitizer"
+      - "/opt/compute-sanitizer"
+      - "/sw/bin/compute-sanitizer"
+      - "/sw/sbin/compute-sanitizer"
+      - "/sw/compute-sanitizer"
+      - "/opt/local/bin/compute-sanitizer"
+      - "/opt/local/sbin/compute-sanitizer"
+      - "/opt/local/compute-sanitizer"
+      - "/Users/yousufawj/Applications/compute-sanitizer"
+      - "/Applications/compute-sanitizer"
+      - "/Applications/Xcode.app/Contents/Applications/compute-sanitizer"
+      - "/Applications/Xcode.app/Contents/Developer/Applications/compute-sanitizer"
+    found: false
+    search_context:
+      CMAKE_PREFIX_PATH:
+        - "/opt/homebrew/opt/qt"
+      ENV{PATH}:
+        - "/Users/yousufawj/.kimi-code/bin"
+        - "/Users/yousufawj/.grok/bin"
+        - "/Users/yousufawj/.antigravity/antigravity/bin"
+        - "/Users/yousufawj/.nvm/versions/node/v22.21.0/bin"
+        - "/Users/yousufawj/.local/bin"
+        - "/opt/homebrew/opt/mysql-client/bin"
+        - "/opt/homebrew/opt/php@8.3/sbin"
+        - "/opt/homebrew/opt/php@8.3/bin"
+        - "/opt/homebrew/bin"
+        - "/opt/homebrew/sbin"
+        - "/opt/homebrew/opt/coreutils/libexec/gnubin"
+        - "/usr/local/bin"
+        - "/System/Cryptexes/App/usr/bin"
+        - "/usr/bin"
+        - "/bin"
+        - "/usr/sbin"
+        - "/sbin"
+        - "/var/run/com.apple.security.cryptexd/codex.system/bootstrap/usr/local/bin"
+        - "/var/run/com.apple.security.cryptexd/codex.system/bootstrap/usr/bin"
+        - "/var/run/com.apple.security.cryptexd/codex.system/bootstrap/usr/appleinternal/bin"
+        - "/pkg/env/global/bin"
+        - "/Library/Apple/usr/bin"
+        - "/Applications/VMware Fusion.app/Contents/Public"
+        - "/usr/local/share/dotnet"
+        - "~/.dotnet/tools"
+        - "/Users/yousufawj/.kimi-code/bin"
+        - "/Users/yousufawj/.grok/bin"
+        - "/Users/yousufawj/.antigravity/antigravity/bin"
+        - "/Users/yousufawj/.nvm/versions/node/v22.21.0/bin"
+        - "/Users/yousufawj/.local/bin"
+        - "/opt/homebrew/opt/mysql-client/bin"
+        - "/opt/homebrew/opt/php@8.3/sbin"
+        - "/opt/homebrew/opt/php@8.3/bin"
+        - "/opt/anaconda3/bin"
+        - "/opt/anaconda3/condabin"
+        - "/Users/yousufawj/Library/Application Support/JetBrains/Toolbox/scripts"
+        - "/Users/yousufawj/code/sdk/flutter/bin"
+        - "/Users/yousufawj/.lmstudio/bin"
+        - "/Users/yousufawj/code/sdk/flutter/bin"
+        - "/Users/yousufawj/.lmstudio/bin"
+      CMAKE_INSTALL_PREFIX: "/usr/local"
+      CMAKE_SYSTEM_PREFIX_PATH:
+        - "/Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX.sdk/usr"
+        - "/opt/homebrew"
+        - "/usr/local"
+        - "/usr"
+        - "/"
+        - "/opt/homebrew"
+        - "/usr/local"
+        - "/usr/X11R6"
+        - "/usr/pkg"
+        - "/opt"
+        - "/sw"
+        - "/opt/local"
+      CMAKE_SYSTEM_APPBUNDLE_PATH:
+        - "/Users/yousufawj/Applications"
+        - "/Applications"
+        - "/Applications/Xcode.app/Contents/Applications"
+        - "/Applications/Xcode.app/Contents/Developer/Applications"
+  -
+    kind: "find-v1"
+    backtrace:
+      - "/opt/homebrew/share/cmake/Modules/CTest.cmake:196 (find_program)"
+      - "CMakeLists.txt:108 (include)"
+    mode: "program"
+    variable: "COVERAGE_COMMAND"
+    description: "Path to the coverage program that CTest uses for performing coverage inspection"
+    settings:
+      SearchFramework: "FIRST"
+      SearchAppBundle: "FIRST"
+      CMAKE_FIND_USE_CMAKE_PATH: true
+      CMAKE_FIND_USE_CMAKE_ENVIRONMENT_PATH: true
+      CMAKE_FIND_USE_SYSTEM_ENVIRONMENT_PATH: true
+      CMAKE_FIND_USE_CMAKE_SYSTEM_PATH: true
+      CMAKE_FIND_USE_INSTALL_PREFIX: true
+    names:
+      - "gcov"
+    candidate_directories:
+      - "/opt/homebrew/opt/qt/bin/"
+      - "/opt/homebrew/opt/qt/sbin/"
+      - "/opt/homebrew/opt/qt/"
+      - "/Users/yousufawj/.kimi-code/bin/"
+      - "/Users/yousufawj/.grok/bin/"
+      - "/Users/yousufawj/.antigravity/antigravity/bin/"
+      - "/Users/yousufawj/.nvm/versions/node/v22.21.0/bin/"
+      - "/Users/yousufawj/.local/bin/"
+      - "/opt/homebrew/opt/mysql-client/bin/"
+      - "/opt/homebrew/opt/php@8.3/sbin/"
+      - "/opt/homebrew/opt/php@8.3/bin/"
+      - "/opt/homebrew/bin/"
+      - "/opt/homebrew/sbin/"
+      - "/opt/homebrew/opt/coreutils/libexec/gnubin/"
+      - "/usr/local/bin/"
+      - "/System/Cryptexes/App/usr/bin/"
+      - "/usr/bin/"
+      - "/bin/"
+      - "/usr/sbin/"
+      - "/sbin/"
+      - "/var/run/com.apple.security.cryptexd/codex.system/bootstrap/usr/local/bin/"
+      - "/var/run/com.apple.security.cryptexd/codex.system/bootstrap/usr/bin/"
+      - "/var/run/com.apple.security.cryptexd/codex.system/bootstrap/usr/appleinternal/bin/"
+      - "/pkg/env/global/bin/"
+      - "/Library/Apple/usr/bin/"
+      - "/Applications/VMware Fusion.app/Contents/Public/"
+      - "/usr/local/share/dotnet/"
+      - "/Users/yousufawj/.dotnet/tools/"
+      - "/opt/anaconda3/bin/"
+      - "/opt/anaconda3/condabin/"
+      - "/Users/yousufawj/Library/Application Support/JetBrains/Toolbox/scripts/"
+      - "/Users/yousufawj/code/sdk/flutter/bin/"
+      - "/Users/yousufawj/.lmstudio/bin/"
+      - "/Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX.sdk/usr/bin/"
+      - "/Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX.sdk/usr/sbin/"
+      - "/Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX.sdk/usr/"
+      - "/opt/homebrew/bin/"
+      - "/opt/homebrew/sbin/"
+      - "/opt/homebrew/"
+      - "/usr/local/bin/"
+      - "/usr/local/sbin/"
+      - "/usr/local/"
+      - "/usr/bin/"
+      - "/usr/sbin/"
+      - "/usr/"
+      - "/bin/"
+      - "/sbin/"
+      - "/usr/X11R6/bin/"
+      - "/usr/X11R6/sbin/"
+      - "/usr/X11R6/"
+      - "/usr/pkg/bin/"
+      - "/usr/pkg/sbin/"
+      - "/usr/pkg/"
+      - "/opt/bin/"
+      - "/opt/sbin/"
+      - "/opt/"
+      - "/sw/bin/"
+      - "/sw/sbin/"
+      - "/sw/"
+      - "/opt/local/bin/"
+      - "/opt/local/sbin/"
+      - "/opt/local/"
+      - "/Users/yousufawj/Applications/"
+      - "/Applications/"
+      - "/Applications/Xcode.app/Contents/Applications/"
+      - "/Applications/Xcode.app/Contents/Developer/Applications/"
+    searched_directories:
+      - "/opt/homebrew/opt/qt/bin/gcov"
+      - "/opt/homebrew/opt/qt/sbin/gcov"
+      - "/opt/homebrew/opt/qt/gcov"
+      - "/Users/yousufawj/.kimi-code/bin/gcov"
+      - "/Users/yousufawj/.grok/bin/gcov"
+      - "/Users/yousufawj/.antigravity/antigravity/bin/gcov"
+      - "/Users/yousufawj/.nvm/versions/node/v22.21.0/bin/gcov"
+      - "/Users/yousufawj/.local/bin/gcov"
+      - "/opt/homebrew/opt/mysql-client/bin/gcov"
+      - "/opt/homebrew/opt/php@8.3/sbin/gcov"
+      - "/opt/homebrew/opt/php@8.3/bin/gcov"
+      - "/opt/homebrew/bin/gcov"
+      - "/opt/homebrew/sbin/gcov"
+      - "/opt/homebrew/opt/coreutils/libexec/gnubin/gcov"
+      - "/usr/local/bin/gcov"
+      - "/System/Cryptexes/App/usr/bin/gcov"
+    found: "/usr/bin/gcov"
+    search_context:
+      CMAKE_PREFIX_PATH:
+        - "/opt/homebrew/opt/qt"
+      ENV{PATH}:
+        - "/Users/yousufawj/.kimi-code/bin"
+        - "/Users/yousufawj/.grok/bin"
+        - "/Users/yousufawj/.antigravity/antigravity/bin"
+        - "/Users/yousufawj/.nvm/versions/node/v22.21.0/bin"
+        - "/Users/yousufawj/.local/bin"
+        - "/opt/homebrew/opt/mysql-client/bin"
+        - "/opt/homebrew/opt/php@8.3/sbin"
+        - "/opt/homebrew/opt/php@8.3/bin"
+        - "/opt/homebrew/bin"
+        - "/opt/homebrew/sbin"
+        - "/opt/homebrew/opt/coreutils/libexec/gnubin"
+        - "/usr/local/bin"
+        - "/System/Cryptexes/App/usr/bin"
+        - "/usr/bin"
+        - "/bin"
+        - "/usr/sbin"
+        - "/sbin"
+        - "/var/run/com.apple.security.cryptexd/codex.system/bootstrap/usr/local/bin"
+        - "/var/run/com.apple.security.cryptexd/codex.system/bootstrap/usr/bin"
+        - "/var/run/com.apple.security.cryptexd/codex.system/bootstrap/usr/appleinternal/bin"
+        - "/pkg/env/global/bin"
+        - "/Library/Apple/usr/bin"
+        - "/Applications/VMware Fusion.app/Contents/Public"
+        - "/usr/local/share/dotnet"
+        - "~/.dotnet/tools"
+        - "/Users/yousufawj/.kimi-code/bin"
+        - "/Users/yousufawj/.grok/bin"
+        - "/Users/yousufawj/.antigravity/antigravity/bin"
+        - "/Users/yousufawj/.nvm/versions/node/v22.21.0/bin"
+        - "/Users/yousufawj/.local/bin"
+        - "/opt/homebrew/opt/mysql-client/bin"
+        - "/opt/homebrew/opt/php@8.3/sbin"
+        - "/opt/homebrew/opt/php@8.3/bin"
+        - "/opt/anaconda3/bin"
+        - "/opt/anaconda3/condabin"
+        - "/Users/yousufawj/Library/Application Support/JetBrains/Toolbox/scripts"
+        - "/Users/yousufawj/code/sdk/flutter/bin"
+        - "/Users/yousufawj/.lmstudio/bin"
+        - "/Users/yousufawj/code/sdk/flutter/bin"
+        - "/Users/yousufawj/.lmstudio/bin"
+      CMAKE_INSTALL_PREFIX: "/usr/local"
+      CMAKE_SYSTEM_PREFIX_PATH:
+        - "/Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX.sdk/usr"
+        - "/opt/homebrew"
+        - "/usr/local"
+        - "/usr"
+        - "/"
+        - "/opt/homebrew"
+        - "/usr/local"
+        - "/usr/X11R6"
+        - "/usr/pkg"
+        - "/opt"
+        - "/sw"
+        - "/opt/local"
+      CMAKE_SYSTEM_APPBUNDLE_PATH:
+        - "/Users/yousufawj/Applications"
+        - "/Applications"
+        - "/Applications/Xcode.app/Contents/Applications"
+        - "/Applications/Xcode.app/Contents/Developer/Applications"
 ...

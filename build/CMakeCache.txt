@@ -14,6 +14,9 @@
 # EXTERNAL cache entries
 ########################
 
+//Build the testing tree.
+BUILD_TESTING:BOOL=ON
+
 //Path to a program.
 CMAKE_ADDR2LINE:FILEPATH=CMAKE_ADDR2LINE-NOTFOUND
 
@@ -22,7 +25,7 @@ CMAKE_AR:FILEPATH=/usr/bin/ar
 
 //Choose the type of build, options are: None Debug Release RelWithDebInfo
 // MinSizeRel ...
-CMAKE_BUILD_TYPE:STRING=Debug
+CMAKE_BUILD_TYPE:STRING=Release
 
 //Enable/Disable color output during build.
 CMAKE_COLOR_MAKEFILE:BOOL=ON
@@ -103,7 +106,7 @@ CMAKE_INSTALL_LOCALSTATEDIR:PATH=var
 CMAKE_INSTALL_MANDIR:PATH=
 
 //Path to a program.
-CMAKE_INSTALL_NAME_TOOL:FILEPATH=/opt/anaconda3/bin/install_name_tool
+CMAKE_INSTALL_NAME_TOOL:FILEPATH=/usr/bin/install_name_tool
 
 //C header files for non-gcc (/usr/include)
 CMAKE_INSTALL_OLDINCLUDEDIR:PATH=/usr/include
@@ -264,6 +267,22 @@ CMAKE_TAPI:FILEPATH=/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeD
 // Studio IDE projects all commands are done without /nologo.
 CMAKE_VERBOSE_MAKEFILE:BOOL=FALSE
 
+//Path to the coverage program that CTest uses for performing coverage
+// inspection
+COVERAGE_COMMAND:FILEPATH=/usr/bin/gcov
+
+//Extra command line flags to pass to the coverage tool
+COVERAGE_EXTRA_FLAGS:STRING=-l
+
+//How many times to retry timed-out CTest submissions.
+CTEST_SUBMIT_RETRY_COUNT:STRING=3
+
+//How long to wait between timed-out CTest submissions.
+CTEST_SUBMIT_RETRY_DELAY:STRING=5
+
+//Maximum time allowed before CTest will kill the test.
+DART_TESTING_TIMEOUT:STRING=1500
+
 //Value Computed by CMake
 DataStudio_BINARY_DIR:STATIC=/Users/yousufawj/projects/rnd/data_studio/build
 
@@ -274,7 +293,19 @@ DataStudio_IS_TOP_LEVEL:STATIC=ON
 DataStudio_SOURCE_DIR:STATIC=/Users/yousufawj/projects/rnd/data_studio
 
 //Path to a program.
+GITCOMMAND:FILEPATH=/opt/homebrew/bin/git
+
+//Path to a program.
 MACDEPLOYQT_EXECUTABLE:FILEPATH=/opt/homebrew/opt/qt/bin/macdeployqt
+
+//Command to build the project
+MAKECOMMAND:STRING=/opt/homebrew/bin/cmake --build . --config "${CTEST_CONFIGURATION_TYPE}"
+
+//Path to the memory checking command, used for memory error detection.
+MEMORYCHECK_COMMAND:FILEPATH=MEMORYCHECK_COMMAND-NOTFOUND
+
+//File that contains suppressions for the memory checker
+MEMORYCHECK_SUPPRESSIONS_FILE:FILEPATH=
 
 //Include for the OpenGL GLU library
 OPENGL_GLU_INCLUDE_DIR:PATH=/Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX.sdk/System/Library/Frameworks/OpenGL.framework
@@ -300,6 +331,9 @@ QT_ADDITIONAL_HOST_PACKAGES_PREFIX_PATH:STRING=
 
 //Additional directories where find(Qt6 ...) components are searched
 QT_ADDITIONAL_PACKAGES_PREFIX_PATH:STRING=
+
+//The directory containing a CMake configuration file for Qt6Concurrent.
+Qt6Concurrent_DIR:PATH=/opt/homebrew/opt/qt/lib/cmake/Qt6Concurrent
 
 //The directory containing a CMake configuration file for Qt6CoreTools.
 Qt6CoreTools_DIR:PATH=/opt/homebrew/opt/qt/lib/cmake/Qt6CoreTools
@@ -331,6 +365,9 @@ Qt6Widgets_DIR:PATH=/opt/homebrew/opt/qt/lib/cmake/Qt6Widgets
 //The directory containing a CMake configuration file for Qt6.
 Qt6_DIR:PATH=/opt/homebrew/opt/qt/lib/cmake/Qt6
 
+//Name of the computer/site where compile is being run
+SITE:STRING=Yousufs-MacBook-Pro.local
+
 //Path to a program.
 Vulkan_GLSLANG_VALIDATOR_EXECUTABLE:FILEPATH=Vulkan_GLSLANG_VALIDATOR_EXECUTABLE-NOTFOUND
 
@@ -344,7 +381,7 @@ Vulkan_INCLUDE_DIR:PATH=Vulkan_INCLUDE_DIR-NOTFOUND
 Vulkan_LIBRARY:FILEPATH=Vulkan_LIBRARY-NOTFOUND
 
 //Path to a library.
-pkgcfg_lib_MYSQLCLIENT_mysqlclient:FILEPATH=/opt/homebrew/Cellar/mysql/9.6.0_1/lib/libmysqlclient.dylib
+pkgcfg_lib_MARIADB_mariadb:FILEPATH=/opt/homebrew/Cellar/mariadb-connector-c/3.4.9/lib/libmariadb.dylib
 
 //Path to a library.
 pkgcfg_lib_SQLITE3_sqlite3:FILEPATH=/Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX.sdk/usr/lib/libsqlite3.tbd
@@ -372,6 +409,8 @@ CMAKE_COLOR_MAKEFILE-ADVANCED:INTERNAL=1
 CMAKE_COMMAND:INTERNAL=/opt/homebrew/bin/cmake
 //Path to cpack program executable.
 CMAKE_CPACK_COMMAND:INTERNAL=/opt/homebrew/bin/cpack
+//ADVANCED property for variable: CMAKE_CTEST_COMMAND
+CMAKE_CTEST_COMMAND-ADVANCED:INTERNAL=1
 //Path to ctest program executable.
 CMAKE_CTEST_COMMAND:INTERNAL=/opt/homebrew/bin/ctest
 //ADVANCED property for variable: CMAKE_CXX_COMPILER
@@ -517,6 +556,16 @@ CMAKE_TAPI-ADVANCED:INTERNAL=1
 CMAKE_UNAME:INTERNAL=/opt/homebrew/opt/coreutils/libexec/gnubin/uname
 //ADVANCED property for variable: CMAKE_VERBOSE_MAKEFILE
 CMAKE_VERBOSE_MAKEFILE-ADVANCED:INTERNAL=1
+//ADVANCED property for variable: COVERAGE_COMMAND
+COVERAGE_COMMAND-ADVANCED:INTERNAL=1
+//ADVANCED property for variable: COVERAGE_EXTRA_FLAGS
+COVERAGE_EXTRA_FLAGS-ADVANCED:INTERNAL=1
+//ADVANCED property for variable: CTEST_SUBMIT_RETRY_COUNT
+CTEST_SUBMIT_RETRY_COUNT-ADVANCED:INTERNAL=1
+//ADVANCED property for variable: CTEST_SUBMIT_RETRY_DELAY
+CTEST_SUBMIT_RETRY_DELAY-ADVANCED:INTERNAL=1
+//ADVANCED property for variable: DART_TESTING_TIMEOUT
+DART_TESTING_TIMEOUT-ADVANCED:INTERNAL=1
 //Details about finding OpenGL
 FIND_PACKAGE_MESSAGE_DETAILS_OpenGL:INTERNAL=[/Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX.sdk/System/Library/Frameworks/OpenGL.framework][/Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX.sdk/System/Library/Frameworks/OpenGL.framework][ ][v()]
 //Details about finding PkgConfig
@@ -527,43 +576,51 @@ FIND_PACKAGE_MESSAGE_DETAILS_Threads:INTERNAL=[TRUE][v()]
 FIND_PACKAGE_MESSAGE_DETAILS_WrapAtomic:INTERNAL=[1][v()]
 //Details about finding WrapOpenGL
 FIND_PACKAGE_MESSAGE_DETAILS_WrapOpenGL:INTERNAL=[ON][v()]
+//ADVANCED property for variable: GITCOMMAND
+GITCOMMAND-ADVANCED:INTERNAL=1
 //Test HAVE_STDATOMIC
 HAVE_STDATOMIC:INTERNAL=1
-MYSQLCLIENT_CFLAGS:INTERNAL=-I/opt/homebrew/Cellar/mysql/9.6.0_1/include/mysql
-MYSQLCLIENT_CFLAGS_I:INTERNAL=
-MYSQLCLIENT_CFLAGS_OTHER:INTERNAL=
-MYSQLCLIENT_FOUND:INTERNAL=1
-MYSQLCLIENT_INCLUDEDIR:INTERNAL=/opt/homebrew/Cellar/mysql/9.6.0_1/include/mysql
-MYSQLCLIENT_INCLUDE_DIRS:INTERNAL=/opt/homebrew/Cellar/mysql/9.6.0_1/include/mysql
-MYSQLCLIENT_LDFLAGS:INTERNAL=-L/opt/homebrew/Cellar/mysql/9.6.0_1/lib;-lmysqlclient
-MYSQLCLIENT_LDFLAGS_OTHER:INTERNAL=
-MYSQLCLIENT_LIBDIR:INTERNAL=/opt/homebrew/Cellar/mysql/9.6.0_1/lib
-MYSQLCLIENT_LIBRARIES:INTERNAL=mysqlclient
-MYSQLCLIENT_LIBRARY_DIRS:INTERNAL=/opt/homebrew/Cellar/mysql/9.6.0_1/lib
-MYSQLCLIENT_LIBS:INTERNAL=
-MYSQLCLIENT_LIBS_L:INTERNAL=
-MYSQLCLIENT_LIBS_OTHER:INTERNAL=
-MYSQLCLIENT_LIBS_PATHS:INTERNAL=
-MYSQLCLIENT_MODULE_NAME:INTERNAL=mysqlclient
-MYSQLCLIENT_PREFIX:INTERNAL=/opt/homebrew/Cellar/mysql/9.6.0_1
-MYSQLCLIENT_STATIC_CFLAGS:INTERNAL=-I/opt/homebrew/Cellar/mysql/9.6.0_1/include/mysql
-MYSQLCLIENT_STATIC_CFLAGS_I:INTERNAL=
-MYSQLCLIENT_STATIC_CFLAGS_OTHER:INTERNAL=
-MYSQLCLIENT_STATIC_INCLUDE_DIRS:INTERNAL=/opt/homebrew/Cellar/mysql/9.6.0_1/include/mysql
-MYSQLCLIENT_STATIC_LDFLAGS:INTERNAL=-L/opt/homebrew/Cellar/mysql/9.6.0_1/lib;-lmysqlclient;-lz;-lzstd;-lssl;-lcrypto;-lresolv
-MYSQLCLIENT_STATIC_LDFLAGS_OTHER:INTERNAL=
-MYSQLCLIENT_STATIC_LIBDIR:INTERNAL=
-MYSQLCLIENT_STATIC_LIBRARIES:INTERNAL=mysqlclient;z;zstd;ssl;crypto;resolv
-MYSQLCLIENT_STATIC_LIBRARY_DIRS:INTERNAL=/opt/homebrew/Cellar/mysql/9.6.0_1/lib
-MYSQLCLIENT_STATIC_LIBS:INTERNAL=
-MYSQLCLIENT_STATIC_LIBS_L:INTERNAL=
-MYSQLCLIENT_STATIC_LIBS_OTHER:INTERNAL=
-MYSQLCLIENT_STATIC_LIBS_PATHS:INTERNAL=
-MYSQLCLIENT_VERSION:INTERNAL=24
-MYSQLCLIENT_mysqlclient_INCLUDEDIR:INTERNAL=
-MYSQLCLIENT_mysqlclient_LIBDIR:INTERNAL=
-MYSQLCLIENT_mysqlclient_PREFIX:INTERNAL=
-MYSQLCLIENT_mysqlclient_VERSION:INTERNAL=
+//ADVANCED property for variable: MAKECOMMAND
+MAKECOMMAND-ADVANCED:INTERNAL=1
+MARIADB_CFLAGS:INTERNAL=-I/opt/homebrew/Cellar/mariadb-connector-c/3.4.9/include/mariadb/
+MARIADB_CFLAGS_I:INTERNAL=
+MARIADB_CFLAGS_OTHER:INTERNAL=
+MARIADB_FOUND:INTERNAL=1
+MARIADB_INCLUDEDIR:INTERNAL=/opt/homebrew/Cellar/mariadb-connector-c/3.4.9/include/mariadb/
+MARIADB_INCLUDE_DIRS:INTERNAL=/opt/homebrew/Cellar/mariadb-connector-c/3.4.9/include/mariadb/
+MARIADB_LDFLAGS:INTERNAL=-L/opt/homebrew/Cellar/mariadb-connector-c/3.4.9/lib/;-lmariadb
+MARIADB_LDFLAGS_OTHER:INTERNAL=
+MARIADB_LIBDIR:INTERNAL=/opt/homebrew/Cellar/mariadb-connector-c/3.4.9/lib/
+MARIADB_LIBRARIES:INTERNAL=mariadb
+MARIADB_LIBRARY_DIRS:INTERNAL=/opt/homebrew/Cellar/mariadb-connector-c/3.4.9/lib/
+MARIADB_LIBS:INTERNAL=
+MARIADB_LIBS_L:INTERNAL=
+MARIADB_LIBS_OTHER:INTERNAL=
+MARIADB_LIBS_PATHS:INTERNAL=
+MARIADB_MODULE_NAME:INTERNAL=libmariadb
+MARIADB_PREFIX:INTERNAL=/opt/homebrew/Cellar/mariadb-connector-c/3.4.9
+MARIADB_STATIC_CFLAGS:INTERNAL=-I/opt/homebrew/Cellar/mariadb-connector-c/3.4.9/include/mariadb/
+MARIADB_STATIC_CFLAGS_I:INTERNAL=
+MARIADB_STATIC_CFLAGS_OTHER:INTERNAL=
+MARIADB_STATIC_INCLUDE_DIRS:INTERNAL=/opt/homebrew/Cellar/mariadb-connector-c/3.4.9/include/mariadb/
+MARIADB_STATIC_LDFLAGS:INTERNAL=-L/opt/homebrew/Cellar/mariadb-connector-c/3.4.9/lib/;-lmariadb;-l/Library/Developer/CommandLineTools/SDKs/MacOSX26.sdk/usr/lib/libz.tbd;-lssl;-lcrypto
+MARIADB_STATIC_LDFLAGS_OTHER:INTERNAL=
+MARIADB_STATIC_LIBDIR:INTERNAL=
+MARIADB_STATIC_LIBRARIES:INTERNAL=mariadb;/Library/Developer/CommandLineTools/SDKs/MacOSX26.sdk/usr/lib/libz.tbd;ssl;crypto
+MARIADB_STATIC_LIBRARY_DIRS:INTERNAL=/opt/homebrew/Cellar/mariadb-connector-c/3.4.9/lib/
+MARIADB_STATIC_LIBS:INTERNAL=
+MARIADB_STATIC_LIBS_L:INTERNAL=
+MARIADB_STATIC_LIBS_OTHER:INTERNAL=
+MARIADB_STATIC_LIBS_PATHS:INTERNAL=
+MARIADB_VERSION:INTERNAL=3.4.9
+MARIADB_libmariadb_INCLUDEDIR:INTERNAL=
+MARIADB_libmariadb_LIBDIR:INTERNAL=
+MARIADB_libmariadb_PREFIX:INTERNAL=
+MARIADB_libmariadb_VERSION:INTERNAL=
+//ADVANCED property for variable: MEMORYCHECK_COMMAND
+MEMORYCHECK_COMMAND-ADVANCED:INTERNAL=1
+//ADVANCED property for variable: MEMORYCHECK_SUPPRESSIONS_FILE
+MEMORYCHECK_SUPPRESSIONS_FILE-ADVANCED:INTERNAL=1
 //ADVANCED property for variable: OPENGL_GLU_INCLUDE_DIR
 OPENGL_GLU_INCLUDE_DIR-ADVANCED:INTERNAL=1
 //ADVANCED property for variable: OPENGL_INCLUDE_DIR
@@ -1467,6 +1524,8 @@ QT_FEATURE_xmlstreamreader:INTERNAL=ON
 QT_FEATURE_xmlstreamwriter:INTERNAL=ON
 //Qt feature: zstd (from target Qt6::Core)
 QT_FEATURE_zstd:INTERNAL=ON
+//ADVANCED property for variable: SITE
+SITE-ADVANCED:INTERNAL=1
 SQLITE3_CFLAGS:INTERNAL=
 SQLITE3_CFLAGS_I:INTERNAL=
 SQLITE3_CFLAGS_OTHER:INTERNAL=
@@ -1512,13 +1571,13 @@ Vulkan_INCLUDE_DIR-ADVANCED:INTERNAL=1
 Vulkan_LIBRARY-ADVANCED:INTERNAL=1
 //CMAKE_INSTALL_PREFIX during last run
 _GNUInstallDirs_LAST_CMAKE_INSTALL_PREFIX:INTERNAL=/usr/local
-__pkg_config_arguments_MYSQLCLIENT:INTERNAL=IMPORTED_TARGET;mysqlclient
+__pkg_config_arguments_MARIADB:INTERNAL=IMPORTED_TARGET;libmariadb
 __pkg_config_arguments_SQLITE3:INTERNAL=REQUIRED;IMPORTED_TARGET;sqlite3
-__pkg_config_checked_MYSQLCLIENT:INTERNAL=1
+__pkg_config_checked_MARIADB:INTERNAL=1
 __pkg_config_checked_SQLITE3:INTERNAL=1
-//ADVANCED property for variable: pkgcfg_lib_MYSQLCLIENT_mysqlclient
-pkgcfg_lib_MYSQLCLIENT_mysqlclient-ADVANCED:INTERNAL=1
+//ADVANCED property for variable: pkgcfg_lib_MARIADB_mariadb
+pkgcfg_lib_MARIADB_mariadb-ADVANCED:INTERNAL=1
 //ADVANCED property for variable: pkgcfg_lib_SQLITE3_sqlite3
 pkgcfg_lib_SQLITE3_sqlite3-ADVANCED:INTERNAL=1
-prefix_result:INTERNAL=/opt/homebrew/Cellar/mysql/9.6.0_1/lib
+prefix_result:INTERNAL=/opt/homebrew/Cellar/mariadb-connector-c/3.4.9/lib/
 

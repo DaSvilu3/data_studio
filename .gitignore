@@ -1,0 +1,7 @@
+build/
+cmake-build-*/
+*.db
+*.sqlite
+*.sqlite3
+.DS_Store
+compile_commands.json

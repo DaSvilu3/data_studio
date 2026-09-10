@@ -5,8 +5,6 @@
 
 #include "core/Driver.h"
 
-typedef struct MYSQL MYSQL;
-
 namespace ds {
 
 class MySqlDriver final : public Driver {
@@ -36,7 +34,10 @@ class MySqlDriver final : public Driver {
   [[noreturn]] void fail(const std::string& what) const;
   std::string escape(const std::string& s) const;
 
-  MYSQL* conn_ = nullptr;
+  // Held opaquely on purpose. Oracle's client declares `struct MYSQL` while
+  // MariaDB Connector/C declares `struct st_mysql`, so there is no forward
+  // declaration that compiles against both. The .cpp casts it back.
+  void* conn_ = nullptr;
   ConnectionConfig cfg_;
   std::string activeDb_;
   unsigned long threadId_ = 0;

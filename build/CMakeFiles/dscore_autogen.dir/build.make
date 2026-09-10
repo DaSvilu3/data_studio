@@ -72,7 +72,7 @@ dscore_autogen/timestamp: /opt/homebrew/opt/qt/share/qt/libexec/moc
 dscore_autogen/timestamp: /opt/homebrew/opt/qt/share/qt/libexec/uic
 dscore_autogen/timestamp: CMakeFiles/dscore_autogen.dir/compiler_depend.ts
 	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --blue --bold --progress-dir=/Users/yousufawj/projects/rnd/data_studio/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_1) "Automatic MOC and UIC for target dscore"
-	/opt/homebrew/bin/cmake -E cmake_autogen /Users/yousufawj/projects/rnd/data_studio/build/CMakeFiles/dscore_autogen.dir/AutogenInfo.json Debug
+	/opt/homebrew/bin/cmake -E cmake_autogen /Users/yousufawj/projects/rnd/data_studio/build/CMakeFiles/dscore_autogen.dir/AutogenInfo.json Release
 	/opt/homebrew/bin/cmake -E touch /Users/yousufawj/projects/rnd/data_studio/build/dscore_autogen/timestamp
 
 CMakeFiles/dscore_autogen.dir/codegen:

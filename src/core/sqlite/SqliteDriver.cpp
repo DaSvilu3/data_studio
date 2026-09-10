@@ -204,7 +204,7 @@ Schema SqliteDriver::introspect() {
     for (const auto& c : cols.rows) {
       if (c.size() < 6) continue;
       Column col;
-      col.ordinal = static_cast<int>(std::get<int64_t>(c[0]));
+      col.ordinal = static_cast<int>(toInt(c[0]));
       col.name = toDisplayString(c[1]);
       col.type = toDisplayString(c[2]);
       col.nullable = toDisplayString(c[3]) == "0";
@@ -245,7 +245,7 @@ Schema SqliteDriver::introspect() {
       // Rows for a composite key share an `id`; group them back together.
       for (const auto& fr : fks.rows) {
         if (fr.size() < 5) continue;
-        const int64_t id = std::get<int64_t>(fr[0]);
+        const int64_t id = toInt(fr[0]);
         const std::string toTable = toDisplayString(fr[2]);
         const std::string fromCol = toDisplayString(fr[3]);
         const std::string toCol =
@@ -292,7 +292,7 @@ Schema SqliteDriver::introspect() {
         ResultSet c = execute(
             "SELECT COUNT(*) FROM " + quoteIdentifier(t.name), 0);
         if (!c.rows.empty() && !c.rows[0].empty()) {
-          t.estimatedRows = std::get<int64_t>(c.rows[0][0]);
+          t.estimatedRows = toInt(c.rows[0][0], -1);
         }
       } catch (const DbError&) {
         // A broken view or missing module shouldn't sink the whole refresh.

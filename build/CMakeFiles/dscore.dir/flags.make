@@ -4,9 +4,9 @@
 # compile CXX with /usr/bin/c++
 CXX_DEFINES = -DDS_HAVE_MYSQL=1
 
-CXX_INCLUDES = -I/Users/yousufawj/projects/rnd/data_studio/build/dscore_autogen/include -I/Users/yousufawj/projects/rnd/data_studio/src -isystem /opt/homebrew/Cellar/mysql/9.6.0_1/include/mysql
+CXX_INCLUDES = -I/Users/yousufawj/projects/rnd/data_studio/build/dscore_autogen/include -I/Users/yousufawj/projects/rnd/data_studio/src -isystem /opt/homebrew/Cellar/mariadb-connector-c/3.4.9/include/mariadb
 
-CXX_FLAGSarm64 = -g -std=c++20 -arch arm64
+CXX_FLAGSarm64 = -O3 -DNDEBUG -std=c++20 -arch arm64
 
-CXX_FLAGS = -g -std=c++20 -arch arm64
+CXX_FLAGS = -O3 -DNDEBUG -std=c++20 -arch arm64
 

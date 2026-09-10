@@ -14,15 +14,29 @@ if(APPLE AND NOT DEFINED CMAKE_PREFIX_PATH)
   endif()
 endif()
 
-find_package(Qt6 6.5 REQUIRED COMPONENTS Core Gui Widgets Network)
+find_package(Qt6 6.5 REQUIRED COMPONENTS Core Gui Widgets Network Concurrent)
 qt_standard_project_setup()
 
 find_package(PkgConfig REQUIRED)
 pkg_check_modules(SQLITE3 REQUIRED IMPORTED_TARGET sqlite3)
-pkg_check_modules(MYSQLCLIENT IMPORTED_TARGET mysqlclient)
+# MySQL/MariaDB client library. MariaDB Connector/C is preferred: it speaks
+# both servers' protocols and still ships mysql_native_password, which Oracle's
+# client removed in 9.x -- without it, connecting to any MariaDB server fails
+# with "Authentication plugin 'mysql_native_password' cannot be loaded".
+# Both expose the same mysql.h API, so the driver compiles against either.
+if(APPLE)
+  execute_process(COMMAND brew --prefix mariadb-connector-c
+                  OUTPUT_VARIABLE BREW_MARIADB
+                  OUTPUT_STRIP_TRAILING_WHITESPACE ERROR_QUIET)
+  if(BREW_MARIADB AND EXISTS "${BREW_MARIADB}/lib/pkgconfig")
+    # Keg-only, so pkg-config needs pointing at it.
+    set(ENV{PKG_CONFIG_PATH} "${BREW_MARIADB}/lib/pkgconfig:$ENV{PKG_CONFIG_PATH}")
+  endif()
+endif()
 
-if(NOT MYSQLCLIENT_FOUND)
-  message(WARNING "libmysqlclient not found -- MySQL support will be disabled.")
+pkg_check_modules(MARIADB IMPORTED_TARGET libmariadb)
+if(NOT MARIADB_FOUND)
+  pkg_check_modules(MYSQLCLIENT IMPORTED_TARGET mysqlclient)
 endif()
 
 # ---------------------------------------------------------------- dscore
@@ -41,18 +55,27 @@ add_library(dscore STATIC
 target_include_directories(dscore PUBLIC src)
 target_link_libraries(dscore PUBLIC PkgConfig::SQLITE3)
 
-if(MYSQLCLIENT_FOUND)
+if(MARIADB_FOUND OR MYSQLCLIENT_FOUND)
   target_sources(dscore PRIVATE src/core/mysql/MySqlDriver.cpp)
-  target_link_libraries(dscore PUBLIC PkgConfig::MYSQLCLIENT)
   target_compile_definitions(dscore PUBLIC DS_HAVE_MYSQL=1)
+  if(MARIADB_FOUND)
+    target_link_libraries(dscore PUBLIC PkgConfig::MARIADB)
+  else()
+    target_link_libraries(dscore PUBLIC PkgConfig::MYSQLCLIENT)
+  endif()
 else()
   target_compile_definitions(dscore PUBLIC DS_HAVE_MYSQL=0)
 endif()
 
-# ---------------------------------------------------------------- app
-qt_add_executable(data-studio
-  src/main.cpp
-  src/ai/NlSqlClient.cpp
+# ---------------------------------------------------------------- dsui
+# Qt widgets + the Claude client. A library so tests can link it too.
+qt_add_library(dsui STATIC
+  src/ai/SqlGenerator.cpp
+  src/ai/SchemaPrompt.cpp
+  src/ai/AiSettings.cpp
+  src/ai/LocalSqlGenerator.cpp
+  src/ai/ClaudeSqlGenerator.cpp
+  src/ai/AiSettingsDialog.cpp
   src/ui/MainWindow.cpp
   src/ui/ConnectionDialog.cpp
   src/ui/ConnectionStore.cpp
@@ -66,8 +89,33 @@ qt_add_executable(data-studio
   src/ui/QueryBuilderPanel.cpp
   src/ui/NlPromptBar.cpp
 )
-target_link_libraries(data-studio PRIVATE dscore Qt6::Widgets Qt6::Network)
+target_link_libraries(dsui PUBLIC dscore Qt6::Widgets Qt6::Network Qt6::Concurrent)
+
+# ---------------------------------------------------------------- app
+qt_add_executable(data-studio MACOSX_BUNDLE src/main.cpp)
+target_link_libraries(data-studio PRIVATE dsui)
 set_target_properties(data-studio PROPERTIES
+  MACOSX_BUNDLE ON
   MACOSX_BUNDLE_BUNDLE_NAME "Data Studio"
+  MACOSX_BUNDLE_GUI_IDENTIFIER "dev.datastudio.app"
+  MACOSX_BUNDLE_BUNDLE_VERSION "${PROJECT_VERSION}"
+  MACOSX_BUNDLE_SHORT_VERSION_STRING "${PROJECT_VERSION}"
   WIN32_EXECUTABLE ON
 )
+
+# ---------------------------------------------------------------- tests
+# ctest -V. The UI tests run headless via the offscreen platform plugin.
+include(CTest)
+if(BUILD_TESTING)
+  add_executable(ds-core-tests tests/core_tests.cpp)
+  target_link_libraries(ds-core-tests PRIVATE dscore)
+  target_include_directories(ds-core-tests PRIVATE ${CMAKE_SOURCE_DIR})
+  add_test(NAME core COMMAND ds-core-tests)
+
+  qt_add_executable(ds-ui-tests tests/ui_tests.cpp)
+  target_link_libraries(ds-ui-tests PRIVATE dsui)
+  target_include_directories(ds-ui-tests PRIVATE ${CMAKE_SOURCE_DIR})
+  add_test(NAME ui COMMAND ds-ui-tests)
+  set_tests_properties(ui PROPERTIES ENVIRONMENT "QT_QPA_PLATFORM=offscreen")
+endif()
+

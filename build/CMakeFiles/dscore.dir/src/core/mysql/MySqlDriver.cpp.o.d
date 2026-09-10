@@ -879,20 +879,12 @@ CMakeFiles/dscore.dir/src/core/mysql/MySqlDriver.cpp.o: \
   /Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX.sdk/usr/include/c++/v1/cstdarg \
   /Users/yousufawj/projects/rnd/data_studio/src/core/Schema.h \
   /Users/yousufawj/projects/rnd/data_studio/src/core/Value.h \
-  /opt/homebrew/Cellar/mysql/9.6.0_1/include/mysql/mysql.h \
-  /Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX.sdk/usr/include/c++/v1/stdbool.h \
-  /Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/lib/clang/17/include/stdbool.h \
-  /opt/homebrew/Cellar/mysql/9.6.0_1/include/mysql/field_types.h \
-  /opt/homebrew/Cellar/mysql/9.6.0_1/include/mysql/my_list.h \
-  /opt/homebrew/Cellar/mysql/9.6.0_1/include/mysql/mysql_com.h \
-  /opt/homebrew/Cellar/mysql/9.6.0_1/include/mysql/my_command.h \
-  /opt/homebrew/Cellar/mysql/9.6.0_1/include/mysql/my_compress.h \
-  /opt/homebrew/Cellar/mysql/9.6.0_1/include/mysql/mysql/udf_registration_types.h \
-  /opt/homebrew/Cellar/mysql/9.6.0_1/include/mysql/mysql/client_plugin.h \
-  /opt/homebrew/Cellar/mysql/9.6.0_1/include/mysql/mysql/plugin_auth_common.h \
-  /opt/homebrew/Cellar/mysql/9.6.0_1/include/mysql/mysql_version.h \
-  /opt/homebrew/Cellar/mysql/9.6.0_1/include/mysql/mysql_time.h \
-  /opt/homebrew/Cellar/mysql/9.6.0_1/include/mysql/errmsg.h \
+  /opt/homebrew/Cellar/mariadb-connector-c/3.4.9/include/mariadb/mysql.h \
+  /opt/homebrew/Cellar/mariadb-connector-c/3.4.9/include/mariadb/mariadb_com.h \
+  /opt/homebrew/Cellar/mariadb-connector-c/3.4.9/include/mariadb/mariadb_version.h \
+  /opt/homebrew/Cellar/mariadb-connector-c/3.4.9/include/mariadb/ma_list.h \
+  /opt/homebrew/Cellar/mariadb-connector-c/3.4.9/include/mariadb/mariadb_ctype.h \
+  /opt/homebrew/Cellar/mariadb-connector-c/3.4.9/include/mariadb/mariadb_stmt.h \
   /Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX.sdk/usr/include/c++/v1/chrono \
   /Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX.sdk/usr/include/c++/v1/__chrono/file_clock.h \
   /Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX.sdk/usr/include/c++/v1/__chrono/calendar.h \

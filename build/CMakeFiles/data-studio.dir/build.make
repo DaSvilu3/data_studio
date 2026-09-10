@@ -100,238 +100,32 @@ CMakeFiles/data-studio.dir/src/main.cpp.s: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green "Compiling CXX source to assembly CMakeFiles/data-studio.dir/src/main.cpp.s"
 	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /Users/yousufawj/projects/rnd/data_studio/src/main.cpp -o CMakeFiles/data-studio.dir/src/main.cpp.s
 
-CMakeFiles/data-studio.dir/src/ai/NlSqlClient.cpp.o: CMakeFiles/data-studio.dir/flags.make
-CMakeFiles/data-studio.dir/src/ai/NlSqlClient.cpp.o: /Users/yousufawj/projects/rnd/data_studio/src/ai/NlSqlClient.cpp
-CMakeFiles/data-studio.dir/src/ai/NlSqlClient.cpp.o: CMakeFiles/data-studio.dir/compiler_depend.ts
-	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green --progress-dir=/Users/yousufawj/projects/rnd/data_studio/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_3) "Building CXX object CMakeFiles/data-studio.dir/src/ai/NlSqlClient.cpp.o"
-	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -MD -MT CMakeFiles/data-studio.dir/src/ai/NlSqlClient.cpp.o -MF CMakeFiles/data-studio.dir/src/ai/NlSqlClient.cpp.o.d -o CMakeFiles/data-studio.dir/src/ai/NlSqlClient.cpp.o -c /Users/yousufawj/projects/rnd/data_studio/src/ai/NlSqlClient.cpp
-
-CMakeFiles/data-studio.dir/src/ai/NlSqlClient.cpp.i: cmake_force
-	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green "Preprocessing CXX source to CMakeFiles/data-studio.dir/src/ai/NlSqlClient.cpp.i"
-	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /Users/yousufawj/projects/rnd/data_studio/src/ai/NlSqlClient.cpp > CMakeFiles/data-studio.dir/src/ai/NlSqlClient.cpp.i
-
-CMakeFiles/data-studio.dir/src/ai/NlSqlClient.cpp.s: cmake_force
-	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green "Compiling CXX source to assembly CMakeFiles/data-studio.dir/src/ai/NlSqlClient.cpp.s"
-	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /Users/yousufawj/projects/rnd/data_studio/src/ai/NlSqlClient.cpp -o CMakeFiles/data-studio.dir/src/ai/NlSqlClient.cpp.s
-
-CMakeFiles/data-studio.dir/src/ui/MainWindow.cpp.o: CMakeFiles/data-studio.dir/flags.make
-CMakeFiles/data-studio.dir/src/ui/MainWindow.cpp.o: /Users/yousufawj/projects/rnd/data_studio/src/ui/MainWindow.cpp
-CMakeFiles/data-studio.dir/src/ui/MainWindow.cpp.o: CMakeFiles/data-studio.dir/compiler_depend.ts
-	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green --progress-dir=/Users/yousufawj/projects/rnd/data_studio/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_4) "Building CXX object CMakeFiles/data-studio.dir/src/ui/MainWindow.cpp.o"
-	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -MD -MT CMakeFiles/data-studio.dir/src/ui/MainWindow.cpp.o -MF CMakeFiles/data-studio.dir/src/ui/MainWindow.cpp.o.d -o CMakeFiles/data-studio.dir/src/ui/MainWindow.cpp.o -c /Users/yousufawj/projects/rnd/data_studio/src/ui/MainWindow.cpp
-
-CMakeFiles/data-studio.dir/src/ui/MainWindow.cpp.i: cmake_force
-	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green "Preprocessing CXX source to CMakeFiles/data-studio.dir/src/ui/MainWindow.cpp.i"
-	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /Users/yousufawj/projects/rnd/data_studio/src/ui/MainWindow.cpp > CMakeFiles/data-studio.dir/src/ui/MainWindow.cpp.i
-
-CMakeFiles/data-studio.dir/src/ui/MainWindow.cpp.s: cmake_force
-	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green "Compiling CXX source to assembly CMakeFiles/data-studio.dir/src/ui/MainWindow.cpp.s"
-	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /Users/yousufawj/projects/rnd/data_studio/src/ui/MainWindow.cpp -o CMakeFiles/data-studio.dir/src/ui/MainWindow.cpp.s
-
-CMakeFiles/data-studio.dir/src/ui/ConnectionDialog.cpp.o: CMakeFiles/data-studio.dir/flags.make
-CMakeFiles/data-studio.dir/src/ui/ConnectionDialog.cpp.o: /Users/yousufawj/projects/rnd/data_studio/src/ui/ConnectionDialog.cpp
-CMakeFiles/data-studio.dir/src/ui/ConnectionDialog.cpp.o: CMakeFiles/data-studio.dir/compiler_depend.ts
-	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green --progress-dir=/Users/yousufawj/projects/rnd/data_studio/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_5) "Building CXX object CMakeFiles/data-studio.dir/src/ui/ConnectionDialog.cpp.o"
-	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -MD -MT CMakeFiles/data-studio.dir/src/ui/ConnectionDialog.cpp.o -MF CMakeFiles/data-studio.dir/src/ui/ConnectionDialog.cpp.o.d -o CMakeFiles/data-studio.dir/src/ui/ConnectionDialog.cpp.o -c /Users/yousufawj/projects/rnd/data_studio/src/ui/ConnectionDialog.cpp
-
-CMakeFiles/data-studio.dir/src/ui/ConnectionDialog.cpp.i: cmake_force
-	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green "Preprocessing CXX source to CMakeFiles/data-studio.dir/src/ui/ConnectionDialog.cpp.i"
-	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /Users/yousufawj/projects/rnd/data_studio/src/ui/ConnectionDialog.cpp > CMakeFiles/data-studio.dir/src/ui/ConnectionDialog.cpp.i
-
-CMakeFiles/data-studio.dir/src/ui/ConnectionDialog.cpp.s: cmake_force
-	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green "Compiling CXX source to assembly CMakeFiles/data-studio.dir/src/ui/ConnectionDialog.cpp.s"
-	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /Users/yousufawj/projects/rnd/data_studio/src/ui/ConnectionDialog.cpp -o CMakeFiles/data-studio.dir/src/ui/ConnectionDialog.cpp.s
-
-CMakeFiles/data-studio.dir/src/ui/ConnectionStore.cpp.o: CMakeFiles/data-studio.dir/flags.make
-CMakeFiles/data-studio.dir/src/ui/ConnectionStore.cpp.o: /Users/yousufawj/projects/rnd/data_studio/src/ui/ConnectionStore.cpp
-CMakeFiles/data-studio.dir/src/ui/ConnectionStore.cpp.o: CMakeFiles/data-studio.dir/compiler_depend.ts
-	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green --progress-dir=/Users/yousufawj/projects/rnd/data_studio/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_6) "Building CXX object CMakeFiles/data-studio.dir/src/ui/ConnectionStore.cpp.o"
-	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -MD -MT CMakeFiles/data-studio.dir/src/ui/ConnectionStore.cpp.o -MF CMakeFiles/data-studio.dir/src/ui/ConnectionStore.cpp.o.d -o CMakeFiles/data-studio.dir/src/ui/ConnectionStore.cpp.o -c /Users/yousufawj/projects/rnd/data_studio/src/ui/ConnectionStore.cpp
-
-CMakeFiles/data-studio.dir/src/ui/ConnectionStore.cpp.i: cmake_force
-	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green "Preprocessing CXX source to CMakeFiles/data-studio.dir/src/ui/ConnectionStore.cpp.i"
-	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /Users/yousufawj/projects/rnd/data_studio/src/ui/ConnectionStore.cpp > CMakeFiles/data-studio.dir/src/ui/ConnectionStore.cpp.i
-
-CMakeFiles/data-studio.dir/src/ui/ConnectionStore.cpp.s: cmake_force
-	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green "Compiling CXX source to assembly CMakeFiles/data-studio.dir/src/ui/ConnectionStore.cpp.s"
-	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /Users/yousufawj/projects/rnd/data_studio/src/ui/ConnectionStore.cpp -o CMakeFiles/data-studio.dir/src/ui/ConnectionStore.cpp.s
-
-CMakeFiles/data-studio.dir/src/ui/SchemaTree.cpp.o: CMakeFiles/data-studio.dir/flags.make
-CMakeFiles/data-studio.dir/src/ui/SchemaTree.cpp.o: /Users/yousufawj/projects/rnd/data_studio/src/ui/SchemaTree.cpp
-CMakeFiles/data-studio.dir/src/ui/SchemaTree.cpp.o: CMakeFiles/data-studio.dir/compiler_depend.ts
-	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green --progress-dir=/Users/yousufawj/projects/rnd/data_studio/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_7) "Building CXX object CMakeFiles/data-studio.dir/src/ui/SchemaTree.cpp.o"
-	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -MD -MT CMakeFiles/data-studio.dir/src/ui/SchemaTree.cpp.o -MF CMakeFiles/data-studio.dir/src/ui/SchemaTree.cpp.o.d -o CMakeFiles/data-studio.dir/src/ui/SchemaTree.cpp.o -c /Users/yousufawj/projects/rnd/data_studio/src/ui/SchemaTree.cpp
-
-CMakeFiles/data-studio.dir/src/ui/SchemaTree.cpp.i: cmake_force
-	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green "Preprocessing CXX source to CMakeFiles/data-studio.dir/src/ui/SchemaTree.cpp.i"
-	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /Users/yousufawj/projects/rnd/data_studio/src/ui/SchemaTree.cpp > CMakeFiles/data-studio.dir/src/ui/SchemaTree.cpp.i
-
-CMakeFiles/data-studio.dir/src/ui/SchemaTree.cpp.s: cmake_force
-	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green "Compiling CXX source to assembly CMakeFiles/data-studio.dir/src/ui/SchemaTree.cpp.s"
-	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /Users/yousufawj/projects/rnd/data_studio/src/ui/SchemaTree.cpp -o CMakeFiles/data-studio.dir/src/ui/SchemaTree.cpp.s
-
-CMakeFiles/data-studio.dir/src/ui/SqlEditor.cpp.o: CMakeFiles/data-studio.dir/flags.make
-CMakeFiles/data-studio.dir/src/ui/SqlEditor.cpp.o: /Users/yousufawj/projects/rnd/data_studio/src/ui/SqlEditor.cpp
-CMakeFiles/data-studio.dir/src/ui/SqlEditor.cpp.o: CMakeFiles/data-studio.dir/compiler_depend.ts
-	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green --progress-dir=/Users/yousufawj/projects/rnd/data_studio/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_8) "Building CXX object CMakeFiles/data-studio.dir/src/ui/SqlEditor.cpp.o"
-	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -MD -MT CMakeFiles/data-studio.dir/src/ui/SqlEditor.cpp.o -MF CMakeFiles/data-studio.dir/src/ui/SqlEditor.cpp.o.d -o CMakeFiles/data-studio.dir/src/ui/SqlEditor.cpp.o -c /Users/yousufawj/projects/rnd/data_studio/src/ui/SqlEditor.cpp
-
-CMakeFiles/data-studio.dir/src/ui/SqlEditor.cpp.i: cmake_force
-	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green "Preprocessing CXX source to CMakeFiles/data-studio.dir/src/ui/SqlEditor.cpp.i"
-	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /Users/yousufawj/projects/rnd/data_studio/src/ui/SqlEditor.cpp > CMakeFiles/data-studio.dir/src/ui/SqlEditor.cpp.i
-
-CMakeFiles/data-studio.dir/src/ui/SqlEditor.cpp.s: cmake_force
-	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green "Compiling CXX source to assembly CMakeFiles/data-studio.dir/src/ui/SqlEditor.cpp.s"
-	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /Users/yousufawj/projects/rnd/data_studio/src/ui/SqlEditor.cpp -o CMakeFiles/data-studio.dir/src/ui/SqlEditor.cpp.s
-
-CMakeFiles/data-studio.dir/src/ui/SqlHighlighter.cpp.o: CMakeFiles/data-studio.dir/flags.make
-CMakeFiles/data-studio.dir/src/ui/SqlHighlighter.cpp.o: /Users/yousufawj/projects/rnd/data_studio/src/ui/SqlHighlighter.cpp
-CMakeFiles/data-studio.dir/src/ui/SqlHighlighter.cpp.o: CMakeFiles/data-studio.dir/compiler_depend.ts
-	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green --progress-dir=/Users/yousufawj/projects/rnd/data_studio/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_9) "Building CXX object CMakeFiles/data-studio.dir/src/ui/SqlHighlighter.cpp.o"
-	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -MD -MT CMakeFiles/data-studio.dir/src/ui/SqlHighlighter.cpp.o -MF CMakeFiles/data-studio.dir/src/ui/SqlHighlighter.cpp.o.d -o CMakeFiles/data-studio.dir/src/ui/SqlHighlighter.cpp.o -c /Users/yousufawj/projects/rnd/data_studio/src/ui/SqlHighlighter.cpp
-
-CMakeFiles/data-studio.dir/src/ui/SqlHighlighter.cpp.i: cmake_force
-	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green "Preprocessing CXX source to CMakeFiles/data-studio.dir/src/ui/SqlHighlighter.cpp.i"
-	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /Users/yousufawj/projects/rnd/data_studio/src/ui/SqlHighlighter.cpp > CMakeFiles/data-studio.dir/src/ui/SqlHighlighter.cpp.i
-
-CMakeFiles/data-studio.dir/src/ui/SqlHighlighter.cpp.s: cmake_force
-	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green "Compiling CXX source to assembly CMakeFiles/data-studio.dir/src/ui/SqlHighlighter.cpp.s"
-	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /Users/yousufawj/projects/rnd/data_studio/src/ui/SqlHighlighter.cpp -o CMakeFiles/data-studio.dir/src/ui/SqlHighlighter.cpp.s
-
-CMakeFiles/data-studio.dir/src/ui/ResultsModel.cpp.o: CMakeFiles/data-studio.dir/flags.make
-CMakeFiles/data-studio.dir/src/ui/ResultsModel.cpp.o: /Users/yousufawj/projects/rnd/data_studio/src/ui/ResultsModel.cpp
-CMakeFiles/data-studio.dir/src/ui/ResultsModel.cpp.o: CMakeFiles/data-studio.dir/compiler_depend.ts
-	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green --progress-dir=/Users/yousufawj/projects/rnd/data_studio/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_10) "Building CXX object CMakeFiles/data-studio.dir/src/ui/ResultsModel.cpp.o"
-	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -MD -MT CMakeFiles/data-studio.dir/src/ui/ResultsModel.cpp.o -MF CMakeFiles/data-studio.dir/src/ui/ResultsModel.cpp.o.d -o CMakeFiles/data-studio.dir/src/ui/ResultsModel.cpp.o -c /Users/yousufawj/projects/rnd/data_studio/src/ui/ResultsModel.cpp
-
-CMakeFiles/data-studio.dir/src/ui/ResultsModel.cpp.i: cmake_force
-	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green "Preprocessing CXX source to CMakeFiles/data-studio.dir/src/ui/ResultsModel.cpp.i"
-	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /Users/yousufawj/projects/rnd/data_studio/src/ui/ResultsModel.cpp > CMakeFiles/data-studio.dir/src/ui/ResultsModel.cpp.i
-
-CMakeFiles/data-studio.dir/src/ui/ResultsModel.cpp.s: cmake_force
-	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green "Compiling CXX source to assembly CMakeFiles/data-studio.dir/src/ui/ResultsModel.cpp.s"
-	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /Users/yousufawj/projects/rnd/data_studio/src/ui/ResultsModel.cpp -o CMakeFiles/data-studio.dir/src/ui/ResultsModel.cpp.s
-
-CMakeFiles/data-studio.dir/src/ui/ResultsView.cpp.o: CMakeFiles/data-studio.dir/flags.make
-CMakeFiles/data-studio.dir/src/ui/ResultsView.cpp.o: /Users/yousufawj/projects/rnd/data_studio/src/ui/ResultsView.cpp
-CMakeFiles/data-studio.dir/src/ui/ResultsView.cpp.o: CMakeFiles/data-studio.dir/compiler_depend.ts
-	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green --progress-dir=/Users/yousufawj/projects/rnd/data_studio/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_11) "Building CXX object CMakeFiles/data-studio.dir/src/ui/ResultsView.cpp.o"
-	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -MD -MT CMakeFiles/data-studio.dir/src/ui/ResultsView.cpp.o -MF CMakeFiles/data-studio.dir/src/ui/ResultsView.cpp.o.d -o CMakeFiles/data-studio.dir/src/ui/ResultsView.cpp.o -c /Users/yousufawj/projects/rnd/data_studio/src/ui/ResultsView.cpp
-
-CMakeFiles/data-studio.dir/src/ui/ResultsView.cpp.i: cmake_force
-	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green "Preprocessing CXX source to CMakeFiles/data-studio.dir/src/ui/ResultsView.cpp.i"
-	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /Users/yousufawj/projects/rnd/data_studio/src/ui/ResultsView.cpp > CMakeFiles/data-studio.dir/src/ui/ResultsView.cpp.i
-
-CMakeFiles/data-studio.dir/src/ui/ResultsView.cpp.s: cmake_force
-	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green "Compiling CXX source to assembly CMakeFiles/data-studio.dir/src/ui/ResultsView.cpp.s"
-	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /Users/yousufawj/projects/rnd/data_studio/src/ui/ResultsView.cpp -o CMakeFiles/data-studio.dir/src/ui/ResultsView.cpp.s
-
-CMakeFiles/data-studio.dir/src/ui/QueryExecutor.cpp.o: CMakeFiles/data-studio.dir/flags.make
-CMakeFiles/data-studio.dir/src/ui/QueryExecutor.cpp.o: /Users/yousufawj/projects/rnd/data_studio/src/ui/QueryExecutor.cpp
-CMakeFiles/data-studio.dir/src/ui/QueryExecutor.cpp.o: CMakeFiles/data-studio.dir/compiler_depend.ts
-	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green --progress-dir=/Users/yousufawj/projects/rnd/data_studio/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_12) "Building CXX object CMakeFiles/data-studio.dir/src/ui/QueryExecutor.cpp.o"
-	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -MD -MT CMakeFiles/data-studio.dir/src/ui/QueryExecutor.cpp.o -MF CMakeFiles/data-studio.dir/src/ui/QueryExecutor.cpp.o.d -o CMakeFiles/data-studio.dir/src/ui/QueryExecutor.cpp.o -c /Users/yousufawj/projects/rnd/data_studio/src/ui/QueryExecutor.cpp
-
-CMakeFiles/data-studio.dir/src/ui/QueryExecutor.cpp.i: cmake_force
-	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green "Preprocessing CXX source to CMakeFiles/data-studio.dir/src/ui/QueryExecutor.cpp.i"
-	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /Users/yousufawj/projects/rnd/data_studio/src/ui/QueryExecutor.cpp > CMakeFiles/data-studio.dir/src/ui/QueryExecutor.cpp.i
-
-CMakeFiles/data-studio.dir/src/ui/QueryExecutor.cpp.s: cmake_force
-	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green "Compiling CXX source to assembly CMakeFiles/data-studio.dir/src/ui/QueryExecutor.cpp.s"
-	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /Users/yousufawj/projects/rnd/data_studio/src/ui/QueryExecutor.cpp -o CMakeFiles/data-studio.dir/src/ui/QueryExecutor.cpp.s
-
-CMakeFiles/data-studio.dir/src/ui/AnalyzerPanel.cpp.o: CMakeFiles/data-studio.dir/flags.make
-CMakeFiles/data-studio.dir/src/ui/AnalyzerPanel.cpp.o: /Users/yousufawj/projects/rnd/data_studio/src/ui/AnalyzerPanel.cpp
-CMakeFiles/data-studio.dir/src/ui/AnalyzerPanel.cpp.o: CMakeFiles/data-studio.dir/compiler_depend.ts
-	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green --progress-dir=/Users/yousufawj/projects/rnd/data_studio/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_13) "Building CXX object CMakeFiles/data-studio.dir/src/ui/AnalyzerPanel.cpp.o"
-	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -MD -MT CMakeFiles/data-studio.dir/src/ui/AnalyzerPanel.cpp.o -MF CMakeFiles/data-studio.dir/src/ui/AnalyzerPanel.cpp.o.d -o CMakeFiles/data-studio.dir/src/ui/AnalyzerPanel.cpp.o -c /Users/yousufawj/projects/rnd/data_studio/src/ui/AnalyzerPanel.cpp
-
-CMakeFiles/data-studio.dir/src/ui/AnalyzerPanel.cpp.i: cmake_force
-	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green "Preprocessing CXX source to CMakeFiles/data-studio.dir/src/ui/AnalyzerPanel.cpp.i"
-	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /Users/yousufawj/projects/rnd/data_studio/src/ui/AnalyzerPanel.cpp > CMakeFiles/data-studio.dir/src/ui/AnalyzerPanel.cpp.i
-
-CMakeFiles/data-studio.dir/src/ui/AnalyzerPanel.cpp.s: cmake_force
-	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green "Compiling CXX source to assembly CMakeFiles/data-studio.dir/src/ui/AnalyzerPanel.cpp.s"
-	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /Users/yousufawj/projects/rnd/data_studio/src/ui/AnalyzerPanel.cpp -o CMakeFiles/data-studio.dir/src/ui/AnalyzerPanel.cpp.s
-
-CMakeFiles/data-studio.dir/src/ui/QueryBuilderPanel.cpp.o: CMakeFiles/data-studio.dir/flags.make
-CMakeFiles/data-studio.dir/src/ui/QueryBuilderPanel.cpp.o: /Users/yousufawj/projects/rnd/data_studio/src/ui/QueryBuilderPanel.cpp
-CMakeFiles/data-studio.dir/src/ui/QueryBuilderPanel.cpp.o: CMakeFiles/data-studio.dir/compiler_depend.ts
-	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green --progress-dir=/Users/yousufawj/projects/rnd/data_studio/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_14) "Building CXX object CMakeFiles/data-studio.dir/src/ui/QueryBuilderPanel.cpp.o"
-	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -MD -MT CMakeFiles/data-studio.dir/src/ui/QueryBuilderPanel.cpp.o -MF CMakeFiles/data-studio.dir/src/ui/QueryBuilderPanel.cpp.o.d -o CMakeFiles/data-studio.dir/src/ui/QueryBuilderPanel.cpp.o -c /Users/yousufawj/projects/rnd/data_studio/src/ui/QueryBuilderPanel.cpp
-
-CMakeFiles/data-studio.dir/src/ui/QueryBuilderPanel.cpp.i: cmake_force
-	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green "Preprocessing CXX source to CMakeFiles/data-studio.dir/src/ui/QueryBuilderPanel.cpp.i"
-	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /Users/yousufawj/projects/rnd/data_studio/src/ui/QueryBuilderPanel.cpp > CMakeFiles/data-studio.dir/src/ui/QueryBuilderPanel.cpp.i
-
-CMakeFiles/data-studio.dir/src/ui/QueryBuilderPanel.cpp.s: cmake_force
-	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green "Compiling CXX source to assembly CMakeFiles/data-studio.dir/src/ui/QueryBuilderPanel.cpp.s"
-	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /Users/yousufawj/projects/rnd/data_studio/src/ui/QueryBuilderPanel.cpp -o CMakeFiles/data-studio.dir/src/ui/QueryBuilderPanel.cpp.s
-
-CMakeFiles/data-studio.dir/src/ui/NlPromptBar.cpp.o: CMakeFiles/data-studio.dir/flags.make
-CMakeFiles/data-studio.dir/src/ui/NlPromptBar.cpp.o: /Users/yousufawj/projects/rnd/data_studio/src/ui/NlPromptBar.cpp
-CMakeFiles/data-studio.dir/src/ui/NlPromptBar.cpp.o: CMakeFiles/data-studio.dir/compiler_depend.ts
-	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green --progress-dir=/Users/yousufawj/projects/rnd/data_studio/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_15) "Building CXX object CMakeFiles/data-studio.dir/src/ui/NlPromptBar.cpp.o"
-	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -MD -MT CMakeFiles/data-studio.dir/src/ui/NlPromptBar.cpp.o -MF CMakeFiles/data-studio.dir/src/ui/NlPromptBar.cpp.o.d -o CMakeFiles/data-studio.dir/src/ui/NlPromptBar.cpp.o -c /Users/yousufawj/projects/rnd/data_studio/src/ui/NlPromptBar.cpp
-
-CMakeFiles/data-studio.dir/src/ui/NlPromptBar.cpp.i: cmake_force
-	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green "Preprocessing CXX source to CMakeFiles/data-studio.dir/src/ui/NlPromptBar.cpp.i"
-	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /Users/yousufawj/projects/rnd/data_studio/src/ui/NlPromptBar.cpp > CMakeFiles/data-studio.dir/src/ui/NlPromptBar.cpp.i
-
-CMakeFiles/data-studio.dir/src/ui/NlPromptBar.cpp.s: cmake_force
-	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green "Compiling CXX source to assembly CMakeFiles/data-studio.dir/src/ui/NlPromptBar.cpp.s"
-	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /Users/yousufawj/projects/rnd/data_studio/src/ui/NlPromptBar.cpp -o CMakeFiles/data-studio.dir/src/ui/NlPromptBar.cpp.s
-
 # Object files for target data-studio
 data__studio_OBJECTS = \
 "CMakeFiles/data-studio.dir/data-studio_autogen/mocs_compilation.cpp.o" \
-"CMakeFiles/data-studio.dir/src/main.cpp.o" \
-"CMakeFiles/data-studio.dir/src/ai/NlSqlClient.cpp.o" \
-"CMakeFiles/data-studio.dir/src/ui/MainWindow.cpp.o" \
-"CMakeFiles/data-studio.dir/src/ui/ConnectionDialog.cpp.o" \
-"CMakeFiles/data-studio.dir/src/ui/ConnectionStore.cpp.o" \
-"CMakeFiles/data-studio.dir/src/ui/SchemaTree.cpp.o" \
-"CMakeFiles/data-studio.dir/src/ui/SqlEditor.cpp.o" \
-"CMakeFiles/data-studio.dir/src/ui/SqlHighlighter.cpp.o" \
-"CMakeFiles/data-studio.dir/src/ui/ResultsModel.cpp.o" \
-"CMakeFiles/data-studio.dir/src/ui/ResultsView.cpp.o" \
-"CMakeFiles/data-studio.dir/src/ui/QueryExecutor.cpp.o" \
-"CMakeFiles/data-studio.dir/src/ui/AnalyzerPanel.cpp.o" \
-"CMakeFiles/data-studio.dir/src/ui/QueryBuilderPanel.cpp.o" \
-"CMakeFiles/data-studio.dir/src/ui/NlPromptBar.cpp.o"
+"CMakeFiles/data-studio.dir/src/main.cpp.o"
 
 # External object files for target data-studio
 data__studio_EXTERNAL_OBJECTS =
 
-data-studio: CMakeFiles/data-studio.dir/data-studio_autogen/mocs_compilation.cpp.o
-data-studio: CMakeFiles/data-studio.dir/src/main.cpp.o
-data-studio: CMakeFiles/data-studio.dir/src/ai/NlSqlClient.cpp.o
-data-studio: CMakeFiles/data-studio.dir/src/ui/MainWindow.cpp.o
-data-studio: CMakeFiles/data-studio.dir/src/ui/ConnectionDialog.cpp.o
-data-studio: CMakeFiles/data-studio.dir/src/ui/ConnectionStore.cpp.o
-data-studio: CMakeFiles/data-studio.dir/src/ui/SchemaTree.cpp.o
-data-studio: CMakeFiles/data-studio.dir/src/ui/SqlEditor.cpp.o
-data-studio: CMakeFiles/data-studio.dir/src/ui/SqlHighlighter.cpp.o
-data-studio: CMakeFiles/data-studio.dir/src/ui/ResultsModel.cpp.o
-data-studio: CMakeFiles/data-studio.dir/src/ui/ResultsView.cpp.o
-data-studio: CMakeFiles/data-studio.dir/src/ui/QueryExecutor.cpp.o
-data-studio: CMakeFiles/data-studio.dir/src/ui/AnalyzerPanel.cpp.o
-data-studio: CMakeFiles/data-studio.dir/src/ui/QueryBuilderPanel.cpp.o
-data-studio: CMakeFiles/data-studio.dir/src/ui/NlPromptBar.cpp.o
-data-studio: CMakeFiles/data-studio.dir/build.make
-data-studio: libdscore.a
-data-studio: /opt/homebrew/opt/qt/lib/QtWidgets.framework/Versions/A/QtWidgets
-data-studio: /opt/homebrew/opt/qt/lib/QtNetwork.framework/Versions/A/QtNetwork
-data-studio: /Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX.sdk/usr/lib/libsqlite3.tbd
-data-studio: /opt/homebrew/Cellar/mysql/9.6.0_1/lib/libmysqlclient.dylib
-data-studio: /opt/homebrew/opt/qt/lib/QtGui.framework/Versions/A/QtGui
-data-studio: /opt/homebrew/opt/qt/lib/QtCore.framework/Versions/A/QtCore
-data-studio: CMakeFiles/data-studio.dir/link.txt
-	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green --bold --progress-dir=/Users/yousufawj/projects/rnd/data_studio/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_16) "Linking CXX executable data-studio"
+data-studio.app/Contents/MacOS/data-studio: CMakeFiles/data-studio.dir/data-studio_autogen/mocs_compilation.cpp.o
+data-studio.app/Contents/MacOS/data-studio: CMakeFiles/data-studio.dir/src/main.cpp.o
+data-studio.app/Contents/MacOS/data-studio: CMakeFiles/data-studio.dir/build.make
+data-studio.app/Contents/MacOS/data-studio: libdsui.a
+data-studio.app/Contents/MacOS/data-studio: libdscore.a
+data-studio.app/Contents/MacOS/data-studio: /Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX.sdk/usr/lib/libsqlite3.tbd
+data-studio.app/Contents/MacOS/data-studio: /opt/homebrew/Cellar/mariadb-connector-c/3.4.9/lib/libmariadb.dylib
+data-studio.app/Contents/MacOS/data-studio: /opt/homebrew/opt/qt/lib/QtWidgets.framework/Versions/A/QtWidgets
+data-studio.app/Contents/MacOS/data-studio: /opt/homebrew/opt/qt/lib/QtGui.framework/Versions/A/QtGui
+data-studio.app/Contents/MacOS/data-studio: /opt/homebrew/opt/qt/lib/QtNetwork.framework/Versions/A/QtNetwork
+data-studio.app/Contents/MacOS/data-studio: /opt/homebrew/opt/qt/lib/QtConcurrent.framework/Versions/A/QtConcurrent
+data-studio.app/Contents/MacOS/data-studio: /opt/homebrew/opt/qt/lib/QtCore.framework/Versions/A/QtCore
+data-studio.app/Contents/MacOS/data-studio: CMakeFiles/data-studio.dir/link.txt
+	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green --bold --progress-dir=/Users/yousufawj/projects/rnd/data_studio/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_3) "Linking CXX executable data-studio.app/Contents/MacOS/data-studio"
 	$(CMAKE_COMMAND) -E cmake_link_script CMakeFiles/data-studio.dir/link.txt --verbose=$(VERBOSE)
 
 # Rule to build all files generated by this target.
-CMakeFiles/data-studio.dir/build: data-studio
+CMakeFiles/data-studio.dir/build: data-studio.app/Contents/MacOS/data-studio
 .PHONY : CMakeFiles/data-studio.dir/build
 
 CMakeFiles/data-studio.dir/clean:

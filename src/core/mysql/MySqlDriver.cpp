@@ -70,15 +70,18 @@ const char* typeName(enum_field_types t) {
   }
 }
 
+// Casts the opaque handle back to the client library's connection type.
+MYSQL* handleOf(void* conn) { return static_cast<MYSQL*>(conn); }
+
 }  // namespace
 
 MySqlDriver::~MySqlDriver() { disconnect(); }
 
 void MySqlDriver::fail(const std::string& what) const {
   if (!conn_) throw DbError(what + ": not connected.");
-  throw DbError(what + ": " + mysql_error(conn_),
-                static_cast<int>(mysql_errno(conn_)),
-                mysql_sqlstate(conn_) ? mysql_sqlstate(conn_) : "");
+  throw DbError(what + ": " + mysql_error(handleOf(conn_)),
+                static_cast<int>(mysql_errno(handleOf(conn_))),
+                mysql_sqlstate(handleOf(conn_)) ? mysql_sqlstate(handleOf(conn_)) : "");
 }
 
 void MySqlDriver::connect(const ConnectionConfig& cfg) {
@@ -88,26 +91,34 @@ void MySqlDriver::connect(const ConnectionConfig& cfg) {
   if (!conn_) throw DbError("mysql_init failed (out of memory).");
 
   unsigned int timeout = 10;
-  mysql_options(conn_, MYSQL_OPT_CONNECT_TIMEOUT, &timeout);
-  mysql_options(conn_, MYSQL_SET_CHARSET_NAME, "utf8mb4");
+  mysql_options(handleOf(conn_), MYSQL_OPT_CONNECT_TIMEOUT, &timeout);
+  mysql_options(handleOf(conn_), MYSQL_SET_CHARSET_NAME, "utf8mb4");
 
   // Prefer TLS but don't refuse a server that can't offer it -- requiring it
-  // outright breaks against plenty of local/dev servers.
+  // outright breaks against plenty of local/dev servers. The two client
+  // libraries spell this differently.
+#ifdef MARIADB_PACKAGE_VERSION
+  // Connector/C negotiates TLS on its own when the server offers it, so
+  // "prefer" is simply the default; only the opt-out needs saying.
+  my_bool enforceSsl = 0;
+  if (!cfg.useSsl) mysql_options(handleOf(conn_), MYSQL_OPT_SSL_ENFORCE, &enforceSsl);
+#else
   unsigned int sslMode = cfg.useSsl ? SSL_MODE_PREFERRED : SSL_MODE_DISABLED;
-  mysql_options(conn_, MYSQL_OPT_SSL_MODE, &sslMode);
+  mysql_options(handleOf(conn_), MYSQL_OPT_SSL_MODE, &sslMode);
+#endif
 
   // CLIENT_MULTI_STATEMENTS is deliberately *not* set: statements are split
   // and executed one at a time so each gets its own timing and result tab.
   MYSQL* ok = mysql_real_connect(
-      conn_, cfg.host.c_str(), cfg.user.c_str(),
+      handleOf(conn_), cfg.host.c_str(), cfg.user.c_str(),
       cfg.password.empty() ? nullptr : cfg.password.c_str(),
       cfg.database.empty() ? nullptr : cfg.database.c_str(),
       static_cast<unsigned int>(cfg.port), nullptr, 0);
 
   if (!ok) {
-    std::string msg = mysql_error(conn_);
-    unsigned int code = mysql_errno(conn_);
-    mysql_close(conn_);
+    std::string msg = mysql_error(handleOf(conn_));
+    unsigned int code = mysql_errno(handleOf(conn_));
+    mysql_close(handleOf(conn_));
     conn_ = nullptr;
     throw DbError("Could not connect to " + cfg.host + ":" +
                       std::to_string(cfg.port) + " -- " + msg,
@@ -117,12 +128,12 @@ void MySqlDriver::connect(const ConnectionConfig& cfg) {
   std::lock_guard<std::mutex> lock(cancelMutex_);
   cfg_ = cfg;
   activeDb_ = cfg.database;
-  threadId_ = mysql_thread_id(conn_);
+  threadId_ = mysql_thread_id(handleOf(conn_));
 }
 
 void MySqlDriver::disconnect() {
   if (conn_) {
-    mysql_close(conn_);
+    mysql_close(handleOf(conn_));
     conn_ = nullptr;
   }
   std::lock_guard<std::mutex> lock(cancelMutex_);
@@ -131,11 +142,14 @@ void MySqlDriver::disconnect() {
 
 std::string MySqlDriver::serverVersion() const {
   if (!conn_) return "MySQL (disconnected)";
-  return std::string("MySQL ") + mysql_get_server_info(conn_);
+  // MariaDB reports itself in the version string, so don't hard-code "MySQL".
+  const std::string version = mysql_get_server_info(handleOf(conn_));
+  const bool isMaria = version.find("Maria") != std::string::npos;
+  return (isMaria ? "" : "MySQL ") + version;
 }
 
 void MySqlDriver::cancel() {
-  // The in-flight query owns conn_, so the kill has to travel over a second,
+  // The in-flight query owns the connection, so the kill has to travel over a second,
   // short-lived connection. This is how the MySQL CLI does Ctrl-C too.
   ConnectionConfig cfg;
   unsigned long tid = 0;
@@ -164,7 +178,7 @@ void MySqlDriver::cancel() {
 std::string MySqlDriver::escape(const std::string& s) const {
   std::string out(s.size() * 2 + 1, '\0');
   unsigned long n =
-      conn_ ? mysql_real_escape_string(conn_, out.data(), s.c_str(),
+      conn_ ? mysql_real_escape_string(handleOf(conn_), out.data(), s.c_str(),
                                        static_cast<unsigned long>(s.size()))
             : 0;
   out.resize(n);
@@ -175,7 +189,7 @@ ResultSet MySqlDriver::execute(const std::string& sql, int maxRows) {
   if (!conn_) throw DbError("Not connected.");
   const auto start = std::chrono::steady_clock::now();
 
-  if (mysql_real_query(conn_, sql.c_str(),
+  if (mysql_real_query(handleOf(conn_), sql.c_str(),
                        static_cast<unsigned long>(sql.size())) != 0) {
     fail("Query failed");
   }
@@ -186,11 +200,11 @@ ResultSet MySqlDriver::execute(const std::string& sql, int maxRows) {
   // use_result streams rows instead of buffering the whole set client-side,
   // so a stray `SELECT * FROM huge_table` doesn't blow up memory before the
   // row cap gets a chance to apply.
-  MYSQL_RES* res = mysql_use_result(conn_);
+  MYSQL_RES* res = mysql_use_result(handleOf(conn_));
   if (!res) {
-    if (mysql_field_count(conn_) != 0) fail("Could not read result");
-    rs.rowsAffected = static_cast<int64_t>(mysql_affected_rows(conn_));
-    rs.lastInsertId = static_cast<int64_t>(mysql_insert_id(conn_));
+    if (mysql_field_count(handleOf(conn_)) != 0) fail("Could not read result");
+    rs.rowsAffected = static_cast<int64_t>(mysql_affected_rows(handleOf(conn_)));
+    rs.lastInsertId = static_cast<int64_t>(mysql_insert_id(handleOf(conn_)));
     rs.elapsedMs = std::chrono::duration<double, std::milli>(
                        std::chrono::steady_clock::now() - start).count();
     return rs;
@@ -248,9 +262,9 @@ ResultSet MySqlDriver::execute(const std::string& sql, int maxRows) {
     rs.rows.push_back(std::move(out));
   }
 
-  const bool streamError = mysql_errno(conn_) != 0;
-  std::string streamMsg = streamError ? mysql_error(conn_) : "";
-  unsigned int streamCode = mysql_errno(conn_);
+  const bool streamError = mysql_errno(handleOf(conn_)) != 0;
+  std::string streamMsg = streamError ? mysql_error(handleOf(conn_)) : "";
+  unsigned int streamCode = mysql_errno(handleOf(conn_));
 
   if (rs.truncated) {
     // Drain the rest so the connection is usable again; the server-side query
@@ -290,7 +304,7 @@ std::vector<std::string> MySqlDriver::databases() {
 
 void MySqlDriver::useDatabase(const std::string& name) {
   if (!conn_) throw DbError("Not connected.");
-  if (mysql_select_db(conn_, name.c_str()) != 0) {
+  if (mysql_select_db(handleOf(conn_), name.c_str()) != 0) {
     fail("Could not switch to database '" + name + "'");
   }
   std::lock_guard<std::mutex> lock(cancelMutex_);
@@ -341,8 +355,8 @@ Schema MySqlDriver::introspect() {
     t.schema = db;
     t.name = toDisplayString(r[0]);
     t.isView = toDisplayString(r[1]) == "VIEW";
-    if (!isNull(r[2])) t.estimatedRows = std::get<int64_t>(r[2]);
-    if (!isNull(r[3])) t.sizeBytes = std::get<int64_t>(r[3]);
+    if (!isNull(r[2])) t.estimatedRows = toInt(r[2], -1);
+    if (!isNull(r[3])) t.sizeBytes = toInt(r[3], -1);
     t.comment = toDisplayString(r[4]);
     schema.tables.push_back(std::move(t));
   }
@@ -373,7 +387,7 @@ Schema MySqlDriver::introspect() {
     c.autoIncrement =
         toDisplayString(r[5]).find("auto_increment") != std::string::npos;
     if (!isNull(r[6])) c.defaultValue = toDisplayString(r[6]);
-    c.ordinal = static_cast<int>(std::get<int64_t>(r[7])) - 1;
+    c.ordinal = static_cast<int>(toInt(r[7], 1)) - 1;
     c.comment = toDisplayString(r[8]);
     c.kind = classifyType(c.type);
     t->columns.push_back(std::move(c));

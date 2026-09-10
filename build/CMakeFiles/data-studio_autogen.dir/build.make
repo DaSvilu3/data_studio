@@ -72,7 +72,7 @@ data-studio_autogen/timestamp: /opt/homebrew/opt/qt/share/qt/libexec/moc
 data-studio_autogen/timestamp: /opt/homebrew/opt/qt/share/qt/libexec/uic
 data-studio_autogen/timestamp: CMakeFiles/data-studio_autogen.dir/compiler_depend.ts
 	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --blue --bold --progress-dir=/Users/yousufawj/projects/rnd/data_studio/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_1) "Automatic MOC and UIC for target data-studio"
-	/opt/homebrew/bin/cmake -E cmake_autogen /Users/yousufawj/projects/rnd/data_studio/build/CMakeFiles/data-studio_autogen.dir/AutogenInfo.json Debug
+	/opt/homebrew/bin/cmake -E cmake_autogen /Users/yousufawj/projects/rnd/data_studio/build/CMakeFiles/data-studio_autogen.dir/AutogenInfo.json Release
 	/opt/homebrew/bin/cmake -E touch /Users/yousufawj/projects/rnd/data_studio/build/data-studio_autogen/timestamp
 
 CMakeFiles/data-studio_autogen.dir/codegen:

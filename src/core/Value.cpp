@@ -65,6 +65,43 @@ std::string toSqlLiteral(const Value& v) {
   return std::visit(Visitor{}, v);
 }
 
+int64_t toInt(const Value& v, int64_t fallback) {
+  struct Visitor {
+    int64_t fallback;
+    int64_t operator()(std::monostate) const { return fallback; }
+    int64_t operator()(int64_t i) const { return i; }
+    int64_t operator()(double d) const { return static_cast<int64_t>(d); }
+    int64_t operator()(const std::string& s) const {
+      try {
+        // stoll stops at the first non-digit, which handles "12.5" too.
+        return std::stoll(s);
+      } catch (...) {
+        return fallback;
+      }
+    }
+    int64_t operator()(const Blob&) const { return fallback; }
+  };
+  return std::visit(Visitor{fallback}, v);
+}
+
+double toReal(const Value& v, double fallback) {
+  struct Visitor {
+    double fallback;
+    double operator()(std::monostate) const { return fallback; }
+    double operator()(int64_t i) const { return static_cast<double>(i); }
+    double operator()(double d) const { return d; }
+    double operator()(const std::string& s) const {
+      try {
+        return std::stod(s);
+      } catch (...) {
+        return fallback;
+      }
+    }
+    double operator()(const Blob&) const { return fallback; }
+  };
+  return std::visit(Visitor{fallback}, v);
+}
+
 const char* dialectName(Dialect d) {
   switch (d) {
     case Dialect::Sqlite: return "SQLite";

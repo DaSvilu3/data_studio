@@ -65,6 +65,16 @@ CMAKE_BINARY_DIR = /Users/yousufawj/projects/rnd/data_studio/build
 #=============================================================================
 # Targets provided globally by CMake.
 
+# Special rule for the target test
+test:
+	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --cyan "Running tests..."
+	/opt/homebrew/bin/ctest $(ARGS)
+.PHONY : test
+
+# Special rule for the target test
+test/fast: test
+.PHONY : test/fast
+
 # Special rule for the target edit_cache
 edit_cache:
 	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --cyan "Running CMake cache editor..."
@@ -130,6 +140,19 @@ dscore/fast:
 .PHONY : dscore/fast
 
 #=============================================================================
+# Target rules for targets named dsui
+
+# Build rule for target.
+dsui: cmake_check_build_system
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/Makefile2 dsui
+.PHONY : dsui
+
+# fast build rule for target.
+dsui/fast:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/dsui.dir/build.make CMakeFiles/dsui.dir/build
+.PHONY : dsui/fast
+
+#=============================================================================
 # Target rules for targets named data-studio
 
 # Build rule for target.
@@ -141,6 +164,396 @@ data-studio: cmake_check_build_system
 data-studio/fast:
 	$(MAKE) $(MAKESILENT) -f CMakeFiles/data-studio.dir/build.make CMakeFiles/data-studio.dir/build
 .PHONY : data-studio/fast
+
+#=============================================================================
+# Target rules for targets named Experimental
+
+# Build rule for target.
+Experimental: cmake_check_build_system
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/Makefile2 Experimental
+.PHONY : Experimental
+
+# fast build rule for target.
+Experimental/fast:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/Experimental.dir/build.make CMakeFiles/Experimental.dir/build
+.PHONY : Experimental/fast
+
+#=============================================================================
+# Target rules for targets named Nightly
+
+# Build rule for target.
+Nightly: cmake_check_build_system
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/Makefile2 Nightly
+.PHONY : Nightly
+
+# fast build rule for target.
+Nightly/fast:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/Nightly.dir/build.make CMakeFiles/Nightly.dir/build
+.PHONY : Nightly/fast
+
+#=============================================================================
+# Target rules for targets named Continuous
+
+# Build rule for target.
+Continuous: cmake_check_build_system
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/Makefile2 Continuous
+.PHONY : Continuous
+
+# fast build rule for target.
+Continuous/fast:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/Continuous.dir/build.make CMakeFiles/Continuous.dir/build
+.PHONY : Continuous/fast
+
+#=============================================================================
+# Target rules for targets named NightlyMemoryCheck
+
+# Build rule for target.
+NightlyMemoryCheck: cmake_check_build_system
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/Makefile2 NightlyMemoryCheck
+.PHONY : NightlyMemoryCheck
+
+# fast build rule for target.
+NightlyMemoryCheck/fast:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/NightlyMemoryCheck.dir/build.make CMakeFiles/NightlyMemoryCheck.dir/build
+.PHONY : NightlyMemoryCheck/fast
+
+#=============================================================================
+# Target rules for targets named NightlyStart
+
+# Build rule for target.
+NightlyStart: cmake_check_build_system
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/Makefile2 NightlyStart
+.PHONY : NightlyStart
+
+# fast build rule for target.
+NightlyStart/fast:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/NightlyStart.dir/build.make CMakeFiles/NightlyStart.dir/build
+.PHONY : NightlyStart/fast
+
+#=============================================================================
+# Target rules for targets named NightlyUpdate
+
+# Build rule for target.
+NightlyUpdate: cmake_check_build_system
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/Makefile2 NightlyUpdate
+.PHONY : NightlyUpdate
+
+# fast build rule for target.
+NightlyUpdate/fast:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/NightlyUpdate.dir/build.make CMakeFiles/NightlyUpdate.dir/build
+.PHONY : NightlyUpdate/fast
+
+#=============================================================================
+# Target rules for targets named NightlyConfigure
+
+# Build rule for target.
+NightlyConfigure: cmake_check_build_system
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/Makefile2 NightlyConfigure
+.PHONY : NightlyConfigure
+
+# fast build rule for target.
+NightlyConfigure/fast:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/NightlyConfigure.dir/build.make CMakeFiles/NightlyConfigure.dir/build
+.PHONY : NightlyConfigure/fast
+
+#=============================================================================
+# Target rules for targets named NightlyBuild
+
+# Build rule for target.
+NightlyBuild: cmake_check_build_system
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/Makefile2 NightlyBuild
+.PHONY : NightlyBuild
+
+# fast build rule for target.
+NightlyBuild/fast:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/NightlyBuild.dir/build.make CMakeFiles/NightlyBuild.dir/build
+.PHONY : NightlyBuild/fast
+
+#=============================================================================
+# Target rules for targets named NightlyTest
+
+# Build rule for target.
+NightlyTest: cmake_check_build_system
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/Makefile2 NightlyTest
+.PHONY : NightlyTest
+
+# fast build rule for target.
+NightlyTest/fast:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/NightlyTest.dir/build.make CMakeFiles/NightlyTest.dir/build
+.PHONY : NightlyTest/fast
+
+#=============================================================================
+# Target rules for targets named NightlyCoverage
+
+# Build rule for target.
+NightlyCoverage: cmake_check_build_system
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/Makefile2 NightlyCoverage
+.PHONY : NightlyCoverage
+
+# fast build rule for target.
+NightlyCoverage/fast:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/NightlyCoverage.dir/build.make CMakeFiles/NightlyCoverage.dir/build
+.PHONY : NightlyCoverage/fast
+
+#=============================================================================
+# Target rules for targets named NightlyMemCheck
+
+# Build rule for target.
+NightlyMemCheck: cmake_check_build_system
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/Makefile2 NightlyMemCheck
+.PHONY : NightlyMemCheck
+
+# fast build rule for target.
+NightlyMemCheck/fast:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/NightlyMemCheck.dir/build.make CMakeFiles/NightlyMemCheck.dir/build
+.PHONY : NightlyMemCheck/fast
+
+#=============================================================================
+# Target rules for targets named NightlySubmit
+
+# Build rule for target.
+NightlySubmit: cmake_check_build_system
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/Makefile2 NightlySubmit
+.PHONY : NightlySubmit
+
+# fast build rule for target.
+NightlySubmit/fast:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/NightlySubmit.dir/build.make CMakeFiles/NightlySubmit.dir/build
+.PHONY : NightlySubmit/fast
+
+#=============================================================================
+# Target rules for targets named ExperimentalStart
+
+# Build rule for target.
+ExperimentalStart: cmake_check_build_system
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/Makefile2 ExperimentalStart
+.PHONY : ExperimentalStart
+
+# fast build rule for target.
+ExperimentalStart/fast:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/ExperimentalStart.dir/build.make CMakeFiles/ExperimentalStart.dir/build
+.PHONY : ExperimentalStart/fast
+
+#=============================================================================
+# Target rules for targets named ExperimentalUpdate
+
+# Build rule for target.
+ExperimentalUpdate: cmake_check_build_system
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/Makefile2 ExperimentalUpdate
+.PHONY : ExperimentalUpdate
+
+# fast build rule for target.
+ExperimentalUpdate/fast:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/ExperimentalUpdate.dir/build.make CMakeFiles/ExperimentalUpdate.dir/build
+.PHONY : ExperimentalUpdate/fast
+
+#=============================================================================
+# Target rules for targets named ExperimentalConfigure
+
+# Build rule for target.
+ExperimentalConfigure: cmake_check_build_system
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/Makefile2 ExperimentalConfigure
+.PHONY : ExperimentalConfigure
+
+# fast build rule for target.
+ExperimentalConfigure/fast:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/ExperimentalConfigure.dir/build.make CMakeFiles/ExperimentalConfigure.dir/build
+.PHONY : ExperimentalConfigure/fast
+
+#=============================================================================
+# Target rules for targets named ExperimentalBuild
+
+# Build rule for target.
+ExperimentalBuild: cmake_check_build_system
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/Makefile2 ExperimentalBuild
+.PHONY : ExperimentalBuild
+
+# fast build rule for target.
+ExperimentalBuild/fast:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/ExperimentalBuild.dir/build.make CMakeFiles/ExperimentalBuild.dir/build
+.PHONY : ExperimentalBuild/fast
+
+#=============================================================================
+# Target rules for targets named ExperimentalTest
+
+# Build rule for target.
+ExperimentalTest: cmake_check_build_system
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/Makefile2 ExperimentalTest
+.PHONY : ExperimentalTest
+
+# fast build rule for target.
+ExperimentalTest/fast:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/ExperimentalTest.dir/build.make CMakeFiles/ExperimentalTest.dir/build
+.PHONY : ExperimentalTest/fast
+
+#=============================================================================
+# Target rules for targets named ExperimentalCoverage
+
+# Build rule for target.
+ExperimentalCoverage: cmake_check_build_system
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/Makefile2 ExperimentalCoverage
+.PHONY : ExperimentalCoverage
+
+# fast build rule for target.
+ExperimentalCoverage/fast:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/ExperimentalCoverage.dir/build.make CMakeFiles/ExperimentalCoverage.dir/build
+.PHONY : ExperimentalCoverage/fast
+
+#=============================================================================
+# Target rules for targets named ExperimentalMemCheck
+
+# Build rule for target.
+ExperimentalMemCheck: cmake_check_build_system
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/Makefile2 ExperimentalMemCheck
+.PHONY : ExperimentalMemCheck
+
+# fast build rule for target.
+ExperimentalMemCheck/fast:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/ExperimentalMemCheck.dir/build.make CMakeFiles/ExperimentalMemCheck.dir/build
+.PHONY : ExperimentalMemCheck/fast
+
+#=============================================================================
+# Target rules for targets named ExperimentalSubmit
+
+# Build rule for target.
+ExperimentalSubmit: cmake_check_build_system
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/Makefile2 ExperimentalSubmit
+.PHONY : ExperimentalSubmit
+
+# fast build rule for target.
+ExperimentalSubmit/fast:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/ExperimentalSubmit.dir/build.make CMakeFiles/ExperimentalSubmit.dir/build
+.PHONY : ExperimentalSubmit/fast
+
+#=============================================================================
+# Target rules for targets named ContinuousStart
+
+# Build rule for target.
+ContinuousStart: cmake_check_build_system
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/Makefile2 ContinuousStart
+.PHONY : ContinuousStart
+
+# fast build rule for target.
+ContinuousStart/fast:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/ContinuousStart.dir/build.make CMakeFiles/ContinuousStart.dir/build
+.PHONY : ContinuousStart/fast
+
+#=============================================================================
+# Target rules for targets named ContinuousUpdate
+
+# Build rule for target.
+ContinuousUpdate: cmake_check_build_system
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/Makefile2 ContinuousUpdate
+.PHONY : ContinuousUpdate
+
+# fast build rule for target.
+ContinuousUpdate/fast:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/ContinuousUpdate.dir/build.make CMakeFiles/ContinuousUpdate.dir/build
+.PHONY : ContinuousUpdate/fast
+
+#=============================================================================
+# Target rules for targets named ContinuousConfigure
+
+# Build rule for target.
+ContinuousConfigure: cmake_check_build_system
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/Makefile2 ContinuousConfigure
+.PHONY : ContinuousConfigure
+
+# fast build rule for target.
+ContinuousConfigure/fast:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/ContinuousConfigure.dir/build.make CMakeFiles/ContinuousConfigure.dir/build
+.PHONY : ContinuousConfigure/fast
+
+#=============================================================================
+# Target rules for targets named ContinuousBuild
+
+# Build rule for target.
+ContinuousBuild: cmake_check_build_system
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/Makefile2 ContinuousBuild
+.PHONY : ContinuousBuild
+
+# fast build rule for target.
+ContinuousBuild/fast:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/ContinuousBuild.dir/build.make CMakeFiles/ContinuousBuild.dir/build
+.PHONY : ContinuousBuild/fast
+
+#=============================================================================
+# Target rules for targets named ContinuousTest
+
+# Build rule for target.
+ContinuousTest: cmake_check_build_system
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/Makefile2 ContinuousTest
+.PHONY : ContinuousTest
+
+# fast build rule for target.
+ContinuousTest/fast:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/ContinuousTest.dir/build.make CMakeFiles/ContinuousTest.dir/build
+.PHONY : ContinuousTest/fast
+
+#=============================================================================
+# Target rules for targets named ContinuousCoverage
+
+# Build rule for target.
+ContinuousCoverage: cmake_check_build_system
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/Makefile2 ContinuousCoverage
+.PHONY : ContinuousCoverage
+
+# fast build rule for target.
+ContinuousCoverage/fast:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/ContinuousCoverage.dir/build.make CMakeFiles/ContinuousCoverage.dir/build
+.PHONY : ContinuousCoverage/fast
+
+#=============================================================================
+# Target rules for targets named ContinuousMemCheck
+
+# Build rule for target.
+ContinuousMemCheck: cmake_check_build_system
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/Makefile2 ContinuousMemCheck
+.PHONY : ContinuousMemCheck
+
+# fast build rule for target.
+ContinuousMemCheck/fast:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/ContinuousMemCheck.dir/build.make CMakeFiles/ContinuousMemCheck.dir/build
+.PHONY : ContinuousMemCheck/fast
+
+#=============================================================================
+# Target rules for targets named ContinuousSubmit
+
+# Build rule for target.
+ContinuousSubmit: cmake_check_build_system
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/Makefile2 ContinuousSubmit
+.PHONY : ContinuousSubmit
+
+# fast build rule for target.
+ContinuousSubmit/fast:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/ContinuousSubmit.dir/build.make CMakeFiles/ContinuousSubmit.dir/build
+.PHONY : ContinuousSubmit/fast
+
+#=============================================================================
+# Target rules for targets named ds-core-tests
+
+# Build rule for target.
+ds-core-tests: cmake_check_build_system
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/Makefile2 ds-core-tests
+.PHONY : ds-core-tests
+
+# fast build rule for target.
+ds-core-tests/fast:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/ds-core-tests.dir/build.make CMakeFiles/ds-core-tests.dir/build
+.PHONY : ds-core-tests/fast
+
+#=============================================================================
+# Target rules for targets named ds-ui-tests
+
+# Build rule for target.
+ds-ui-tests: cmake_check_build_system
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/Makefile2 ds-ui-tests
+.PHONY : ds-ui-tests
+
+# fast build rule for target.
+ds-ui-tests/fast:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/ds-ui-tests.dir/build.make CMakeFiles/ds-ui-tests.dir/build
+.PHONY : ds-ui-tests/fast
 
 #=============================================================================
 # Target rules for targets named dscore_autogen_timestamp_deps
@@ -169,6 +582,32 @@ dscore_autogen/fast:
 .PHONY : dscore_autogen/fast
 
 #=============================================================================
+# Target rules for targets named dsui_autogen_timestamp_deps
+
+# Build rule for target.
+dsui_autogen_timestamp_deps: cmake_check_build_system
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/Makefile2 dsui_autogen_timestamp_deps
+.PHONY : dsui_autogen_timestamp_deps
+
+# fast build rule for target.
+dsui_autogen_timestamp_deps/fast:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/dsui_autogen_timestamp_deps.dir/build.make CMakeFiles/dsui_autogen_timestamp_deps.dir/build
+.PHONY : dsui_autogen_timestamp_deps/fast
+
+#=============================================================================
+# Target rules for targets named dsui_autogen
+
+# Build rule for target.
+dsui_autogen: cmake_check_build_system
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/Makefile2 dsui_autogen
+.PHONY : dsui_autogen
+
+# fast build rule for target.
+dsui_autogen/fast:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/dsui_autogen.dir/build.make CMakeFiles/dsui_autogen.dir/build
+.PHONY : dsui_autogen/fast
+
+#=============================================================================
 # Target rules for targets named data-studio_autogen_timestamp_deps
 
 # Build rule for target.
@@ -194,6 +633,58 @@ data-studio_autogen/fast:
 	$(MAKE) $(MAKESILENT) -f CMakeFiles/data-studio_autogen.dir/build.make CMakeFiles/data-studio_autogen.dir/build
 .PHONY : data-studio_autogen/fast
 
+#=============================================================================
+# Target rules for targets named ds-core-tests_autogen_timestamp_deps
+
+# Build rule for target.
+ds-core-tests_autogen_timestamp_deps: cmake_check_build_system
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/Makefile2 ds-core-tests_autogen_timestamp_deps
+.PHONY : ds-core-tests_autogen_timestamp_deps
+
+# fast build rule for target.
+ds-core-tests_autogen_timestamp_deps/fast:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/ds-core-tests_autogen_timestamp_deps.dir/build.make CMakeFiles/ds-core-tests_autogen_timestamp_deps.dir/build
+.PHONY : ds-core-tests_autogen_timestamp_deps/fast
+
+#=============================================================================
+# Target rules for targets named ds-core-tests_autogen
+
+# Build rule for target.
+ds-core-tests_autogen: cmake_check_build_system
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/Makefile2 ds-core-tests_autogen
+.PHONY : ds-core-tests_autogen
+
+# fast build rule for target.
+ds-core-tests_autogen/fast:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/ds-core-tests_autogen.dir/build.make CMakeFiles/ds-core-tests_autogen.dir/build
+.PHONY : ds-core-tests_autogen/fast
+
+#=============================================================================
+# Target rules for targets named ds-ui-tests_autogen_timestamp_deps
+
+# Build rule for target.
+ds-ui-tests_autogen_timestamp_deps: cmake_check_build_system
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/Makefile2 ds-ui-tests_autogen_timestamp_deps
+.PHONY : ds-ui-tests_autogen_timestamp_deps
+
+# fast build rule for target.
+ds-ui-tests_autogen_timestamp_deps/fast:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/ds-ui-tests_autogen_timestamp_deps.dir/build.make CMakeFiles/ds-ui-tests_autogen_timestamp_deps.dir/build
+.PHONY : ds-ui-tests_autogen_timestamp_deps/fast
+
+#=============================================================================
+# Target rules for targets named ds-ui-tests_autogen
+
+# Build rule for target.
+ds-ui-tests_autogen: cmake_check_build_system
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/Makefile2 ds-ui-tests_autogen
+.PHONY : ds-ui-tests_autogen
+
+# fast build rule for target.
+ds-ui-tests_autogen/fast:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/ds-ui-tests_autogen.dir/build.make CMakeFiles/ds-ui-tests_autogen.dir/build
+.PHONY : ds-ui-tests_autogen/fast
+
 data-studio_autogen/mocs_compilation.o: data-studio_autogen/mocs_compilation.cpp.o
 .PHONY : data-studio_autogen/mocs_compilation.o
 
@@ -217,6 +708,54 @@ data-studio_autogen/mocs_compilation.s: data-studio_autogen/mocs_compilation.cpp
 data-studio_autogen/mocs_compilation.cpp.s:
 	$(MAKE) $(MAKESILENT) -f CMakeFiles/data-studio.dir/build.make CMakeFiles/data-studio.dir/data-studio_autogen/mocs_compilation.cpp.s
 .PHONY : data-studio_autogen/mocs_compilation.cpp.s
+
+ds-core-tests_autogen/mocs_compilation.o: ds-core-tests_autogen/mocs_compilation.cpp.o
+.PHONY : ds-core-tests_autogen/mocs_compilation.o
+
+# target to build an object file
+ds-core-tests_autogen/mocs_compilation.cpp.o:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/ds-core-tests.dir/build.make CMakeFiles/ds-core-tests.dir/ds-core-tests_autogen/mocs_compilation.cpp.o
+.PHONY : ds-core-tests_autogen/mocs_compilation.cpp.o
+
+ds-core-tests_autogen/mocs_compilation.i: ds-core-tests_autogen/mocs_compilation.cpp.i
+.PHONY : ds-core-tests_autogen/mocs_compilation.i
+
+# target to preprocess a source file
+ds-core-tests_autogen/mocs_compilation.cpp.i:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/ds-core-tests.dir/build.make CMakeFiles/ds-core-tests.dir/ds-core-tests_autogen/mocs_compilation.cpp.i
+.PHONY : ds-core-tests_autogen/mocs_compilation.cpp.i
+
+ds-core-tests_autogen/mocs_compilation.s: ds-core-tests_autogen/mocs_compilation.cpp.s
+.PHONY : ds-core-tests_autogen/mocs_compilation.s
+
+# target to generate assembly for a file
+ds-core-tests_autogen/mocs_compilation.cpp.s:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/ds-core-tests.dir/build.make CMakeFiles/ds-core-tests.dir/ds-core-tests_autogen/mocs_compilation.cpp.s
+.PHONY : ds-core-tests_autogen/mocs_compilation.cpp.s
+
+ds-ui-tests_autogen/mocs_compilation.o: ds-ui-tests_autogen/mocs_compilation.cpp.o
+.PHONY : ds-ui-tests_autogen/mocs_compilation.o
+
+# target to build an object file
+ds-ui-tests_autogen/mocs_compilation.cpp.o:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/ds-ui-tests.dir/build.make CMakeFiles/ds-ui-tests.dir/ds-ui-tests_autogen/mocs_compilation.cpp.o
+.PHONY : ds-ui-tests_autogen/mocs_compilation.cpp.o
+
+ds-ui-tests_autogen/mocs_compilation.i: ds-ui-tests_autogen/mocs_compilation.cpp.i
+.PHONY : ds-ui-tests_autogen/mocs_compilation.i
+
+# target to preprocess a source file
+ds-ui-tests_autogen/mocs_compilation.cpp.i:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/ds-ui-tests.dir/build.make CMakeFiles/ds-ui-tests.dir/ds-ui-tests_autogen/mocs_compilation.cpp.i
+.PHONY : ds-ui-tests_autogen/mocs_compilation.cpp.i
+
+ds-ui-tests_autogen/mocs_compilation.s: ds-ui-tests_autogen/mocs_compilation.cpp.s
+.PHONY : ds-ui-tests_autogen/mocs_compilation.s
+
+# target to generate assembly for a file
+ds-ui-tests_autogen/mocs_compilation.cpp.s:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/ds-ui-tests.dir/build.make CMakeFiles/ds-ui-tests.dir/ds-ui-tests_autogen/mocs_compilation.cpp.s
+.PHONY : ds-ui-tests_autogen/mocs_compilation.cpp.s
 
 dscore_autogen/mocs_compilation.o: dscore_autogen/mocs_compilation.cpp.o
 .PHONY : dscore_autogen/mocs_compilation.o
@@ -242,29 +781,173 @@ dscore_autogen/mocs_compilation.cpp.s:
 	$(MAKE) $(MAKESILENT) -f CMakeFiles/dscore.dir/build.make CMakeFiles/dscore.dir/dscore_autogen/mocs_compilation.cpp.s
 .PHONY : dscore_autogen/mocs_compilation.cpp.s
 
-src/ai/NlSqlClient.o: src/ai/NlSqlClient.cpp.o
-.PHONY : src/ai/NlSqlClient.o
+dsui_autogen/mocs_compilation.o: dsui_autogen/mocs_compilation.cpp.o
+.PHONY : dsui_autogen/mocs_compilation.o
 
 # target to build an object file
-src/ai/NlSqlClient.cpp.o:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/data-studio.dir/build.make CMakeFiles/data-studio.dir/src/ai/NlSqlClient.cpp.o
-.PHONY : src/ai/NlSqlClient.cpp.o
+dsui_autogen/mocs_compilation.cpp.o:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/dsui.dir/build.make CMakeFiles/dsui.dir/dsui_autogen/mocs_compilation.cpp.o
+.PHONY : dsui_autogen/mocs_compilation.cpp.o
 
-src/ai/NlSqlClient.i: src/ai/NlSqlClient.cpp.i
-.PHONY : src/ai/NlSqlClient.i
+dsui_autogen/mocs_compilation.i: dsui_autogen/mocs_compilation.cpp.i
+.PHONY : dsui_autogen/mocs_compilation.i
 
 # target to preprocess a source file
-src/ai/NlSqlClient.cpp.i:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/data-studio.dir/build.make CMakeFiles/data-studio.dir/src/ai/NlSqlClient.cpp.i
-.PHONY : src/ai/NlSqlClient.cpp.i
+dsui_autogen/mocs_compilation.cpp.i:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/dsui.dir/build.make CMakeFiles/dsui.dir/dsui_autogen/mocs_compilation.cpp.i
+.PHONY : dsui_autogen/mocs_compilation.cpp.i
 
-src/ai/NlSqlClient.s: src/ai/NlSqlClient.cpp.s
-.PHONY : src/ai/NlSqlClient.s
+dsui_autogen/mocs_compilation.s: dsui_autogen/mocs_compilation.cpp.s
+.PHONY : dsui_autogen/mocs_compilation.s
 
 # target to generate assembly for a file
-src/ai/NlSqlClient.cpp.s:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/data-studio.dir/build.make CMakeFiles/data-studio.dir/src/ai/NlSqlClient.cpp.s
-.PHONY : src/ai/NlSqlClient.cpp.s
+dsui_autogen/mocs_compilation.cpp.s:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/dsui.dir/build.make CMakeFiles/dsui.dir/dsui_autogen/mocs_compilation.cpp.s
+.PHONY : dsui_autogen/mocs_compilation.cpp.s
+
+src/ai/AiSettings.o: src/ai/AiSettings.cpp.o
+.PHONY : src/ai/AiSettings.o
+
+# target to build an object file
+src/ai/AiSettings.cpp.o:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/dsui.dir/build.make CMakeFiles/dsui.dir/src/ai/AiSettings.cpp.o
+.PHONY : src/ai/AiSettings.cpp.o
+
+src/ai/AiSettings.i: src/ai/AiSettings.cpp.i
+.PHONY : src/ai/AiSettings.i
+
+# target to preprocess a source file
+src/ai/AiSettings.cpp.i:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/dsui.dir/build.make CMakeFiles/dsui.dir/src/ai/AiSettings.cpp.i
+.PHONY : src/ai/AiSettings.cpp.i
+
+src/ai/AiSettings.s: src/ai/AiSettings.cpp.s
+.PHONY : src/ai/AiSettings.s
+
+# target to generate assembly for a file
+src/ai/AiSettings.cpp.s:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/dsui.dir/build.make CMakeFiles/dsui.dir/src/ai/AiSettings.cpp.s
+.PHONY : src/ai/AiSettings.cpp.s
+
+src/ai/AiSettingsDialog.o: src/ai/AiSettingsDialog.cpp.o
+.PHONY : src/ai/AiSettingsDialog.o
+
+# target to build an object file
+src/ai/AiSettingsDialog.cpp.o:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/dsui.dir/build.make CMakeFiles/dsui.dir/src/ai/AiSettingsDialog.cpp.o
+.PHONY : src/ai/AiSettingsDialog.cpp.o
+
+src/ai/AiSettingsDialog.i: src/ai/AiSettingsDialog.cpp.i
+.PHONY : src/ai/AiSettingsDialog.i
+
+# target to preprocess a source file
+src/ai/AiSettingsDialog.cpp.i:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/dsui.dir/build.make CMakeFiles/dsui.dir/src/ai/AiSettingsDialog.cpp.i
+.PHONY : src/ai/AiSettingsDialog.cpp.i
+
+src/ai/AiSettingsDialog.s: src/ai/AiSettingsDialog.cpp.s
+.PHONY : src/ai/AiSettingsDialog.s
+
+# target to generate assembly for a file
+src/ai/AiSettingsDialog.cpp.s:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/dsui.dir/build.make CMakeFiles/dsui.dir/src/ai/AiSettingsDialog.cpp.s
+.PHONY : src/ai/AiSettingsDialog.cpp.s
+
+src/ai/ClaudeSqlGenerator.o: src/ai/ClaudeSqlGenerator.cpp.o
+.PHONY : src/ai/ClaudeSqlGenerator.o
+
+# target to build an object file
+src/ai/ClaudeSqlGenerator.cpp.o:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/dsui.dir/build.make CMakeFiles/dsui.dir/src/ai/ClaudeSqlGenerator.cpp.o
+.PHONY : src/ai/ClaudeSqlGenerator.cpp.o
+
+src/ai/ClaudeSqlGenerator.i: src/ai/ClaudeSqlGenerator.cpp.i
+.PHONY : src/ai/ClaudeSqlGenerator.i
+
+# target to preprocess a source file
+src/ai/ClaudeSqlGenerator.cpp.i:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/dsui.dir/build.make CMakeFiles/dsui.dir/src/ai/ClaudeSqlGenerator.cpp.i
+.PHONY : src/ai/ClaudeSqlGenerator.cpp.i
+
+src/ai/ClaudeSqlGenerator.s: src/ai/ClaudeSqlGenerator.cpp.s
+.PHONY : src/ai/ClaudeSqlGenerator.s
+
+# target to generate assembly for a file
+src/ai/ClaudeSqlGenerator.cpp.s:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/dsui.dir/build.make CMakeFiles/dsui.dir/src/ai/ClaudeSqlGenerator.cpp.s
+.PHONY : src/ai/ClaudeSqlGenerator.cpp.s
+
+src/ai/LocalSqlGenerator.o: src/ai/LocalSqlGenerator.cpp.o
+.PHONY : src/ai/LocalSqlGenerator.o
+
+# target to build an object file
+src/ai/LocalSqlGenerator.cpp.o:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/dsui.dir/build.make CMakeFiles/dsui.dir/src/ai/LocalSqlGenerator.cpp.o
+.PHONY : src/ai/LocalSqlGenerator.cpp.o
+
+src/ai/LocalSqlGenerator.i: src/ai/LocalSqlGenerator.cpp.i
+.PHONY : src/ai/LocalSqlGenerator.i
+
+# target to preprocess a source file
+src/ai/LocalSqlGenerator.cpp.i:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/dsui.dir/build.make CMakeFiles/dsui.dir/src/ai/LocalSqlGenerator.cpp.i
+.PHONY : src/ai/LocalSqlGenerator.cpp.i
+
+src/ai/LocalSqlGenerator.s: src/ai/LocalSqlGenerator.cpp.s
+.PHONY : src/ai/LocalSqlGenerator.s
+
+# target to generate assembly for a file
+src/ai/LocalSqlGenerator.cpp.s:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/dsui.dir/build.make CMakeFiles/dsui.dir/src/ai/LocalSqlGenerator.cpp.s
+.PHONY : src/ai/LocalSqlGenerator.cpp.s
+
+src/ai/SchemaPrompt.o: src/ai/SchemaPrompt.cpp.o
+.PHONY : src/ai/SchemaPrompt.o
+
+# target to build an object file
+src/ai/SchemaPrompt.cpp.o:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/dsui.dir/build.make CMakeFiles/dsui.dir/src/ai/SchemaPrompt.cpp.o
+.PHONY : src/ai/SchemaPrompt.cpp.o
+
+src/ai/SchemaPrompt.i: src/ai/SchemaPrompt.cpp.i
+.PHONY : src/ai/SchemaPrompt.i
+
+# target to preprocess a source file
+src/ai/SchemaPrompt.cpp.i:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/dsui.dir/build.make CMakeFiles/dsui.dir/src/ai/SchemaPrompt.cpp.i
+.PHONY : src/ai/SchemaPrompt.cpp.i
+
+src/ai/SchemaPrompt.s: src/ai/SchemaPrompt.cpp.s
+.PHONY : src/ai/SchemaPrompt.s
+
+# target to generate assembly for a file
+src/ai/SchemaPrompt.cpp.s:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/dsui.dir/build.make CMakeFiles/dsui.dir/src/ai/SchemaPrompt.cpp.s
+.PHONY : src/ai/SchemaPrompt.cpp.s
+
+src/ai/SqlGenerator.o: src/ai/SqlGenerator.cpp.o
+.PHONY : src/ai/SqlGenerator.o
+
+# target to build an object file
+src/ai/SqlGenerator.cpp.o:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/dsui.dir/build.make CMakeFiles/dsui.dir/src/ai/SqlGenerator.cpp.o
+.PHONY : src/ai/SqlGenerator.cpp.o
+
+src/ai/SqlGenerator.i: src/ai/SqlGenerator.cpp.i
+.PHONY : src/ai/SqlGenerator.i
+
+# target to preprocess a source file
+src/ai/SqlGenerator.cpp.i:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/dsui.dir/build.make CMakeFiles/dsui.dir/src/ai/SqlGenerator.cpp.i
+.PHONY : src/ai/SqlGenerator.cpp.i
+
+src/ai/SqlGenerator.s: src/ai/SqlGenerator.cpp.s
+.PHONY : src/ai/SqlGenerator.s
+
+# target to generate assembly for a file
+src/ai/SqlGenerator.cpp.s:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/dsui.dir/build.make CMakeFiles/dsui.dir/src/ai/SqlGenerator.cpp.s
+.PHONY : src/ai/SqlGenerator.cpp.s
 
 src/core/DriverRegistry.o: src/core/DriverRegistry.cpp.o
 .PHONY : src/core/DriverRegistry.o
@@ -535,7 +1218,7 @@ src/ui/AnalyzerPanel.o: src/ui/AnalyzerPanel.cpp.o
 
 # target to build an object file
 src/ui/AnalyzerPanel.cpp.o:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/data-studio.dir/build.make CMakeFiles/data-studio.dir/src/ui/AnalyzerPanel.cpp.o
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/dsui.dir/build.make CMakeFiles/dsui.dir/src/ui/AnalyzerPanel.cpp.o
 .PHONY : src/ui/AnalyzerPanel.cpp.o
 
 src/ui/AnalyzerPanel.i: src/ui/AnalyzerPanel.cpp.i
@@ -543,7 +1226,7 @@ src/ui/AnalyzerPanel.i: src/ui/AnalyzerPanel.cpp.i
 
 # target to preprocess a source file
 src/ui/AnalyzerPanel.cpp.i:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/data-studio.dir/build.make CMakeFiles/data-studio.dir/src/ui/AnalyzerPanel.cpp.i
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/dsui.dir/build.make CMakeFiles/dsui.dir/src/ui/AnalyzerPanel.cpp.i
 .PHONY : src/ui/AnalyzerPanel.cpp.i
 
 src/ui/AnalyzerPanel.s: src/ui/AnalyzerPanel.cpp.s
@@ -551,7 +1234,7 @@ src/ui/AnalyzerPanel.s: src/ui/AnalyzerPanel.cpp.s
 
 # target to generate assembly for a file
 src/ui/AnalyzerPanel.cpp.s:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/data-studio.dir/build.make CMakeFiles/data-studio.dir/src/ui/AnalyzerPanel.cpp.s
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/dsui.dir/build.make CMakeFiles/dsui.dir/src/ui/AnalyzerPanel.cpp.s
 .PHONY : src/ui/AnalyzerPanel.cpp.s
 
 src/ui/ConnectionDialog.o: src/ui/ConnectionDialog.cpp.o
@@ -559,7 +1242,7 @@ src/ui/ConnectionDialog.o: src/ui/ConnectionDialog.cpp.o
 
 # target to build an object file
 src/ui/ConnectionDialog.cpp.o:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/data-studio.dir/build.make CMakeFiles/data-studio.dir/src/ui/ConnectionDialog.cpp.o
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/dsui.dir/build.make CMakeFiles/dsui.dir/src/ui/ConnectionDialog.cpp.o
 .PHONY : src/ui/ConnectionDialog.cpp.o
 
 src/ui/ConnectionDialog.i: src/ui/ConnectionDialog.cpp.i
@@ -567,7 +1250,7 @@ src/ui/ConnectionDialog.i: src/ui/ConnectionDialog.cpp.i
 
 # target to preprocess a source file
 src/ui/ConnectionDialog.cpp.i:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/data-studio.dir/build.make CMakeFiles/data-studio.dir/src/ui/ConnectionDialog.cpp.i
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/dsui.dir/build.make CMakeFiles/dsui.dir/src/ui/ConnectionDialog.cpp.i
 .PHONY : src/ui/ConnectionDialog.cpp.i
 
 src/ui/ConnectionDialog.s: src/ui/ConnectionDialog.cpp.s
@@ -575,7 +1258,7 @@ src/ui/ConnectionDialog.s: src/ui/ConnectionDialog.cpp.s
 
 # target to generate assembly for a file
 src/ui/ConnectionDialog.cpp.s:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/data-studio.dir/build.make CMakeFiles/data-studio.dir/src/ui/ConnectionDialog.cpp.s
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/dsui.dir/build.make CMakeFiles/dsui.dir/src/ui/ConnectionDialog.cpp.s
 .PHONY : src/ui/ConnectionDialog.cpp.s
 
 src/ui/ConnectionStore.o: src/ui/ConnectionStore.cpp.o
@@ -583,7 +1266,7 @@ src/ui/ConnectionStore.o: src/ui/ConnectionStore.cpp.o
 
 # target to build an object file
 src/ui/ConnectionStore.cpp.o:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/data-studio.dir/build.make CMakeFiles/data-studio.dir/src/ui/ConnectionStore.cpp.o
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/dsui.dir/build.make CMakeFiles/dsui.dir/src/ui/ConnectionStore.cpp.o
 .PHONY : src/ui/ConnectionStore.cpp.o
 
 src/ui/ConnectionStore.i: src/ui/ConnectionStore.cpp.i
@@ -591,7 +1274,7 @@ src/ui/ConnectionStore.i: src/ui/ConnectionStore.cpp.i
 
 # target to preprocess a source file
 src/ui/ConnectionStore.cpp.i:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/data-studio.dir/build.make CMakeFiles/data-studio.dir/src/ui/ConnectionStore.cpp.i
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/dsui.dir/build.make CMakeFiles/dsui.dir/src/ui/ConnectionStore.cpp.i
 .PHONY : src/ui/ConnectionStore.cpp.i
 
 src/ui/ConnectionStore.s: src/ui/ConnectionStore.cpp.s
@@ -599,7 +1282,7 @@ src/ui/ConnectionStore.s: src/ui/ConnectionStore.cpp.s
 
 # target to generate assembly for a file
 src/ui/ConnectionStore.cpp.s:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/data-studio.dir/build.make CMakeFiles/data-studio.dir/src/ui/ConnectionStore.cpp.s
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/dsui.dir/build.make CMakeFiles/dsui.dir/src/ui/ConnectionStore.cpp.s
 .PHONY : src/ui/ConnectionStore.cpp.s
 
 src/ui/MainWindow.o: src/ui/MainWindow.cpp.o
@@ -607,7 +1290,7 @@ src/ui/MainWindow.o: src/ui/MainWindow.cpp.o
 
 # target to build an object file
 src/ui/MainWindow.cpp.o:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/data-studio.dir/build.make CMakeFiles/data-studio.dir/src/ui/MainWindow.cpp.o
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/dsui.dir/build.make CMakeFiles/dsui.dir/src/ui/MainWindow.cpp.o
 .PHONY : src/ui/MainWindow.cpp.o
 
 src/ui/MainWindow.i: src/ui/MainWindow.cpp.i
@@ -615,7 +1298,7 @@ src/ui/MainWindow.i: src/ui/MainWindow.cpp.i
 
 # target to preprocess a source file
 src/ui/MainWindow.cpp.i:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/data-studio.dir/build.make CMakeFiles/data-studio.dir/src/ui/MainWindow.cpp.i
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/dsui.dir/build.make CMakeFiles/dsui.dir/src/ui/MainWindow.cpp.i
 .PHONY : src/ui/MainWindow.cpp.i
 
 src/ui/MainWindow.s: src/ui/MainWindow.cpp.s
@@ -623,7 +1306,7 @@ src/ui/MainWindow.s: src/ui/MainWindow.cpp.s
 
 # target to generate assembly for a file
 src/ui/MainWindow.cpp.s:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/data-studio.dir/build.make CMakeFiles/data-studio.dir/src/ui/MainWindow.cpp.s
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/dsui.dir/build.make CMakeFiles/dsui.dir/src/ui/MainWindow.cpp.s
 .PHONY : src/ui/MainWindow.cpp.s
 
 src/ui/NlPromptBar.o: src/ui/NlPromptBar.cpp.o
@@ -631,7 +1314,7 @@ src/ui/NlPromptBar.o: src/ui/NlPromptBar.cpp.o
 
 # target to build an object file
 src/ui/NlPromptBar.cpp.o:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/data-studio.dir/build.make CMakeFiles/data-studio.dir/src/ui/NlPromptBar.cpp.o
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/dsui.dir/build.make CMakeFiles/dsui.dir/src/ui/NlPromptBar.cpp.o
 .PHONY : src/ui/NlPromptBar.cpp.o
 
 src/ui/NlPromptBar.i: src/ui/NlPromptBar.cpp.i
@@ -639,7 +1322,7 @@ src/ui/NlPromptBar.i: src/ui/NlPromptBar.cpp.i
 
 # target to preprocess a source file
 src/ui/NlPromptBar.cpp.i:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/data-studio.dir/build.make CMakeFiles/data-studio.dir/src/ui/NlPromptBar.cpp.i
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/dsui.dir/build.make CMakeFiles/dsui.dir/src/ui/NlPromptBar.cpp.i
 .PHONY : src/ui/NlPromptBar.cpp.i
 
 src/ui/NlPromptBar.s: src/ui/NlPromptBar.cpp.s
@@ -647,7 +1330,7 @@ src/ui/NlPromptBar.s: src/ui/NlPromptBar.cpp.s
 
 # target to generate assembly for a file
 src/ui/NlPromptBar.cpp.s:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/data-studio.dir/build.make CMakeFiles/data-studio.dir/src/ui/NlPromptBar.cpp.s
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/dsui.dir/build.make CMakeFiles/dsui.dir/src/ui/NlPromptBar.cpp.s
 .PHONY : src/ui/NlPromptBar.cpp.s
 
 src/ui/QueryBuilderPanel.o: src/ui/QueryBuilderPanel.cpp.o
@@ -655,7 +1338,7 @@ src/ui/QueryBuilderPanel.o: src/ui/QueryBuilderPanel.cpp.o
 
 # target to build an object file
 src/ui/QueryBuilderPanel.cpp.o:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/data-studio.dir/build.make CMakeFiles/data-studio.dir/src/ui/QueryBuilderPanel.cpp.o
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/dsui.dir/build.make CMakeFiles/dsui.dir/src/ui/QueryBuilderPanel.cpp.o
 .PHONY : src/ui/QueryBuilderPanel.cpp.o
 
 src/ui/QueryBuilderPanel.i: src/ui/QueryBuilderPanel.cpp.i
@@ -663,7 +1346,7 @@ src/ui/QueryBuilderPanel.i: src/ui/QueryBuilderPanel.cpp.i
 
 # target to preprocess a source file
 src/ui/QueryBuilderPanel.cpp.i:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/data-studio.dir/build.make CMakeFiles/data-studio.dir/src/ui/QueryBuilderPanel.cpp.i
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/dsui.dir/build.make CMakeFiles/dsui.dir/src/ui/QueryBuilderPanel.cpp.i
 .PHONY : src/ui/QueryBuilderPanel.cpp.i
 
 src/ui/QueryBuilderPanel.s: src/ui/QueryBuilderPanel.cpp.s
@@ -671,7 +1354,7 @@ src/ui/QueryBuilderPanel.s: src/ui/QueryBuilderPanel.cpp.s
 
 # target to generate assembly for a file
 src/ui/QueryBuilderPanel.cpp.s:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/data-studio.dir/build.make CMakeFiles/data-studio.dir/src/ui/QueryBuilderPanel.cpp.s
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/dsui.dir/build.make CMakeFiles/dsui.dir/src/ui/QueryBuilderPanel.cpp.s
 .PHONY : src/ui/QueryBuilderPanel.cpp.s
 
 src/ui/QueryExecutor.o: src/ui/QueryExecutor.cpp.o
@@ -679,7 +1362,7 @@ src/ui/QueryExecutor.o: src/ui/QueryExecutor.cpp.o
 
 # target to build an object file
 src/ui/QueryExecutor.cpp.o:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/data-studio.dir/build.make CMakeFiles/data-studio.dir/src/ui/QueryExecutor.cpp.o
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/dsui.dir/build.make CMakeFiles/dsui.dir/src/ui/QueryExecutor.cpp.o
 .PHONY : src/ui/QueryExecutor.cpp.o
 
 src/ui/QueryExecutor.i: src/ui/QueryExecutor.cpp.i
@@ -687,7 +1370,7 @@ src/ui/QueryExecutor.i: src/ui/QueryExecutor.cpp.i
 
 # target to preprocess a source file
 src/ui/QueryExecutor.cpp.i:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/data-studio.dir/build.make CMakeFiles/data-studio.dir/src/ui/QueryExecutor.cpp.i
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/dsui.dir/build.make CMakeFiles/dsui.dir/src/ui/QueryExecutor.cpp.i
 .PHONY : src/ui/QueryExecutor.cpp.i
 
 src/ui/QueryExecutor.s: src/ui/QueryExecutor.cpp.s
@@ -695,7 +1378,7 @@ src/ui/QueryExecutor.s: src/ui/QueryExecutor.cpp.s
 
 # target to generate assembly for a file
 src/ui/QueryExecutor.cpp.s:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/data-studio.dir/build.make CMakeFiles/data-studio.dir/src/ui/QueryExecutor.cpp.s
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/dsui.dir/build.make CMakeFiles/dsui.dir/src/ui/QueryExecutor.cpp.s
 .PHONY : src/ui/QueryExecutor.cpp.s
 
 src/ui/ResultsModel.o: src/ui/ResultsModel.cpp.o
@@ -703,7 +1386,7 @@ src/ui/ResultsModel.o: src/ui/ResultsModel.cpp.o
 
 # target to build an object file
 src/ui/ResultsModel.cpp.o:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/data-studio.dir/build.make CMakeFiles/data-studio.dir/src/ui/ResultsModel.cpp.o
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/dsui.dir/build.make CMakeFiles/dsui.dir/src/ui/ResultsModel.cpp.o
 .PHONY : src/ui/ResultsModel.cpp.o
 
 src/ui/ResultsModel.i: src/ui/ResultsModel.cpp.i
@@ -711,7 +1394,7 @@ src/ui/ResultsModel.i: src/ui/ResultsModel.cpp.i
 
 # target to preprocess a source file
 src/ui/ResultsModel.cpp.i:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/data-studio.dir/build.make CMakeFiles/data-studio.dir/src/ui/ResultsModel.cpp.i
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/dsui.dir/build.make CMakeFiles/dsui.dir/src/ui/ResultsModel.cpp.i
 .PHONY : src/ui/ResultsModel.cpp.i
 
 src/ui/ResultsModel.s: src/ui/ResultsModel.cpp.s
@@ -719,7 +1402,7 @@ src/ui/ResultsModel.s: src/ui/ResultsModel.cpp.s
 
 # target to generate assembly for a file
 src/ui/ResultsModel.cpp.s:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/data-studio.dir/build.make CMakeFiles/data-studio.dir/src/ui/ResultsModel.cpp.s
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/dsui.dir/build.make CMakeFiles/dsui.dir/src/ui/ResultsModel.cpp.s
 .PHONY : src/ui/ResultsModel.cpp.s
 
 src/ui/ResultsView.o: src/ui/ResultsView.cpp.o
@@ -727,7 +1410,7 @@ src/ui/ResultsView.o: src/ui/ResultsView.cpp.o
 
 # target to build an object file
 src/ui/ResultsView.cpp.o:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/data-studio.dir/build.make CMakeFiles/data-studio.dir/src/ui/ResultsView.cpp.o
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/dsui.dir/build.make CMakeFiles/dsui.dir/src/ui/ResultsView.cpp.o
 .PHONY : src/ui/ResultsView.cpp.o
 
 src/ui/ResultsView.i: src/ui/ResultsView.cpp.i
@@ -735,7 +1418,7 @@ src/ui/ResultsView.i: src/ui/ResultsView.cpp.i
 
 # target to preprocess a source file
 src/ui/ResultsView.cpp.i:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/data-studio.dir/build.make CMakeFiles/data-studio.dir/src/ui/ResultsView.cpp.i
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/dsui.dir/build.make CMakeFiles/dsui.dir/src/ui/ResultsView.cpp.i
 .PHONY : src/ui/ResultsView.cpp.i
 
 src/ui/ResultsView.s: src/ui/ResultsView.cpp.s
@@ -743,7 +1426,7 @@ src/ui/ResultsView.s: src/ui/ResultsView.cpp.s
 
 # target to generate assembly for a file
 src/ui/ResultsView.cpp.s:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/data-studio.dir/build.make CMakeFiles/data-studio.dir/src/ui/ResultsView.cpp.s
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/dsui.dir/build.make CMakeFiles/dsui.dir/src/ui/ResultsView.cpp.s
 .PHONY : src/ui/ResultsView.cpp.s
 
 src/ui/SchemaTree.o: src/ui/SchemaTree.cpp.o
@@ -751,7 +1434,7 @@ src/ui/SchemaTree.o: src/ui/SchemaTree.cpp.o
 
 # target to build an object file
 src/ui/SchemaTree.cpp.o:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/data-studio.dir/build.make CMakeFiles/data-studio.dir/src/ui/SchemaTree.cpp.o
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/dsui.dir/build.make CMakeFiles/dsui.dir/src/ui/SchemaTree.cpp.o
 .PHONY : src/ui/SchemaTree.cpp.o
 
 src/ui/SchemaTree.i: src/ui/SchemaTree.cpp.i
@@ -759,7 +1442,7 @@ src/ui/SchemaTree.i: src/ui/SchemaTree.cpp.i
 
 # target to preprocess a source file
 src/ui/SchemaTree.cpp.i:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/data-studio.dir/build.make CMakeFiles/data-studio.dir/src/ui/SchemaTree.cpp.i
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/dsui.dir/build.make CMakeFiles/dsui.dir/src/ui/SchemaTree.cpp.i
 .PHONY : src/ui/SchemaTree.cpp.i
 
 src/ui/SchemaTree.s: src/ui/SchemaTree.cpp.s
@@ -767,7 +1450,7 @@ src/ui/SchemaTree.s: src/ui/SchemaTree.cpp.s
 
 # target to generate assembly for a file
 src/ui/SchemaTree.cpp.s:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/data-studio.dir/build.make CMakeFiles/data-studio.dir/src/ui/SchemaTree.cpp.s
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/dsui.dir/build.make CMakeFiles/dsui.dir/src/ui/SchemaTree.cpp.s
 .PHONY : src/ui/SchemaTree.cpp.s
 
 src/ui/SqlEditor.o: src/ui/SqlEditor.cpp.o
@@ -775,7 +1458,7 @@ src/ui/SqlEditor.o: src/ui/SqlEditor.cpp.o
 
 # target to build an object file
 src/ui/SqlEditor.cpp.o:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/data-studio.dir/build.make CMakeFiles/data-studio.dir/src/ui/SqlEditor.cpp.o
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/dsui.dir/build.make CMakeFiles/dsui.dir/src/ui/SqlEditor.cpp.o
 .PHONY : src/ui/SqlEditor.cpp.o
 
 src/ui/SqlEditor.i: src/ui/SqlEditor.cpp.i
@@ -783,7 +1466,7 @@ src/ui/SqlEditor.i: src/ui/SqlEditor.cpp.i
 
 # target to preprocess a source file
 src/ui/SqlEditor.cpp.i:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/data-studio.dir/build.make CMakeFiles/data-studio.dir/src/ui/SqlEditor.cpp.i
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/dsui.dir/build.make CMakeFiles/dsui.dir/src/ui/SqlEditor.cpp.i
 .PHONY : src/ui/SqlEditor.cpp.i
 
 src/ui/SqlEditor.s: src/ui/SqlEditor.cpp.s
@@ -791,7 +1474,7 @@ src/ui/SqlEditor.s: src/ui/SqlEditor.cpp.s
 
 # target to generate assembly for a file
 src/ui/SqlEditor.cpp.s:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/data-studio.dir/build.make CMakeFiles/data-studio.dir/src/ui/SqlEditor.cpp.s
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/dsui.dir/build.make CMakeFiles/dsui.dir/src/ui/SqlEditor.cpp.s
 .PHONY : src/ui/SqlEditor.cpp.s
 
 src/ui/SqlHighlighter.o: src/ui/SqlHighlighter.cpp.o
@@ -799,7 +1482,7 @@ src/ui/SqlHighlighter.o: src/ui/SqlHighlighter.cpp.o
 
 # target to build an object file
 src/ui/SqlHighlighter.cpp.o:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/data-studio.dir/build.make CMakeFiles/data-studio.dir/src/ui/SqlHighlighter.cpp.o
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/dsui.dir/build.make CMakeFiles/dsui.dir/src/ui/SqlHighlighter.cpp.o
 .PHONY : src/ui/SqlHighlighter.cpp.o
 
 src/ui/SqlHighlighter.i: src/ui/SqlHighlighter.cpp.i
@@ -807,7 +1490,7 @@ src/ui/SqlHighlighter.i: src/ui/SqlHighlighter.cpp.i
 
 # target to preprocess a source file
 src/ui/SqlHighlighter.cpp.i:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/data-studio.dir/build.make CMakeFiles/data-studio.dir/src/ui/SqlHighlighter.cpp.i
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/dsui.dir/build.make CMakeFiles/dsui.dir/src/ui/SqlHighlighter.cpp.i
 .PHONY : src/ui/SqlHighlighter.cpp.i
 
 src/ui/SqlHighlighter.s: src/ui/SqlHighlighter.cpp.s
@@ -815,8 +1498,56 @@ src/ui/SqlHighlighter.s: src/ui/SqlHighlighter.cpp.s
 
 # target to generate assembly for a file
 src/ui/SqlHighlighter.cpp.s:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/data-studio.dir/build.make CMakeFiles/data-studio.dir/src/ui/SqlHighlighter.cpp.s
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/dsui.dir/build.make CMakeFiles/dsui.dir/src/ui/SqlHighlighter.cpp.s
 .PHONY : src/ui/SqlHighlighter.cpp.s
+
+tests/core_tests.o: tests/core_tests.cpp.o
+.PHONY : tests/core_tests.o
+
+# target to build an object file
+tests/core_tests.cpp.o:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/ds-core-tests.dir/build.make CMakeFiles/ds-core-tests.dir/tests/core_tests.cpp.o
+.PHONY : tests/core_tests.cpp.o
+
+tests/core_tests.i: tests/core_tests.cpp.i
+.PHONY : tests/core_tests.i
+
+# target to preprocess a source file
+tests/core_tests.cpp.i:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/ds-core-tests.dir/build.make CMakeFiles/ds-core-tests.dir/tests/core_tests.cpp.i
+.PHONY : tests/core_tests.cpp.i
+
+tests/core_tests.s: tests/core_tests.cpp.s
+.PHONY : tests/core_tests.s
+
+# target to generate assembly for a file
+tests/core_tests.cpp.s:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/ds-core-tests.dir/build.make CMakeFiles/ds-core-tests.dir/tests/core_tests.cpp.s
+.PHONY : tests/core_tests.cpp.s
+
+tests/ui_tests.o: tests/ui_tests.cpp.o
+.PHONY : tests/ui_tests.o
+
+# target to build an object file
+tests/ui_tests.cpp.o:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/ds-ui-tests.dir/build.make CMakeFiles/ds-ui-tests.dir/tests/ui_tests.cpp.o
+.PHONY : tests/ui_tests.cpp.o
+
+tests/ui_tests.i: tests/ui_tests.cpp.i
+.PHONY : tests/ui_tests.i
+
+# target to preprocess a source file
+tests/ui_tests.cpp.i:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/ds-ui-tests.dir/build.make CMakeFiles/ds-ui-tests.dir/tests/ui_tests.cpp.i
+.PHONY : tests/ui_tests.cpp.i
+
+tests/ui_tests.s: tests/ui_tests.cpp.s
+.PHONY : tests/ui_tests.s
+
+# target to generate assembly for a file
+tests/ui_tests.cpp.s:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/ds-ui-tests.dir/build.make CMakeFiles/ds-ui-tests.dir/tests/ui_tests.cpp.s
+.PHONY : tests/ui_tests.cpp.s
 
 # Help Target
 help:
@@ -826,21 +1557,83 @@ help:
 	@echo "... depend"
 	@echo "... edit_cache"
 	@echo "... rebuild_cache"
+	@echo "... test"
+	@echo "... Continuous"
+	@echo "... ContinuousBuild"
+	@echo "... ContinuousConfigure"
+	@echo "... ContinuousCoverage"
+	@echo "... ContinuousMemCheck"
+	@echo "... ContinuousStart"
+	@echo "... ContinuousSubmit"
+	@echo "... ContinuousTest"
+	@echo "... ContinuousUpdate"
+	@echo "... Experimental"
+	@echo "... ExperimentalBuild"
+	@echo "... ExperimentalConfigure"
+	@echo "... ExperimentalCoverage"
+	@echo "... ExperimentalMemCheck"
+	@echo "... ExperimentalStart"
+	@echo "... ExperimentalSubmit"
+	@echo "... ExperimentalTest"
+	@echo "... ExperimentalUpdate"
+	@echo "... Nightly"
+	@echo "... NightlyBuild"
+	@echo "... NightlyConfigure"
+	@echo "... NightlyCoverage"
+	@echo "... NightlyMemCheck"
+	@echo "... NightlyMemoryCheck"
+	@echo "... NightlyStart"
+	@echo "... NightlySubmit"
+	@echo "... NightlyTest"
+	@echo "... NightlyUpdate"
 	@echo "... data-studio_autogen"
 	@echo "... data-studio_autogen_timestamp_deps"
+	@echo "... ds-core-tests_autogen"
+	@echo "... ds-core-tests_autogen_timestamp_deps"
+	@echo "... ds-ui-tests_autogen"
+	@echo "... ds-ui-tests_autogen_timestamp_deps"
 	@echo "... dscore_autogen"
 	@echo "... dscore_autogen_timestamp_deps"
+	@echo "... dsui_autogen"
+	@echo "... dsui_autogen_timestamp_deps"
 	@echo "... data-studio"
+	@echo "... ds-core-tests"
+	@echo "... ds-ui-tests"
 	@echo "... dscore"
+	@echo "... dsui"
 	@echo "... data-studio_autogen/mocs_compilation.o"
 	@echo "... data-studio_autogen/mocs_compilation.i"
 	@echo "... data-studio_autogen/mocs_compilation.s"
+	@echo "... ds-core-tests_autogen/mocs_compilation.o"
+	@echo "... ds-core-tests_autogen/mocs_compilation.i"
+	@echo "... ds-core-tests_autogen/mocs_compilation.s"
+	@echo "... ds-ui-tests_autogen/mocs_compilation.o"
+	@echo "... ds-ui-tests_autogen/mocs_compilation.i"
+	@echo "... ds-ui-tests_autogen/mocs_compilation.s"
 	@echo "... dscore_autogen/mocs_compilation.o"
 	@echo "... dscore_autogen/mocs_compilation.i"
 	@echo "... dscore_autogen/mocs_compilation.s"
-	@echo "... src/ai/NlSqlClient.o"
-	@echo "... src/ai/NlSqlClient.i"
-	@echo "... src/ai/NlSqlClient.s"
+	@echo "... dsui_autogen/mocs_compilation.o"
+	@echo "... dsui_autogen/mocs_compilation.i"
+	@echo "... dsui_autogen/mocs_compilation.s"
+	@echo "... src/ai/AiSettings.o"
+	@echo "... src/ai/AiSettings.i"
+	@echo "... src/ai/AiSettings.s"
+	@echo "... src/ai/AiSettingsDialog.o"
+	@echo "... src/ai/AiSettingsDialog.i"
+	@echo "... src/ai/AiSettingsDialog.s"
+	@echo "... src/ai/ClaudeSqlGenerator.o"
+	@echo "... src/ai/ClaudeSqlGenerator.i"
+	@echo "... src/ai/ClaudeSqlGenerator.s"
+	@echo "... src/ai/LocalSqlGenerator.o"
+	@echo "... src/ai/LocalSqlGenerator.i"
+	@echo "... src/ai/LocalSqlGenerator.s"
+	@echo "... src/ai/SchemaPrompt.o"
+	@echo "... src/ai/SchemaPrompt.i"
+	@echo "... src/ai/SchemaPrompt.s"
+	@echo "... src/ai/SqlGenerator.o"
+	@echo "... src/ai/SqlGenerator.i"
+	@echo "... src/ai/SqlGenerator.s"
 	@echo "... src/core/DriverRegistry.o"
 	@echo "... src/core/DriverRegistry.i"
 	@echo "... src/core/DriverRegistry.s"
@@ -910,6 +1703,12 @@ help:
 	@echo "... src/ui/SqlHighlighter.o"
 	@echo "... src/ui/SqlHighlighter.i"
 	@echo "... src/ui/SqlHighlighter.s"
+	@echo "... tests/core_tests.o"
+	@echo "... tests/core_tests.i"
+	@echo "... tests/core_tests.s"
+	@echo "... tests/ui_tests.o"
+	@echo "... tests/ui_tests.i"
+	@echo "... tests/ui_tests.s"
 .PHONY : help
 
 

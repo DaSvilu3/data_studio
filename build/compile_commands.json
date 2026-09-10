@@ -1,158 +1,218 @@
 [
 {
   "directory": "/Users/yousufawj/projects/rnd/data_studio/build",
-  "command": "/usr/bin/c++ -DDS_HAVE_MYSQL=1 -I/Users/yousufawj/projects/rnd/data_studio/build/dscore_autogen/include -I/Users/yousufawj/projects/rnd/data_studio/src -isystem /opt/homebrew/Cellar/mysql/9.6.0_1/include/mysql -g -std=c++20 -arch arm64 -o CMakeFiles/dscore.dir/dscore_autogen/mocs_compilation.cpp.o -c /Users/yousufawj/projects/rnd/data_studio/build/dscore_autogen/mocs_compilation.cpp",
+  "command": "/usr/bin/c++ -DDS_HAVE_MYSQL=1 -I/Users/yousufawj/projects/rnd/data_studio/build/dscore_autogen/include -I/Users/yousufawj/projects/rnd/data_studio/src -isystem /opt/homebrew/Cellar/mariadb-connector-c/3.4.9/include/mariadb -O3 -DNDEBUG -std=c++20 -arch arm64 -o CMakeFiles/dscore.dir/dscore_autogen/mocs_compilation.cpp.o -c /Users/yousufawj/projects/rnd/data_studio/build/dscore_autogen/mocs_compilation.cpp",
   "file": "/Users/yousufawj/projects/rnd/data_studio/build/dscore_autogen/mocs_compilation.cpp",
   "output": "CMakeFiles/dscore.dir/dscore_autogen/mocs_compilation.cpp.o"
 },
 {
   "directory": "/Users/yousufawj/projects/rnd/data_studio/build",
-  "command": "/usr/bin/c++ -DDS_HAVE_MYSQL=1 -I/Users/yousufawj/projects/rnd/data_studio/build/dscore_autogen/include -I/Users/yousufawj/projects/rnd/data_studio/src -isystem /opt/homebrew/Cellar/mysql/9.6.0_1/include/mysql -g -std=c++20 -arch arm64 -o CMakeFiles/dscore.dir/src/core/Value.cpp.o -c /Users/yousufawj/projects/rnd/data_studio/src/core/Value.cpp",
+  "command": "/usr/bin/c++ -DDS_HAVE_MYSQL=1 -I/Users/yousufawj/projects/rnd/data_studio/build/dscore_autogen/include -I/Users/yousufawj/projects/rnd/data_studio/src -isystem /opt/homebrew/Cellar/mariadb-connector-c/3.4.9/include/mariadb -O3 -DNDEBUG -std=c++20 -arch arm64 -o CMakeFiles/dscore.dir/src/core/Value.cpp.o -c /Users/yousufawj/projects/rnd/data_studio/src/core/Value.cpp",
   "file": "/Users/yousufawj/projects/rnd/data_studio/src/core/Value.cpp",
   "output": "CMakeFiles/dscore.dir/src/core/Value.cpp.o"
 },
 {
   "directory": "/Users/yousufawj/projects/rnd/data_studio/build",
-  "command": "/usr/bin/c++ -DDS_HAVE_MYSQL=1 -I/Users/yousufawj/projects/rnd/data_studio/build/dscore_autogen/include -I/Users/yousufawj/projects/rnd/data_studio/src -isystem /opt/homebrew/Cellar/mysql/9.6.0_1/include/mysql -g -std=c++20 -arch arm64 -o CMakeFiles/dscore.dir/src/core/Schema.cpp.o -c /Users/yousufawj/projects/rnd/data_studio/src/core/Schema.cpp",
+  "command": "/usr/bin/c++ -DDS_HAVE_MYSQL=1 -I/Users/yousufawj/projects/rnd/data_studio/build/dscore_autogen/include -I/Users/yousufawj/projects/rnd/data_studio/src -isystem /opt/homebrew/Cellar/mariadb-connector-c/3.4.9/include/mariadb -O3 -DNDEBUG -std=c++20 -arch arm64 -o CMakeFiles/dscore.dir/src/core/Schema.cpp.o -c /Users/yousufawj/projects/rnd/data_studio/src/core/Schema.cpp",
   "file": "/Users/yousufawj/projects/rnd/data_studio/src/core/Schema.cpp",
   "output": "CMakeFiles/dscore.dir/src/core/Schema.cpp.o"
 },
 {
   "directory": "/Users/yousufawj/projects/rnd/data_studio/build",
-  "command": "/usr/bin/c++ -DDS_HAVE_MYSQL=1 -I/Users/yousufawj/projects/rnd/data_studio/build/dscore_autogen/include -I/Users/yousufawj/projects/rnd/data_studio/src -isystem /opt/homebrew/Cellar/mysql/9.6.0_1/include/mysql -g -std=c++20 -arch arm64 -o CMakeFiles/dscore.dir/src/core/DriverRegistry.cpp.o -c /Users/yousufawj/projects/rnd/data_studio/src/core/DriverRegistry.cpp",
+  "command": "/usr/bin/c++ -DDS_HAVE_MYSQL=1 -I/Users/yousufawj/projects/rnd/data_studio/build/dscore_autogen/include -I/Users/yousufawj/projects/rnd/data_studio/src -isystem /opt/homebrew/Cellar/mariadb-connector-c/3.4.9/include/mariadb -O3 -DNDEBUG -std=c++20 -arch arm64 -o CMakeFiles/dscore.dir/src/core/DriverRegistry.cpp.o -c /Users/yousufawj/projects/rnd/data_studio/src/core/DriverRegistry.cpp",
   "file": "/Users/yousufawj/projects/rnd/data_studio/src/core/DriverRegistry.cpp",
   "output": "CMakeFiles/dscore.dir/src/core/DriverRegistry.cpp.o"
 },
 {
   "directory": "/Users/yousufawj/projects/rnd/data_studio/build",
-  "command": "/usr/bin/c++ -DDS_HAVE_MYSQL=1 -I/Users/yousufawj/projects/rnd/data_studio/build/dscore_autogen/include -I/Users/yousufawj/projects/rnd/data_studio/src -isystem /opt/homebrew/Cellar/mysql/9.6.0_1/include/mysql -g -std=c++20 -arch arm64 -o CMakeFiles/dscore.dir/src/core/sqlite/SqliteDriver.cpp.o -c /Users/yousufawj/projects/rnd/data_studio/src/core/sqlite/SqliteDriver.cpp",
+  "command": "/usr/bin/c++ -DDS_HAVE_MYSQL=1 -I/Users/yousufawj/projects/rnd/data_studio/build/dscore_autogen/include -I/Users/yousufawj/projects/rnd/data_studio/src -isystem /opt/homebrew/Cellar/mariadb-connector-c/3.4.9/include/mariadb -O3 -DNDEBUG -std=c++20 -arch arm64 -o CMakeFiles/dscore.dir/src/core/sqlite/SqliteDriver.cpp.o -c /Users/yousufawj/projects/rnd/data_studio/src/core/sqlite/SqliteDriver.cpp",
   "file": "/Users/yousufawj/projects/rnd/data_studio/src/core/sqlite/SqliteDriver.cpp",
   "output": "CMakeFiles/dscore.dir/src/core/sqlite/SqliteDriver.cpp.o"
 },
 {
   "directory": "/Users/yousufawj/projects/rnd/data_studio/build",
-  "command": "/usr/bin/c++ -DDS_HAVE_MYSQL=1 -I/Users/yousufawj/projects/rnd/data_studio/build/dscore_autogen/include -I/Users/yousufawj/projects/rnd/data_studio/src -isystem /opt/homebrew/Cellar/mysql/9.6.0_1/include/mysql -g -std=c++20 -arch arm64 -o CMakeFiles/dscore.dir/src/query/SqlLexer.cpp.o -c /Users/yousufawj/projects/rnd/data_studio/src/query/SqlLexer.cpp",
+  "command": "/usr/bin/c++ -DDS_HAVE_MYSQL=1 -I/Users/yousufawj/projects/rnd/data_studio/build/dscore_autogen/include -I/Users/yousufawj/projects/rnd/data_studio/src -isystem /opt/homebrew/Cellar/mariadb-connector-c/3.4.9/include/mariadb -O3 -DNDEBUG -std=c++20 -arch arm64 -o CMakeFiles/dscore.dir/src/query/SqlLexer.cpp.o -c /Users/yousufawj/projects/rnd/data_studio/src/query/SqlLexer.cpp",
   "file": "/Users/yousufawj/projects/rnd/data_studio/src/query/SqlLexer.cpp",
   "output": "CMakeFiles/dscore.dir/src/query/SqlLexer.cpp.o"
 },
 {
   "directory": "/Users/yousufawj/projects/rnd/data_studio/build",
-  "command": "/usr/bin/c++ -DDS_HAVE_MYSQL=1 -I/Users/yousufawj/projects/rnd/data_studio/build/dscore_autogen/include -I/Users/yousufawj/projects/rnd/data_studio/src -isystem /opt/homebrew/Cellar/mysql/9.6.0_1/include/mysql -g -std=c++20 -arch arm64 -o CMakeFiles/dscore.dir/src/query/SqlContext.cpp.o -c /Users/yousufawj/projects/rnd/data_studio/src/query/SqlContext.cpp",
+  "command": "/usr/bin/c++ -DDS_HAVE_MYSQL=1 -I/Users/yousufawj/projects/rnd/data_studio/build/dscore_autogen/include -I/Users/yousufawj/projects/rnd/data_studio/src -isystem /opt/homebrew/Cellar/mariadb-connector-c/3.4.9/include/mariadb -O3 -DNDEBUG -std=c++20 -arch arm64 -o CMakeFiles/dscore.dir/src/query/SqlContext.cpp.o -c /Users/yousufawj/projects/rnd/data_studio/src/query/SqlContext.cpp",
   "file": "/Users/yousufawj/projects/rnd/data_studio/src/query/SqlContext.cpp",
   "output": "CMakeFiles/dscore.dir/src/query/SqlContext.cpp.o"
 },
 {
   "directory": "/Users/yousufawj/projects/rnd/data_studio/build",
-  "command": "/usr/bin/c++ -DDS_HAVE_MYSQL=1 -I/Users/yousufawj/projects/rnd/data_studio/build/dscore_autogen/include -I/Users/yousufawj/projects/rnd/data_studio/src -isystem /opt/homebrew/Cellar/mysql/9.6.0_1/include/mysql -g -std=c++20 -arch arm64 -o CMakeFiles/dscore.dir/src/query/JoinGraph.cpp.o -c /Users/yousufawj/projects/rnd/data_studio/src/query/JoinGraph.cpp",
+  "command": "/usr/bin/c++ -DDS_HAVE_MYSQL=1 -I/Users/yousufawj/projects/rnd/data_studio/build/dscore_autogen/include -I/Users/yousufawj/projects/rnd/data_studio/src -isystem /opt/homebrew/Cellar/mariadb-connector-c/3.4.9/include/mariadb -O3 -DNDEBUG -std=c++20 -arch arm64 -o CMakeFiles/dscore.dir/src/query/JoinGraph.cpp.o -c /Users/yousufawj/projects/rnd/data_studio/src/query/JoinGraph.cpp",
   "file": "/Users/yousufawj/projects/rnd/data_studio/src/query/JoinGraph.cpp",
   "output": "CMakeFiles/dscore.dir/src/query/JoinGraph.cpp.o"
 },
 {
   "directory": "/Users/yousufawj/projects/rnd/data_studio/build",
-  "command": "/usr/bin/c++ -DDS_HAVE_MYSQL=1 -I/Users/yousufawj/projects/rnd/data_studio/build/dscore_autogen/include -I/Users/yousufawj/projects/rnd/data_studio/src -isystem /opt/homebrew/Cellar/mysql/9.6.0_1/include/mysql -g -std=c++20 -arch arm64 -o CMakeFiles/dscore.dir/src/query/QueryBuilder.cpp.o -c /Users/yousufawj/projects/rnd/data_studio/src/query/QueryBuilder.cpp",
+  "command": "/usr/bin/c++ -DDS_HAVE_MYSQL=1 -I/Users/yousufawj/projects/rnd/data_studio/build/dscore_autogen/include -I/Users/yousufawj/projects/rnd/data_studio/src -isystem /opt/homebrew/Cellar/mariadb-connector-c/3.4.9/include/mariadb -O3 -DNDEBUG -std=c++20 -arch arm64 -o CMakeFiles/dscore.dir/src/query/QueryBuilder.cpp.o -c /Users/yousufawj/projects/rnd/data_studio/src/query/QueryBuilder.cpp",
   "file": "/Users/yousufawj/projects/rnd/data_studio/src/query/QueryBuilder.cpp",
   "output": "CMakeFiles/dscore.dir/src/query/QueryBuilder.cpp.o"
 },
 {
   "directory": "/Users/yousufawj/projects/rnd/data_studio/build",
-  "command": "/usr/bin/c++ -DDS_HAVE_MYSQL=1 -I/Users/yousufawj/projects/rnd/data_studio/build/dscore_autogen/include -I/Users/yousufawj/projects/rnd/data_studio/src -isystem /opt/homebrew/Cellar/mysql/9.6.0_1/include/mysql -g -std=c++20 -arch arm64 -o CMakeFiles/dscore.dir/src/query/Analyzer.cpp.o -c /Users/yousufawj/projects/rnd/data_studio/src/query/Analyzer.cpp",
+  "command": "/usr/bin/c++ -DDS_HAVE_MYSQL=1 -I/Users/yousufawj/projects/rnd/data_studio/build/dscore_autogen/include -I/Users/yousufawj/projects/rnd/data_studio/src -isystem /opt/homebrew/Cellar/mariadb-connector-c/3.4.9/include/mariadb -O3 -DNDEBUG -std=c++20 -arch arm64 -o CMakeFiles/dscore.dir/src/query/Analyzer.cpp.o -c /Users/yousufawj/projects/rnd/data_studio/src/query/Analyzer.cpp",
   "file": "/Users/yousufawj/projects/rnd/data_studio/src/query/Analyzer.cpp",
   "output": "CMakeFiles/dscore.dir/src/query/Analyzer.cpp.o"
 },
 {
   "directory": "/Users/yousufawj/projects/rnd/data_studio/build",
-  "command": "/usr/bin/c++ -DDS_HAVE_MYSQL=1 -I/Users/yousufawj/projects/rnd/data_studio/build/dscore_autogen/include -I/Users/yousufawj/projects/rnd/data_studio/src -isystem /opt/homebrew/Cellar/mysql/9.6.0_1/include/mysql -g -std=c++20 -arch arm64 -o CMakeFiles/dscore.dir/src/core/mysql/MySqlDriver.cpp.o -c /Users/yousufawj/projects/rnd/data_studio/src/core/mysql/MySqlDriver.cpp",
+  "command": "/usr/bin/c++ -DDS_HAVE_MYSQL=1 -I/Users/yousufawj/projects/rnd/data_studio/build/dscore_autogen/include -I/Users/yousufawj/projects/rnd/data_studio/src -isystem /opt/homebrew/Cellar/mariadb-connector-c/3.4.9/include/mariadb -O3 -DNDEBUG -std=c++20 -arch arm64 -o CMakeFiles/dscore.dir/src/core/mysql/MySqlDriver.cpp.o -c /Users/yousufawj/projects/rnd/data_studio/src/core/mysql/MySqlDriver.cpp",
   "file": "/Users/yousufawj/projects/rnd/data_studio/src/core/mysql/MySqlDriver.cpp",
   "output": "CMakeFiles/dscore.dir/src/core/mysql/MySqlDriver.cpp.o"
 },
 {
   "directory": "/Users/yousufawj/projects/rnd/data_studio/build",
-  "command": "/usr/bin/c++ -DDS_HAVE_MYSQL=1 -DQT_CORE_LIB -DQT_GUI_LIB -DQT_NETWORK_LIB -DQT_WIDGETS_LIB -I/Users/yousufawj/projects/rnd/data_studio/build/data-studio_autogen/include -I/Users/yousufawj/projects/rnd/data_studio/src -isystem /opt/homebrew/opt/qt/lib/QtCore.framework/Headers -iframework /opt/homebrew/opt/qt/lib -isystem /opt/homebrew/opt/qt/share/qt/mkspecs/macx-clang -isystem /opt/homebrew/opt/qt/include -isystem /opt/homebrew/Cellar/mysql/9.6.0_1/include/mysql -isystem /opt/homebrew/opt/qt/lib/QtWidgets.framework/Headers -isystem /opt/homebrew/opt/qt/lib/QtGui.framework/Headers -isystem /opt/homebrew/opt/qt/lib/QtNetwork.framework/Headers -g -std=c++20 -arch arm64 -o CMakeFiles/data-studio.dir/data-studio_autogen/mocs_compilation.cpp.o -c /Users/yousufawj/projects/rnd/data_studio/build/data-studio_autogen/mocs_compilation.cpp",
+  "command": "/usr/bin/c++ -DDS_HAVE_MYSQL=1 -DQT_CONCURRENT_LIB -DQT_CORE_LIB -DQT_GUI_LIB -DQT_NETWORK_LIB -DQT_NO_DEBUG -DQT_WIDGETS_LIB -I/Users/yousufawj/projects/rnd/data_studio/build/dsui_autogen/include -I/Users/yousufawj/projects/rnd/data_studio/src -isystem /opt/homebrew/Cellar/mariadb-connector-c/3.4.9/include/mariadb -isystem /opt/homebrew/opt/qt/lib/QtWidgets.framework/Headers -iframework /opt/homebrew/opt/qt/lib -isystem /opt/homebrew/opt/qt/lib/QtCore.framework/Headers -isystem /opt/homebrew/opt/qt/share/qt/mkspecs/macx-clang -isystem /opt/homebrew/opt/qt/include -isystem /opt/homebrew/opt/qt/lib/QtGui.framework/Headers -isystem /opt/homebrew/opt/qt/lib/QtNetwork.framework/Headers -isystem /opt/homebrew/opt/qt/lib/QtConcurrent.framework/Headers -O3 -DNDEBUG -std=c++20 -arch arm64 -o CMakeFiles/dsui.dir/dsui_autogen/mocs_compilation.cpp.o -c /Users/yousufawj/projects/rnd/data_studio/build/dsui_autogen/mocs_compilation.cpp",
+  "file": "/Users/yousufawj/projects/rnd/data_studio/build/dsui_autogen/mocs_compilation.cpp",
+  "output": "CMakeFiles/dsui.dir/dsui_autogen/mocs_compilation.cpp.o"
+},
+{
+  "directory": "/Users/yousufawj/projects/rnd/data_studio/build",
+  "command": "/usr/bin/c++ -DDS_HAVE_MYSQL=1 -DQT_CONCURRENT_LIB -DQT_CORE_LIB -DQT_GUI_LIB -DQT_NETWORK_LIB -DQT_NO_DEBUG -DQT_WIDGETS_LIB -I/Users/yousufawj/projects/rnd/data_studio/build/dsui_autogen/include -I/Users/yousufawj/projects/rnd/data_studio/src -isystem /opt/homebrew/Cellar/mariadb-connector-c/3.4.9/include/mariadb -isystem /opt/homebrew/opt/qt/lib/QtWidgets.framework/Headers -iframework /opt/homebrew/opt/qt/lib -isystem /opt/homebrew/opt/qt/lib/QtCore.framework/Headers -isystem /opt/homebrew/opt/qt/share/qt/mkspecs/macx-clang -isystem /opt/homebrew/opt/qt/include -isystem /opt/homebrew/opt/qt/lib/QtGui.framework/Headers -isystem /opt/homebrew/opt/qt/lib/QtNetwork.framework/Headers -isystem /opt/homebrew/opt/qt/lib/QtConcurrent.framework/Headers -O3 -DNDEBUG -std=c++20 -arch arm64 -o CMakeFiles/dsui.dir/src/ai/SqlGenerator.cpp.o -c /Users/yousufawj/projects/rnd/data_studio/src/ai/SqlGenerator.cpp",
+  "file": "/Users/yousufawj/projects/rnd/data_studio/src/ai/SqlGenerator.cpp",
+  "output": "CMakeFiles/dsui.dir/src/ai/SqlGenerator.cpp.o"
+},
+{
+  "directory": "/Users/yousufawj/projects/rnd/data_studio/build",
+  "command": "/usr/bin/c++ -DDS_HAVE_MYSQL=1 -DQT_CONCURRENT_LIB -DQT_CORE_LIB -DQT_GUI_LIB -DQT_NETWORK_LIB -DQT_NO_DEBUG -DQT_WIDGETS_LIB -I/Users/yousufawj/projects/rnd/data_studio/build/dsui_autogen/include -I/Users/yousufawj/projects/rnd/data_studio/src -isystem /opt/homebrew/Cellar/mariadb-connector-c/3.4.9/include/mariadb -isystem /opt/homebrew/opt/qt/lib/QtWidgets.framework/Headers -iframework /opt/homebrew/opt/qt/lib -isystem /opt/homebrew/opt/qt/lib/QtCore.framework/Headers -isystem /opt/homebrew/opt/qt/share/qt/mkspecs/macx-clang -isystem /opt/homebrew/opt/qt/include -isystem /opt/homebrew/opt/qt/lib/QtGui.framework/Headers -isystem /opt/homebrew/opt/qt/lib/QtNetwork.framework/Headers -isystem /opt/homebrew/opt/qt/lib/QtConcurrent.framework/Headers -O3 -DNDEBUG -std=c++20 -arch arm64 -o CMakeFiles/dsui.dir/src/ai/SchemaPrompt.cpp.o -c /Users/yousufawj/projects/rnd/data_studio/src/ai/SchemaPrompt.cpp",
+  "file": "/Users/yousufawj/projects/rnd/data_studio/src/ai/SchemaPrompt.cpp",
+  "output": "CMakeFiles/dsui.dir/src/ai/SchemaPrompt.cpp.o"
+},
+{
+  "directory": "/Users/yousufawj/projects/rnd/data_studio/build",
+  "command": "/usr/bin/c++ -DDS_HAVE_MYSQL=1 -DQT_CONCURRENT_LIB -DQT_CORE_LIB -DQT_GUI_LIB -DQT_NETWORK_LIB -DQT_NO_DEBUG -DQT_WIDGETS_LIB -I/Users/yousufawj/projects/rnd/data_studio/build/dsui_autogen/include -I/Users/yousufawj/projects/rnd/data_studio/src -isystem /opt/homebrew/Cellar/mariadb-connector-c/3.4.9/include/mariadb -isystem /opt/homebrew/opt/qt/lib/QtWidgets.framework/Headers -iframework /opt/homebrew/opt/qt/lib -isystem /opt/homebrew/opt/qt/lib/QtCore.framework/Headers -isystem /opt/homebrew/opt/qt/share/qt/mkspecs/macx-clang -isystem /opt/homebrew/opt/qt/include -isystem /opt/homebrew/opt/qt/lib/QtGui.framework/Headers -isystem /opt/homebrew/opt/qt/lib/QtNetwork.framework/Headers -isystem /opt/homebrew/opt/qt/lib/QtConcurrent.framework/Headers -O3 -DNDEBUG -std=c++20 -arch arm64 -o CMakeFiles/dsui.dir/src/ai/AiSettings.cpp.o -c /Users/yousufawj/projects/rnd/data_studio/src/ai/AiSettings.cpp",
+  "file": "/Users/yousufawj/projects/rnd/data_studio/src/ai/AiSettings.cpp",
+  "output": "CMakeFiles/dsui.dir/src/ai/AiSettings.cpp.o"
+},
+{
+  "directory": "/Users/yousufawj/projects/rnd/data_studio/build",
+  "command": "/usr/bin/c++ -DDS_HAVE_MYSQL=1 -DQT_CONCURRENT_LIB -DQT_CORE_LIB -DQT_GUI_LIB -DQT_NETWORK_LIB -DQT_NO_DEBUG -DQT_WIDGETS_LIB -I/Users/yousufawj/projects/rnd/data_studio/build/dsui_autogen/include -I/Users/yousufawj/projects/rnd/data_studio/src -isystem /opt/homebrew/Cellar/mariadb-connector-c/3.4.9/include/mariadb -isystem /opt/homebrew/opt/qt/lib/QtWidgets.framework/Headers -iframework /opt/homebrew/opt/qt/lib -isystem /opt/homebrew/opt/qt/lib/QtCore.framework/Headers -isystem /opt/homebrew/opt/qt/share/qt/mkspecs/macx-clang -isystem /opt/homebrew/opt/qt/include -isystem /opt/homebrew/opt/qt/lib/QtGui.framework/Headers -isystem /opt/homebrew/opt/qt/lib/QtNetwork.framework/Headers -isystem /opt/homebrew/opt/qt/lib/QtConcurrent.framework/Headers -O3 -DNDEBUG -std=c++20 -arch arm64 -o CMakeFiles/dsui.dir/src/ai/LocalSqlGenerator.cpp.o -c /Users/yousufawj/projects/rnd/data_studio/src/ai/LocalSqlGenerator.cpp",
+  "file": "/Users/yousufawj/projects/rnd/data_studio/src/ai/LocalSqlGenerator.cpp",
+  "output": "CMakeFiles/dsui.dir/src/ai/LocalSqlGenerator.cpp.o"
+},
+{
+  "directory": "/Users/yousufawj/projects/rnd/data_studio/build",
+  "command": "/usr/bin/c++ -DDS_HAVE_MYSQL=1 -DQT_CONCURRENT_LIB -DQT_CORE_LIB -DQT_GUI_LIB -DQT_NETWORK_LIB -DQT_NO_DEBUG -DQT_WIDGETS_LIB -I/Users/yousufawj/projects/rnd/data_studio/build/dsui_autogen/include -I/Users/yousufawj/projects/rnd/data_studio/src -isystem /opt/homebrew/Cellar/mariadb-connector-c/3.4.9/include/mariadb -isystem /opt/homebrew/opt/qt/lib/QtWidgets.framework/Headers -iframework /opt/homebrew/opt/qt/lib -isystem /opt/homebrew/opt/qt/lib/QtCore.framework/Headers -isystem /opt/homebrew/opt/qt/share/qt/mkspecs/macx-clang -isystem /opt/homebrew/opt/qt/include -isystem /opt/homebrew/opt/qt/lib/QtGui.framework/Headers -isystem /opt/homebrew/opt/qt/lib/QtNetwork.framework/Headers -isystem /opt/homebrew/opt/qt/lib/QtConcurrent.framework/Headers -O3 -DNDEBUG -std=c++20 -arch arm64 -o CMakeFiles/dsui.dir/src/ai/ClaudeSqlGenerator.cpp.o -c /Users/yousufawj/projects/rnd/data_studio/src/ai/ClaudeSqlGenerator.cpp",
+  "file": "/Users/yousufawj/projects/rnd/data_studio/src/ai/ClaudeSqlGenerator.cpp",
+  "output": "CMakeFiles/dsui.dir/src/ai/ClaudeSqlGenerator.cpp.o"
+},
+{
+  "directory": "/Users/yousufawj/projects/rnd/data_studio/build",
+  "command": "/usr/bin/c++ -DDS_HAVE_MYSQL=1 -DQT_CONCURRENT_LIB -DQT_CORE_LIB -DQT_GUI_LIB -DQT_NETWORK_LIB -DQT_NO_DEBUG -DQT_WIDGETS_LIB -I/Users/yousufawj/projects/rnd/data_studio/build/dsui_autogen/include -I/Users/yousufawj/projects/rnd/data_studio/src -isystem /opt/homebrew/Cellar/mariadb-connector-c/3.4.9/include/mariadb -isystem /opt/homebrew/opt/qt/lib/QtWidgets.framework/Headers -iframework /opt/homebrew/opt/qt/lib -isystem /opt/homebrew/opt/qt/lib/QtCore.framework/Headers -isystem /opt/homebrew/opt/qt/share/qt/mkspecs/macx-clang -isystem /opt/homebrew/opt/qt/include -isystem /opt/homebrew/opt/qt/lib/QtGui.framework/Headers -isystem /opt/homebrew/opt/qt/lib/QtNetwork.framework/Headers -isystem /opt/homebrew/opt/qt/lib/QtConcurrent.framework/Headers -O3 -DNDEBUG -std=c++20 -arch arm64 -o CMakeFiles/dsui.dir/src/ai/AiSettingsDialog.cpp.o -c /Users/yousufawj/projects/rnd/data_studio/src/ai/AiSettingsDialog.cpp",
+  "file": "/Users/yousufawj/projects/rnd/data_studio/src/ai/AiSettingsDialog.cpp",
+  "output": "CMakeFiles/dsui.dir/src/ai/AiSettingsDialog.cpp.o"
+},
+{
+  "directory": "/Users/yousufawj/projects/rnd/data_studio/build",
+  "command": "/usr/bin/c++ -DDS_HAVE_MYSQL=1 -DQT_CONCURRENT_LIB -DQT_CORE_LIB -DQT_GUI_LIB -DQT_NETWORK_LIB -DQT_NO_DEBUG -DQT_WIDGETS_LIB -I/Users/yousufawj/projects/rnd/data_studio/build/dsui_autogen/include -I/Users/yousufawj/projects/rnd/data_studio/src -isystem /opt/homebrew/Cellar/mariadb-connector-c/3.4.9/include/mariadb -isystem /opt/homebrew/opt/qt/lib/QtWidgets.framework/Headers -iframework /opt/homebrew/opt/qt/lib -isystem /opt/homebrew/opt/qt/lib/QtCore.framework/Headers -isystem /opt/homebrew/opt/qt/share/qt/mkspecs/macx-clang -isystem /opt/homebrew/opt/qt/include -isystem /opt/homebrew/opt/qt/lib/QtGui.framework/Headers -isystem /opt/homebrew/opt/qt/lib/QtNetwork.framework/Headers -isystem /opt/homebrew/opt/qt/lib/QtConcurrent.framework/Headers -O3 -DNDEBUG -std=c++20 -arch arm64 -o CMakeFiles/dsui.dir/src/ui/MainWindow.cpp.o -c /Users/yousufawj/projects/rnd/data_studio/src/ui/MainWindow.cpp",
+  "file": "/Users/yousufawj/projects/rnd/data_studio/src/ui/MainWindow.cpp",
+  "output": "CMakeFiles/dsui.dir/src/ui/MainWindow.cpp.o"
+},
+{
+  "directory": "/Users/yousufawj/projects/rnd/data_studio/build",
+  "command": "/usr/bin/c++ -DDS_HAVE_MYSQL=1 -DQT_CONCURRENT_LIB -DQT_CORE_LIB -DQT_GUI_LIB -DQT_NETWORK_LIB -DQT_NO_DEBUG -DQT_WIDGETS_LIB -I/Users/yousufawj/projects/rnd/data_studio/build/dsui_autogen/include -I/Users/yousufawj/projects/rnd/data_studio/src -isystem /opt/homebrew/Cellar/mariadb-connector-c/3.4.9/include/mariadb -isystem /opt/homebrew/opt/qt/lib/QtWidgets.framework/Headers -iframework /opt/homebrew/opt/qt/lib -isystem /opt/homebrew/opt/qt/lib/QtCore.framework/Headers -isystem /opt/homebrew/opt/qt/share/qt/mkspecs/macx-clang -isystem /opt/homebrew/opt/qt/include -isystem /opt/homebrew/opt/qt/lib/QtGui.framework/Headers -isystem /opt/homebrew/opt/qt/lib/QtNetwork.framework/Headers -isystem /opt/homebrew/opt/qt/lib/QtConcurrent.framework/Headers -O3 -DNDEBUG -std=c++20 -arch arm64 -o CMakeFiles/dsui.dir/src/ui/ConnectionDialog.cpp.o -c /Users/yousufawj/projects/rnd/data_studio/src/ui/ConnectionDialog.cpp",
+  "file": "/Users/yousufawj/projects/rnd/data_studio/src/ui/ConnectionDialog.cpp",
+  "output": "CMakeFiles/dsui.dir/src/ui/ConnectionDialog.cpp.o"
+},
+{
+  "directory": "/Users/yousufawj/projects/rnd/data_studio/build",
+  "command": "/usr/bin/c++ -DDS_HAVE_MYSQL=1 -DQT_CONCURRENT_LIB -DQT_CORE_LIB -DQT_GUI_LIB -DQT_NETWORK_LIB -DQT_NO_DEBUG -DQT_WIDGETS_LIB -I/Users/yousufawj/projects/rnd/data_studio/build/dsui_autogen/include -I/Users/yousufawj/projects/rnd/data_studio/src -isystem /opt/homebrew/Cellar/mariadb-connector-c/3.4.9/include/mariadb -isystem /opt/homebrew/opt/qt/lib/QtWidgets.framework/Headers -iframework /opt/homebrew/opt/qt/lib -isystem /opt/homebrew/opt/qt/lib/QtCore.framework/Headers -isystem /opt/homebrew/opt/qt/share/qt/mkspecs/macx-clang -isystem /opt/homebrew/opt/qt/include -isystem /opt/homebrew/opt/qt/lib/QtGui.framework/Headers -isystem /opt/homebrew/opt/qt/lib/QtNetwork.framework/Headers -isystem /opt/homebrew/opt/qt/lib/QtConcurrent.framework/Headers -O3 -DNDEBUG -std=c++20 -arch arm64 -o CMakeFiles/dsui.dir/src/ui/ConnectionStore.cpp.o -c /Users/yousufawj/projects/rnd/data_studio/src/ui/ConnectionStore.cpp",
+  "file": "/Users/yousufawj/projects/rnd/data_studio/src/ui/ConnectionStore.cpp",
+  "output": "CMakeFiles/dsui.dir/src/ui/ConnectionStore.cpp.o"
+},
+{
+  "directory": "/Users/yousufawj/projects/rnd/data_studio/build",
+  "command": "/usr/bin/c++ -DDS_HAVE_MYSQL=1 -DQT_CONCURRENT_LIB -DQT_CORE_LIB -DQT_GUI_LIB -DQT_NETWORK_LIB -DQT_NO_DEBUG -DQT_WIDGETS_LIB -I/Users/yousufawj/projects/rnd/data_studio/build/dsui_autogen/include -I/Users/yousufawj/projects/rnd/data_studio/src -isystem /opt/homebrew/Cellar/mariadb-connector-c/3.4.9/include/mariadb -isystem /opt/homebrew/opt/qt/lib/QtWidgets.framework/Headers -iframework /opt/homebrew/opt/qt/lib -isystem /opt/homebrew/opt/qt/lib/QtCore.framework/Headers -isystem /opt/homebrew/opt/qt/share/qt/mkspecs/macx-clang -isystem /opt/homebrew/opt/qt/include -isystem /opt/homebrew/opt/qt/lib/QtGui.framework/Headers -isystem /opt/homebrew/opt/qt/lib/QtNetwork.framework/Headers -isystem /opt/homebrew/opt/qt/lib/QtConcurrent.framework/Headers -O3 -DNDEBUG -std=c++20 -arch arm64 -o CMakeFiles/dsui.dir/src/ui/SchemaTree.cpp.o -c /Users/yousufawj/projects/rnd/data_studio/src/ui/SchemaTree.cpp",
+  "file": "/Users/yousufawj/projects/rnd/data_studio/src/ui/SchemaTree.cpp",
+  "output": "CMakeFiles/dsui.dir/src/ui/SchemaTree.cpp.o"
+},
+{
+  "directory": "/Users/yousufawj/projects/rnd/data_studio/build",
+  "command": "/usr/bin/c++ -DDS_HAVE_MYSQL=1 -DQT_CONCURRENT_LIB -DQT_CORE_LIB -DQT_GUI_LIB -DQT_NETWORK_LIB -DQT_NO_DEBUG -DQT_WIDGETS_LIB -I/Users/yousufawj/projects/rnd/data_studio/build/dsui_autogen/include -I/Users/yousufawj/projects/rnd/data_studio/src -isystem /opt/homebrew/Cellar/mariadb-connector-c/3.4.9/include/mariadb -isystem /opt/homebrew/opt/qt/lib/QtWidgets.framework/Headers -iframework /opt/homebrew/opt/qt/lib -isystem /opt/homebrew/opt/qt/lib/QtCore.framework/Headers -isystem /opt/homebrew/opt/qt/share/qt/mkspecs/macx-clang -isystem /opt/homebrew/opt/qt/include -isystem /opt/homebrew/opt/qt/lib/QtGui.framework/Headers -isystem /opt/homebrew/opt/qt/lib/QtNetwork.framework/Headers -isystem /opt/homebrew/opt/qt/lib/QtConcurrent.framework/Headers -O3 -DNDEBUG -std=c++20 -arch arm64 -o CMakeFiles/dsui.dir/src/ui/SqlEditor.cpp.o -c /Users/yousufawj/projects/rnd/data_studio/src/ui/SqlEditor.cpp",
+  "file": "/Users/yousufawj/projects/rnd/data_studio/src/ui/SqlEditor.cpp",
+  "output": "CMakeFiles/dsui.dir/src/ui/SqlEditor.cpp.o"
+},
+{
+  "directory": "/Users/yousufawj/projects/rnd/data_studio/build",
+  "command": "/usr/bin/c++ -DDS_HAVE_MYSQL=1 -DQT_CONCURRENT_LIB -DQT_CORE_LIB -DQT_GUI_LIB -DQT_NETWORK_LIB -DQT_NO_DEBUG -DQT_WIDGETS_LIB -I/Users/yousufawj/projects/rnd/data_studio/build/dsui_autogen/include -I/Users/yousufawj/projects/rnd/data_studio/src -isystem /opt/homebrew/Cellar/mariadb-connector-c/3.4.9/include/mariadb -isystem /opt/homebrew/opt/qt/lib/QtWidgets.framework/Headers -iframework /opt/homebrew/opt/qt/lib -isystem /opt/homebrew/opt/qt/lib/QtCore.framework/Headers -isystem /opt/homebrew/opt/qt/share/qt/mkspecs/macx-clang -isystem /opt/homebrew/opt/qt/include -isystem /opt/homebrew/opt/qt/lib/QtGui.framework/Headers -isystem /opt/homebrew/opt/qt/lib/QtNetwork.framework/Headers -isystem /opt/homebrew/opt/qt/lib/QtConcurrent.framework/Headers -O3 -DNDEBUG -std=c++20 -arch arm64 -o CMakeFiles/dsui.dir/src/ui/SqlHighlighter.cpp.o -c /Users/yousufawj/projects/rnd/data_studio/src/ui/SqlHighlighter.cpp",
+  "file": "/Users/yousufawj/projects/rnd/data_studio/src/ui/SqlHighlighter.cpp",
+  "output": "CMakeFiles/dsui.dir/src/ui/SqlHighlighter.cpp.o"
+},
+{
+  "directory": "/Users/yousufawj/projects/rnd/data_studio/build",
+  "command": "/usr/bin/c++ -DDS_HAVE_MYSQL=1 -DQT_CONCURRENT_LIB -DQT_CORE_LIB -DQT_GUI_LIB -DQT_NETWORK_LIB -DQT_NO_DEBUG -DQT_WIDGETS_LIB -I/Users/yousufawj/projects/rnd/data_studio/build/dsui_autogen/include -I/Users/yousufawj/projects/rnd/data_studio/src -isystem /opt/homebrew/Cellar/mariadb-connector-c/3.4.9/include/mariadb -isystem /opt/homebrew/opt/qt/lib/QtWidgets.framework/Headers -iframework /opt/homebrew/opt/qt/lib -isystem /opt/homebrew/opt/qt/lib/QtCore.framework/Headers -isystem /opt/homebrew/opt/qt/share/qt/mkspecs/macx-clang -isystem /opt/homebrew/opt/qt/include -isystem /opt/homebrew/opt/qt/lib/QtGui.framework/Headers -isystem /opt/homebrew/opt/qt/lib/QtNetwork.framework/Headers -isystem /opt/homebrew/opt/qt/lib/QtConcurrent.framework/Headers -O3 -DNDEBUG -std=c++20 -arch arm64 -o CMakeFiles/dsui.dir/src/ui/ResultsModel.cpp.o -c /Users/yousufawj/projects/rnd/data_studio/src/ui/ResultsModel.cpp",
+  "file": "/Users/yousufawj/projects/rnd/data_studio/src/ui/ResultsModel.cpp",
+  "output": "CMakeFiles/dsui.dir/src/ui/ResultsModel.cpp.o"
+},
+{
+  "directory": "/Users/yousufawj/projects/rnd/data_studio/build",
+  "command": "/usr/bin/c++ -DDS_HAVE_MYSQL=1 -DQT_CONCURRENT_LIB -DQT_CORE_LIB -DQT_GUI_LIB -DQT_NETWORK_LIB -DQT_NO_DEBUG -DQT_WIDGETS_LIB -I/Users/yousufawj/projects/rnd/data_studio/build/dsui_autogen/include -I/Users/yousufawj/projects/rnd/data_studio/src -isystem /opt/homebrew/Cellar/mariadb-connector-c/3.4.9/include/mariadb -isystem /opt/homebrew/opt/qt/lib/QtWidgets.framework/Headers -iframework /opt/homebrew/opt/qt/lib -isystem /opt/homebrew/opt/qt/lib/QtCore.framework/Headers -isystem /opt/homebrew/opt/qt/share/qt/mkspecs/macx-clang -isystem /opt/homebrew/opt/qt/include -isystem /opt/homebrew/opt/qt/lib/QtGui.framework/Headers -isystem /opt/homebrew/opt/qt/lib/QtNetwork.framework/Headers -isystem /opt/homebrew/opt/qt/lib/QtConcurrent.framework/Headers -O3 -DNDEBUG -std=c++20 -arch arm64 -o CMakeFiles/dsui.dir/src/ui/ResultsView.cpp.o -c /Users/yousufawj/projects/rnd/data_studio/src/ui/ResultsView.cpp",
+  "file": "/Users/yousufawj/projects/rnd/data_studio/src/ui/ResultsView.cpp",
+  "output": "CMakeFiles/dsui.dir/src/ui/ResultsView.cpp.o"
+},
+{
+  "directory": "/Users/yousufawj/projects/rnd/data_studio/build",
+  "command": "/usr/bin/c++ -DDS_HAVE_MYSQL=1 -DQT_CONCURRENT_LIB -DQT_CORE_LIB -DQT_GUI_LIB -DQT_NETWORK_LIB -DQT_NO_DEBUG -DQT_WIDGETS_LIB -I/Users/yousufawj/projects/rnd/data_studio/build/dsui_autogen/include -I/Users/yousufawj/projects/rnd/data_studio/src -isystem /opt/homebrew/Cellar/mariadb-connector-c/3.4.9/include/mariadb -isystem /opt/homebrew/opt/qt/lib/QtWidgets.framework/Headers -iframework /opt/homebrew/opt/qt/lib -isystem /opt/homebrew/opt/qt/lib/QtCore.framework/Headers -isystem /opt/homebrew/opt/qt/share/qt/mkspecs/macx-clang -isystem /opt/homebrew/opt/qt/include -isystem /opt/homebrew/opt/qt/lib/QtGui.framework/Headers -isystem /opt/homebrew/opt/qt/lib/QtNetwork.framework/Headers -isystem /opt/homebrew/opt/qt/lib/QtConcurrent.framework/Headers -O3 -DNDEBUG -std=c++20 -arch arm64 -o CMakeFiles/dsui.dir/src/ui/QueryExecutor.cpp.o -c /Users/yousufawj/projects/rnd/data_studio/src/ui/QueryExecutor.cpp",
+  "file": "/Users/yousufawj/projects/rnd/data_studio/src/ui/QueryExecutor.cpp",
+  "output": "CMakeFiles/dsui.dir/src/ui/QueryExecutor.cpp.o"
+},
+{
+  "directory": "/Users/yousufawj/projects/rnd/data_studio/build",
+  "command": "/usr/bin/c++ -DDS_HAVE_MYSQL=1 -DQT_CONCURRENT_LIB -DQT_CORE_LIB -DQT_GUI_LIB -DQT_NETWORK_LIB -DQT_NO_DEBUG -DQT_WIDGETS_LIB -I/Users/yousufawj/projects/rnd/data_studio/build/dsui_autogen/include -I/Users/yousufawj/projects/rnd/data_studio/src -isystem /opt/homebrew/Cellar/mariadb-connector-c/3.4.9/include/mariadb -isystem /opt/homebrew/opt/qt/lib/QtWidgets.framework/Headers -iframework /opt/homebrew/opt/qt/lib -isystem /opt/homebrew/opt/qt/lib/QtCore.framework/Headers -isystem /opt/homebrew/opt/qt/share/qt/mkspecs/macx-clang -isystem /opt/homebrew/opt/qt/include -isystem /opt/homebrew/opt/qt/lib/QtGui.framework/Headers -isystem /opt/homebrew/opt/qt/lib/QtNetwork.framework/Headers -isystem /opt/homebrew/opt/qt/lib/QtConcurrent.framework/Headers -O3 -DNDEBUG -std=c++20 -arch arm64 -o CMakeFiles/dsui.dir/src/ui/AnalyzerPanel.cpp.o -c /Users/yousufawj/projects/rnd/data_studio/src/ui/AnalyzerPanel.cpp",
+  "file": "/Users/yousufawj/projects/rnd/data_studio/src/ui/AnalyzerPanel.cpp",
+  "output": "CMakeFiles/dsui.dir/src/ui/AnalyzerPanel.cpp.o"
+},
+{
+  "directory": "/Users/yousufawj/projects/rnd/data_studio/build",
+  "command": "/usr/bin/c++ -DDS_HAVE_MYSQL=1 -DQT_CONCURRENT_LIB -DQT_CORE_LIB -DQT_GUI_LIB -DQT_NETWORK_LIB -DQT_NO_DEBUG -DQT_WIDGETS_LIB -I/Users/yousufawj/projects/rnd/data_studio/build/dsui_autogen/include -I/Users/yousufawj/projects/rnd/data_studio/src -isystem /opt/homebrew/Cellar/mariadb-connector-c/3.4.9/include/mariadb -isystem /opt/homebrew/opt/qt/lib/QtWidgets.framework/Headers -iframework /opt/homebrew/opt/qt/lib -isystem /opt/homebrew/opt/qt/lib/QtCore.framework/Headers -isystem /opt/homebrew/opt/qt/share/qt/mkspecs/macx-clang -isystem /opt/homebrew/opt/qt/include -isystem /opt/homebrew/opt/qt/lib/QtGui.framework/Headers -isystem /opt/homebrew/opt/qt/lib/QtNetwork.framework/Headers -isystem /opt/homebrew/opt/qt/lib/QtConcurrent.framework/Headers -O3 -DNDEBUG -std=c++20 -arch arm64 -o CMakeFiles/dsui.dir/src/ui/QueryBuilderPanel.cpp.o -c /Users/yousufawj/projects/rnd/data_studio/src/ui/QueryBuilderPanel.cpp",
+  "file": "/Users/yousufawj/projects/rnd/data_studio/src/ui/QueryBuilderPanel.cpp",
+  "output": "CMakeFiles/dsui.dir/src/ui/QueryBuilderPanel.cpp.o"
+},
+{
+  "directory": "/Users/yousufawj/projects/rnd/data_studio/build",
+  "command": "/usr/bin/c++ -DDS_HAVE_MYSQL=1 -DQT_CONCURRENT_LIB -DQT_CORE_LIB -DQT_GUI_LIB -DQT_NETWORK_LIB -DQT_NO_DEBUG -DQT_WIDGETS_LIB -I/Users/yousufawj/projects/rnd/data_studio/build/dsui_autogen/include -I/Users/yousufawj/projects/rnd/data_studio/src -isystem /opt/homebrew/Cellar/mariadb-connector-c/3.4.9/include/mariadb -isystem /opt/homebrew/opt/qt/lib/QtWidgets.framework/Headers -iframework /opt/homebrew/opt/qt/lib -isystem /opt/homebrew/opt/qt/lib/QtCore.framework/Headers -isystem /opt/homebrew/opt/qt/share/qt/mkspecs/macx-clang -isystem /opt/homebrew/opt/qt/include -isystem /opt/homebrew/opt/qt/lib/QtGui.framework/Headers -isystem /opt/homebrew/opt/qt/lib/QtNetwork.framework/Headers -isystem /opt/homebrew/opt/qt/lib/QtConcurrent.framework/Headers -O3 -DNDEBUG -std=c++20 -arch arm64 -o CMakeFiles/dsui.dir/src/ui/NlPromptBar.cpp.o -c /Users/yousufawj/projects/rnd/data_studio/src/ui/NlPromptBar.cpp",
+  "file": "/Users/yousufawj/projects/rnd/data_studio/src/ui/NlPromptBar.cpp",
+  "output": "CMakeFiles/dsui.dir/src/ui/NlPromptBar.cpp.o"
+},
+{
+  "directory": "/Users/yousufawj/projects/rnd/data_studio/build",
+  "command": "/usr/bin/c++ -DDS_HAVE_MYSQL=1 -DQT_CONCURRENT_LIB -DQT_CORE_LIB -DQT_GUI_LIB -DQT_NETWORK_LIB -DQT_NO_DEBUG -DQT_WIDGETS_LIB -I/Users/yousufawj/projects/rnd/data_studio/build/data-studio_autogen/include -I/Users/yousufawj/projects/rnd/data_studio/src -isystem /opt/homebrew/opt/qt/lib/QtCore.framework/Headers -iframework /opt/homebrew/opt/qt/lib -isystem /opt/homebrew/opt/qt/share/qt/mkspecs/macx-clang -isystem /opt/homebrew/opt/qt/include -isystem /opt/homebrew/Cellar/mariadb-connector-c/3.4.9/include/mariadb -isystem /opt/homebrew/opt/qt/lib/QtWidgets.framework/Headers -isystem /opt/homebrew/opt/qt/lib/QtGui.framework/Headers -isystem /opt/homebrew/opt/qt/lib/QtNetwork.framework/Headers -isystem /opt/homebrew/opt/qt/lib/QtConcurrent.framework/Headers -O3 -DNDEBUG -std=c++20 -arch arm64 -o CMakeFiles/data-studio.dir/data-studio_autogen/mocs_compilation.cpp.o -c /Users/yousufawj/projects/rnd/data_studio/build/data-studio_autogen/mocs_compilation.cpp",
   "file": "/Users/yousufawj/projects/rnd/data_studio/build/data-studio_autogen/mocs_compilation.cpp",
   "output": "CMakeFiles/data-studio.dir/data-studio_autogen/mocs_compilation.cpp.o"
 },
 {
   "directory": "/Users/yousufawj/projects/rnd/data_studio/build",
-  "command": "/usr/bin/c++ -DDS_HAVE_MYSQL=1 -DQT_CORE_LIB -DQT_GUI_LIB -DQT_NETWORK_LIB -DQT_WIDGETS_LIB -I/Users/yousufawj/projects/rnd/data_studio/build/data-studio_autogen/include -I/Users/yousufawj/projects/rnd/data_studio/src -isystem /opt/homebrew/opt/qt/lib/QtCore.framework/Headers -iframework /opt/homebrew/opt/qt/lib -isystem /opt/homebrew/opt/qt/share/qt/mkspecs/macx-clang -isystem /opt/homebrew/opt/qt/include -isystem /opt/homebrew/Cellar/mysql/9.6.0_1/include/mysql -isystem /opt/homebrew/opt/qt/lib/QtWidgets.framework/Headers -isystem /opt/homebrew/opt/qt/lib/QtGui.framework/Headers -isystem /opt/homebrew/opt/qt/lib/QtNetwork.framework/Headers -g -std=c++20 -arch arm64 -o CMakeFiles/data-studio.dir/src/main.cpp.o -c /Users/yousufawj/projects/rnd/data_studio/src/main.cpp",
+  "command": "/usr/bin/c++ -DDS_HAVE_MYSQL=1 -DQT_CONCURRENT_LIB -DQT_CORE_LIB -DQT_GUI_LIB -DQT_NETWORK_LIB -DQT_NO_DEBUG -DQT_WIDGETS_LIB -I/Users/yousufawj/projects/rnd/data_studio/build/data-studio_autogen/include -I/Users/yousufawj/projects/rnd/data_studio/src -isystem /opt/homebrew/opt/qt/lib/QtCore.framework/Headers -iframework /opt/homebrew/opt/qt/lib -isystem /opt/homebrew/opt/qt/share/qt/mkspecs/macx-clang -isystem /opt/homebrew/opt/qt/include -isystem /opt/homebrew/Cellar/mariadb-connector-c/3.4.9/include/mariadb -isystem /opt/homebrew/opt/qt/lib/QtWidgets.framework/Headers -isystem /opt/homebrew/opt/qt/lib/QtGui.framework/Headers -isystem /opt/homebrew/opt/qt/lib/QtNetwork.framework/Headers -isystem /opt/homebrew/opt/qt/lib/QtConcurrent.framework/Headers -O3 -DNDEBUG -std=c++20 -arch arm64 -o CMakeFiles/data-studio.dir/src/main.cpp.o -c /Users/yousufawj/projects/rnd/data_studio/src/main.cpp",
   "file": "/Users/yousufawj/projects/rnd/data_studio/src/main.cpp",
   "output": "CMakeFiles/data-studio.dir/src/main.cpp.o"
 },
 {
   "directory": "/Users/yousufawj/projects/rnd/data_studio/build",
-  "command": "/usr/bin/c++ -DDS_HAVE_MYSQL=1 -DQT_CORE_LIB -DQT_GUI_LIB -DQT_NETWORK_LIB -DQT_WIDGETS_LIB -I/Users/yousufawj/projects/rnd/data_studio/build/data-studio_autogen/include -I/Users/yousufawj/projects/rnd/data_studio/src -isystem /opt/homebrew/opt/qt/lib/QtCore.framework/Headers -iframework /opt/homebrew/opt/qt/lib -isystem /opt/homebrew/opt/qt/share/qt/mkspecs/macx-clang -isystem /opt/homebrew/opt/qt/include -isystem /opt/homebrew/Cellar/mysql/9.6.0_1/include/mysql -isystem /opt/homebrew/opt/qt/lib/QtWidgets.framework/Headers -isystem /opt/homebrew/opt/qt/lib/QtGui.framework/Headers -isystem /opt/homebrew/opt/qt/lib/QtNetwork.framework/Headers -g -std=c++20 -arch arm64 -o CMakeFiles/data-studio.dir/src/ai/NlSqlClient.cpp.o -c /Users/yousufawj/projects/rnd/data_studio/src/ai/NlSqlClient.cpp",
-  "file": "/Users/yousufawj/projects/rnd/data_studio/src/ai/NlSqlClient.cpp",
-  "output": "CMakeFiles/data-studio.dir/src/ai/NlSqlClient.cpp.o"
+  "command": "/usr/bin/c++ -DDS_HAVE_MYSQL=1 -I/Users/yousufawj/projects/rnd/data_studio/build/ds-core-tests_autogen/include -I/Users/yousufawj/projects/rnd/data_studio -I/Users/yousufawj/projects/rnd/data_studio/src -isystem /opt/homebrew/Cellar/mariadb-connector-c/3.4.9/include/mariadb -O3 -DNDEBUG -std=c++20 -arch arm64 -o CMakeFiles/ds-core-tests.dir/ds-core-tests_autogen/mocs_compilation.cpp.o -c /Users/yousufawj/projects/rnd/data_studio/build/ds-core-tests_autogen/mocs_compilation.cpp",
+  "file": "/Users/yousufawj/projects/rnd/data_studio/build/ds-core-tests_autogen/mocs_compilation.cpp",
+  "output": "CMakeFiles/ds-core-tests.dir/ds-core-tests_autogen/mocs_compilation.cpp.o"
 },
 {
   "directory": "/Users/yousufawj/projects/rnd/data_studio/build",
-  "command": "/usr/bin/c++ -DDS_HAVE_MYSQL=1 -DQT_CORE_LIB -DQT_GUI_LIB -DQT_NETWORK_LIB -DQT_WIDGETS_LIB -I/Users/yousufawj/projects/rnd/data_studio/build/data-studio_autogen/include -I/Users/yousufawj/projects/rnd/data_studio/src -isystem /opt/homebrew/opt/qt/lib/QtCore.framework/Headers -iframework /opt/homebrew/opt/qt/lib -isystem /opt/homebrew/opt/qt/share/qt/mkspecs/macx-clang -isystem /opt/homebrew/opt/qt/include -isystem /opt/homebrew/Cellar/mysql/9.6.0_1/include/mysql -isystem /opt/homebrew/opt/qt/lib/QtWidgets.framework/Headers -isystem /opt/homebrew/opt/qt/lib/QtGui.framework/Headers -isystem /opt/homebrew/opt/qt/lib/QtNetwork.framework/Headers -g -std=c++20 -arch arm64 -o CMakeFiles/data-studio.dir/src/ui/MainWindow.cpp.o -c /Users/yousufawj/projects/rnd/data_studio/src/ui/MainWindow.cpp",
-  "file": "/Users/yousufawj/projects/rnd/data_studio/src/ui/MainWindow.cpp",
-  "output": "CMakeFiles/data-studio.dir/src/ui/MainWindow.cpp.o"
+  "command": "/usr/bin/c++ -DDS_HAVE_MYSQL=1 -I/Users/yousufawj/projects/rnd/data_studio/build/ds-core-tests_autogen/include -I/Users/yousufawj/projects/rnd/data_studio -I/Users/yousufawj/projects/rnd/data_studio/src -isystem /opt/homebrew/Cellar/mariadb-connector-c/3.4.9/include/mariadb -O3 -DNDEBUG -std=c++20 -arch arm64 -o CMakeFiles/ds-core-tests.dir/tests/core_tests.cpp.o -c /Users/yousufawj/projects/rnd/data_studio/tests/core_tests.cpp",
+  "file": "/Users/yousufawj/projects/rnd/data_studio/tests/core_tests.cpp",
+  "output": "CMakeFiles/ds-core-tests.dir/tests/core_tests.cpp.o"
 },
 {
   "directory": "/Users/yousufawj/projects/rnd/data_studio/build",
-  "command": "/usr/bin/c++ -DDS_HAVE_MYSQL=1 -DQT_CORE_LIB -DQT_GUI_LIB -DQT_NETWORK_LIB -DQT_WIDGETS_LIB -I/Users/yousufawj/projects/rnd/data_studio/build/data-studio_autogen/include -I/Users/yousufawj/projects/rnd/data_studio/src -isystem /opt/homebrew/opt/qt/lib/QtCore.framework/Headers -iframework /opt/homebrew/opt/qt/lib -isystem /opt/homebrew/opt/qt/share/qt/mkspecs/macx-clang -isystem /opt/homebrew/opt/qt/include -isystem /opt/homebrew/Cellar/mysql/9.6.0_1/include/mysql -isystem /opt/homebrew/opt/qt/lib/QtWidgets.framework/Headers -isystem /opt/homebrew/opt/qt/lib/QtGui.framework/Headers -isystem /opt/homebrew/opt/qt/lib/QtNetwork.framework/Headers -g -std=c++20 -arch arm64 -o CMakeFiles/data-studio.dir/src/ui/ConnectionDialog.cpp.o -c /Users/yousufawj/projects/rnd/data_studio/src/ui/ConnectionDialog.cpp",
-  "file": "/Users/yousufawj/projects/rnd/data_studio/src/ui/ConnectionDialog.cpp",
-  "output": "CMakeFiles/data-studio.dir/src/ui/ConnectionDialog.cpp.o"
+  "command": "/usr/bin/c++ -DDS_HAVE_MYSQL=1 -DQT_CONCURRENT_LIB -DQT_CORE_LIB -DQT_GUI_LIB -DQT_NETWORK_LIB -DQT_NO_DEBUG -DQT_WIDGETS_LIB -I/Users/yousufawj/projects/rnd/data_studio/build/ds-ui-tests_autogen/include -I/Users/yousufawj/projects/rnd/data_studio -I/Users/yousufawj/projects/rnd/data_studio/src -isystem /opt/homebrew/opt/qt/lib/QtCore.framework/Headers -iframework /opt/homebrew/opt/qt/lib -isystem /opt/homebrew/opt/qt/share/qt/mkspecs/macx-clang -isystem /opt/homebrew/opt/qt/include -isystem /opt/homebrew/Cellar/mariadb-connector-c/3.4.9/include/mariadb -isystem /opt/homebrew/opt/qt/lib/QtWidgets.framework/Headers -isystem /opt/homebrew/opt/qt/lib/QtGui.framework/Headers -isystem /opt/homebrew/opt/qt/lib/QtNetwork.framework/Headers -isystem /opt/homebrew/opt/qt/lib/QtConcurrent.framework/Headers -O3 -DNDEBUG -std=c++20 -arch arm64 -o CMakeFiles/ds-ui-tests.dir/ds-ui-tests_autogen/mocs_compilation.cpp.o -c /Users/yousufawj/projects/rnd/data_studio/build/ds-ui-tests_autogen/mocs_compilation.cpp",
+  "file": "/Users/yousufawj/projects/rnd/data_studio/build/ds-ui-tests_autogen/mocs_compilation.cpp",
+  "output": "CMakeFiles/ds-ui-tests.dir/ds-ui-tests_autogen/mocs_compilation.cpp.o"
 },
 {
   "directory": "/Users/yousufawj/projects/rnd/data_studio/build",
-  "command": "/usr/bin/c++ -DDS_HAVE_MYSQL=1 -DQT_CORE_LIB -DQT_GUI_LIB -DQT_NETWORK_LIB -DQT_WIDGETS_LIB -I/Users/yousufawj/projects/rnd/data_studio/build/data-studio_autogen/include -I/Users/yousufawj/projects/rnd/data_studio/src -isystem /opt/homebrew/opt/qt/lib/QtCore.framework/Headers -iframework /opt/homebrew/opt/qt/lib -isystem /opt/homebrew/opt/qt/share/qt/mkspecs/macx-clang -isystem /opt/homebrew/opt/qt/include -isystem /opt/homebrew/Cellar/mysql/9.6.0_1/include/mysql -isystem /opt/homebrew/opt/qt/lib/QtWidgets.framework/Headers -isystem /opt/homebrew/opt/qt/lib/QtGui.framework/Headers -isystem /opt/homebrew/opt/qt/lib/QtNetwork.framework/Headers -g -std=c++20 -arch arm64 -o CMakeFiles/data-studio.dir/src/ui/ConnectionStore.cpp.o -c /Users/yousufawj/projects/rnd/data_studio/src/ui/ConnectionStore.cpp",
-  "file": "/Users/yousufawj/projects/rnd/data_studio/src/ui/ConnectionStore.cpp",
-  "output": "CMakeFiles/data-studio.dir/src/ui/ConnectionStore.cpp.o"
-},
-{
-  "directory": "/Users/yousufawj/projects/rnd/data_studio/build",
-  "command": "/usr/bin/c++ -DDS_HAVE_MYSQL=1 -DQT_CORE_LIB -DQT_GUI_LIB -DQT_NETWORK_LIB -DQT_WIDGETS_LIB -I/Users/yousufawj/projects/rnd/data_studio/build/data-studio_autogen/include -I/Users/yousufawj/projects/rnd/data_studio/src -isystem /opt/homebrew/opt/qt/lib/QtCore.framework/Headers -iframework /opt/homebrew/opt/qt/lib -isystem /opt/homebrew/opt/qt/share/qt/mkspecs/macx-clang -isystem /opt/homebrew/opt/qt/include -isystem /opt/homebrew/Cellar/mysql/9.6.0_1/include/mysql -isystem /opt/homebrew/opt/qt/lib/QtWidgets.framework/Headers -isystem /opt/homebrew/opt/qt/lib/QtGui.framework/Headers -isystem /opt/homebrew/opt/qt/lib/QtNetwork.framework/Headers -g -std=c++20 -arch arm64 -o CMakeFiles/data-studio.dir/src/ui/SchemaTree.cpp.o -c /Users/yousufawj/projects/rnd/data_studio/src/ui/SchemaTree.cpp",
-  "file": "/Users/yousufawj/projects/rnd/data_studio/src/ui/SchemaTree.cpp",
-  "output": "CMakeFiles/data-studio.dir/src/ui/SchemaTree.cpp.o"
-},
-{
-  "directory": "/Users/yousufawj/projects/rnd/data_studio/build",
-  "command": "/usr/bin/c++ -DDS_HAVE_MYSQL=1 -DQT_CORE_LIB -DQT_GUI_LIB -DQT_NETWORK_LIB -DQT_WIDGETS_LIB -I/Users/yousufawj/projects/rnd/data_studio/build/data-studio_autogen/include -I/Users/yousufawj/projects/rnd/data_studio/src -isystem /opt/homebrew/opt/qt/lib/QtCore.framework/Headers -iframework /opt/homebrew/opt/qt/lib -isystem /opt/homebrew/opt/qt/share/qt/mkspecs/macx-clang -isystem /opt/homebrew/opt/qt/include -isystem /opt/homebrew/Cellar/mysql/9.6.0_1/include/mysql -isystem /opt/homebrew/opt/qt/lib/QtWidgets.framework/Headers -isystem /opt/homebrew/opt/qt/lib/QtGui.framework/Headers -isystem /opt/homebrew/opt/qt/lib/QtNetwork.framework/Headers -g -std=c++20 -arch arm64 -o CMakeFiles/data-studio.dir/src/ui/SqlEditor.cpp.o -c /Users/yousufawj/projects/rnd/data_studio/src/ui/SqlEditor.cpp",
-  "file": "/Users/yousufawj/projects/rnd/data_studio/src/ui/SqlEditor.cpp",
-  "output": "CMakeFiles/data-studio.dir/src/ui/SqlEditor.cpp.o"
-},
-{
-  "directory": "/Users/yousufawj/projects/rnd/data_studio/build",
-  "command": "/usr/bin/c++ -DDS_HAVE_MYSQL=1 -DQT_CORE_LIB -DQT_GUI_LIB -DQT_NETWORK_LIB -DQT_WIDGETS_LIB -I/Users/yousufawj/projects/rnd/data_studio/build/data-studio_autogen/include -I/Users/yousufawj/projects/rnd/data_studio/src -isystem /opt/homebrew/opt/qt/lib/QtCore.framework/Headers -iframework /opt/homebrew/opt/qt/lib -isystem /opt/homebrew/opt/qt/share/qt/mkspecs/macx-clang -isystem /opt/homebrew/opt/qt/include -isystem /opt/homebrew/Cellar/mysql/9.6.0_1/include/mysql -isystem /opt/homebrew/opt/qt/lib/QtWidgets.framework/Headers -isystem /opt/homebrew/opt/qt/lib/QtGui.framework/Headers -isystem /opt/homebrew/opt/qt/lib/QtNetwork.framework/Headers -g -std=c++20 -arch arm64 -o CMakeFiles/data-studio.dir/src/ui/SqlHighlighter.cpp.o -c /Users/yousufawj/projects/rnd/data_studio/src/ui/SqlHighlighter.cpp",
-  "file": "/Users/yousufawj/projects/rnd/data_studio/src/ui/SqlHighlighter.cpp",
-  "output": "CMakeFiles/data-studio.dir/src/ui/SqlHighlighter.cpp.o"
-},
-{
-  "directory": "/Users/yousufawj/projects/rnd/data_studio/build",
-  "command": "/usr/bin/c++ -DDS_HAVE_MYSQL=1 -DQT_CORE_LIB -DQT_GUI_LIB -DQT_NETWORK_LIB -DQT_WIDGETS_LIB -I/Users/yousufawj/projects/rnd/data_studio/build/data-studio_autogen/include -I/Users/yousufawj/projects/rnd/data_studio/src -isystem /opt/homebrew/opt/qt/lib/QtCore.framework/Headers -iframework /opt/homebrew/opt/qt/lib -isystem /opt/homebrew/opt/qt/share/qt/mkspecs/macx-clang -isystem /opt/homebrew/opt/qt/include -isystem /opt/homebrew/Cellar/mysql/9.6.0_1/include/mysql -isystem /opt/homebrew/opt/qt/lib/QtWidgets.framework/Headers -isystem /opt/homebrew/opt/qt/lib/QtGui.framework/Headers -isystem /opt/homebrew/opt/qt/lib/QtNetwork.framework/Headers -g -std=c++20 -arch arm64 -o CMakeFiles/data-studio.dir/src/ui/ResultsModel.cpp.o -c /Users/yousufawj/projects/rnd/data_studio/src/ui/ResultsModel.cpp",
-  "file": "/Users/yousufawj/projects/rnd/data_studio/src/ui/ResultsModel.cpp",
-  "output": "CMakeFiles/data-studio.dir/src/ui/ResultsModel.cpp.o"
-},
-{
-  "directory": "/Users/yousufawj/projects/rnd/data_studio/build",
-  "command": "/usr/bin/c++ -DDS_HAVE_MYSQL=1 -DQT_CORE_LIB -DQT_GUI_LIB -DQT_NETWORK_LIB -DQT_WIDGETS_LIB -I/Users/yousufawj/projects/rnd/data_studio/build/data-studio_autogen/include -I/Users/yousufawj/projects/rnd/data_studio/src -isystem /opt/homebrew/opt/qt/lib/QtCore.framework/Headers -iframework /opt/homebrew/opt/qt/lib -isystem /opt/homebrew/opt/qt/share/qt/mkspecs/macx-clang -isystem /opt/homebrew/opt/qt/include -isystem /opt/homebrew/Cellar/mysql/9.6.0_1/include/mysql -isystem /opt/homebrew/opt/qt/lib/QtWidgets.framework/Headers -isystem /opt/homebrew/opt/qt/lib/QtGui.framework/Headers -isystem /opt/homebrew/opt/qt/lib/QtNetwork.framework/Headers -g -std=c++20 -arch arm64 -o CMakeFiles/data-studio.dir/src/ui/ResultsView.cpp.o -c /Users/yousufawj/projects/rnd/data_studio/src/ui/ResultsView.cpp",
-  "file": "/Users/yousufawj/projects/rnd/data_studio/src/ui/ResultsView.cpp",
-  "output": "CMakeFiles/data-studio.dir/src/ui/ResultsView.cpp.o"
-},
-{
-  "directory": "/Users/yousufawj/projects/rnd/data_studio/build",
-  "command": "/usr/bin/c++ -DDS_HAVE_MYSQL=1 -DQT_CORE_LIB -DQT_GUI_LIB -DQT_NETWORK_LIB -DQT_WIDGETS_LIB -I/Users/yousufawj/projects/rnd/data_studio/build/data-studio_autogen/include -I/Users/yousufawj/projects/rnd/data_studio/src -isystem /opt/homebrew/opt/qt/lib/QtCore.framework/Headers -iframework /opt/homebrew/opt/qt/lib -isystem /opt/homebrew/opt/qt/share/qt/mkspecs/macx-clang -isystem /opt/homebrew/opt/qt/include -isystem /opt/homebrew/Cellar/mysql/9.6.0_1/include/mysql -isystem /opt/homebrew/opt/qt/lib/QtWidgets.framework/Headers -isystem /opt/homebrew/opt/qt/lib/QtGui.framework/Headers -isystem /opt/homebrew/opt/qt/lib/QtNetwork.framework/Headers -g -std=c++20 -arch arm64 -o CMakeFiles/data-studio.dir/src/ui/QueryExecutor.cpp.o -c /Users/yousufawj/projects/rnd/data_studio/src/ui/QueryExecutor.cpp",
-  "file": "/Users/yousufawj/projects/rnd/data_studio/src/ui/QueryExecutor.cpp",
-  "output": "CMakeFiles/data-studio.dir/src/ui/QueryExecutor.cpp.o"
-},
-{
-  "directory": "/Users/yousufawj/projects/rnd/data_studio/build",
-  "command": "/usr/bin/c++ -DDS_HAVE_MYSQL=1 -DQT_CORE_LIB -DQT_GUI_LIB -DQT_NETWORK_LIB -DQT_WIDGETS_LIB -I/Users/yousufawj/projects/rnd/data_studio/build/data-studio_autogen/include -I/Users/yousufawj/projects/rnd/data_studio/src -isystem /opt/homebrew/opt/qt/lib/QtCore.framework/Headers -iframework /opt/homebrew/opt/qt/lib -isystem /opt/homebrew/opt/qt/share/qt/mkspecs/macx-clang -isystem /opt/homebrew/opt/qt/include -isystem /opt/homebrew/Cellar/mysql/9.6.0_1/include/mysql -isystem /opt/homebrew/opt/qt/lib/QtWidgets.framework/Headers -isystem /opt/homebrew/opt/qt/lib/QtGui.framework/Headers -isystem /opt/homebrew/opt/qt/lib/QtNetwork.framework/Headers -g -std=c++20 -arch arm64 -o CMakeFiles/data-studio.dir/src/ui/AnalyzerPanel.cpp.o -c /Users/yousufawj/projects/rnd/data_studio/src/ui/AnalyzerPanel.cpp",
-  "file": "/Users/yousufawj/projects/rnd/data_studio/src/ui/AnalyzerPanel.cpp",
-  "output": "CMakeFiles/data-studio.dir/src/ui/AnalyzerPanel.cpp.o"
-},
-{
-  "directory": "/Users/yousufawj/projects/rnd/data_studio/build",
-  "command": "/usr/bin/c++ -DDS_HAVE_MYSQL=1 -DQT_CORE_LIB -DQT_GUI_LIB -DQT_NETWORK_LIB -DQT_WIDGETS_LIB -I/Users/yousufawj/projects/rnd/data_studio/build/data-studio_autogen/include -I/Users/yousufawj/projects/rnd/data_studio/src -isystem /opt/homebrew/opt/qt/lib/QtCore.framework/Headers -iframework /opt/homebrew/opt/qt/lib -isystem /opt/homebrew/opt/qt/share/qt/mkspecs/macx-clang -isystem /opt/homebrew/opt/qt/include -isystem /opt/homebrew/Cellar/mysql/9.6.0_1/include/mysql -isystem /opt/homebrew/opt/qt/lib/QtWidgets.framework/Headers -isystem /opt/homebrew/opt/qt/lib/QtGui.framework/Headers -isystem /opt/homebrew/opt/qt/lib/QtNetwork.framework/Headers -g -std=c++20 -arch arm64 -o CMakeFiles/data-studio.dir/src/ui/QueryBuilderPanel.cpp.o -c /Users/yousufawj/projects/rnd/data_studio/src/ui/QueryBuilderPanel.cpp",
-  "file": "/Users/yousufawj/projects/rnd/data_studio/src/ui/QueryBuilderPanel.cpp",
-  "output": "CMakeFiles/data-studio.dir/src/ui/QueryBuilderPanel.cpp.o"
-},
-{
-  "directory": "/Users/yousufawj/projects/rnd/data_studio/build",
-  "command": "/usr/bin/c++ -DDS_HAVE_MYSQL=1 -DQT_CORE_LIB -DQT_GUI_LIB -DQT_NETWORK_LIB -DQT_WIDGETS_LIB -I/Users/yousufawj/projects/rnd/data_studio/build/data-studio_autogen/include -I/Users/yousufawj/projects/rnd/data_studio/src -isystem /opt/homebrew/opt/qt/lib/QtCore.framework/Headers -iframework /opt/homebrew/opt/qt/lib -isystem /opt/homebrew/opt/qt/share/qt/mkspecs/macx-clang -isystem /opt/homebrew/opt/qt/include -isystem /opt/homebrew/Cellar/mysql/9.6.0_1/include/mysql -isystem /opt/homebrew/opt/qt/lib/QtWidgets.framework/Headers -isystem /opt/homebrew/opt/qt/lib/QtGui.framework/Headers -isystem /opt/homebrew/opt/qt/lib/QtNetwork.framework/Headers -g -std=c++20 -arch arm64 -o CMakeFiles/data-studio.dir/src/ui/NlPromptBar.cpp.o -c /Users/yousufawj/projects/rnd/data_studio/src/ui/NlPromptBar.cpp",
-  "file": "/Users/yousufawj/projects/rnd/data_studio/src/ui/NlPromptBar.cpp",
-  "output": "CMakeFiles/data-studio.dir/src/ui/NlPromptBar.cpp.o"
+  "command": "/usr/bin/c++ -DDS_HAVE_MYSQL=1 -DQT_CONCURRENT_LIB -DQT_CORE_LIB -DQT_GUI_LIB -DQT_NETWORK_LIB -DQT_NO_DEBUG -DQT_WIDGETS_LIB -I/Users/yousufawj/projects/rnd/data_studio/build/ds-ui-tests_autogen/include -I/Users/yousufawj/projects/rnd/data_studio -I/Users/yousufawj/projects/rnd/data_studio/src -isystem /opt/homebrew/opt/qt/lib/QtCore.framework/Headers -iframework /opt/homebrew/opt/qt/lib -isystem /opt/homebrew/opt/qt/share/qt/mkspecs/macx-clang -isystem /opt/homebrew/opt/qt/include -isystem /opt/homebrew/Cellar/mariadb-connector-c/3.4.9/include/mariadb -isystem /opt/homebrew/opt/qt/lib/QtWidgets.framework/Headers -isystem /opt/homebrew/opt/qt/lib/QtGui.framework/Headers -isystem /opt/homebrew/opt/qt/lib/QtNetwork.framework/Headers -isystem /opt/homebrew/opt/qt/lib/QtConcurrent.framework/Headers -O3 -DNDEBUG -std=c++20 -arch arm64 -o CMakeFiles/ds-ui-tests.dir/tests/ui_tests.cpp.o -c /Users/yousufawj/projects/rnd/data_studio/tests/ui_tests.cpp",
+  "file": "/Users/yousufawj/projects/rnd/data_studio/tests/ui_tests.cpp",
+  "output": "CMakeFiles/ds-ui-tests.dir/tests/ui_tests.cpp.o"
 }
 ]

@@ -3548,7 +3548,6 @@ CMakeFiles/dscore.dir/src/core/mysql/MySqlDriver.cpp.o: /Users/yousufawj/project
   /Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX.sdk/usr/include/c++/v1/ratio \
   /Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX.sdk/usr/include/c++/v1/sstream \
   /Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX.sdk/usr/include/c++/v1/stack \
-  /Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX.sdk/usr/include/c++/v1/stdbool.h \
   /Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX.sdk/usr/include/c++/v1/stddef.h \
   /Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX.sdk/usr/include/c++/v1/stdexcept \
   /Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX.sdk/usr/include/c++/v1/stdint.h \
@@ -3716,25 +3715,18 @@ CMakeFiles/dscore.dir/src/core/mysql/MySqlDriver.cpp.o: /Users/yousufawj/project
   /Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/lib/clang/17/include/limits.h \
   /Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/lib/clang/17/include/ptrcheck.h \
   /Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/lib/clang/17/include/stdarg.h \
-  /Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/lib/clang/17/include/stdbool.h \
   /Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/lib/clang/17/include/stddef.h \
   /Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/lib/clang/17/include/stdint.h \
   /Users/yousufawj/projects/rnd/data_studio/src/core/Driver.h \
   /Users/yousufawj/projects/rnd/data_studio/src/core/Schema.h \
   /Users/yousufawj/projects/rnd/data_studio/src/core/Value.h \
   /Users/yousufawj/projects/rnd/data_studio/src/core/mysql/MySqlDriver.h \
-  /opt/homebrew/Cellar/mysql/9.6.0_1/include/mysql/errmsg.h \
-  /opt/homebrew/Cellar/mysql/9.6.0_1/include/mysql/field_types.h \
-  /opt/homebrew/Cellar/mysql/9.6.0_1/include/mysql/my_command.h \
-  /opt/homebrew/Cellar/mysql/9.6.0_1/include/mysql/my_compress.h \
-  /opt/homebrew/Cellar/mysql/9.6.0_1/include/mysql/my_list.h \
-  /opt/homebrew/Cellar/mysql/9.6.0_1/include/mysql/mysql.h \
-  /opt/homebrew/Cellar/mysql/9.6.0_1/include/mysql/mysql/client_plugin.h \
-  /opt/homebrew/Cellar/mysql/9.6.0_1/include/mysql/mysql/plugin_auth_common.h \
-  /opt/homebrew/Cellar/mysql/9.6.0_1/include/mysql/mysql/udf_registration_types.h \
-  /opt/homebrew/Cellar/mysql/9.6.0_1/include/mysql/mysql_com.h \
-  /opt/homebrew/Cellar/mysql/9.6.0_1/include/mysql/mysql_time.h \
-  /opt/homebrew/Cellar/mysql/9.6.0_1/include/mysql/mysql_version.h
+  /opt/homebrew/Cellar/mariadb-connector-c/3.4.9/include/mariadb/ma_list.h \
+  /opt/homebrew/Cellar/mariadb-connector-c/3.4.9/include/mariadb/mariadb_com.h \
+  /opt/homebrew/Cellar/mariadb-connector-c/3.4.9/include/mariadb/mariadb_ctype.h \
+  /opt/homebrew/Cellar/mariadb-connector-c/3.4.9/include/mariadb/mariadb_stmt.h \
+  /opt/homebrew/Cellar/mariadb-connector-c/3.4.9/include/mariadb/mariadb_version.h \
+  /opt/homebrew/Cellar/mariadb-connector-c/3.4.9/include/mariadb/mysql.h
 
 CMakeFiles/dscore.dir/src/core/sqlite/SqliteDriver.cpp.o: /Users/yousufawj/projects/rnd/data_studio/src/core/sqlite/SqliteDriver.cpp \
   /Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX.sdk/usr/include/Availability.h \
@@ -9264,23 +9256,13 @@ CMakeFiles/dscore.dir/src/query/SqlLexer.cpp.o: /Users/yousufawj/projects/rnd/da
 
 /Users/yousufawj/projects/rnd/data_studio/src/query/Analyzer.cpp:
 
-/opt/homebrew/Cellar/mysql/9.6.0_1/include/mysql/mysql_version.h:
+/opt/homebrew/Cellar/mariadb-connector-c/3.4.9/include/mariadb/mysql.h:
 
-/opt/homebrew/Cellar/mysql/9.6.0_1/include/mysql/mysql_time.h:
+/opt/homebrew/Cellar/mariadb-connector-c/3.4.9/include/mariadb/mariadb_stmt.h:
 
-/opt/homebrew/Cellar/mysql/9.6.0_1/include/mysql/mysql/udf_registration_types.h:
+/opt/homebrew/Cellar/mariadb-connector-c/3.4.9/include/mariadb/mariadb_ctype.h:
 
-/opt/homebrew/Cellar/mysql/9.6.0_1/include/mysql/my_list.h:
-
-/opt/homebrew/Cellar/mysql/9.6.0_1/include/mysql/my_compress.h:
-
-/opt/homebrew/Cellar/mysql/9.6.0_1/include/mysql/my_command.h:
-
-/opt/homebrew/Cellar/mysql/9.6.0_1/include/mysql/field_types.h:
-
-/opt/homebrew/Cellar/mysql/9.6.0_1/include/mysql/errmsg.h:
-
-/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/lib/clang/17/include/stdbool.h:
+/opt/homebrew/Cellar/mariadb-connector-c/3.4.9/include/mariadb/ma_list.h:
 
 /Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX.sdk/usr/include/c++/v1/forward_list:
 
@@ -9321,6 +9303,8 @@ CMakeFiles/dscore.dir/src/query/SqlLexer.cpp.o: /Users/yousufawj/projects/rnd/da
 /Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX.sdk/usr/include/c++/v1/__type_traits/remove_const_ref.h:
 
 /Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX.sdk/usr/include/c++/v1/__type_traits/is_char_like_type.h:
+
+/opt/homebrew/Cellar/mariadb-connector-c/3.4.9/include/mariadb/mariadb_com.h:
 
 /Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX.sdk/usr/include/c++/v1/__ranges/ref_view.h:
 
@@ -9489,8 +9473,6 @@ CMakeFiles/dscore.dir/src/query/SqlLexer.cpp.o: /Users/yousufawj/projects/rnd/da
 /Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX.sdk/usr/include/sys/_types/_timespec.h:
 
 /Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX.sdk/usr/include/sqlite3.h:
-
-/opt/homebrew/Cellar/mysql/9.6.0_1/include/mysql/mysql_com.h:
 
 /Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX.sdk/usr/include/sys/_types/_time_t.h:
 
@@ -10028,8 +10010,6 @@ CMakeFiles/dscore.dir/src/query/SqlLexer.cpp.o: /Users/yousufawj/projects/rnd/da
 
 /Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX.sdk/usr/include/c++/v1/__string/extern_template_lists.h:
 
-/opt/homebrew/Cellar/mysql/9.6.0_1/include/mysql/mysql/client_plugin.h:
-
 /Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX.sdk/usr/include/c++/v1/__type_traits/remove_const.h:
 
 /Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX.sdk/usr/include/c++/v1/__format/unicode.h:
@@ -10115,6 +10095,8 @@ CMakeFiles/dscore.dir/src/query/SqlLexer.cpp.o: /Users/yousufawj/projects/rnd/da
 /Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX.sdk/usr/include/c++/v1/__debug_utils/strict_weak_ordering_check.h:
 
 /Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX.sdk/usr/include/c++/v1/__mutex/once_flag.h:
+
+/opt/homebrew/Cellar/mariadb-connector-c/3.4.9/include/mariadb/mariadb_version.h:
 
 /Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX.sdk/usr/include/sys/_types/_int16_t.h:
 
@@ -10718,8 +10700,6 @@ CMakeFiles/dscore.dir/src/query/SqlLexer.cpp.o: /Users/yousufawj/projects/rnd/da
 
 /Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX.sdk/usr/include/c++/v1/__algorithm/sort.h:
 
-/Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX.sdk/usr/include/c++/v1/stdbool.h:
-
 /Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX.sdk/usr/include/c++/v1/cerrno:
 
 /Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX.sdk/usr/include/c++/v1/__algorithm/simd_utils.h:
@@ -11154,8 +11134,6 @@ dscore_autogen/mocs_compilation.cpp:
 
 /Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX.sdk/usr/include/c++/v1/__algorithm/any_of.h:
 
-/opt/homebrew/Cellar/mysql/9.6.0_1/include/mysql/mysql.h:
-
 /Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX.sdk/usr/include/c++/v1/istream:
 
 /Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX.sdk/usr/include/c++/v1/__algorithm/three_way_comp_ref_type.h:
@@ -11241,8 +11219,6 @@ dscore_autogen/mocs_compilation.cpp:
 /Users/yousufawj/projects/rnd/data_studio/src/core/DriverRegistry.cpp:
 
 /Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX.sdk/usr/include/c++/v1/__type_traits/is_abstract.h:
-
-/opt/homebrew/Cellar/mysql/9.6.0_1/include/mysql/mysql/plugin_auth_common.h:
 
 /Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX.sdk/usr/include/arm/_limits.h:
 

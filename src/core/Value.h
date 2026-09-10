@@ -22,6 +22,13 @@ std::string toDisplayString(const Value& v);
 // SQL literal rendering, properly escaped for the given dialect.
 std::string toSqlLiteral(const Value& v);
 
+// Coercing readers. Servers disagree about the type of an expression --
+// MariaDB reports COALESCE over unsigned bigints as DECIMAL, which this driver
+// keeps as text to preserve precision -- so metadata queries must never assume
+// a variant alternative. Returns `fallback` for NULL or unparseable values.
+int64_t toInt(const Value& v, int64_t fallback = 0);
+double toReal(const Value& v, double fallback = 0.0);
+
 enum class Dialect { Sqlite, MySql };
 
 const char* dialectName(Dialect d);
