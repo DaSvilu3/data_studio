@@ -1,0 +1,8 @@
+/Users/yousufawj/projects/rnd/data_studio/build/CMakeFiles/dscore.dir
+/Users/yousufawj/projects/rnd/data_studio/build/CMakeFiles/data-studio.dir
+/Users/yousufawj/projects/rnd/data_studio/build/CMakeFiles/edit_cache.dir
+/Users/yousufawj/projects/rnd/data_studio/build/CMakeFiles/rebuild_cache.dir
+/Users/yousufawj/projects/rnd/data_studio/build/CMakeFiles/dscore_autogen_timestamp_deps.dir
+/Users/yousufawj/projects/rnd/data_studio/build/CMakeFiles/dscore_autogen.dir
+/Users/yousufawj/projects/rnd/data_studio/build/CMakeFiles/data-studio_autogen_timestamp_deps.dir
+/Users/yousufawj/projects/rnd/data_studio/build/CMakeFiles/data-studio_autogen.dir

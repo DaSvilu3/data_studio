@@ -1,0 +1,42 @@
+file(REMOVE_RECURSE
+  "CMakeFiles/data-studio_autogen.dir/AutogenUsed.txt"
+  "CMakeFiles/data-studio_autogen.dir/ParseCache.txt"
+  "data-studio_autogen"
+  "CMakeFiles/data-studio.dir/data-studio_autogen/mocs_compilation.cpp.o"
+  "CMakeFiles/data-studio.dir/data-studio_autogen/mocs_compilation.cpp.o.d"
+  "CMakeFiles/data-studio.dir/src/ai/NlSqlClient.cpp.o"
+  "CMakeFiles/data-studio.dir/src/ai/NlSqlClient.cpp.o.d"
+  "CMakeFiles/data-studio.dir/src/main.cpp.o"
+  "CMakeFiles/data-studio.dir/src/main.cpp.o.d"
+  "CMakeFiles/data-studio.dir/src/ui/AnalyzerPanel.cpp.o"
+  "CMakeFiles/data-studio.dir/src/ui/AnalyzerPanel.cpp.o.d"
+  "CMakeFiles/data-studio.dir/src/ui/ConnectionDialog.cpp.o"
+  "CMakeFiles/data-studio.dir/src/ui/ConnectionDialog.cpp.o.d"
+  "CMakeFiles/data-studio.dir/src/ui/ConnectionStore.cpp.o"
+  "CMakeFiles/data-studio.dir/src/ui/ConnectionStore.cpp.o.d"
+  "CMakeFiles/data-studio.dir/src/ui/MainWindow.cpp.o"
+  "CMakeFiles/data-studio.dir/src/ui/MainWindow.cpp.o.d"
+  "CMakeFiles/data-studio.dir/src/ui/NlPromptBar.cpp.o"
+  "CMakeFiles/data-studio.dir/src/ui/NlPromptBar.cpp.o.d"
+  "CMakeFiles/data-studio.dir/src/ui/QueryBuilderPanel.cpp.o"
+  "CMakeFiles/data-studio.dir/src/ui/QueryBuilderPanel.cpp.o.d"
+  "CMakeFiles/data-studio.dir/src/ui/QueryExecutor.cpp.o"
+  "CMakeFiles/data-studio.dir/src/ui/QueryExecutor.cpp.o.d"
+  "CMakeFiles/data-studio.dir/src/ui/ResultsModel.cpp.o"
+  "CMakeFiles/data-studio.dir/src/ui/ResultsModel.cpp.o.d"
+  "CMakeFiles/data-studio.dir/src/ui/ResultsView.cpp.o"
+  "CMakeFiles/data-studio.dir/src/ui/ResultsView.cpp.o.d"
+  "CMakeFiles/data-studio.dir/src/ui/SchemaTree.cpp.o"
+  "CMakeFiles/data-studio.dir/src/ui/SchemaTree.cpp.o.d"
+  "CMakeFiles/data-studio.dir/src/ui/SqlEditor.cpp.o"
+  "CMakeFiles/data-studio.dir/src/ui/SqlEditor.cpp.o.d"
+  "CMakeFiles/data-studio.dir/src/ui/SqlHighlighter.cpp.o"
+  "CMakeFiles/data-studio.dir/src/ui/SqlHighlighter.cpp.o.d"
+  "data-studio"
+  "data-studio.pdb"
+)
+
+# Per-language clean rules from dependency scanning.
+foreach(lang CXX)
+  include(CMakeFiles/data-studio.dir/cmake_clean_${lang}.cmake OPTIONAL)
+endforeach()
